@@ -1,7 +1,7 @@
 Profile: KLGatewayChildrenEncounter
 Parent: Encounter
 Id: klgateway-children-encounter
-Title: "140CareEncounter"
+Title: "KLGatewayChildrenEncounter"
 Description: "Encounter for health prevention and need-based visits from childrens nurses"
 * identifier ..0
 * statusHistory ..0
@@ -19,7 +19,7 @@ Description: "Encounter for health prevention and need-based visits from childre
 * serviceType ..0
 * priority ..0
 * subject 1..1
-* subject only Reference(klgateway-care-citizen)
+* subject only Reference(klgateway-children-citizen)
 * subject ^type.aggregation = #bundled
 * episodeOfCare ..0
 * basedOn ..0

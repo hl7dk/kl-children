@@ -1,6 +1,6 @@
-Profile: KLGatewayCareCitizen
-Parent: http://hl7.dk/fhir/core/StructureDefinition/dk-core-patient
-Id: klgateway-care-citizen
+Profile: KLGatewayChildrenCitizen
+Parent: dk-core-patient
+Id: klgateway-children-citizen
 Title: "CareCitizen"
 Description: "Administrative information about a citizen receiving care or care related services."
 * identifier 1..1
@@ -28,7 +28,7 @@ Description: "Administrative information about a citizen receiving care or care 
 * managingOrganization.display ..0
 * link ..1
 * link MS
-* link.other only Reference(parentRelation)
+* link.other only Reference(klgateway-children-related-parent)
 * link.other ^type.aggregation = #bundled
 
 
@@ -36,13 +36,3 @@ Description: "Administrative information about a citizen receiving care or care 
 * identifier ^short = "[DK] borgers cpr-nummer"
 * managingOrganization ^short = "[DK] journalførende organisation"
 * link ^short = "[DK] forældrerelation"
-
-Instance: TestPerson
-InstanceOf: KLGatewayCareCitizen
-Description: "Test person used in the examples of the implementation guide."
-* identifier.use = #official
-* identifier.value = "0101010101"
-* identifier.system = "urn:oid:1.2.208.176.1.2"
-* managingOrganization.identifier.use = #official
-* managingOrganization.identifier.value =  "123456789012345"
-* managingOrganization.identifier.system = "urn:oid:1.2.208.176.1.1"

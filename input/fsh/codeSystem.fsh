@@ -38,7 +38,10 @@ ValueSet: ParentTypes
 Id: ParentTypes
 Title: "ParentTypes"
 Description: "Limitation on HL7 role class to only represent parent-relationships, as accepted in the children data-set"
-* $RoleClass #PRN
-* $RoleClass #GUARD
-* $RoleClass #
-* $RoleClass #
+* $RoleClass#PRN
+//* $RoleClass#GUARD
+
+ValueSet: BodyheightSCTobservablesChildren
+Title: "BodyheightSCTobservablesChildren"
+* $SCT#248334005 //|Length of body (observable entity)|
+* $SCT#248333004 //|Standing height (observable entity)|

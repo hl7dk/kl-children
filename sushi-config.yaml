@@ -3,7 +3,7 @@
 # │  supported properties, see: https://fshschool.org/docs/sushi/configuration/                    │
 # ╰────────────────────────────────────────────────────────────────────────────────────────────────╯
 id: kl.fhir.dk.children
-canonical: http://fhir.kl.dk/term
+canonical: http://fhir.kl.dk/children
 name: KLChildren
 status: draft
 version: 0.1.0
@@ -14,7 +14,7 @@ publisher:
   name: Kommunernes Landsforening
   url: http://kl.dk
 
-  dependencies:
+dependencies:
   hl7.fhir.dk.core:
     uri: https://hl7.dk/fhir/core
     version: 2.1.0
