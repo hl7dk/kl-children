@@ -33,8 +33,8 @@ Description: "Administrative information about a citizen receiving care or care 
 
 
 //Danish descriptions
-* identifier ^short = "[DK] borgers cpr-nummer"
-* managingOrganization ^short = "[DK] journalførende organisation"
+* identifier ^short = "[DK] cpr"
+* managingOrganization ^short = "[DK] journalførendeOrganisation"
 * link ^short = "[DK] erSammePersonSom"
 
 Instance: Rikke
