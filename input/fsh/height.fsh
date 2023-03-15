@@ -1,7 +1,7 @@
 Profile: KLGatewayChildrenBodyHeight
 Parent: http://hl7.org/fhir/StructureDefinition/bodyheight
 Id: klgateway-children-bodyheight
-Title: "Body height"
+Title: "KLGatewayChildrenBodyHeight"
 Description: "Body height profile used in Danish Municipalities, derived from HL7 standard profile"
 //Constraints
 * code.coding contains snomedSlice 1..1
@@ -14,7 +14,7 @@ Description: "Body height profile used in Danish Municipalities, derived from HL
 * encounter only Reference(klgateway-children-encounter)
 * encounter ^type.aggregation = #bundled
 * effective[x] 1..1
-* effectiv[x]e only dateTime
+* effective[x] only dateTime
 //0..0 cardinalities
 * identifier 0..0
 * basedOn 0..0
@@ -43,15 +43,15 @@ Description: "Body height profile used in Danish Municipalities, derived from HL
 * effectiveDateTime ^short = "[DK] Højdetid" //Behøver ikke både kontakt og tid.
 * status ^short = "[DK] HøjdeStatus"
 
-Instance: MaleneBodyHeight
+Instance: RikkeBodyHeight
 InstanceOf: klgateway-children-bodyheight
 Usage: #example
-Title: "MaleneBodyHeight"
-Description: "Malenes kropslængde"
-* subject = Reference(Malene)
+Title: "RikkeBodyHeight"
+Description: "Rikkes kropslængde"
+* subject = Reference(Rikke)
 * encounter = Reference(2mthEncounter)
-* category.coding.system="http://terminology.hl7.org/CodeSystem/observation-category"
-* category.coding.code= #vital-signs
+* category.coding.system = "http://terminology.hl7.org/CodeSystem/observation-category"
+* category.coding.code = #vital-signs
 * code.coding[snomedSlice] = $SCT#248334005
 * code.coding[BodyHeightCode] = $LOINC#8302-2
 * valueQuantity.value = 62
@@ -59,4 +59,4 @@ Description: "Malenes kropslængde"
 * valueQuantity.system = $UCUM
 * valueQuantity.code = #cm
 * status = #final
-* effectiveDateTime = 2019-01-09T12:45:00.000Z
+* effectiveDateTime = 2020-07-07T12:45:00.000Z

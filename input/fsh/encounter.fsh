@@ -45,3 +45,15 @@ Description: "Encounter for health prevention and need-based visits from childre
 * period.end ^short = "[DK] kontaktslut"
 * subject ^short = "[DK] kontaktsubjekt"
 * class ^short = "[DK] kontaktklasse"
+
+
+Instance: 2mthEncounter
+InstanceOf: klgateway-children-encounter
+Title: "2 måneders besøg ved Rikke"
+Usage: #example
+Description: "Kontakt, hvor der leveres besøg ved det ca. 2 måneder gamle barn til Rikke og hendes familie"
+* type = Tempcodes#51f30d1c-d60e-4e3e-ac22-ec9712ea962d "Besøg ved det ca. 2 måneder gamle barn"
+* period.start = 2020-07-07T12:45:00.000Z
+* status = $EncounterStatus#finished
+* subject = Reference(Rikke)
+* class = $V3ACTCODES#HH

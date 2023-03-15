@@ -1,7 +1,7 @@
 Profile: KLGatewayChildrenRelatedParent
 Parent: RelatedPerson
 Id: klgateway-children-related-parent
-Title: "ParentRelation"
+Title: "KLGatewayChildrenRelatedParent"
 Description: "Profile for describing the relationship between the child, and the parents, guardians or caregivers who are also relevant for the journal"
 * patient only Reference(klgateway-children-citizen)
 * patient ^type.aggregation = #bundled
@@ -16,3 +16,6 @@ Description: "Profile for describing the relationship between the child, and the
 * photo 0..0
 * period 0..0
 * communication 0..0
+
+* patient ^short = "[DK] harBarn"
+* relationship ^short = "[DK] forældreType"

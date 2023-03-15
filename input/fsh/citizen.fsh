@@ -1,7 +1,7 @@
 Profile: KLGatewayChildrenCitizen
 Parent: dk-core-patient
 Id: klgateway-children-citizen
-Title: "CareCitizen"
+Title: "KLGatewayChildrenCitizen"
 Description: "Administrative information about a citizen receiving care or care related services."
 * identifier 1..1
 * identifier only dk-core-cpr-identifier
@@ -35,4 +35,15 @@ Description: "Administrative information about a citizen receiving care or care 
 //Danish descriptions
 * identifier ^short = "[DK] borgers cpr-nummer"
 * managingOrganization ^short = "[DK] journalførende organisation"
-* link ^short = "[DK] forældrerelation"
+* link ^short = "[DK] erSammePersonSom"
+
+Instance: Rikke
+InstanceOf: klgateway-children-citizen
+Description: "Barnet Rikke"
+Usage: #example
+* identifier.use = #official
+* identifier.value = "0505209996"
+* identifier.system = "urn:oid:1.2.208.176.1.2"
+* managingOrganization.identifier.use = #official
+* managingOrganization.identifier.value =  "123456789012345"
+* managingOrganization.identifier.system = "urn:oid:1.2.208.176.1.1"
