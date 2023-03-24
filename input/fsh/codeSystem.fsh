@@ -61,16 +61,63 @@ Title: "BodyweightSCTobservablesChildren"
 Description: "SNOMED CT observables for weight"
 * $SCT#425024002	// Body weight without shoes
 
+ValueSet: HeadCircumSCTobservablesChildren
+Title: "HeadCircumferenceSCTobservablesChildren"
+Description: "SNOMED CT observables for Head Circumference"
+* $SCT#363812007 //|Hovedomkreds|
+
+ValueSet: TobaccoObservablesChildren
+Title: "TobaccoobservablesChildren"
+Description: "SNOMED CT observables for tobacco use and exposure"
+* $SCT#229819007 //Tobacco use and exposure (observable entity)
+
+ValueSet: MentalStateObservablesChildren
+Title: "MentalStateobservablesChildren"
+Description: "SNOMED CT observables for MentalState"
+* $SCT#285854004 //|Emotion (observable entity)|
+
+ValueSet: FeedingObservablesChildren
+Title: "FeedingObservablesChildren"
+Description: "SNOMED CT observables for infant feeding method"
+* $SCT#169740003 //|Infant feeding method|
+
 ValueSet: ObservationSCTChildren
 Title: "SCTobservablesChildren"
 Description: "SNOMED CT observables for children observations"
-* $SCT#425024002	// Body weight without shoes
+* $SCT#425024002 // Body weight without shoes
 * $SCT#248334005 //|Length of body (observable entity)|
 * $SCT#248333004 //|Standing height (observable entity)|
 * $SCT#229819007 //Tobacco use and exposure (observable entity)
 * $SCT#169740003 //|Infant feeding method|
 * $SCT#285854004 //|Emotion (observable entity)|
 * $SCT#363812007 //|Hovedomkreds|
+
+ValueSet: TobaccoResultsChildren 
+Title: "TobaccoResultsChildren"
+Description: "SNOMED CT observation resultcodes for tobacco use and exposure"
+* $SCT#228524006 //|Exposed to tobacco smoke at home (finding)|
+* $SCT#110483000 //|Tobacco user (finding)|
+* $SCT#160245001  //"No current problems or disability"
+
+ValueSet: MentalStateResultsChildren
+Title: "MentalStateResultsChildren"
+Description: "Resultcodes for mental state"
+* Tempcodes#be128c20-851d-4217-b8df-744d8af39cac //"for det meste meget glad" "Barnet vurderer selv for det meste at være meget glad"
+* Tempcodes#6bea1014-8e30-40e7-9274-2b02376c0b1b //"for det meste glad" "Barnet vurderer selv for det meste at være glad"
+* Tempcodes#2c945a43-a07b-4b26-b4cc-205ba15a1251 //"for det meste midt imellem" "Barnet vurderer selv for det meste at være midt imellem glad og ikke glad"
+* Tempcodes#10edfc52-3632-453b-8db1-af6691049885 //"for det meste ikke glad" "Barnet vurderer selv for det meste ikke at være glad"
+* Tempcodes#9b4b5194-cf7f-4274-a691-734c24adb0b7 //"for det meste meget glad i skolen" "Barnet vurderer selv for det meste at være meget glad i skolen"
+* Tempcodes#5dc857f6-1220-4762-a718-31a6101b5d61 //"for det meste glad i skolen" "Barnet vurderer selv for det meste at være glad i skolen"
+* Tempcodes#2e026475-a2ec-45e3-92d8-f0bed307cceb //"for det meste midt imellem i skolen" "Barnet vurderer selv for det meste at være midt imellem glad og ikke glad i skolen"
+* Tempcodes#822dffb2-3b29-4f86-9784-757954d6a047 //"for det meste ikke glad i skolen"
+
+ValueSet: FeedingResultsChildren
+Title: "FeedingResultsChildren"
+Description: "Resultcodes for feeding"
+* $SCT#1145307003 //|Exclusively breastfed| (EffectivePeriod)
+* $SCT#169743001 //|Breastfeeding with supplement| (EffectivePeriode)
+* $SCT#169746009 //|Breastfeeding stopped| (EffectiveTime)
+
 
 ValueSet: ObservationResultsChildren
 Title: "Observation resultcodes"

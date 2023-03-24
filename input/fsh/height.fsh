@@ -32,16 +32,16 @@ Description: "Body height profile used in Danish Municipalities, derived from HL
 * derivedFrom 0..0
 
 //Short Danish descriptions
-* category ^short = "[DK] Kategori"
-* dataAbsentReason ^short = "[DK] HøjdeMangler"
-* code ^short = "[DK] HøjdeKode"
-* valueQuantity.value ^short = "[DK] HøjdeResultat"
-* valueQuantity.code ^short = "[DK] HøjdeEnhed"
-* valueQuantity.system ^short = "[DK] HøjdeEnhed"
-* subject ^short = "[DK] Højdesubjekt"
-* encounter ^short = "[DK] Højdekontakt"
-* effectiveDateTime ^short = "[DK] Højdetid" //Behøver ikke både kontakt og tid.
-* status ^short = "[DK] HøjdeStatus"
+* category ^short = "[DK] højdeKategori"
+* dataAbsentReason ^short = "[DK] højdeMangler"
+* code ^short = "[DK] højdeKode"
+* valueQuantity.value ^short = "[DK] højdeResultat"
+* valueQuantity.code ^short = "[DK] højdeEnhed"
+* valueQuantity.system ^short = "[DK] højdeEnhed"
+* subject ^short = "[DK] højdeSubjekt"
+* encounter ^short = "[DK] højdeKontakt"
+* effectiveDateTime ^short = "[DK] højdeTid" //Behøver ikke både kontakt og tid.
+* status ^short = "[DK] højdeStatus"
 
 Instance: RikkeBodyHeight
 InstanceOf: klgateway-children-bodyheight

@@ -31,16 +31,16 @@ Description: "Profile of HL7 body weight profile used in Danish Municipalities"
 * hasMember 0..0
 * derivedFrom 0..0
 
-* category ^short = "[DK] Kategori"
-* dataAbsentReason ^short = "[DK] VægtMangler"
-* code ^short = "[DK] VægtKode"
-* valueQuantity.value ^short = "[DK] VægtResultat"
-* valueQuantity.code ^short = "[DK] VægtEnhed"
-* valueQuantity.system ^short = "[DK] VægtEnhed"
-* subject ^short = "[DK] Vægtsubjekt"
-* encounter ^short = "[DK] Vægtkontakt"
-* effectiveDateTime ^short = "[DK] Vægttid"
-* status ^short = "[DK] VægtStatus"
+* category ^short = "[DK] vægtKategori"
+* dataAbsentReason ^short = "[DK] vægtMangler"
+* code ^short = "[DK] vægtKode"
+* valueQuantity.value ^short = "[DK] vægtResultat"
+* valueQuantity.code ^short = "[DK] vægtEnhed"
+* valueQuantity.system ^short = "[DK] vægtEnhed"
+* subject ^short = "[DK] vægtsubjekt"
+* encounter ^short = "[DK] vægtkontakt"
+* effectiveDateTime ^short = "[DK] vægttid"
+* status ^short = "[DK] vægtStatus"
 
 
 Instance: RikkeBodyWeight
@@ -52,7 +52,6 @@ Description: "Rikkes vægt"
 * encounter = Reference(2mthEncounter)
 * category.coding.system = "http://terminology.hl7.org/CodeSystem/observation-category"
 * category.coding.code = #vital-signs
-* subject = Reference(Helene)
 * code.coding[snomedSlice] = $SCT#276885007
 * code.coding[BodyWeightCode] = $LOINC#29463-7
 * valueQuantity.value = 4300
