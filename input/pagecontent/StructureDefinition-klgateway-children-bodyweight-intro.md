@@ -1,7 +1,7 @@
 ### Scope and usage
 KLGatewayChildrenBodyWeight is used to document children weight results.
 
- Observation.code.coding, holds the valid values for the types of obervations allowed. It is bound to a mandatory LOINC code: 29463-7 'Body weight', and a mandatory SNOMED CT code 'Body Weight without shoes'.
+ Observation.code.coding, holds the valid values for the types of observations allowed. It is bound to a mandatory LOINC code: 29463-7 'Body weight', and a mandatory SNOMED CT code 'Body Weight without shoes'.
 
 The Observation.value[x] is a valueQuantity. The unit is drawn from UCUM and is always 'g'.
 

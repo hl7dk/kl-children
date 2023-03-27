@@ -36,5 +36,5 @@ Description: "Profile used to document mental state in the children database"
 * value[x] ^short = "[DK] mentalStatusResultat"
 * subject ^short = "[DK] mentalStatusSubjekt"
 * encounter ^short = "[DK] mentalStatusKontakt"
-* effective[x] ^short = "[DK] mentalStatusTid" //Behøver ikke både kontakt og tid.
+* effective[x] ^short = "[DK] mentalStatusTid"
 * status ^short = "[DK] mentalStatusStatus"

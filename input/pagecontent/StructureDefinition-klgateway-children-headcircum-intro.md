@@ -1,7 +1,7 @@
 ### Scope and usage
 KLGatewayChildrenHeadCircumference is used to document childrens head circumference.
 
- Observation.code.coding holds the valid values for the types of obervations allowed. It is bound to a mandatory LOINC code: 9843-4 'Head Occipital-frontal circumference', and a SNOMED CT code 363812007 'Head circumference (observable entity)'.
+ Observation.code.coding holds the valid values for the types of observations allowed. It is bound to a mandatory LOINC code: 9843-4 'Head Occipital-frontal circumference', and a SNOMED CT code 363812007 'Head circumference (observable entity)'.
 
 The Observation.value[x] is a valueQuantity. The unit is drawn from UCUM and is always 'cm'.
 

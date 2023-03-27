@@ -60,7 +60,7 @@ Instance: RikkeFeedingObservationError
 InstanceOf: klgateway-children-feeding-observation
 Usage: #example
 Title: "RikkeBodyFeedingObservationError"
-Description: "Rikkes ammestatus, med forkert angivelse af tid"
+Description: "Rikkes ammestatus, med forkert angivelse af tid giver feed-2 fejl"
 * subject = Reference(Rikke)
 * encounter = Reference(2mthEncounter)
 * code.coding = $SCT#169740003
@@ -80,3 +80,15 @@ Description: "Rikkes ammestatus, med rigtig angivelse af tid"
 * status = #final
 * effectivePeriod.start = 2020-05-05T00:00:00.000Z
 * effectivePeriod.end = 2020-07-07T00:00:00.000Z
+
+Instance: RikkeFeedingObservation2
+InstanceOf: klgateway-children-feeding-observation2
+Usage: #example
+Title: "RikkeFeedingObservation2"
+Description: "Rikkes ammestatus, ved stop af amning"
+* subject = Reference(Rikke)
+* encounter = Reference(10mthEncounter)
+* code.coding = $SCT#169740003
+* valueCodeableConcept = $SCT#169746009  //|Exclusively breastfed| (EffectivePeriod)
+* status = #final
+* effectiveDateTime = 2021-02-02T00:00:00.000Z

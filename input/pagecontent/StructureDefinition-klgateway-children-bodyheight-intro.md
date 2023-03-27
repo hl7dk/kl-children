@@ -1,7 +1,7 @@
 ### Scope and usage
 KLGatewayChildrenBodyHeight is used to document childrens length or height.
 
- Observation.code.coding holds the valid values for the types of obervations allowed. It is bound to a mandatory LOINC code: 8302-2 'Body height', and a mandatory set of SNOMED CT codes. The allowed SNOMED CT observation codes are:
+ Observation.code.coding holds the valid values for the types of observations allowed. It is bound to a mandatory LOINC code: 8302-2 'Body height', and a mandatory set of SNOMED CT codes. The allowed SNOMED CT observation codes are:
  * Body length
  * Body height 
 Choose length as long as the child is laying down while being meassured

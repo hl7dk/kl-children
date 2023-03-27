@@ -57,3 +57,14 @@ Description: "Kontakt, hvor der leveres besøg ved det ca. 2 måneder gamle barn
 * status = $EncounterStatus#finished
 * subject = Reference(Rikke)
 * class = $V3ACTCODES#HH
+
+Instance: 10mthEncounter
+InstanceOf: klgateway-children-encounter
+Title: "2 måneders besøg ved Rikke"
+Usage: #example
+Description: "Kontakt, hvor der leveres besøg ved det 8-11 måneder gamle barn til Rikke og hendes familie"
+* type = Tempcodes##3f3e6489-31bd-44cf-9920-3c632868feb7 "Besøg ved det 8-11 måneder gamle barn"
+* period.start = 2021-03-09T10:15:00.000Z
+* status = $EncounterStatus#finished
+* subject = Reference(Rikke)
+* class = $V3ACTCODES#HH
