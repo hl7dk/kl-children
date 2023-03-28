@@ -2,6 +2,8 @@ CodeSystem: Tempcodes
 Id: Tempcodes
 Title: "Tempcodes"
 Description: "Tempcodes to be implemented in KL-term"
+* ^experimental = false
+* ^caseSensitive = false
 * #6c2a4f15-d775-47f3-9868-b26fbff9ff8b "Forebyggelsesbesøg af småbørnssundhedsplejen"
 * #6c2a4f15-d775-47f3-9868-b26fbff9ff8b #d3c00541-f1d3-4c43-b5fc-16e8914ca1df "Graviditetsbesøg"
 * #6c2a4f15-d775-47f3-9868-b26fbff9ff8b #7d35a193-e808-4e77-b361-6c0d114d021f "Barselsbesøg"
@@ -80,43 +82,51 @@ ValueSet: ParentTypes
 Id: ParentTypes
 Title: "ParentTypes"
 Description: "Limitation on HL7 role class to only represent parent-relationships, as accepted in the children data-set"
+* ^experimental = false
 * $RoleCode#PRN
 //* $RoleClass#GUARD
 
 ValueSet: BodyheightSCTobservablesChildren
 Title: "BodyheightSCTobservablesChildren"
 Description: "SNOMED CT observables for length/height"
+* ^experimental = false
 * $SCT#248334005 //|Length of body (observable entity)|
 * $SCT#248333004 //|Standing height (observable entity)|
 
 ValueSet: BodyweightSCTobservablesChildren
 Title: "BodyweightSCTobservablesChildren"
 Description: "SNOMED CT observables for weight"
+* ^experimental = false
 * $SCT#425024002	// Body weight without shoes
 
 ValueSet: HeadCircumSCTobservablesChildren
 Title: "HeadCircumferenceSCTobservablesChildren"
 Description: "SNOMED CT observables for Head Circumference"
+* ^experimental = false
 * $SCT#363812007 //|Hovedomkreds|
 
 ValueSet: TobaccoObservablesChildren
 Title: "TobaccoobservablesChildren"
 Description: "SNOMED CT observables for tobacco use and exposure"
+* ^experimental = false
 * $SCT#229819007 //Tobacco use and exposure (observable entity)
 
 ValueSet: MentalStateObservablesChildren
 Title: "MentalStateobservablesChildren"
 Description: "SNOMED CT observables for MentalState"
+* ^experimental = false
 * $SCT#285854004 //|Emotion (observable entity)|
 
 ValueSet: FeedingObservablesChildren
 Title: "FeedingObservablesChildren"
 Description: "SNOMED CT observables for infant feeding method"
+* ^experimental = false
 * $SCT#169740003 //|Infant feeding method|
 
 ValueSet: ObservationSCTChildren
 Title: "SCTobservablesChildren"
 Description: "SNOMED CT observables for children observations"
+* ^experimental = false
 * $SCT#425024002 // Body weight without shoes
 * $SCT#248334005 //|Length of body (observable entity)|
 * $SCT#248333004 //|Standing height (observable entity)|
@@ -128,6 +138,7 @@ Description: "SNOMED CT observables for children observations"
 ValueSet: TobaccoResultsChildren 
 Title: "TobaccoResultsChildren"
 Description: "SNOMED CT observation resultcodes for tobacco use and exposure"
+* ^experimental = false
 * $SCT#228524006 //|Exposed to tobacco smoke at home (finding)|
 * $SCT#110483000 //|Tobacco user (finding)|
 * $SCT#160245001  //"No current problems or disability"
@@ -135,6 +146,7 @@ Description: "SNOMED CT observation resultcodes for tobacco use and exposure"
 ValueSet: MentalStateResultsChildren
 Title: "MentalStateResultsChildren"
 Description: "Resultcodes for mental state"
+* ^experimental = false
 * Tempcodes#be128c20-851d-4217-b8df-744d8af39cac //"for det meste meget glad" "Barnet vurderer selv for det meste at være meget glad"
 * Tempcodes#6bea1014-8e30-40e7-9274-2b02376c0b1b //"for det meste glad" "Barnet vurderer selv for det meste at være glad"
 * Tempcodes#2c945a43-a07b-4b26-b4cc-205ba15a1251 //"for det meste midt imellem" "Barnet vurderer selv for det meste at være midt imellem glad og ikke glad"
@@ -147,6 +159,7 @@ Description: "Resultcodes for mental state"
 ValueSet: FeedingResultsChildren
 Title: "FeedingResultsChildren"
 Description: "Resultcodes for feeding"
+* ^experimental = false
 * $SCT#1145307003 //|Exclusively breastfed| (EffectivePeriod)
 * $SCT#169743001 //|Breastfeeding with supplement| (EffectivePeriode)
 * $SCT#169746009 //|Breastfeeding stopped| (EffectiveTime)
@@ -155,6 +168,7 @@ Description: "Resultcodes for feeding"
 ValueSet: ObservationResultsChildren
 Title: "Observation resultcodes"
 Description: "SNOMED CT finding codes to express the result of children observations"
+* ^experimental = false
 * $SCT#228524006 //|Exposed to tobacco smoke at home (finding)|
 * $SCT#110483000 //|Tobacco user (finding)|
 * $SCT#711563001 //|No known exposure to tobacco smoke| /(normalt fund. Overvej at lade udgå)
@@ -180,12 +194,14 @@ Description: "SNOMED CT finding codes to express the result of children observat
 ValueSet: ObservationUnitsChildren
 Title: "ObservationUnitsChildren"
 Description: "UCUM units for children observations"
+* ^experimental = false
 * $UCUM#cm
 * $UCUM#g
 
 ValueSet: IndicatorCodesChildren
 Title: "IndicatorCodesChildren"
 Description: "Indicator-observables for parents and children"
+* ^experimental = false
 * Tempcodes#2c39af9f-8e45-4c88-962f-e7a9e2cd31b6 // "Observation af psykisk tilstand når man er blevet forælder ifm. forebyggelsesindsats for småbørn" 
 * Tempcodes#bee30064-8436-4762-83ed-e47d65f23fc6 // "Observation af samvær, kontakt, forældre-barn relation ifm. forebyggelsesindsats for småbørn" 
 * Tempcodes#e88ddd81-4aa5-4c84-89fb-52de961a7c17 // "Observation af signaler, reaktioner, kommunikation ifm. forebyggelsesindsats for småbørn"
@@ -222,6 +238,7 @@ Description: "Indicator-observables for parents and children"
 ValueSet: IndicatorResultsChildren
 Title: "IndicatorResultsChildren"
 Description: "Result values for children indicators"
+* ^experimental = false
 * Tempcodes#96e3eda6-3eb7-4fbb-9850-fc6dfafadb4a "Der er konstateret et problem, og lavet en bemærkning" 
 * Tempcodes#1b64f768-5133-4633-85a4-2b97fcaa1f7a "Der er intet at bemærke"
 //* $SCT#228150001 //|mental helbredssvækkelse| (bemærkninger til mors psykiske tilstand)

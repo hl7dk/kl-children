@@ -40,7 +40,7 @@ Description: "Tobacco observation profile used in the children database"
 * status ^short = "[DK] tobaksobservationStatus"
 
 Instance: RikkeTobaccoObservation
-InstanceOf: klgateway-children-feeding-observation
+InstanceOf: klgateway-children-tobacco-observation
 Usage: #example
 Title: "RikkeTobaccoObservation"
 Description: "Rikkes tobaksobservation ved 2mrd"
