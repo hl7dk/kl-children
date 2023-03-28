@@ -5,7 +5,6 @@ Title: "KLGatewayChildrenEncounter"
 Description: "Encounter for health prevention and need-based visits from childrens nurses"
 * identifier ..0
 * statusHistory ..0
-* class = $v3-ActCode#HH
 * class.version ..0
 * class.display ..0
 * class.userSelected ..0
@@ -60,11 +59,22 @@ Description: "Kontakt, hvor der leveres besøg ved det ca. 2 måneder gamle barn
 
 Instance: 10mthEncounter
 InstanceOf: klgateway-children-encounter
-Title: "2 måneders besøg ved Rikke"
+Title: "10 måneders besøg ved Rikke"
 Usage: #example
 Description: "Kontakt, hvor der leveres besøg ved det 8-11 måneder gamle barn til Rikke og hendes familie"
-* type = Tempcodes##3f3e6489-31bd-44cf-9920-3c632868feb7 "Besøg ved det 8-11 måneder gamle barn"
+* type = Tempcodes#3f3e6489-31bd-44cf-9920-3c632868feb7 "Besøg ved det 8-11 måneder gamle barn"
 * period.start = 2021-03-09T10:15:00.000Z
 * status = $EncounterStatus#finished
 * subject = Reference(Rikke)
 * class = $V3ACTCODES#HH
+
+Instance: SchoolStartEncounter
+InstanceOf: klgateway-children-encounter
+Title: "Indskolingsundersøgelse Lars"
+Usage: #example
+Description: "Kontakt, der er Lars' indskolingsundersøgelse"
+* type = Tempcodes#c06ed6f1-be9d-460e-a45e-34821bcbd533 "Indskolingsundersøgelse"
+* period.start = 2021-10-21T10:45:00.000Z
+* status = $EncounterStatus#finished
+* subject = Reference(Lars)
+* class = $V3ACTCODES#AMB

@@ -80,7 +80,7 @@ ValueSet: ParentTypes
 Id: ParentTypes
 Title: "ParentTypes"
 Description: "Limitation on HL7 role class to only represent parent-relationships, as accepted in the children data-set"
-* $RoleClass#PRN
+* $RoleCode#PRN
 //* $RoleClass#GUARD
 
 ValueSet: BodyheightSCTobservablesChildren
@@ -183,7 +183,7 @@ Description: "UCUM units for children observations"
 * $UCUM#cm
 * $UCUM#g
 
-ValueSet: 
+ValueSet: IndicatorCodesChildren
 Title: "IndicatorCodesChildren"
 Description: "Indicator-observables for parents and children"
 * Tempcodes#2c39af9f-8e45-4c88-962f-e7a9e2cd31b6 // "Observation af psykisk tilstand når man er blevet forælder ifm. forebyggelsesindsats for småbørn" 
@@ -222,8 +222,8 @@ Description: "Indicator-observables for parents and children"
 ValueSet: IndicatorResultsChildren
 Title: "IndicatorResultsChildren"
 Description: "Result values for children indicators"
-* #96e3eda6-3eb7-4fbb-9850-fc6dfafadb4a "Der er konstateret et problem, og lavet en bemærkning" 
-* #1b64f768-5133-4633-85a4-2b97fcaa1f7a "Der er intet at bemærke"
+* Tempcodes#96e3eda6-3eb7-4fbb-9850-fc6dfafadb4a "Der er konstateret et problem, og lavet en bemærkning" 
+* Tempcodes#1b64f768-5133-4633-85a4-2b97fcaa1f7a "Der er intet at bemærke"
 //* $SCT#228150001 //|mental helbredssvækkelse| (bemærkninger til mors psykiske tilstand)
 //* $SCT#737368006 //|Caregiver-child relationship problem| (bemærkning til samspil og kontakt)
 //* $SCT#247806005 //|dårligt tilpas| (Eller 276247002 |misforhold vedrørende sindsstemning|) (Bemærkning til signaler og reaktioner)

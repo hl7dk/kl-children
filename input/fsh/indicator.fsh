@@ -39,3 +39,25 @@ Description: "Indicator profile used in the children database"
 * effectiveDateTime ^short = "[DK] Indikatortid" //Behøver ikke både kontakt og tid.
 * status ^short = "[DK] IndikatorStatus"
 
+Instance: RikkeIndicatorSK
+InstanceOf: klgateway-children-indicator
+Usage: #example
+Title: "RikkeIndicatorSK"
+Description: "Rikkes samvær og kontakt indikator ved 2mrd"
+* subject = Reference(Rikke)
+* encounter = Reference(2mthEncounter)
+* code.coding = Tempcodes#bee30064-8436-4762-83ed-e47d65f23fc6 "Observation af samvær, kontakt, forældre-barn relation ifm. forebyggelsesindsats for småbørn" 
+* valueCodeableConcept = Tempcodes#96e3eda6-3eb7-4fbb-9850-fc6dfafadb4a "Der er konstateret et problem, og lavet en bemærkning" 
+* status = #final
+* effectiveDateTime = 2020-07-07T00:00:00.000Z
+
+Instance: KirstenIndicatorMS
+InstanceOf: klgateway-children-indicator
+Usage: #example
+Title: "KirstenIndicatorMS"
+Description: "Kirstens psykiske tilstand ved 2mrd"
+* subject = Reference(Kirsten)
+* code.coding = Tempcodes#2c39af9f-8e45-4c88-962f-e7a9e2cd31b6 "Observation af psykisk tilstand når man er blevet forælder ifm. forebyggelsesindsats for småbørn" 
+* valueCodeableConcept = Tempcodes#96e3eda6-3eb7-4fbb-9850-fc6dfafadb4a "Der er konstateret et problem, og lavet en bemærkning" 
+* status = #final
+* effectiveDateTime = 2020-07-07T00:00:00.000Z

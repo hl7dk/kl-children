@@ -36,5 +36,17 @@ Description: "Tobacco observation profile used in the children database"
 * value[x] ^short = "[DK] tobaksobservationsResultat"
 * subject ^short = "[DK] tobaksobservationSubjekt"
 * encounter ^short = "[DK] tobaksobservationKontakt"
-* effective[x] ^short = "[DK] tobaksobservationTid" //Behøver ikke både kontakt og tid.
+* effective[x] ^short = "[DK] tobaksobservationTid"
 * status ^short = "[DK] tobaksobservationStatus"
+
+Instance: RikkeTobaccoObservation
+InstanceOf: klgateway-children-feeding-observation
+Usage: #example
+Title: "RikkeTobaccoObservation"
+Description: "Rikkes tobaksobservation ved 2mrd"
+* subject = Reference(Rikke)
+* encounter = Reference(2mthEncounter)
+* code.coding = $SCT#229819007 //Tobacco use and exposure (observable entity)
+* valueCodeableConcept = $SCT#228524006 //|Exposed to tobacco smoke at home (finding)|
+* status = #final
+* effectiveDateTime = 2020-07-07T00:00:00.000Z

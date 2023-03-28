@@ -26,8 +26,9 @@ Description: "Administrative information about a citizen receiving care or care 
 * managingOrganization.identifier 1..1
 * managingOrganization.identifier only dk-core-sor-identifier
 * managingOrganization.display ..0
-* link ..1
+* link ..*
 * link MS
+* link.type = http://hl7.org/fhir/link-type#seealso
 * link.other only Reference(klgateway-children-related-parent)
 * link.other ^type.aggregation = #bundled
 
@@ -47,3 +48,28 @@ Usage: #example
 * managingOrganization.identifier.use = #official
 * managingOrganization.identifier.value =  "123456789012345"
 * managingOrganization.identifier.system = "urn:oid:1.2.208.176.1.1"
+
+Instance: Lars
+InstanceOf: klgateway-children-citizen
+Description: "Barnet Lars"
+Usage: #example
+* identifier.use = #official
+* identifier.value = "0505159995"
+* identifier.system = "urn:oid:1.2.208.176.1.2"
+* managingOrganization.identifier.use = #official
+* managingOrganization.identifier.value =  "123456789012345"
+* managingOrganization.identifier.system = "urn:oid:1.2.208.176.1.1"
+
+
+Instance: Kirsten
+InstanceOf: klgateway-children-citizen
+Description: "Borger, Kirsten"
+Usage: #example
+* identifier.use = #official
+* identifier.value = "2911829996"
+* identifier.system = "urn:oid:1.2.208.176.1.2"
+* managingOrganization.identifier.use = #official
+* managingOrganization.identifier.value =  "123456789012345"
+* managingOrganization.identifier.system = "urn:oid:1.2.208.176.1.1"
+* link.type = http://hl7.org/fhir/link-type#seealso
+* link.other = Reference(RikkesParent)

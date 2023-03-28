@@ -38,3 +38,15 @@ Description: "Profile used to document mental state in the children database"
 * encounter ^short = "[DK] mentalStatusKontakt"
 * effective[x] ^short = "[DK] mentalStatusTid"
 * status ^short = "[DK] mentalStatusStatus"
+
+Instance: LarsmentalStateObservation
+InstanceOf: klgateway-children-mental-state
+Usage: #example
+Title: "LarsMentalState"
+Description: "Lars egenvurderede generelle trivsel ved indskolingsundersøgelsen"
+* subject = Reference(Lars)
+* encounter = Reference(SchoolStartEncounter)
+* code.coding = $SCT#285854004 //|Emotion (observable entity)|
+* valueCodeableConcept = Tempcodes#6bea1014-8e30-40e7-9274-2b02376c0b1b "For det meste glad"
+* status = #final
+* effectiveDateTime = 2021-10-21T10:45:00.000Z

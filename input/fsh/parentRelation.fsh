@@ -19,3 +19,10 @@ Description: "Profile for describing the relationship between the child, and the
 
 * patient ^short = "[DK] harBarn"
 * relationship ^short = "[DK] forældreType"
+
+Instance: RikkesParent
+InstanceOf: klgateway-children-related-parent
+Description: "RikkesParent"
+Usage: #example
+* patient = Reference(Rikke)
+* relationship = $RoleCode#PRN

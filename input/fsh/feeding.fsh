@@ -40,7 +40,7 @@ Description: "Feeding observation profile used in the children database"
 * value[x] ^short = "[DK] madningsobservationsResultat"
 * subject ^short = "[DK] madningsobservationSubjekt"
 * encounter ^short = "[DK] madningsobservationKontakt"
-* effective[x] ^short = "[DK] madningsobservationTid" //Behøver ikke både kontakt og tid.
+* effective[x] ^short = "[DK] madningsobservationTid" 
 * status ^short = "[DK] madningsobservationStatus"
 
 
@@ -82,7 +82,7 @@ Description: "Rikkes ammestatus, med rigtig angivelse af tid"
 * effectivePeriod.end = 2020-07-07T00:00:00.000Z
 
 Instance: RikkeFeedingObservation2
-InstanceOf: klgateway-children-feeding-observation2
+InstanceOf: klgateway-children-feeding-observation
 Usage: #example
 Title: "RikkeFeedingObservation2"
 Description: "Rikkes ammestatus, ved stop af amning"

@@ -43,4 +43,20 @@ Description: "Head circumference profile used in Danish Municipalities, derived 
 * effectiveDateTime ^short = "[DK] hovedomkredsTid"
 * status ^short = "[DK] hovedomkredsStatus"
 
-
+Instance: RikkeHeadCircum
+InstanceOf: klgateway-children-headcircum
+Usage: #example
+Title: "RikkeHeadCircum"
+Description: "Rikkes hovedomkreds"
+* subject = Reference(Rikke)
+* encounter = Reference(2mthEncounter)
+* category.coding.system = "http://terminology.hl7.org/CodeSystem/observation-category"
+* category.coding.code = #vital-signs
+* code.coding[snomedSlice] = $SCT#363812007 "Head circumference"
+* code.coding[HeadCircumCode] = $LOINC#9843-4
+* valueQuantity.value = 38.3
+* valueQuantity.unit = "cm"
+* valueQuantity.system = $UCUM
+* valueQuantity.code = #cm
+* status = #final
+* effectiveDateTime = 2020-07-07T12:45:00.000Z
