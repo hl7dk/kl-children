@@ -1,5 +1,5 @@
 ### Scope and usage
-KLGatewayChildrenMentalState is used to document how children in school self-report that they thrive.
+KLGatewayChildrenMentalState is used to document how children in school self-report that they thrive. Note that two instanses should be reported if both the general happines, and school specific happines is needed.
 
 Observation.code.coding, holds the valid value for the types of observations allowed. It is bound to a fixed SNOMED CT code 'Emotion'. (That 'Emotion' is the observation code might be counterintuitive, but when children are asked if they are happy in their day to day life, the observable interpreted is actually a feeling, and so the observation code becomes 'Emotion')
 

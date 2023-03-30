@@ -4,7 +4,7 @@ Title: "Tempcodes"
 Description: "Tempcodes to be implemented in KL-term"
 * ^experimental = false
 * ^caseSensitive = false
-* #6c2a4f15-d775-47f3-9868-b26fbff9ff8b "Forebyggelsesbesøg af småbørnssundhedsplejen"
+* #6c2a4f15-d775-47f3-9868-b26fbff9ff8b "Forebyggelseskontakt i småbørnssundhedsplejen"
 * #6c2a4f15-d775-47f3-9868-b26fbff9ff8b #d3c00541-f1d3-4c43-b5fc-16e8914ca1df "Graviditetsbesøg"
 * #6c2a4f15-d775-47f3-9868-b26fbff9ff8b #7d35a193-e808-4e77-b361-6c0d114d021f "Barselsbesøg"
 * #6c2a4f15-d775-47f3-9868-b26fbff9ff8b #b4bf6058-502a-4d64-bb8e-369661f43b47 "Etableringsbesøg"

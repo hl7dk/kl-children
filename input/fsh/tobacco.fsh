@@ -29,6 +29,7 @@ Description: "Tobacco observation profile used in the children database"
 * device 0..0
 * hasMember 0..0
 * derivedFrom 0..0
+* obeys obs-2
 
 //Short Danish descriptions
 * dataAbsentReason ^short = "[DK] tobaksobservationMangler"

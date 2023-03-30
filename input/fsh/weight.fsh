@@ -41,7 +41,7 @@ Description: "Profile of HL7 body weight profile used in Danish Municipalities"
 * encounter ^short = "[DK] vægtkontakt"
 * effectiveDateTime ^short = "[DK] vægttid"
 * status ^short = "[DK] vægtStatus"
-
+* obeys obs-2
 
 Instance: RikkeBodyWeight
 InstanceOf: klgateway-children-bodyweight
@@ -49,14 +49,14 @@ Usage: #example
 Title: "RikkeBodyWeight"
 Description: "Rikkes vægt"
 * subject = Reference(Rikke)
-* encounter = Reference(2mthEncounter)
+* encounter = Reference(2nd1mthEncounter)
 * category.coding.system = "http://terminology.hl7.org/CodeSystem/observation-category"
 * category.coding.code = #vital-signs
 * code.coding[snomedSlice] = $SCT#276885007
 * code.coding[BodyWeightCode] = $LOINC#29463-7
-* valueQuantity.value = 4300
+* valueQuantity.value = 5100
 * valueQuantity.unit = "g"
 * valueQuantity.system = $UCUM
 * valueQuantity.code = #g
 * status = #final
-* effectiveDateTime = 2020-07-07T12:45:00.000Z
+* effectiveDateTime = 2020-06-01

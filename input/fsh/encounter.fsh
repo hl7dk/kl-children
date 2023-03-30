@@ -45,6 +45,17 @@ Description: "Encounter for health prevention and need-based visits from childre
 * class ^short = "[DK] kontaktklasse"
 
 
+Instance: 2nd1mthEncounter
+InstanceOf: klgateway-children-encounter
+Title: "Andet besøg i barnets første levemåned ved Rikke"
+Usage: #example
+Description: "Kontakt, hvor der leveres andet besøg i barnets første levemåned til Rikke og hendes familie"
+* type = Tempcodes#563c4174-f451-4c87-8db8-8d5472ca7ff6 "Andet besøg i barnets første levemåned"
+* period.start = 2020-06-01
+* status = $EncounterStatus#finished
+* subject = Reference(Rikke)
+* class = $V3ACTCODES#HH
+
 Instance: 2mthEncounter
 InstanceOf: klgateway-children-encounter
 Title: "2 måneders besøg ved Rikke"

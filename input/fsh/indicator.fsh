@@ -61,3 +61,4 @@ Description: "Kirstens psykiske tilstand ved 2mrd"
 * valueCodeableConcept = Tempcodes#96e3eda6-3eb7-4fbb-9850-fc6dfafadb4a "Der er konstateret et problem, og lavet en bemærkning" 
 * status = #final
 * effectiveDateTime = 2020-07-07T00:00:00.000Z
+

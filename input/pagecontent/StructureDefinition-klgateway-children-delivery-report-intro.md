@@ -5,7 +5,8 @@ The report is a FHIR Bundle that allows different ressources to be grouped and h
 
 For some encounter types, specific observations are required. This report has implemented rules known as FHIR invariants that check, that these conditions holds true. The implemented invariants are:
 
-* If there is an encounter of type 'Besøg ved det ca. 2 måneder gamle barn' then weight and height meassurements should be included in the bundle 
+* "If there is an encounter of type 'Andet besøg i barnets første levemåned' or 'Besøg ved det 4-6 måneder gamle barn' or 'indskolingsundersøgelse' or 'udskolingsundersøgelse' then weight and height meassurements should be included in the bundle" 
+* If there is an encounter of type 'Etableringsbesøg' then tobacco observation should be included in the bundle
 
 ### Conversions between Danish information model and FHIR-profile
 

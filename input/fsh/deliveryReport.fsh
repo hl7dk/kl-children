@@ -37,12 +37,15 @@ Expression: "entry.ofType(Condition).all(
  or resource.conformsTo('http://fhir.kl.dk/children/StructureDefinition/klgateway-children-bodyweight'))"
 
 Invariant: gateway-children-report-2
-Description: "If there is an encounter of type '2 måneders undersøgelse' then weight and height meassurements should be included in the bundle"
+Description: "If there is an encounter of type 'Andet besøg i barnets første levemåned' eller 'Besøg ved det 4-6 måneder gamle barn' eller 'indskolingsundersøgelse' eller 'udskolingsundersøgelse' then weight and height meassurements should be included in the bundle"
 Severity: #error
-Expression: "entry.select((resource as Encounter).type.coding.where(code = '51f30d1c-d60e-4e3e-ac22-ec9712ea962d')).exists() implies (
+Expression: "entry.select((resource as Encounter).type.coding.where(
+    code = '563c4174-f451-4c87-8db8-8d5472ca7ff6'
+    or code = '58ff370b-a775-4bec-b24a-91604e0a5fe7'
+    or code = 'c06ed6f1-be9d-460e-a45e-34821bcbd533'
+    or code = 'dd766967-4d02-4c17-8ed3-021852785fdf')).exists() implies (
     entry.select((resource as Observation).code.coding.where(code = '276885007')).exists()
-    and entry.select((resource as Observation).code.coding.where(code = '248334005')).exists())"
-
+    and entry.select((resource as Observation).code.coding.where(code = '248334005' or code = '248333004')).exists())"
 
 //retunerer sandt, hvis der findes en ressource af typen encounter med koden ......
 //entry.select((resource as Encounter).type.coding.where(code = '51f30d1c-d60e-4e3e-ac22-ec9712ea962d')).exists()
@@ -51,6 +54,34 @@ Expression: "entry.select((resource as Encounter).type.coding.where(code = '51f3
 //entry.select((resource as Observation).code.coding.where(code = '248334005')).exists() and entry.select((resource as Observation).code.coding.where(code = '276885007')).exists()
 //altså, hvis encounteren er en 2 måneders undersøgelse, så skal der indberettes en højde (længde)
 //entry.select((resource as Encounter).type.coding.where(code = '51f30d1c-d60e-4e3e-ac22-ec9712ea962d')).exists() implies entry.select((resource as Observation).code.coding.where(code = '276885007')).exists()
+
+Invariant: gateway-children-report-3
+Description: "If there is an encounter of type 'Etableringsbesøg' then tobacco observation should be included in the bundle"
+Severity: #error
+Expression: "entry.select((resource as Encounter).type.coding.where(code = 'b4bf6058-502a-4d64-bb8e-369661f43b47')).exists() implies (
+    entry.select((resource as Observation).code.coding.where(code = '229819007')).exists())"
+
+
+Instance: RikkeDeliveryReport2nd1mth
+InstanceOf: klgateway-children-delivery-report
+Description: "Indberetning for Rikke, andet besøg første levemåned"
+Usage: #example
+* type = #collection
+* timestamp = 2020-06-01T23:45:00.000Z
+
+* entry[+].fullUrl = "Patient/Rikke"
+* entry[=].resource = Rikke
+
+* entry[+].fullUrl = "Encounter/2nd1mthEncounter"
+* entry[=].resource = 2nd1mthEncounter
+
+* entry[+].fullUrl = "Observation/RikkeBodyHeight"
+* entry[=].resource = RikkeBodyHeight
+
+* entry[+].fullUrl = "Observation/RikkeBodyWeight"
+* entry[=].resource = RikkeBodyWeight
+
+
 
 Instance: RikkeDeliveryReport2months
 InstanceOf: klgateway-children-delivery-report
@@ -71,12 +102,6 @@ Usage: #example
 * entry[+].fullUrl = "Encounter/2mthEncounter"
 * entry[=].resource = 2mthEncounter
 
-* entry[+].fullUrl = "Observation/RikkeBodyHeight"
-* entry[=].resource = RikkeBodyHeight
-
-* entry[+].fullUrl = "Observation/RikkeBodyWeight"
-* entry[=].resource = RikkeBodyWeight
-
 * entry[+].fullUrl = "Observation/RikkeHeadCircum"
 * entry[=].resource = RikkeHeadCircum
 
@@ -92,27 +117,17 @@ Usage: #example
 * entry[+].fullUrl = "Observation/KirstenIndicatorMS"
 * entry[=].resource = KirstenIndicatorMS
 
-Instance: RikkeDeliveryReport2monthsError
+
+Instance: ERRORinRikkeDeliveryReport2nd1mth
 InstanceOf: klgateway-children-delivery-report
-Description: "Indberetning for Rikke 2 måneder, giver fejl ift. invariant gateway-children-report-2"
+Description: "Indberetning for Rikke, andet besøg første levemåned uden højde og vægt giver fejl ift. invariant gateway-children-report-2"
 Usage: #example
 * type = #collection
-* timestamp = 2020-07-08T23:45:00.000Z
+* timestamp = 2020-06-01T23:45:00.000Z
 
 * entry[+].fullUrl = "Patient/Rikke"
 * entry[=].resource = Rikke
 
-* entry[+].fullUrl = "Patient/Kirsten"
-* entry[=].resource = Kirsten
+* entry[+].fullUrl = "Encounter/2nd1mthEncounter"
+* entry[=].resource = 2nd1mthEncounter
 
-* entry[+].fullUrl = "RelatedPerson/RikkesParent"
-* entry[=].resource = RikkesParent
-
-* entry[+].fullUrl = "Encounter/2mthEncounter"
-* entry[=].resource = 2mthEncounter
-
-* entry[+].fullUrl = "Observation/RikkeIndicatorSK"
-* entry[=].resource = RikkeIndicatorSK
-
-* entry[+].fullUrl = "Observation/KirstenIndicatorMS"
-* entry[=].resource = KirstenIndicatorMS

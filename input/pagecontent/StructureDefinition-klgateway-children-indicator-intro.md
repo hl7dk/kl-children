@@ -1,5 +1,5 @@
 ### Scope and usage
-KLGatewayChildrenIndicator is a simple form of observation where a whole area of concern in evaluated.
+KLGatewayChildrenIndicator is a simple form of observation where a whole area of concern is evaluated.
 
 
  Observation.code.coding, holds the valid values for the types of indicators. It is bound to a mandatory set of codes. The allowed codes are differentiated into four codes for small children (småbørnsområdet), 17 codes for school-start examination (indskolingsundersøgelse) and 10 codes for school-end examination (udskolingsundersøgelse). 
