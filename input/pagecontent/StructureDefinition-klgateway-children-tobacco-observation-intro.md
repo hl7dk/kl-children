@@ -5,7 +5,7 @@ Observation.code.coding, holds the valid value for the types of observations all
 
 Observation.value[x] is a coded value Observation.valueCodeableConcept, which should be drawn from the required ValueSet. The valid values are:
 
-* 'Exposed to tobacco smoke at home' (is registered when a child is exposed to tobaco. Exposure to tobacco smoke is defined by the national childrens database indicator, as explained here: https://sundhedsdatastyrelsen.dk/da/rammer-og-retningslinjer/indberetning_sei/vejledninger_indberetning/bornedatabasen)
+* 'Exposed to tobacco smoke at home' (is registered when a child is exposed to tobaco. Exposure to tobacco smoke is defined by the national childrens database indicator [as explained here](https://sundhedsdatastyrelsen.dk/da/rammer-og-retningslinjer/indberetning_sei/vejledninger_indberetning/bornedatabasen))
 * 'Tobacco user' (is registered when a child reports tobacco use in the school take-off examination/udskolingsundersøgelse)
 * 'No current problems or disability' (is registered when the child does not have problems with tobacco exposure or use)
 
