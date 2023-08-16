@@ -5,7 +5,7 @@ KLGatewayChildrenIndicator is a simple form of observation where a whole area of
  Observation.code.coding, holds the valid values for the types of indicators. It is bound to a mandatory set of codes. The allowed codes are differentiated into four codes for small children (småbørnsområdet), 17 codes for school-start examination (indskolingsundersøgelse) and 10 codes for school-end examination (udskolingsundersøgelse). 
 
 
-For each indicator, Observation.value[x] is a coded value Observation.valueCodeableConcept, which should be drawn from the required ValueSet. If there is nothing to remark, the code should be 'Der er intet at bemærke'. If there is a problem, the code should be 'Der er konstateret et problem, og lavet en bemærkning'.
+For each indicator, Observation.value[x] is a coded value Observation.valueCodeableConcept, which should be drawn from the required ValueSet. If there is nothing to remark, the code should be 'Der er intet at bemærke'. If there is a problem, the code should be 'Problem/bemærkning'.
 
 The effective time of the observation is documented in Observation.effectiveDateTime, all indicators should use the time, where the health nurse has an encounter with the family or child, not the time where a problem first occured.
 

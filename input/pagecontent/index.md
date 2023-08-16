@@ -164,7 +164,7 @@ Information about how small children are fed. It is used for observations of a c
 * The observation code should be present, and fixed to a specific SNOMED CT code
 * One value may exist. It should be drawn from a specific ValueSet, no other codes may be reported.
 * One dataAbsentReason is possible if the value is empty
-* The periode start and end is mandatory, unless you give a date for when breastfeeding was stopped, then it is only one date.
+* The period start and end is mandatory, unless you give a date for when breastfeeding was stopped, then it is only one date.
 * One and only one reference to the Citizen exists
 * A reference to an Encounter may exist
 * One and only one FHIR status exists, and should be drawn from the standard FHIR-ValueSet

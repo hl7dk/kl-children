@@ -27,14 +27,14 @@ Description: "Delivery report to deliver data for each child, including state of
 Invariant: gateway-children-report-1
 Description: "All observation resources shall conform to the observation profiles definesd in this IG"
 Severity: #error
-Expression: "entry.ofType(Condition).all(
-    resource.conformsTo('http://fhir.kl.dk/children/StructureDefinition/klgateway-children-feeding-observation')
- or resource.conformsTo('http://fhir.kl.dk/children/StructureDefinition/klgateway-children-headcircum')
- or resource.conformsTo('http://fhir.kl.dk/children/StructureDefinition/klgateway-children-bodyheight')
- or resource.conformsTo('http://fhir.kl.dk/children/StructureDefinition/klgateway-children-indicator')
- or resource.conformsTo('http://fhir.kl.dk/children/StructureDefinition/klgateway-children-mental-state')
- or resource.conformsTo('http://fhir.kl.dk/children/StructureDefinition/klgateway-children-tobacco-observation')
- or resource.conformsTo('http://fhir.kl.dk/children/StructureDefinition/klgateway-children-bodyweight'))"
+Expression: "entry.select(resource as Observation).all(
+    $this.conformsTo('http://fhir.kl.dk/children/StructureDefinition/klgateway-children-feeding-observation')
+ or $this.conformsTo('http://fhir.kl.dk/children/StructureDefinition/klgateway-children-headcircum')
+ or $this.conformsTo('http://fhir.kl.dk/children/StructureDefinition/klgateway-children-bodyheight')
+ or $this.conformsTo('http://fhir.kl.dk/children/StructureDefinition/klgateway-children-indicator')
+ or $this.conformsTo('http://fhir.kl.dk/children/StructureDefinition/klgateway-children-mental-state')
+ or $this.conformsTo('http://fhir.kl.dk/children/StructureDefinition/klgateway-children-tobacco-observation')
+ or $this.conformsTo('http://fhir.kl.dk/children/StructureDefinition/klgateway-children-bodyweight'))"
 
 Invariant: gateway-children-report-2
 Description: "If there is an encounter of type 'Andet besøg i barnets første levemåned' eller 'Besøg ved det 4-6 måneder gamle barn' eller 'indskolingsundersøgelse' eller 'udskolingsundersøgelse' then weight and height meassurements should be included in the bundle"
@@ -117,6 +117,15 @@ Usage: #example
 * entry[+].fullUrl = "Observation/KirstenIndicatorMS"
 * entry[=].resource = KirstenIndicatorMS
 
+Instance: RikkePainVAS
+InstanceOf: Observation
+Usage: #example
+Title: "RikkesPainVAS"
+Description: "rikke smerte målt med VAS"
+* subject = Reference(Rikke)
+* code.coding = $SCT#443394008
+* valueInteger = 20
+* status = #final
 
 Instance: ERRORinRikkeDeliveryReport2nd1mth
 InstanceOf: klgateway-children-delivery-report
@@ -130,4 +139,7 @@ Usage: #example
 
 * entry[+].fullUrl = "Encounter/2nd1mthEncounter"
 * entry[=].resource = 2nd1mthEncounter
+
+* entry[+].fullUrl = "Observation/RikkePainVAS"
+* entry[=].resource = RikkePainVAS
 

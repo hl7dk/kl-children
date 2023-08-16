@@ -50,8 +50,8 @@ Title: "RikkeBodyWeight"
 Description: "Rikkes vægt"
 * subject = Reference(Rikke)
 * encounter = Reference(2nd1mthEncounter)
-* category.coding.system = "http://terminology.hl7.org/CodeSystem/observation-category"
-* category.coding.code = #vital-signs
+* category[VSCat].coding.system = "http://terminology.hl7.org/CodeSystem/observation-category"
+* category[VSCat].coding.code = #vital-signs
 * code.coding[snomedSlice] = $SCT#276885007
 * code.coding[BodyWeightCode] = $LOINC#29463-7
 * valueQuantity.value = 5100

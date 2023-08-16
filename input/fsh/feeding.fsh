@@ -47,12 +47,12 @@ Description: "Feeding observation profile used in the children database"
 Invariant: feed-1
 Description: "If code is'breastfeeding stopped', effective should be given as a dateTime"
 Severity: #error
-Expression: "valueCodeableConcept.coding.code = '169746009' implies (effectiveDateTime.exists())"
+Expression: "value.coding.code = '169746009' implies (effective.start.empty())"
 
 Invariant: feed-2
-Description: "If code is 'Exclusively breastfed' or 'Breastfeeding with supplement' effective[x] should be given as a periode"
+Description: "If code is 'Exclusively breastfed' or 'Breastfeeding with supplement' effective[x] should be given as a period"
 Severity: #error
-Expression: "((valueCodeableConcept.coding.code = '169743001') or (valueCodeableConcept.coding.code = '1145307003')) implies (effectivePeriod.exists())"
+Expression: "((value.coding.code = '169743001') or (value.coding.code = '1145307003')) implies (effective.start.exists())"
 
 //https://hl7.github.io/fhirpath.js/
 

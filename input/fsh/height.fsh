@@ -50,7 +50,7 @@ Description: "Body height profile used in Danish Municipalities, derived from HL
 Invariant: obs-1
 Description: "If height is given as a decimal point number, an error is returned"
 Severity: #error
-Expression: "valueQuantity.value.toString().matches('^[0-9]+$')"
+Expression: "value.ofType(Quantity).value.toString().matches('^[0-9]+$')"
 
 Invariant: obs-2
 Description: "If the value is not given, then explain why using dataAbsentReason"
@@ -65,8 +65,8 @@ Title: "RikkeBodyHeight"
 Description: "Rikkes kropslængde"
 * subject = Reference(Rikke)
 * encounter = Reference(2nd1mthEncounter)
-* category.coding.system = "http://terminology.hl7.org/CodeSystem/observation-category"
-* category.coding.code = #vital-signs
+* category[VSCat].coding.system = "http://terminology.hl7.org/CodeSystem/observation-category"
+* category[VSCat].coding.code = #vital-signs
 * code.coding[snomedSlice] = $SCT#248334005
 * code.coding[BodyHeightCode] = $LOINC#8302-2
 * valueQuantity.value = 57

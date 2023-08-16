@@ -50,8 +50,8 @@ Title: "RikkeHeadCircum"
 Description: "Rikkes hovedomkreds"
 * subject = Reference(Rikke)
 * encounter = Reference(2mthEncounter)
-* category.coding.system = "http://terminology.hl7.org/CodeSystem/observation-category"
-* category.coding.code = #vital-signs
+* category[VSCat].coding.system = "http://terminology.hl7.org/CodeSystem/observation-category"
+* category[VSCat].coding.code = #vital-signs
 * code.coding[snomedSlice] = $SCT#363812007 "Head circumference"
 * code.coding[HeadCircumCode] = $LOINC#9843-4
 * valueQuantity.value = 38.3
