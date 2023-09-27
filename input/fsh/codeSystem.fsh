@@ -164,8 +164,7 @@ Title: "SCTobservablesChildren"
 Description: "SNOMED CT observables for children observations"
 * ^experimental = false
 * $SCT#425024002 // Body weight without shoes
-* $SCT#248334005 //|Length of body (observable entity)|
-* $SCT#248333004 //|Standing height (observable entity)|
+* $SCT#1153637007 //"Body height (observable entity)"
 * $SCT#229819007 //Tobacco use and exposure (observable entity)
 * $SCT#169740003 //|Infant feeding method|
 * $SCT#285854004 //|Emotion (observable entity)|
