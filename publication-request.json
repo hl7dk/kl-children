@@ -1,5 +1,5 @@
 {
-    "package-id" : "kl.fhir.dk.children",
+    "package-id" : "kl.dk.fhir.children",
     "version" : "1.0.0",
     "path" : "http://fhir.kl.dk/children/1.0.0",
     "mode" : "milestone",

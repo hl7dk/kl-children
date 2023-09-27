@@ -2,7 +2,7 @@
 # │  The properties below are used to create the ImplementationGuide resource. For a list of       │
 # │  supported properties, see: https://fshschool.org/docs/sushi/configuration/                    │
 # ╰────────────────────────────────────────────────────────────────────────────────────────────────╯
-id: kl.fhir.dk.children
+id: kl.dk.fhir.children
 canonical: http://fhir.kl.dk/children
 name: KLChildren
 status: active
