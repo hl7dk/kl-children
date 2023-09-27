@@ -210,3 +210,16 @@ Information about how children in school self-report that they thrive.
 * One and only one reference to the Citizen exists
 * A reference to an Encounter may exist
 * One and only one FHIR status exists, and should be drawn from the standard FHIR-ValueSet
+
+
+### Dependencies
+{% include dependency-table.xhtml %}
+
+### Cross Version Analysis
+{% include cross-version-analysis.xhtml %}
+
+### Global Profiles
+{% include globals-table.xhtml %}
+
+### IP Statements
+{% include ip-statements.xhtml %}

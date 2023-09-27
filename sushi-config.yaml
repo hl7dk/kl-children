@@ -6,7 +6,7 @@ id: kl.fhir.dk.children
 canonical: http://fhir.kl.dk/children
 name: KLChildren
 status: draft
-version: 0.1.0
+version: 1.0.0
 fhirVersion: 4.0.1
 copyrightYear: 2023+
 releaseLabel: ci-build
@@ -19,6 +19,9 @@ dependencies:
     uri: https://hl7.dk/fhir/core
     version: 2.1.0
   kl.dk.fhir.term: 1.1.0
+
+parameters:
+  special-url: [http://snomed.info/sct]
 
 # ╭────────────────────────────────────────────menu.xml────────────────────────────────────────────╮
 # │  To use a provided input/includes/menu.xml file, delete the "menu" property below.             │

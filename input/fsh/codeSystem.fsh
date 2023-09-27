@@ -66,40 +66,40 @@
 // * #96e3eda6-3eb7-4fbb-9850-fc6dfafadb4a "Problem/bemærkning" 
 // * #1b64f768-5133-4633-85a4-2b97fcaa1f7a "Der er intet at bemærke"
 
-// CodeSystem: SNOMED_CT_INT
-// Id: v3-snomed-CT
-// Title: "SNOMED CT International Edition"
-// Description: "SNOMED CT is a core clinical healthcare terminology that contains concepts with unique meanings and formal logic based definitions organized into hierarchies."
-// * ^language = #en
-// * ^extension.url = "http://hl7.org/fhir/StructureDefinition/codesystem-properties-mode"
-// * ^extension.valueCode = #not-present
-// * ^url = "http://snomed.info/sct"
-// * ^identifier.system = "urn:ietf:rfc:3986"
-// * ^identifier.value = "urn:oid:2.16.840.1.113883.6.96"
-// * ^version = "3.2.1"
-// * ^status = #active
-// * ^experimental = false
-// * ^date = "2020-11-03"
-// * ^publisher = "International Health Terminology Standards Development Organisation (IHTSDO) trading as SNOMED International"
-// * ^contact.name = "International Health Terminology Standards Development Organisation (IHTSDO) trading as SNOMED International"
-// * ^contact.telecom.system = #email
-// * ^contact.telecom.value = "info@snomed.org"
-// * ^copyright = "This artefact includes content from SNOMED Clinical Terms (SNOMED CT) which is copyrighted material of the International Health Terminology Standards Development Organisation (IHTSDO). Where an implementation of this artefact makes use of SNOMED CT content, the implementer must have the appropriate SNOMED CT Affiliate license - for more information contact http://www.snomed.org/snomed-ct/get-snomed-ct or info@snomed.org"
-// * ^caseSensitive = true
-// * ^content = #fragment
-// * #248334005 "Length of body (observable entity)"
-// * #248333004 "Standing height (observable entity)"
-// * #425024002 "Body weight without shoes"
-// * #363812007 "Head circumference"
-// * #229819007 "Tobacco use and exposure (observable entity)"
-// * #285854004 "Emotion"
-// * #169740003 "Infant feeding method"
-// * #228524006 "Exposed to tobacco smoke at home"
-// * #110483000 "Tobacco user"
-// * #160245001  "No current problems or disability"
-// * #1145307003 "Exclusively breastfed"
-// * #169743001 "Breastfeeding with supplement"
-// * #169746009 "Breastfeeding stopped"
+CodeSystem: SNOMED_CT_INT
+Title: "SNOMED CT International Edition"
+Description: "SNOMED CT is a core clinical healthcare terminology that contains concepts with unique meanings and formal logic based definitions organized into hierarchies."
+//Id: v3-snomed-CT
+* ^language = #en
+* ^extension.url = "http://hl7.org/fhir/StructureDefinition/codesystem-properties-mode"
+* ^extension.valueCode = #not-present
+* ^url = "http://snomed.info/sct"
+* ^identifier.system = "urn:ietf:rfc:3986"
+* ^identifier.value = "urn:oid:2.16.840.1.113883.6.96"
+* ^version = "3.2.1"
+* ^status = #active
+* ^experimental = false
+* ^date = "2020-11-03"
+* ^publisher = "International Health Terminology Standards Development Organisation (IHTSDO) trading as SNOMED International"
+* ^contact.name = "International Health Terminology Standards Development Organisation (IHTSDO) trading as SNOMED International"
+* ^contact.telecom.system = #email
+* ^contact.telecom.value = "info@snomed.org"
+* ^copyright = "This artefact includes content from SNOMED Clinical Terms (SNOMED CT) which is copyrighted material of the International Health Terminology Standards Development Organisation (IHTSDO). Where an implementation of this artefact makes use of SNOMED CT content, the implementer must have the appropriate SNOMED CT Affiliate license - for more information contact http://www.snomed.org/snomed-ct/get-snomed-ct or info@snomed.org"
+* ^caseSensitive = true
+* ^content = #fragment
+* #1153637007 "Body height (observable entity)"
+* #425024002 "Body weight without shoes"
+* #363812007 "Head circumference"
+* #229819007 "Tobacco use and exposure (observable entity)"
+* #285854004 "Emotion"
+* #169740003 "Infant feeding method"
+* #228524006 "Exposed to tobacco smoke at home"
+* #110483000 "Tobacco user"
+* #160245001  "No current problems or disability"
+* #1145307003 "Exclusively breastfed"
+* #169743001 "Breastfeeding with supplement"
+* #169746009 "Breastfeeding stopped"
+* #276885007 "Core body temperature"
 
 
 ValueSet: EncounterTypes
@@ -127,8 +127,7 @@ ValueSet: BodyheightSCTobservablesChildren
 Title: "BodyheightSCTobservablesChildren"
 Description: "SNOMED CT observables for length/height"
 * ^experimental = false
-* $SCT#248334005 //|Length of body (observable entity)|
-* $SCT#248333004 //|Standing height (observable entity)|
+* $SCT#1153637007 "Body height (observable entity)"
 
 ValueSet: BodyweightSCTobservablesChildren
 Title: "BodyweightSCTobservablesChildren"

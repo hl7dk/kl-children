@@ -117,29 +117,31 @@ Usage: #example
 * entry[+].fullUrl = "Observation/KirstenIndicatorMS"
 * entry[=].resource = KirstenIndicatorMS
 
-Instance: RikkePainVAS
-InstanceOf: Observation
-Usage: #example
-Title: "RikkesPainVAS"
-Description: "rikke smerte målt med VAS"
-* subject = Reference(Rikke)
-* code.coding = $SCT#443394008
-* valueInteger = 20
-* status = #final
+//instances used for testing
 
-Instance: ERRORinRikkeDeliveryReport2nd1mth
-InstanceOf: klgateway-children-delivery-report
-Description: "Indberetning for Rikke, andet besøg første levemåned uden højde og vægt giver fejl ift. invariant gateway-children-report-2"
-Usage: #example
-* type = #collection
-* timestamp = 2020-06-01T23:45:00.000Z
+// Instance: RikkePainVAS
+// InstanceOf: Observation
+// Usage: #example
+// Title: "RikkesPainVAS"
+// Description: "rikke smerte målt med VAS"
+// * subject = Reference(Rikke)
+// * code.coding = $SCT#443394008
+// * valueInteger = 20
+// * status = #final
 
-* entry[+].fullUrl = "Patient/Rikke"
-* entry[=].resource = Rikke
+// Instance: ERRORinRikkeDeliveryReport2nd1mth
+// InstanceOf: klgateway-children-delivery-report
+// Description: "Indberetning for Rikke, andet besøg første levemåned uden højde og vægt giver fejl ift. invariant gateway-children-report-2"
+// Usage: #example
+// * type = #collection
+// * timestamp = 2020-06-01T23:45:00.000Z
 
-* entry[+].fullUrl = "Encounter/2nd1mthEncounter"
-* entry[=].resource = 2nd1mthEncounter
+// * entry[+].fullUrl = "Patient/Rikke"
+// * entry[=].resource = Rikke
 
-* entry[+].fullUrl = "Observation/RikkePainVAS"
-* entry[=].resource = RikkePainVAS
+// * entry[+].fullUrl = "Encounter/2nd1mthEncounter"
+// * entry[=].resource = 2nd1mthEncounter
+
+// * entry[+].fullUrl = "Observation/RikkePainVAS"
+// * entry[=].resource = RikkePainVAS
 

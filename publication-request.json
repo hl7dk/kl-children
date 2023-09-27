@@ -1,0 +1,15 @@
+{
+    "package-id" : "kl.fhir.dk.children",
+    "version" : "1.0.0",
+    "path" : "http://fhir.kl.dk/children/1.0.0",
+    "mode" : "milestone",
+    "status" : "release",
+    "sequence" : "Releases",
+    "descmd": "@release-notes.md",
+    "title" : "KLChildren",
+    "first" : true,
+    "desc" : "Initial release",
+    "ci-build" : "https://build.fhir.org/ig/hl7dk/kl-children/",
+    "category" : "Clinical Registries",
+    "introduction" : "This IG includes models for reporting childrens health data from Danish Municipalities for secondary purposes."
+  }
