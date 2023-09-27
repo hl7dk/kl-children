@@ -52,7 +52,7 @@ Description: "Rikkes vægt"
 * encounter = Reference(2nd1mthEncounter)
 * category[VSCat].coding.system = "http://terminology.hl7.org/CodeSystem/observation-category"
 * category[VSCat].coding.code = #vital-signs
-* code.coding[snomedSlice] = $SCT#276885007
+* code.coding[snomedSlice] = $SCT#425024002
 * code.coding[BodyWeightCode] = $LOINC#29463-7
 * valueQuantity.value = 5100
 * valueQuantity.unit = "g"

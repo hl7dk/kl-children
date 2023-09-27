@@ -44,8 +44,8 @@ Expression: "entry.select((resource as Encounter).type.coding.where(
     or code = '58ff370b-a775-4bec-b24a-91604e0a5fe7'
     or code = 'c06ed6f1-be9d-460e-a45e-34821bcbd533'
     or code = 'dd766967-4d02-4c17-8ed3-021852785fdf')).exists() implies (
-    entry.select((resource as Observation).code.coding.where(code = '276885007')).exists()
-    and entry.select((resource as Observation).code.coding.where(code = '248334005' or code = '248333004')).exists())"
+    entry.select((resource as Observation).code.coding.where(code = '425024002')).exists()
+    and entry.select((resource as Observation).code.coding.where(code = '1153637007')).exists())"
 
 //retunerer sandt, hvis der findes en ressource af typen encounter med koden ......
 //entry.select((resource as Encounter).type.coding.where(code = '51f30d1c-d60e-4e3e-ac22-ec9712ea962d')).exists()
