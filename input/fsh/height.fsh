@@ -67,7 +67,7 @@ Description: "Rikkes kropslængde"
 * encounter = Reference(2nd1mthEncounter)
 * category[VSCat].coding.system = "http://terminology.hl7.org/CodeSystem/observation-category"
 * category[VSCat].coding.code = #vital-signs
-* code.coding[snomedSlice] = $SCT#248334005
+* code.coding[snomedSlice] = $SCT#1153637007
 * code.coding[BodyHeightCode] = $LOINC#8302-2
 * valueQuantity.value = 57
 * valueQuantity.unit = "cm"
