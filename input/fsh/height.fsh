@@ -1,12 +1,11 @@
 Profile: KLGatewayChildrenBodyHeight
-Parent: http://hl7.org/fhir/StructureDefinition/bodyheight
+Parent: http://hl7.dk/fhir/core/StructureDefinition/dk-core-basic-observation
 Id: klgateway-children-bodyheight
 Title: "KLGatewayChildrenBodyHeight"
-Description: "Body height profile used in Danish Municipalities, derived from HL7 standard profile"
+Description: "Body height profile used in Danish Municipalities, derived from HL7 DK standard profile"
 //Constraints
-* code.coding contains snomedSlice 1..1
-* code.coding[snomedSlice] from BodyheightSCTobservablesChildren (extensible)
-* code.coding[snomedSlice].system = $SCT
+* code.coding[LOINC] = $LOINC#8302-2 //Body height
+* code.coding[SNOMEDCT] from BodyheightSCTobservablesChildren (extensible)
 * value[x] only Quantity
 * valueQuantity.code = #cm
 * subject 1..1
@@ -52,11 +51,6 @@ Description: "If height is given as a decimal point number, an error is returned
 Severity: #error
 Expression: "value.ofType(Quantity).value.toString().matches('^[0-9]+$')"
 
-Invariant: obs-2
-Description: "If the value is not given, then explain why using dataAbsentReason"
-Severity: #error
-Expression: "value.empty() implies dataAbsentReason.exists()"
-
 
 Instance: RikkeBodyHeight
 InstanceOf: klgateway-children-bodyheight
@@ -65,10 +59,10 @@ Title: "RikkeBodyHeight"
 Description: "Rikkes kropslængde"
 * subject = Reference(Rikke)
 * encounter = Reference(2nd1mthEncounter)
-* category[VSCat].coding.system = "http://terminology.hl7.org/CodeSystem/observation-category"
-* category[VSCat].coding.code = #vital-signs
-* code.coding[snomedSlice] = $SCT#1153637007
-* code.coding[BodyHeightCode] = $LOINC#8302-2
+* category.coding.system = "http://terminology.hl7.org/CodeSystem/observation-category"
+* category.coding.code = #vital-signs
+* code.coding[SNOMEDCT] = $SCT#1153637007
+* code.coding[LOINC] = $LOINC#8302-2
 * valueQuantity.value = 57
 * valueQuantity.unit = "cm"
 * valueQuantity.system = $UCUM

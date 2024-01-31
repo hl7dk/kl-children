@@ -2,15 +2,17 @@
 KLGatewayChildrenBodyHeight is used to document childrens length or height.
 
  Observation.code.coding holds the valid values for the types of observations allowed. It is bound to a mandatory LOINC code: 8302-2 'Body height', and a mandatory set of SNOMED CT codes. The allowed SNOMED CT observation codes are:
- * Body length
- * Body height 
-Choose length as long as the child is laying down while being meassured
+ * Body height
+ * Body heigh standing
+ * Body height recumbent
+
+Either use Body height always, or choose body height recumbent as long as the child is lying down while being meassured, and shift to body heigh standing when the child starts to stand up.
 
 The Observation.value[x] is a valueQuantity. The unit is drawn from UCUM and is always 'cm'. The length/height should alwas be given as an integer. Decimal points should be rounded to nearest integer before reporting.
 
 The effective time of the observation is documented in Observation.effective[x].
 
-Observation.category is populated to conform to international vital-sign standards. The value should always be 'vital-signs'.
+Observation.category is populated to conform to national and international vital-sign/basic observation standards. The value should always be 'vital-signs'.
 
 Observation.subject holds the reference to the child. Observation.encounter holds the reference to the encounter in which the observation is performed.
 

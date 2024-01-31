@@ -35,6 +35,9 @@ Description: "Encounter for health prevention and need-based visits from childre
 * location ..0
 * serviceProvider ..0
 * partOf ..0
+* extension contains
+   BasedOnInterventionExtension named basedOnIntervention 0..*
+* extension[basedOnIntervention].valueReference ^type.aggregation = #bundled
 
 //Danish descriptions
 * status ^short = "[DK] kontaktstatus"
@@ -43,7 +46,15 @@ Description: "Encounter for health prevention and need-based visits from childre
 * period.end ^short = "[DK] kontaktslut"
 * subject ^short = "[DK] kontaktsubjekt"
 * class ^short = "[DK] kontaktklasse"
+* extension[basedOnIntervention] ^short = "[DK] kontaktBaseretPå"
 
+Extension: BasedOnInterventionExtension
+Title:     "basedOnInterventionExtension"
+Description: "Extension for pointing to the intervention describing why this encounter is taking place (will be part of R5 and comming FHIR versions without needing the extension)"
+* value[x] 1..1
+* value[x] only Reference(klgateway-children-intervention)
+* ^context.type = http://hl7.org/fhir/extension-context-type#element
+* ^context.expression = "Encounter"
 
 Instance: 2nd1mthEncounter
 InstanceOf: klgateway-children-encounter

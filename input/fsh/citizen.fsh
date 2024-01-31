@@ -4,7 +4,9 @@ Id: klgateway-children-citizen
 Title: "KLGatewayChildrenCitizen"
 Description: "Administrative information about a citizen receiving care or care related services."
 * identifier 1..1
-* identifier only dk-core-cpr-identifier
+* identifier[x-ecpr] 0..0
+* identifier[d-ecpr] 0..0
+* identifier[cpr] 1..1
 * active ..0
 * name[official] 0..0
 * name ..0

@@ -1,7 +1,9 @@
 # KLChildren
 This implementation guide describes the delivery of children health data to KL Gateway. The data originates from the documantation made by health nurses (sundhedsplejersker) in the Danish municipalities.The reporting aims for compliance with the Danish core profiles and the current work on a shared information model (FKI) for data in the Danish municipalities.  
 
-The profiles for the reporting are restricted to allow only the information that is required to report to the KL Gateway.
+The profiles for the reporting are restricted to allow only the information that is required to report to KL Gateway.
+
+**Notice that the included content is not finished. Right now the guide should be read as a guide to, how data will eventually be organized. Especially codes and code systems are very much preliminary. The DeliveryReport and invariants are not finished. Figure below is outdated.**
 
 ## Overview
 The data is reported as a collection of instances. A report may contain instances that conforms to the profiles defined in this implementation guide. See figure below.

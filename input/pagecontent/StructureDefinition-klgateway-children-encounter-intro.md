@@ -55,3 +55,4 @@ Nedenstående tabel oversætter mellem de attributter der er defineret i den fæ
 |borgerkontaktstart|Kontaktens start, eller planlagte start|Encounter.period.start|
 |borgerkontaktslut|Kontaktens sluttidspunkt, eller planlagte sluttidspunkt|Encounter.period.end|
 |borgerkontaktsubjekt|Den borger kontakten vedrører|Encounter.subject|
+|borgerkontaktBaseretPå|Den behovsindsats, der er grunden til at denne kontakt udføres|Encounter.extension:basedOnIntervention|
