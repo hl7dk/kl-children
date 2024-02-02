@@ -65,15 +65,15 @@ Description: "If the value is not given, then explain why using dataAbsentReason
 Severity: #error
 Expression: "value.empty() implies dataAbsentReason.exists()"
 
-
-Profile: KLGatewayChildrenIndicatorParentsMentalIndicator
-Parent: KLGatewayChildrenIndicator
-Id: klgateway-children-parent-mental
-Title: "KLGatewayChildrenIndicatorParentsMental"
-Description: "Parents mental state model, that inherits from Indicator"
-* code.coding[FBOECode] = $FBOE#2c39af9f-8e45-4c88-962f-e7a9e2cd31b6
-* code.coding[SNOMEDCT] = $SCT#285854004 //|Emotion (observable entity)|
-* valueCodeableConcept.coding[FBOECode] from ParentsMentalCodes (required)
+//udkommenteret fordi slicingen ikke virker med FBOE, kommer senere når resten af koderne også er i FBOE
+//Profile: KLGatewayChildrenIndicatorParentsMentalIndicator
+//Parent: KLGatewayChildrenIndicator
+//Id: klgateway-children-parent-mental
+//itle: "KLGatewayChildrenIndicatorParentsMental"
+//Description: "Parents mental state model, that inherits from Indicator"
+//* code.coding[FBOECode] = $FBOE#2c39af9f-8e45-4c88-962f-e7a9e2cd31b6
+//* code.coding[SNOMEDCT] = $SCT#285854004 //|Emotion (observable entity)|
+//* valueCodeableConcept.coding[FBOECode] from ParentsMentalCodes (required)
 
 Profile: KLGatewayChildrenIndicatorSocialInteraction
 Parent: KLGatewayChildrenIndicator
@@ -187,16 +187,16 @@ Description: "Rikkes sociale kontakt ved 2mrd"
 * valueCodeableConcept = Tempcodes#e1c1674c-9384-4d95-999f-763f3868f444 "Udfordringer i social kontakt"
 * status = #final
 * effectiveDateTime = 2020-07-07T00:00:00.000Z
-
-Instance: KirstenIndicatorMS
-InstanceOf: klgateway-children-parent-mental
-Usage: #example
-Title: "KirstenIndicatorMS"
-Description: "Kirstens psykiske tilstand ved 2mrd"
-* subject = Reference(Kirsten)
-* code.coding[FBOECode] = $FBOE#2c39af9f-8e45-4c88-962f-e7a9e2cd31b6 "Forælders psykiske tilstand"
-* code.coding[SNOMEDCT] = $SCT#285854004 "Emotion (observable entity)"
-* valueCodeableConcept = Tempcodes#f86c2526-3b04-454c-a99e-d350f699dc94 "Udfordret psykisk tilstand" 
-* status = #final
-* effectiveDateTime = 2020-07-07T00:00:00.000Z
+// udkommenteret fordi slicingen ikke virker før alle er i FBOE
+// Instance: KirstenIndicatorMS
+// InstanceOf: klgateway-children-parent-mental
+// Usage: #example
+// Title: "KirstenIndicatorMS"
+// Description: "Kirstens psykiske tilstand ved 2mrd"
+// * subject = Reference(Kirsten)
+// * code.coding[FBOECode] = $FBOE#2c39af9f-8e45-4c88-962f-e7a9e2cd31b6 "Forælders psykiske tilstand"
+// * code.coding[SNOMEDCT] = $SCT#285854004 "Emotion (observable entity)"
+// * valueCodeableConcept = Tempcodes#f86c2526-3b04-454c-a99e-d350f699dc94 "Udfordret psykisk tilstand" 
+// * status = #final
+// * effectiveDateTime = 2020-07-07T00:00:00.000Z
 

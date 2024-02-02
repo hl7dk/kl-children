@@ -114,8 +114,8 @@ Usage: #example
 * entry[+].fullUrl = "Observation/RikkeSocialInteraction"
 * entry[=].resource = RikkeSocialInteraction
 
-* entry[+].fullUrl = "Observation/KirstenIndicatorMS"
-* entry[=].resource = KirstenIndicatorMS
+// * entry[+].fullUrl = "Observation/KirstenIndicatorMS"
+// * entry[=].resource = KirstenIndicatorMS
 
 //instances used for testing
 
