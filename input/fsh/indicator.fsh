@@ -14,6 +14,7 @@ Description: "Abstract indicator profile, used in the children database"
 * code.coding[MedCom] 0..0
 * code.coding[SKS] 0..0
 * code.coding[FBOECode] from IndicatorCodesChildren (required)
+* code.coding[FBOECode].system = Canonical(Tempcodes)
 * ^abstract = true
 * subject 1..1
 * subject only Reference(klgateway-children-citizen)
@@ -27,7 +28,9 @@ Description: "Abstract indicator profile, used in the children database"
 * valueCodeableConcept.coding ^slicing.discriminator.path = "system"
 * valueCodeableConcept.coding ^slicing.rules = #closed
 * valueCodeableConcept.coding contains
-    FBOECode 1..1 and SNOMEDCT 0..1 
+    FBOECode 1..1 and SNOMEDCT 0..1
+* valueCodeableConcept.coding[FBOECode].system = Canonical(Tempcodes)
+* valueCodeableConcept.coding[SNOMEDCT].system = $SCT
 //* valueCodeableConcept from IndicatorResultsChildren
 //0..0 cardinalities
 * identifier 0..0
@@ -63,110 +66,110 @@ Severity: #error
 Expression: "value.empty() implies dataAbsentReason.exists()"
 
 
-Profile: KLGatewayChildrenParentsMentalIndicator
+Profile: KLGatewayChildrenIndicatorParentsMentalIndicator
 Parent: KLGatewayChildrenIndicator
 Id: klgateway-children-parent-mental
-Title: "KLGatewayChildrenParentsMental"
+Title: "KLGatewayChildrenIndicatorParentsMental"
 Description: "Parents mental state model, that inherits from Indicator"
 * code.coding[FBOECode] = $FBOE#2c39af9f-8e45-4c88-962f-e7a9e2cd31b6
 * code.coding[SNOMEDCT] = $SCT#285854004 //|Emotion (observable entity)|
 * valueCodeableConcept.coding[FBOECode] from ParentsMentalCodes (required)
 
-Profile: KLGatewayChildrenSocialInteraction
+Profile: KLGatewayChildrenIndicatorSocialInteraction
 Parent: KLGatewayChildrenIndicator
 Id: klgateway-children-social-interaction
-Title: "KLGatewayChildrenInteraction"
+Title: "KLGatewayChildrenIndicatorInteraction"
 Description: "Childrens social interaction, that inherits from Indicator"
 * code.coding[FBOECode] = Tempcodes#68605f88-49fb-44b9-b327-86947af6aa93
 * code.coding[SNOMEDCT] = $SCT#225597007 // |Evne til at interagere med andre|
 * valueCodeableConcept.coding[FBOECode] from SocialInteractionCodes (required)
 * valueCodeableConcept.coding[SNOMEDCT] from SocialInteractionCodesSCT (required)
 
-Profile: KLGatewayChildrenParentRelationship
+Profile: KLGatewayChildrenIndicatorParentRelationship
 Parent: KLGatewayChildrenIndicator
 Id: klgateway-children-parent-relationship
-Title: "KLGatewayChildrenParentRelationship"
+Title: "KLGatewayChildrenIndicatorParentRelationship"
 Description: "Parent-child relationship, that inherits from Indicator"
 * code.coding[FBOECode] = Tempcodes#763c6f21-5467-4713-82fb-716c9d0a1fdf //Forældre-barn-relation
 //* code.coding[SNOMEDCT] = $SCT#000
 * valueCodeableConcept.coding[FBOECode] from ChildrenParentRelationshipCodes (required)
 
-Profile: KLGatewayChildrenParentSocialStatus
+Profile: KLGatewayChildrenIndicatorParentSocialStatus
 Parent: KLGatewayChildrenIndicator
 Id: klgateway-children-parent-social-status
-Title: "KLGatewayChildrenParentSocialStatus"
+Title: "KLGatewayChildrenIndicatorParentSocialStatus"
 Description: "Parents social status, that inherits from Indicator"
 * code.coding[FBOECode] = Tempcodes#58997614-ba43-4534-90bd-10c7e76802f4 //	Forælders sårbarhed
 //* code.coding[SNOMEDCT] = $SCT#000
 * valueCodeableConcept.coding[FBOECode] from ParentSocialStatusCodes (required)
 
-Profile: KLGatewayChildrenSocialSupportNetwork
+Profile: KLGatewayChildrenIndicatorSocialSupportNetwork
 Parent: KLGatewayChildrenIndicator
 Id: klgateway-children-social-support-network
-Title: "KLGatewayChildrenSocialSupportNetwork"
+Title: "KLGatewayChildrenIndicatorSocialSupportNetwork"
 Description: "Families social support network, that inherits from Indicator"
 * code.coding[FBOECode] = Tempcodes#7e7fab2f-278a-4b14-9bc9-efc36fffcba5 //Netværk
 //* code.coding[SNOMEDCT] = $SCT#000
 * valueCodeableConcept.coding[FBOECode] from SocialSupportNetworkCodes (required)
 
-Profile: KLGatewayChildrenCommunication
+Profile: KLGatewayChildrenIndicatorCommunication
 Parent: KLGatewayChildrenIndicator
 Id: klgateway-children-communication
-Title: "KLGatewayChildrenCommunication"
+Title: "KLGatewayChildrenIndicatorCommunication"
 Description: "Childrens communication, that inherits from Indicator"
 * code.coding[FBOECode] = Tempcodes#653c2b0b-bb64-4906-888b-aea6fef3c3f8 //Kommunikation
 //* code.coding[SNOMEDCT] = $SCT#000
 * valueCodeableConcept.coding[FBOECode] from CommunicationCodes (required)
 
-Profile: KLGatewayChildrenSleep
+Profile: KLGatewayChildrenIndicatorSleep
 Parent: KLGatewayChildrenIndicator
 Id: klgateway-children-sleep
-Title: "KLGatewayChildrenSleep"
+Title: "KLGatewayChildrenIndicatorSleep"
 Description: "Childrens sleep observation, that inherits from Indicator"
 * code.coding[FBOECode] = Tempcodes#73f981f8-455a-4158-b435-7c6d83ab84da //	Søvn
 //* code.coding[SNOMEDCT] = $SCT#000
 * valueCodeableConcept.coding[FBOECode] from SleepCodes (required)
 
-Profile: KLGatewayChildrenMotorFunction
+Profile: KLGatewayChildrenIndicatorMotorFunction
 Parent: KLGatewayChildrenIndicator
 Id: klgateway-children-motor-function
-Title: "KLGatewayChildrenMotorFunction"
+Title: "KLGatewayChildrenIndicatorMotorFunction"
 Description: "Childrens motor function, that inherits from Indicator"
 * code.coding[FBOECode] = Tempcodes#e04f2ca1-888a-4671-a97a-371b525cd2a3 //	Motorik
 //* code.coding[SNOMEDCT] = $SCT#000
 * valueCodeableConcept.coding[FBOECode] from MotorFunctionCodes (required)
 
-Profile: KLGatewayChildrenNutrition
+Profile: KLGatewayChildrenIndicatorNutrition
 Parent: KLGatewayChildrenIndicator
 Id: klgateway-children-nutrition
-Title: "KLGatewayChildrenNutrition"
+Title: "KLGatewayChildrenIndicatorNutrition"
 Description: "Childrens nutrition, that inherits from Indicator"
 * code.coding[FBOECode] = Tempcodes#e61e4dab-54bb-4bf4-9b76-8d991cf4de08 //	Ernæring
 //* code.coding[SNOMEDCT] = $SCT#000
 * valueCodeableConcept.coding[FBOECode] from NutritionCodes (required)
 
-Profile: KLGatewayChildrenPhysicalActivity
+Profile: KLGatewayChildrenIndicatorPhysicalActivity
 Parent: KLGatewayChildrenIndicator
 Id: klgateway-children-physical-activity
-Title: "KLGatewayChildrenPhysicalActivity"
+Title: "KLGatewayChildrenIndicatorPhysicalActivity"
 Description: "Childrens physical activity, that inherits from Indicator"
 * code.coding[FBOECode] = Tempcodes#b331fe02-a781-4abd-b6db-9331d6a69b15 //	Fysisk aktivitet
 //* code.coding[SNOMEDCT] = $SCT#000
 * valueCodeableConcept.coding[FBOECode] from PhysicalActivityCodes (required)
 
-Profile: KLGatewayChildrenHearing
+Profile: KLGatewayChildrenIndicatorHearing
 Parent: KLGatewayChildrenIndicator
 Id: klgateway-children-hearing
-Title: "KLGatewayChildrenHearing"
+Title: "KLGatewayChildrenIndicatorHearing"
 Description: "Childrens hearing, that inherits from Indicator"
 * code.coding[FBOECode] = Tempcodes#a22c4b53-b622-4394-ba13-910a7b0d7b0d //	Hørelse
 //* code.coding[SNOMEDCT] = $SCT#000
 * valueCodeableConcept.coding[FBOECode] from HearingCodes (required)
 
-Profile: KLGatewayChildrenSight
+Profile: KLGatewayChildrenIndicatorSight
 Parent: KLGatewayChildrenIndicator
 Id: klgateway-children-sight
-Title: "KLGatewayChildrenSight"
+Title: "KLGatewayChildrenIndicatorSight"
 Description: "Childrens sight, that inherits from Indicator"
 * code.coding[FBOECode] = Tempcodes#a22c4b53-b622-4394-ba13-910a7b0d7b0d //	Hørelse
 //* code.coding[SNOMEDCT] = $SCT#000
