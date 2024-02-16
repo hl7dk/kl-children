@@ -8,7 +8,7 @@ KLGatewayChildrenBodyHeight is used to document childrens length or height.
 
 Either use Body height always, or choose body height recumbent as long as the child is lying down while being meassured, and shift to body heigh standing when the child starts to stand up.
 
-The Observation.value[x] is a valueQuantity. The unit is drawn from UCUM and is always 'cm'. The length/height should alwas be given as an integer. Decimal points should be rounded to nearest integer before reporting.
+The Observation.value[x] is a valueQuantity. The unit is drawn from UCUM and is always 'cm'. The height should alwas be given as an integer. Decimal points should be rounded to nearest integer before reporting.
 
 The effective time of the observation is documented in Observation.effective[x].
 

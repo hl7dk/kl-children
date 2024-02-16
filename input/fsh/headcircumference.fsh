@@ -1,5 +1,5 @@
 Profile: KLGatewayChildrenHeadCircum
-Parent: http://hl7.org/fhir/StructureDefinition/headcircum
+Parent: http://hl7.dk/fhir/core/StructureDefinition/dk-core-basic-observation
 Id: klgateway-children-headcircum
 Title: "KLGatewayChildrenHeadCircumference"
 Description: "Head circumference profile used in Danish Municipalities, derived from HL7 standard profile"
