@@ -4,7 +4,6 @@ Id: klgateway-children-feeding-observation
 Title: "KLGatewayChildrenFeedingObservation"
 Description: "Feeding observation profile used in the children database"
 //Constraints
-e61e4dab-54bb-4bf4-9b76-8d991cf4de08
 * code.coding 2..2
 * code.coding ^slicing.rules = #closed
 * code.coding contains
@@ -15,9 +14,7 @@ e61e4dab-54bb-4bf4-9b76-8d991cf4de08
 * code.coding[MedCom] 0..0
 * code.coding[SKS] 0..0
 * code.coding[SNOMEDCT] 1..1
-* code.coding[FBOECode] from IndicatorCodesChildren (required)
-* code.coding[FBOECode].system = Canonical(Tempcodes)
-* code.coding[FBOE] = Tempcodes#e61e4dab-54bb-4bf4-9b76-8d991cf4de08 //Ernæring
+* code.coding[FBOECode] = Tempcodes#e61e4dab-54bb-4bf4-9b76-8d991cf4de08 //Ernæring
 * code.coding[SNOMEDCT] = $SCT#169740003
 * subject 1..1
 * subject only Reference(klgateway-children-citizen)
@@ -50,7 +47,7 @@ e61e4dab-54bb-4bf4-9b76-8d991cf4de08
 
 //Short Danish descriptions
 * dataAbsentReason ^short = "[DK] madningsobservationMangler"
-* code ^short = "[DK] madningsobservationsKode"
+* code ^short = "[DK] madningsobservationsKe61e4dab-54bb-4bf4-9b76-8d991cf4de08ode"
 * value[x] ^short = "[DK] madningsobservationsResultat"
 * subject ^short = "[DK] madningsobservationSubjekt"
 * encounter ^short = "[DK] madningsobservationKontakt"

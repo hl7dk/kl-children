@@ -7,7 +7,7 @@ Observation.value[x] is a coded value Observation.valueCodeableConcept, which sh
 
 The time of the observation is documented in Observation.effective[x]. 
 
-Observation.subject holds the reference to the child, who is obsesrved. Observation.encounter holds the reference to the encounter in which the observation is performed.
+Observation.subject holds the reference to the child, who is observed. Observation.encounter holds the reference to the encounter in which the observation is performed.
 
 Notice that the status-attribute is mandatory. For normal use, just set to "final", if data is missing or another problem has occured, follow the FHIR guidance to populate the field correctly. To indicate missing data, Observation.dataAbsentReason can be used as well. 
 

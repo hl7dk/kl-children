@@ -29,7 +29,7 @@ Nedenstående tabel oversætter mellem de attributter der er defineret i den fæ
 |højdeResultat|Resultatet af observationen.|Observation.value[x]|
 |højdeEnhed|Enheden på observationsresultatet.|Observation.valueQuantity.unit|
 |højdeTid|Tidspunkt for observationen.|Observation.effective|
-|højdeKategori|Klasse der udtrykker en overordnet katagori for hvad der observeres|Observation.category|
+|højdeKategori|Klasse der udtrykker en overordnet kategori for hvad der observeres|Observation.category|
 |højdeSubjekt|Den borger, for hvem der er foretaget en observation.|Observation.subject|
 |højdeKontakt|Den kontakt, hvor observationen er foretaget.|Observation.encounter|
 |højdeStatus|Klasse der udtrykker, hvor i sin proces, observationen er.|Observation.status|

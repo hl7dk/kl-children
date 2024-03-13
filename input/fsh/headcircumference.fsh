@@ -4,9 +4,8 @@ Id: klgateway-children-headcircum
 Title: "KLGatewayChildrenHeadCircumference"
 Description: "Head circumference profile used in Danish Municipalities, derived from HL7 standard profile"
 //Constraints
-* code.coding contains snomedSlice 1..1
-* code.coding[snomedSlice] from HeadCircumSCTobservablesChildren (extensible)
-* code.coding[snomedSlice].system = $SCT
+* code.coding[LOINC] = $LOINC#9843-4 //"Head circumference"
+* code.coding[SNOMEDCT] from HeadCircumSCTobservablesChildren (extensible)
 * valueQuantity.code = #cm
 * subject 1..1
 * subject only Reference(klgateway-children-citizen)
@@ -50,10 +49,10 @@ Title: "RikkeHeadCircum"
 Description: "Rikkes hovedomkreds"
 * subject = Reference(Rikke)
 * encounter = Reference(2mthEncounter)
-* category[VSCat].coding.system = "http://terminology.hl7.org/CodeSystem/observation-category"
-* category[VSCat].coding.code = #vital-signs
-* code.coding[snomedSlice] = $SCT#363812007 "Head circumference"
-* code.coding[HeadCircumCode] = $LOINC#9843-4
+* category.coding.system = "http://terminology.hl7.org/CodeSystem/observation-category"
+* category.coding.code = #vital-signs
+* code.coding[SNOMEDCT] = $SCT#363812007 "Head circumference"
+* code.coding[LOINC] = $LOINC#9843-4
 * valueQuantity.value = 38.3
 * valueQuantity.unit = "cm"
 * valueQuantity.system = $UCUM

@@ -1,5 +1,5 @@
 # KLChildren
-This implementation guide describes the delivery of children health data to KL Gateway. The data originates from the documantation made by health nurses (sundhedsplejersker) in the Danish municipalities.The reporting aims for compliance with the Danish core profiles and the current work on a shared information model (FKI) for data in the Danish municipalities.  
+This implementation guide describes the delivery of children health data to KL Gateway. The data originates from the documentation made by health nurses (sundhedsplejersker) in the Danish municipalities.The reporting aims for compliance with the Danish core profiles and the current work on a shared information model (FKI) for data in the Danish municipalities.  
 
 The profiles for the reporting are restricted to allow only the information that is required to report to KL Gateway.
 
@@ -10,12 +10,31 @@ The data is reported as a collection of instances. A report may contain instance
 
 <img alt="OverviewModel" src="./ReportStructure.png" style="float:none; display:block; margin-left:auto; margin-right:auto;" />
 
+In addition to being structured as a report, relationships exist between the models. These are illustrated in the figure below. Note that the ressource Indicator is abstract. Relevant models inherit from dk-core i.e. Citizen, Observation, BasicObservation and Condition.
+
+<img alt="ClassDiagram" src="./ClassDiagram.png" style="float:none; display:block; margin-left:auto; margin-right:auto;" />
+
 ## Special constraints, and resulting reporting practises
-Whereas the report may seem unconstrained, each profile define constraints on attributes, datatypes and cardinalities. In addition, extra constraints are implemented to accomodate the rules of reporting data to The National Child Health Register, see [guidance](https://sundhedsdatastyrelsen.dk/da/rammer-og-retningslinjer/indberetning_sei/vejledninger_indberetning/bornedatabasen). Extra constraints are as follows:
-* Tobacco exposure should be reported, at the visit known as 'Etableringsbesøg'
-* Length/Height and weight should be reported, at the visits/encounters known as 'Andet besøg i barnets første levemåned', 'Besøg ved det 4-6 måneder gamle barn', 'indskolingsundersøgelse' and'udskolingsundersøgelse'
+Whereas the report may seem unconstrained, each profile define constraints on attributes, datatypes and cardinalities. In addition, extra constraints are implemented to accomodate the rules of reporting data to The National Child Health Register, see [guidance](https://sundhedsdatastyrelsen.dk/da/rammer-og-retningslinjer/indberetning_sei/vejledninger_indberetning/bornedatabasen) and ​​Fælleskommunal standard for forebyggende sundhedsydelser til børn og unge​ (FBU). The extra constraints is defines to ensure that the relevant mandatory observations are reported as part of reporting on certain standard encounters. Note that the constraints only apply, when Enconter.Class is ambulatory "AMB" or Home visit "HH". A table is presented below (Danish names for standard-visits):
+
+{:class="grid"}
+|Standard visit| Mandatory Observations in Report|
+| ------------- |-------------|
+|Graviditetsbesøg |IndicatorParentMentalState, IndicatorSocialSupportNetwork, IndicatorParentSocialStatus|
+|Barselsbesøg |ParentRelationship, Weight, Feeding, |
+|Etableringsbesøg |IndicatorSocialSupportNetwork, IndicatorParentSocialStatus, ParentRelationship, Weight, Height, HeadCircumference, Tobacco, Feeding|
+|Andet besøg i barnets første levemåned|Tidspunkt for observationen.|
+|Besøg ved det ca. 2 måneder gamle barn |Klasse der udtrykker en overordnet katagori for hvad der observeres|
+|Besøg ved det 4-6 måneder gamle barn|Den borger, for hvem der er foretaget en observation.|
+|Besøg ved det 8-11 måneder gamle barn|Den kontakt, hvor observationen er foretaget.
+|Indskolingsundersøgelse |Klasse der udtrykker, hvor i sin proces, observationen er.
+|Undersøgelse i mellemtrin, med måling |Klasse, der udtrykker hvorfor data mangler|
+|Udskolingsundersøgelse Klasse, der udtrykker hvorfor data mangler|
+
 
 The applied rules mean that an observation without a value must be reported if one of the menitioned encounters are completed without the data being obtained, and an appropriate dataAbsentReason must be given. In addition, the correct encounter-type must be applied, for the rules to take effect correctly. See more in the descriptions below and in the [Enconter-profile](StructureDefinition-klgateway-children-encounter.html)
+
+Note that constraint also might pose a challenge for reporting, in case the documentation is finished in the days following a visit. For reports missing mandatory observations, it is recommended to try to send the record on the following two days (to see if documentation is finished). If the data is not documented by the secon day, send the observations imdiately without a value and add a dataAbsentReason. 
 
 ## Citizen
 Information about the citizens that are the subjects of the report. This resource is used to get a reference to the child. However, sometimes a report holds data about the child's parents. To ensure that this data goes into the parent's record, the data should be related to the parent represented as a citizen. Citizen and relatedPerson resources for the parents should only be included when and if, they are relevant for the child's report.

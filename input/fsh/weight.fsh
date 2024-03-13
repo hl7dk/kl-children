@@ -1,10 +1,10 @@
 Profile: KLGatewayChildrenBodyWeight
-Parent: Parent: http://hl7.dk/fhir/core/StructureDefinition/dk-core-basic-observation
+Parent: http://hl7.dk/fhir/core/StructureDefinition/dk-core-basic-observation
 Id: klgateway-children-bodyweight
 Title: "KLGatewayChildrenBodyWeight"
 Description: "Profile of HL7 body weight profile used in Danish Municipalities"
 * code.coding[LOINC] = $LOINC#29463-7 //Body weight
-* code.coding[SNOMEDCT] =$SCT#27113001
+* code.coding[SNOMEDCT] = $SCT#27113001
 * valueQuantity.code from ObservationUnitsWeight
 * subject 1..1
 * subject only Reference(klgateway-children-citizen)
@@ -48,10 +48,10 @@ Title: "RikkeBodyWeight"
 Description: "Rikkes vægt"
 * subject = Reference(Rikke)
 * encounter = Reference(2nd1mthEncounter)
-* category[VSCat].coding.system = "http://terminology.hl7.org/CodeSystem/observation-category"
-* category[VSCat].coding.code = #vital-signs
-* code.coding[snomedSlice] = $SCT#27113001
-* code.coding[BodyWeightCode] = $LOINC#29463-7
+* category.coding.system = "http://terminology.hl7.org/CodeSystem/observation-category"
+* category.coding.code = #vital-signs
+* code.coding[SNOMEDCT] = $SCT#27113001
+* code.coding[LOINC] = $LOINC#29463-7
 * valueQuantity.value = 5100
 * valueQuantity.unit = "g"
 * valueQuantity.system = $UCUM
