@@ -232,11 +232,7 @@ Description: "Tempcodes to be implemented in KL-term"
 * #5937b533-a4e3-45af-9ddf-61dce1d56b74 "Borger støttet af medarbejder"
 * #d5762abe-706b-4d52-ac2b-2621c60486b2 "Pårørende alene"
 * #111b2c8a-389d-4ecc-9187-ce78f019649b "Medarbejder alene"
-//Svarkoder spørgeskemaer
-  * #6ec2bea8-5603-4665-a821-8f36f349d0fc "0 - Lige så meget som jeg altid har kunnet" 
-  * #58794738-046f-45e9-94e3-8c5f4f8c9950 "1 - Ikke helt så meget som tidligere" 
-  * #2f1f5df3-bd8d-4c15-8791-bb3f956b7c75 "2 - Afgjort ikke så meget som tidligere" 
-  * #bbce3d8e-4f24-463f-83b4-367395206403 "3 - Overhovedet ikke"  
+
 
 
 

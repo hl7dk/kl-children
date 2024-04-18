@@ -5,6 +5,7 @@ Description: "Questionnaire profile, for all Questionaires in kl-children"
 
 Instance: KLGatewayChildrenEPDS
 InstanceOf: KLGatewayChildrenQuestionnaire
+Id: klgateway-children-epds
 Usage: #definition
 Title: "KLGatewayChildrenEPDS"
 * status = #active
@@ -95,7 +96,7 @@ InstanceOf: KLGatewayChildrenQuestionnaireResponse
 Usage: #example
 Title: "EPDSAnswerKirsten"
 Description: "EPDS besvarelse mor, Kirsten"
-* questionnaire = "http://fhir.kl.dk/children/Questionnaire/KLGatewayChildrenEPDS"
+* questionnaire = "http://fhir.kl.dk/children/Questionnaire/klgateway-children-epds"
 * status = #completed
 * subject = Reference(Kirsten)
 * source = Reference(Kirsten)
@@ -105,7 +106,7 @@ Description: "EPDS besvarelse mor, Kirsten"
 * item[=].answer.valueInteger = 0
 
 * item[+].linkId = "2happiness"
-* item[=].answer.valueInteger = 2
+* item[=].answer.valueInteger = 7
 
 * item[+].linkId = "3blame"
 * item[=].answer.valueInteger = 1
