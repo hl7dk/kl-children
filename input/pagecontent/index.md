@@ -3,7 +3,7 @@ This implementation guide describes the delivery of children health data to KL G
 
 The profiles for the reporting are restricted to allow only the information that is required to report to KL Gateway.
 
-**Notice that the included content is not finished. Right now the guide should be read as a guide to, how data will eventually be organized. Especially codes and code systems are very much preliminary. The DeliveryReport and invariants are not finished. Figure below is outdated.**
+**Notice that the included content is not finished. Right now the guide should be read as a guide to, how data will eventually be organized. Especially codes and code systems are very much preliminary. The DeliveryReport and invariants are not finished.**
 
 ## Overview
 The data is reported as a collection of instances. A report may contain instances that conforms to the profiles defined in this implementation guide. See figure below.
@@ -28,7 +28,7 @@ Whereas the report may seem unconstrained, each profile define constraints on at
 |Besøg ved det 4-6 måneder gamle barn|IndicatorSocialInteraction, IndicatorParentRelationship, Weight, Height, HeadCircumference, Feeding, IndicatorCommunication, IndicatorSleep, IndicatorMotorFunction|
 |Besøg ved det 8-11 måneder gamle barn|IndicatorSocialInteraction, IndicatorParentRelationship, Weight, Height, HeadCircumference, Feeding, IndicatorCommunication, IndicatorSleep, IndicatorMotorFunction|
 |Indskolingsundersøgelse |IndicatorSocialInteraction, Weight, Height, IndicatorNutrition, IndicatorCommunication, IndicatorSleep, IndicatorMotorFunction, IndicatorPhysicalActivity, IndicatorHearing, IndicatorSight|
-|Undersøgelse i mellemtrin, med måling |Weight, Height, IndicatorSight|
+|Undersøgelse i mellemtrin, med måling |Weight, Height|
 |Udskolingsundersøgelse| IndicatorSocialInteraction, Weight, Height, IndicatorNutrition, IndicatorNicotine, IndicatorCommunication, IndicatorSleep, IndicatorPhysicalActivity, IndicatorHearing, IndicatorSight.|
 
 The applied rules mean that an observation without a value must be reported if one of the menitioned encounters are completed without the data being obtained, and an appropriate dataAbsentReason must be given. See more in the descriptions below and in the [Enconter-profile](StructureDefinition-klgateway-children-encounter.html)
@@ -36,7 +36,7 @@ The applied rules mean that an observation without a value must be reported if o
 Note that constraint might also pose a challenge for reporting, in case the documentation is finished in the days following a visit. For reports missing mandatory observations, it is recommended to try to send the record on the following two days (to see if documentation is finished). If the data is not documented by the second day, send the observations immediately without a value and add a dataAbsentReason.
 
 ## Citizen
-Information about the citizens that are the subjects of the report. This resource is used to get a reference to the child. However, sometimes a report holds data about the child's parents. To ensure that this data goes into the parent's record, the data should be related to the parent represented as a citizen. Citizen and relatedPerson resources for the parents should only be included when and if, they are relevant for the child's report.
+Information about the citizens that are the subjects of the report. This resource is used to get a reference to the child. However, sometimes a report holds data about the child's parents. To ensure that this data goes into the parent's record, the data should be related to the parent represented as a citizen. Before birth, only Citizen records for parents should be send. After birth, Citizen and relatedPerson resources for the parents should only be included when and if, they are relevant for the child's report.
 
 ##### Attributes
 * civil registration number (CPR-nr)
@@ -51,7 +51,7 @@ Information about the citizens that are the subjects of the report. This resourc
 * One FHIR status may exist, and should be drawn form the standard ValueSet.
 
 ## ParentRelation
-Information about the relationship between a child and its parents. Citizen and RelatedPerson resources for the parents should only be included when and if, they are relevant for the child's report.
+Information about the relationship between a child and its parents.
 
 ##### Attributes
 * a reference to the Citizen instance that holds the child's information

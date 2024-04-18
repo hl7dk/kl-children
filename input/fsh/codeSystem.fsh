@@ -227,6 +227,19 @@ Description: "Tempcodes to be implemented in KL-term"
 * #dfab6d07-b1b6-4210-ac8a-b8a0d095c8ab "Modermælkserstatning og/eller overgangskost"
 * #5101d1ac-b96f-4dd9-a42e-e3f765f747e1 "Udelukkende familiens mad"
 
+* #a3d30bf2-4a3c-4c49-9001-5363ae11681c "Borger"
+* #71675b26-285e-4551-9488-991d8b34a12a "Borger støttet af pårørende"
+* #5937b533-a4e3-45af-9ddf-61dce1d56b74 "Borger støttet af medarbejder"
+* #d5762abe-706b-4d52-ac2b-2621c60486b2 "Pårørende alene"
+* #111b2c8a-389d-4ecc-9187-ce78f019649b "Medarbejder alene"
+//Svarkoder spørgeskemaer
+  * #6ec2bea8-5603-4665-a821-8f36f349d0fc "0 - Lige så meget som jeg altid har kunnet" 
+  * #58794738-046f-45e9-94e3-8c5f4f8c9950 "1 - Ikke helt så meget som tidligere" 
+  * #2f1f5df3-bd8d-4c15-8791-bb3f956b7c75 "2 - Afgjort ikke så meget som tidligere" 
+  * #bbce3d8e-4f24-463f-83b4-367395206403 "3 - Overhovedet ikke"  
+
+
+
 CodeSystem: SNOMED_CT_INT
 Title: "SNOMED CT International Edition"
 Description: "SNOMED CT is a core clinical healthcare terminology that contains concepts with unique meanings and formal logic based definitions organized into hierarchies."
@@ -274,7 +287,18 @@ Id: SNOMED-CT-INT
 * #248333004 "Standing height"
 * #1149101003 "Recumbent body height (observable entity)" 
 * #225597007 "Ability to interact with others (observable entity)"
+* #273441006 "Edinburgh postnatal depression scale"
 
+
+ValueSet: FindingInformerCodes  //I virkelighedden FFInst-koder. Disse bør tilføjes til KLterm, hvis de ikke allered er?
+Title: "FindingInformerCodes"
+Description: "Codes for who informed the findings"
+* ^experimental = false
+* Tempcodes#a3d30bf2-4a3c-4c49-9001-5363ae11681c //"Borger"
+* Tempcodes#71675b26-285e-4551-9488-991d8b34a12a //"Borger støttet af pårørende"
+* Tempcodes#5937b533-a4e3-45af-9ddf-61dce1d56b74 //"Borger støttet af medarbejder"
+* Tempcodes#d5762abe-706b-4d52-ac2b-2621c60486b2 //"Pårørende alene"
+* Tempcodes#111b2c8a-389d-4ecc-9187-ce78f019649b //"Medarbejder alene"
 
 ValueSet: KLHealthNurseInterventions
 Id: KLHealthNurseInterventions
