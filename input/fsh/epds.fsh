@@ -1,11 +1,5 @@
-Profile: KLToolsQuestionnaire
-Parent: Questionnaire
-Title: "General questionnaire"
-Description: "Questionnaire profile, for all Questionaires in kl-children"
-
-Instance: KLGatewayChildrenEPDS
+Instance: klgateway-children-epds
 InstanceOf: KLGatewayChildrenQuestionnaire
-Id: klgateway-children-epds
 Usage: #definition
 Title: "KLGatewayChildrenEPDS"
 * status = #active
