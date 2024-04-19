@@ -85,7 +85,7 @@ Title: "KLGatewayChildrenEPDS"
 * item[=].extension[maxValue].valueInteger = 30
 * item[=].repeats = false
 
-Instance: EPDSAnswerKirsten
+Instance: PUFAnswerKirsten
 InstanceOf: KLGatewayChildrenQuestionnaireResponse
 Usage: #example
 Title: "EPDSAnswerKirsten"
@@ -93,14 +93,13 @@ Description: "EPDS besvarelse mor, Kirsten"
 * questionnaire = "http://fhir.kl.dk/children/Questionnaire/klgateway-children-epds"
 * status = #completed
 * subject = Reference(Kirsten)
-* source = Reference(Kirsten)
 * extension[findingInformer].valueCodeableConcept = Tempcodes#a3d30bf2-4a3c-4c49-9001-5363ae11681c "Borger"
 
 * item[0].linkId = "1humor"
 * item[=].answer.valueInteger = 0
 
 * item[+].linkId = "2happiness"
-* item[=].answer.valueInteger = 7
+* item[=].answer.valueInteger = 2
 
 * item[+].linkId = "3blame"
 * item[=].answer.valueInteger = 1

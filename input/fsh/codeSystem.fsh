@@ -232,6 +232,7 @@ Description: "Tempcodes to be implemented in KL-term"
 * #5937b533-a4e3-45af-9ddf-61dce1d56b74 "Borger støttet af medarbejder"
 * #d5762abe-706b-4d52-ac2b-2621c60486b2 "Pårørende alene"
 * #111b2c8a-389d-4ecc-9187-ce78f019649b "Medarbejder alene"
+* #601dbb34-a0ad-449b-8f03-6dcce9121b97 "Medarbejder og pårørende alene"
 
 
 
@@ -283,10 +284,10 @@ Id: SNOMED-CT-INT
 * #248333004 "Standing height"
 * #1149101003 "Recumbent body height (observable entity)" 
 * #225597007 "Ability to interact with others (observable entity)"
-* #273441006 "Edinburgh postnatal depression scale"
+* #450320001 "Edinburgh postnatal depression scale score"
 
 
-ValueSet: FindingInformerCodes  //I virkelighedden FFInst-koder. Disse bør tilføjes til KLterm, hvis de ikke allered er?
+ValueSet: FindingInformerCodes  //I virkeligheden FFInst-koder. Disse bør tilføjes til KLterm, hvis de ikke allered er?
 Title: "FindingInformerCodes"
 Description: "Codes for who informed the findings"
 * ^experimental = false
@@ -295,6 +296,7 @@ Description: "Codes for who informed the findings"
 * Tempcodes#5937b533-a4e3-45af-9ddf-61dce1d56b74 //"Borger støttet af medarbejder"
 * Tempcodes#d5762abe-706b-4d52-ac2b-2621c60486b2 //"Pårørende alene"
 * Tempcodes#111b2c8a-389d-4ecc-9187-ce78f019649b //"Medarbejder alene"
+* Tempcodes#601dbb34-a0ad-449b-8f03-6dcce9121b97 //"Medarbejder og pårørende alene"
 
 ValueSet: KLHealthNurseInterventions
 Id: KLHealthNurseInterventions
