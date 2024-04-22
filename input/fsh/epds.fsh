@@ -94,6 +94,7 @@ Description: "EPDS besvarelse mor, Kirsten"
 * status = #completed
 * subject = Reference(Kirsten)
 * extension[findingInformer].valueCodeableConcept = Tempcodes#a3d30bf2-4a3c-4c49-9001-5363ae11681c "Borger"
+* authored = 1996-07-04
 
 * item[0].linkId = "1humor"
 * item[=].answer.valueInteger = 0
