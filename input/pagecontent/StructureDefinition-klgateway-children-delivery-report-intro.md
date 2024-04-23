@@ -1,7 +1,7 @@
 ## Scope and usage
 This model is used to represent the reporting of childrens data from the health nurse prevention programme in Denmark.
 
-The report is a FHIR Bundle that allows different ressources to be grouped and handled as a collection. The ressources that are grouped in this bundle is the ones defined in this implementation guide. No others are allowed.
+The report is a FHIR Bundle that allows different resources to be grouped and handled as a collection. The resources that are grouped in this bundle is the ones defined in this implementation guide. No others are allowed.
 
 For some encounter types, specific observations are required. This report has implemented rules known as FHIR invariants that check, that these conditions holds true. The implemented invariants are:
 

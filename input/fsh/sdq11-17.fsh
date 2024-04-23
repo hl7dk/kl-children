@@ -293,7 +293,7 @@ Description: "SDQ svar lavet af Rikke (Rikkes alder passer ikke til spørgeskema
 * questionnaire = "http://fhir.kl.dk/children/Questionnaire/klgateway-children-sdq11-17"
 * status = #completed
 * subject = Reference(Rikke)
-* authored = 2024-23-04
+* authored = 2024-04-23
 * extension[findingInformer].valueCodeableConcept = Tempcodes#a3d30bf2-4a3c-4c49-9001-5363ae11681c "Borger"
 
 * item[0].linkId = "1friendly"

@@ -9,6 +9,7 @@ Description: "Encounter for health prevention and need-based visits from childre
 * class.display ..0
 * class.userSelected ..0
 * classHistory ..0
+* class from EncounterClassCodes (required)
 * type from EncounterTypes (required)
 * type.coding 1..
 * type.coding.version ..0
@@ -91,3 +92,14 @@ Description: "Kontakt, der er Lars' indskolingsundersøgelse"
 * status = $EncounterStatus#finished
 * subject = Reference(Lars)
 * class = $V3ACTCODES#AMB
+
+Instance: NeedBasedEncounterRikke
+InstanceOf: klgateway-children-encounter
+Title: "Behovskontakt ved Rikke på skærm"
+Usage: #example
+Description: "Kontakt, hvor der leveres behovskontakt på skærm ved Rikke og hendes familie"
+* type = $FBOE#4b039ba1-4005-42e6-b672-09b81ad7578a "Behovskontakt med småbørnssundhedsplejen" 
+* period.start = 2021-03-25T10:15:00.000Z
+* status = $EncounterStatus#finished
+* subject = Reference(Rikke)
+* class = Tempcodes#124be95d-6924-4609-9d2a-e7c73ae3ab3d "Skærmbesøg"

@@ -1,9 +1,9 @@
 ### Scope and usage
 KLGatewayChildrenRelatedParent is used to identify the relationship between a child and its parents. Citizen and relatedPerson resources for the parents should only be includes when and if, they are relevant for the child reporting.
 
-RelatedPerson.patient holds a reference to the child. ReleatedPerson.relationship holds a code that defines the kind of relationship e.g. 'parent' or 'mother'.
+RelatedPerson.patient holds a reference to the child. ReleatedPerson.relationship holds a code that defines the kind of relationship. In this implementation guide the relationship is always 'PRN' for parent.
 
-It may be counterinituitive that this ressource does not have a cpr numer, or other identifier. However, the citizen ressource of the parent holds this information and references the relatedPerson ressource, so there is no need to repeat this information.
+It may be counter intuitive that this resource does not have a cpr identifier, or other identifier. However, the citizen resource of the parent holds this information and references the relatedPerson resource, so there is no need to repeat this information.
 
 ### Conversions between Danish information model and FHIR-profile
 
@@ -13,5 +13,5 @@ Nedenstående tabel oversætter mellem de attributter, der er defineret i den f�
 |   FKI-attribut      | Definition        | FHIR  |
 | ------------- |-------------| -----|
 |forælderHarBarn|Relation til den borger, der er barn af denne forælder|RelatedPerson.patient|
-|forælderType|Typen af forældrerelation|ReleatedPerson.relationship|
+|forælderType|Typen af relation (som altid er sat til forælder)|ReleatedPerson.relationship|
 

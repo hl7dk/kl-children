@@ -10,7 +10,7 @@ The data is reported as a collection of instances. A report may contain instance
 
 <img alt="OverviewModel" src="./ReportStructure.png" style="float:none; display:block; margin-left:auto; margin-right:auto;" />
 
-In addition to being structured as a report, relationships exist between the models. These are illustrated in the figure below. Note that the ressource Indicator is abstract. Relevant models inherit from dk-core i.e. Citizen, Observation, BasicObservation and Condition. QuestionnaireResponses are repported, not Questionnaires. The latter represents shared knowledge between sender and reciever.
+In addition to being structured as a report, relationships exist between the models. These are illustrated in the figure below. Note that the resource Indicator is abstract. Relevant models inherit from dk-core i.e. Citizen, Observation, BasicObservation and Condition. QuestionnaireResponses are repported, not Questionnaires. The latter represents shared knowledge between sender and reciever.
 
 <img alt="ClassDiagram" src="./ClassDiagram.png" style="float:none; display:block; margin-left:auto; margin-right:auto;" />
 

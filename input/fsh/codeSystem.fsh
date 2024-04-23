@@ -65,6 +65,8 @@ Description: "Tempcodes to be implemented in KL-term"
 // * #6be08133-feca-4d2f-a45d-cb36d141011e "Observation vedr. høretest  ifm. udskolingsundersøgelse"
 // * #96e3eda6-3eb7-4fbb-9850-fc6dfafadb4a "Problem/bemærkning" 
 // * #1b64f768-5133-4633-85a4-2b97fcaa1f7a "Der er intet at bemærke"
+* #83559d49-fe53-42e9-a191-072da13c8c99 "Telefonisk" "Kontakten er foregået per telefon"//KLCommonCareSocialCodes
+* #124be95d-6924-4609-9d2a-e7c73ae3ab3d "Skærmbesøg" "Kontakten er foregået via skærm med mulighed for tændt kamera, så parterne har haft mulighed for at interagere ansigt til ansigt, og fremvise ting." //KLCommonCareSocialCodes
 * #6cbf8b19-5aff-4f6f-a7dc-9a411197bcff "Familieindsatser"
 * #6cbf8b19-5aff-4f6f-a7dc-9a411197bcff #b3de92ea-ac5e-4f87-809e-a9e40b59cc34 "Vejledning i kontakt, samspil og barnets behov"
 * #6cbf8b19-5aff-4f6f-a7dc-9a411197bcff #69b3ad8c-f228-405c-b556-b2ea78e196ee "Forældreuddannelse i kontakt og samspil"
@@ -287,6 +289,14 @@ Id: SNOMED-CT-INT
 * #450320001 "Edinburgh postnatal depression scale score"
 
 
+ValueSet: EncounterClassCodes
+Title: "EncounterClassCodes"
+Description: "Codes to describe the mode of delivery of an encounter"
+* ^experimental = false
+* include codes from valueset http://terminology.hl7.org/ValueSet/v3-ActEncounterCode
+* Tempcodes#83559d49-fe53-42e9-a191-072da13c8c99 //"Telefonisk" KLCommonCareSocialCodes
+* Tempcodes#124be95d-6924-4609-9d2a-e7c73ae3ab3d //"Skærmbesøg" KLCommonCareSocialCodes
+
 ValueSet: FindingInformerCodes  //I virkeligheden FFInst-koder. Disse bør tilføjes til KLterm, hvis de ikke allered er?
 Title: "FindingInformerCodes"
 Description: "Codes for who informed the findings"
@@ -346,12 +356,19 @@ Id: EncounterTypes
 Title: "EncounterTypes"
 Description: "Extension on encountertype valueset, to be implemented in KL-term and FKI, does not use exciting codes only those specific to childrens nursing"
 * ^experimental = false
-* include codes from system $FBOE where concept is-a #6c2a4f15-d775-47f3-9868-b26fbff9ff8b
-* include codes from system $FBOE where concept is-a #4b039ba1-4005-42e6-b672-09b81ad7578a
-* include codes from system $FBOE where concept is-a #b30f139c-fac5-416e-b84a-a3429f0222c2
-* include codes from system $FBOE where concept is-a #9f3d853c-88d3-47e9-92a1-c7bbe0f9b4eb
-* include codes from system $FBOE where concept is-a #606c6585-444b-4ecd-885c-2ee59dc33f32
-* include codes from system $FBOE where concept is-a #17f5f9fa-3e1c-42fe-9ef3-178bc7900f67
+* $FBOE#d3c00541-f1d3-4c43-b5fc-16e8914ca1df //"Graviditetsbesøg"
+* $FBOE#b4bf6058-502a-4d64-bb8e-369661f43b47 //"Etableringsbesøg"
+* $FBOE#563c4174-f451-4c87-8db8-8d5472ca7ff6 // "Andet besøg i barnets første levemåned"
+* $FBOE#51f30d1c-d60e-4e3e-ac22-ec9712ea962d // "Besøg ved det ca. 2 måneder gamle barn"
+* $FBOE#58ff370b-a775-4bec-b24a-91604e0a5fe7 // "Besøg ved det 4-6 måneder gamle barn"
+* $FBOE#3f3e6489-31bd-44cf-9920-3c632868feb7 // "Besøg ved det 8-11 måneder gamle barn"
+* $FBOE#4b039ba1-4005-42e6-b672-09b81ad7578a "Behovskontakt med småbørnssundhedsplejen" 
+* $FBOE#b30f139c-fac5-416e-b84a-a3429f0222c2 "Almindelig forebyggende småbørnskontakt" 
+* $FBOE#c06ed6f1-be9d-460e-a45e-34821bcbd533 // "Indskolingsundersøgelse"
+* $FBOE#d01bcb90-2b29-44f4-834c-191d6dd4a08a // "Undersøgelse i mellemtrin, med måling"
+* $FBOE#dd766967-4d02-4c17-8ed3-021852785fdf // "Udskolingsundersøgelse"
+* $FBOE#606c6585-444b-4ecd-885c-2ee59dc33f32 "Behovskontakt med skolesundhedsplejen" 
+* $FBOE#17f5f9fa-3e1c-42fe-9ef3-178bc7900f67 "Almindelig forebyggende skolebørnskontakt"
 
 
 ValueSet: ParentTypes

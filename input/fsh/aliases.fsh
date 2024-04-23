@@ -9,4 +9,4 @@ Alias: $V3ACTCODES = http://terminology.hl7.org/CodeSystem/v3-ActCode
 Alias: $FBOE = http://fhir.kl.dk/term/CodeSystem/FBOE
 Alias: $ExtMinValue = http://hl7.org/fhir/StructureDefinition/minValue
 Alias: $ExtMaxValue = http://hl7.org/fhir/StructureDefinition/maxValue
-Alias: $epds = http://fhir.kl.dk/children/Questionnaire/klgateway-children-epds
+Alias: $actCodes = http://terminology.hl7.org/CodeSystem/v3-ActCode
