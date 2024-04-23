@@ -283,15 +283,15 @@ følelser, koncentration, adfærd eller samspil med andre mennesker?"
 * item[=].linkId = "33AffectOthers"
 * item[=].repeats = false
 
-Instance: SDQ4-10AnswerRikke
+Instance: SDQ4-10AnswerLars
 InstanceOf: KLGatewayChildrenQuestionnaireResponse
 Usage: #example
-Title: "SDQ4-10AnswerRikke"
-Description: "SDQ svar om Rikke lavet af Rikke's mor eller far"
+Title: "SDQ4-10AnswerLars"
+Description: "SDQ svar om Lars lavet af Lars' mor eller far"
 * questionnaire = "http://fhir.kl.dk/children/Questionnaire/klgateway-children-sdq11-17"
 * status = #completed
-* subject = Reference(Rikke)
-* authored = 2005-12-02
+* subject = Reference(Lars)
+* authored = 2024-04-23
 * extension[findingInformer].valueCodeableConcept = Tempcodes#d5762abe-706b-4d52-ac2b-2621c60486b2 "Pårørende alene"
 
 * item[0].linkId = "1friendly"

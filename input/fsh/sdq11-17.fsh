@@ -289,11 +289,11 @@ Instance: SDQ11-17AnswerRikke
 InstanceOf: KLGatewayChildrenQuestionnaireResponse
 Usage: #example
 Title: "SDQ11-17AnswerRikke"
-Description: "SDQ svar lavet af Rikke"
+Description: "SDQ svar lavet af Rikke (Rikkes alder passer ikke til spørgeskemaet)"
 * questionnaire = "http://fhir.kl.dk/children/Questionnaire/klgateway-children-sdq11-17"
 * status = #completed
 * subject = Reference(Rikke)
-* authored = 2010-12-02
+* authored = 2024-23-04
 * extension[findingInformer].valueCodeableConcept = Tempcodes#a3d30bf2-4a3c-4c49-9001-5363ae11681c "Borger"
 
 * item[0].linkId = "1friendly"

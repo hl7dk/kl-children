@@ -160,7 +160,7 @@ Description: "PUF besvarelse Rikke"
 * status = #completed
 * subject = Reference(Rikke)
 * extension[findingInformer].valueCodeableConcept = Tempcodes#601dbb34-a0ad-449b-8f03-6dcce9121b97 "Medarbejder og pårørende alene"
-* authored = 1997-10-01
+* authored = 2021-10-01
 
 * item[0].linkId = "1sleepPattern"
 * item[=].answer.valueBoolean = true
