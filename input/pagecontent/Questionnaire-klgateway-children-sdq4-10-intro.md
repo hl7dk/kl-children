@@ -1,5 +1,5 @@
 ### Scope and usage
-KLGatewayChildrenSDQ11-17 is used to define the Strength and Difficulties Questionnaire (SDQ), including impact supplement for self-completion by 11-17 year olds (SDQ S11-17). The questionnaire uses the official Danish translation. The link-ids from this questionnaire have to be referred in the QuestionnaireResponse, that holds the answers to a SDQ S11-17 questionnaire.
+KLGatewayChildrenSDQ04-10 is used to define the Strength and Difficulties Questionnaire (SDQ), including impact supplement for completion by parents of 4-10 year olds (SDQ P4-10). The questionnaire uses the official Danish translation. The link-ids from this questionnaire have to be referred in the QuestionnaireResponse, that holds the answers to a SDQ P4-10 questionnaire.
 
 Note that this Questionnaire defines question type as 'choice' and datatype (string) This is done for each item in the Questionnaire. However, the FHIR-validator is not able to validate a QuestionnaireResponse using these rules (Because there is a loose coupling between Questionaire and QuestionaireResponse in FHIR). We encourage vendors to ensure that responses are validated according to the rules described here. In other words, only the exact strings provided in Questionnaire.item.answerOption.valueString should be accepted in the QuestionnaireResponse.
 
