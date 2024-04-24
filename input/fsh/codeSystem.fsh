@@ -124,7 +124,7 @@ Description: "Tempcodes to be implemented in KL-term"
 * #e61e4dab-54bb-4bf4-9b76-8d991cf4de08 "Ernæring"
 * #28972d4b-fea3-42ec-b2a5-e2a26f79b14d "Passiv rygning"
 * #76891f7b-cf49-4cb2-88d6-728a509eb75d "Brug af nikotin"
-//normale børnefund - tjekkes med FBU dokument
+//normale børnefund
 * #008b1890-4be5-463a-b618-0ab3d89515d0 "Alderssvarende social kontakt"
 * #7a107df6-8fb8-4744-8413-be10b4c5c1d9	"Velfungerende forældre-barn-relation"
 * #0e5db980-8c6e-4034-abab-054e0eb40935 "Normal psykisk tilstand"
@@ -142,7 +142,7 @@ Description: "Tempcodes to be implemented in KL-term"
 
 
 //Børnetilstande
-//obligatoriske - tjekkes med FBU dokument
+//obligatoriske
 * #18938eb0-3f40-48c5-9971-7255aa86336a "Få tegn på udfordringer i social kontakt" 
 * #e1c1674c-9384-4d95-999f-763f3868f444 "Udfordringer i social kontakt"
 
@@ -192,7 +192,7 @@ Description: "Tempcodes to be implemented in KL-term"
 * #fc4b6e6d-a055-49bf-adab-474e0a810675 "Aktiviteter ikke afpasset"
 * #00a9f897-f784-4164-966c-eba94171ec82 "Uforudsigelighed"
 * #53db2598-28be-4d04-8b3a-0005581f1fda "Barn med særlige behov, forældreudfordringer"
-* #bfd18100-d007-4465-95ce-5bf2ac8bc091 "Dårlig øjenkontakt"
+* #bfd18100-d007-4465-95ce-5bf2ac8bc091 "Afvigende øjenkontakt"
 * #0ec86d42-83b9-4d2d-b56a-f6d352b58ccf "Følelsesmæssigt nedtonet"
 * #3c18d87b-af46-4305-9040-320d90b2f343 "Nedsat aktivitetsniveau"
 * #be8a4c9c-7898-4263-b853-c5d7347e8cec "Manglende vokalisering"
@@ -298,7 +298,7 @@ Description: "Tempcodes to be implemented in KL-term"
 
 
 CodeSystem: SNOMED_CT_INT
-Title: "SNOMED CT International Edition"
+Title: "SNOMED CT International Edition"
 Description: "SNOMED CT is a core clinical healthcare terminology that contains concepts with unique meanings and formal logic based definitions organized into hierarchies."
 Id: SNOMED-CT-INT
 * ^language = #en
@@ -346,6 +346,36 @@ Id: SNOMED-CT-INT
 * #225597007 "Ability to interact with others (observable entity)"
 * #450320001 "Edinburgh postnatal depression scale score"
 
+
+Alias: $v2-0203 = http://terminology.hl7.org/CodeSystem/v2-0203
+
+CodeSystem: LOINC
+Id: v3-loinc
+Title: "Logical Observation Identifiers, Names and Codes (LOINC)"
+Description: "LOINC provides a set of universal names and ID codes for identifying laboratory and clinical test results.1,2 LOINC facilitates the exchange and pooling of results, such as blood hemoglobin, serum potassium, or vital signs, for clinical care, outcomes management, and research. LOINC's universal identifiers (names and codes) can be used in the context of order and observation exchanges between information systems that use syntax standards such as HL73, CEN TC251, ISO TC215, ASTM4, and DICOM. Specifically, the identifier can be used as the coded value for an observation in any other standard that uses the observation/observation value paradigm, whether messages, documents, application programming interface (API), etc. For example, LOINC codes are used widely in the OBX segment Observation Identifier field (OBX-3) of an ORU HL7 (HL7 version 2.x or ASTM 1238-9410) message that may be sent between a Clinical Laboratory Information Management Systems (LIMS) and Electronic Health Record Systems (EHR).5, 6 In this way, LOINC codes provide universal identifiers that allow the exchange of clinical data between heterogeneous computing environments."
+* ^language = #en
+* ^extension.url = "http://hl7.org/fhir/StructureDefinition/codesystem-properties-mode"
+* ^extension.valueCode = #not-present
+* ^url = "http://loinc.org"
+* ^identifier[0].system = "urn:ietf:rfc:3986"
+* ^identifier[=].value = "urn:oid:2.16.840.1.113883.6.1"
+* ^identifier[+].use = #official
+* ^identifier[=].type = $v2-0203#iri-stem
+* ^identifier[=].system = "urn:ietf:rfc:3987"
+* ^identifier[=].value = "http://loinc.org/rdf/"
+* ^identifier[=].assigner.display = "LOINC as per User Guide S12.7.2 at https://loinc.org/kb/users-guide/recommendations-for-best-practices-in-using-and-mapping-to-loinc/#using-uris-to-identify-loinc-artifacts, retrieved 2022-11-22"
+* ^version = "3.1.0"
+* ^status = #active
+* ^experimental = false
+* ^date = "2022-11-22"
+* ^publisher = "LOINC and Health Data Standards, Regenstrief Institute, Inc."
+* ^contact.name = "LOINC and Health Data Standards, Regenstrief Institute, Inc."
+* ^copyright = "Per the LOINC License \"Permission is hereby granted in perpetuity, without payment of license fees or royalties, to use, copy, or distribute the Licensed Materials for any commercial or non-commercial purpose, subject to the following terms and conditions\" Please also note that some content (for example some of the assessment scale content) within LOINC is subject to copyright from third parties and is present in LOINC with permission or under the applicable terms of use from the third party.  Some included third party content requires attribution specific to a particular LOINC code or codes. Such third party content is identified in the LOINC Table and LOINC Table Core by the applicable copyright notice stored in the EXTERNAL_COPYRIGHT_NOTICE field. For further information and for details of how implementers should manage use of third party content (including license obligations) please see https://loinc.org/kb/license/"
+* ^caseSensitive = true
+* ^content = #fragment
+* #8302-2 "Body height"
+* #29463-7 "Body weight"
+* #9843-4 "Head circumference"
 
 ValueSet: EncounterClassCodes
 Title: "EncounterClassCodes"

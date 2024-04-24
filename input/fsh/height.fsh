@@ -5,7 +5,7 @@ Title: "KLGatewayChildrenBodyHeight"
 Description: "Body height profile used in Danish Municipalities, derived from HL7 DK standard profile"
 //Constraints
 * code.coding[LOINC] = $LOINC#8302-2 //Body height
-* code.coding[SNOMEDCT] from BodyheightSCTobservablesChildren (extensible)
+* code.coding[SNOMEDCT] from BodyheightSCTobservablesChildren (required)
 * value[x] only Quantity
 * valueQuantity.code = #cm
 * subject 1..1
@@ -40,16 +40,16 @@ Description: "Body height profile used in Danish Municipalities, derived from HL
 * valueQuantity.system ^short = "[DK] højdeEnhed"
 * subject ^short = "[DK] højdeSubjekt"
 * encounter ^short = "[DK] højdeKontakt"
-* effectiveDateTime ^short = "[DK] højdeTid" //Behøver ikke både kontakt og tid.
+* effectiveDateTime ^short = "[DK] højdeTid"
 * status ^short = "[DK] højdeStatus"
 * obeys obs-1
 * obeys obs-2
 
 
 Invariant: obs-1
-Description: "If height is given as a decimal point number, an error is returned"
+Description: "If value is given as a decimal point number with more than one precision, an error is returned"
 Severity: #error
-Expression: "value.ofType(Quantity).value.toString().matches('^[0-9]+$')"
+Expression: "value.ofType(Quantity).value.toString().matches('^[0-9]*\\.?[0-9]$')"
 
 
 Instance: RikkeBodyHeight

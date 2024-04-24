@@ -39,7 +39,8 @@ Description: "Profile of HL7 body weight profile used in Danish Municipalities"
 * encounter ^short = "[DK] vægtkontakt"
 * effectiveDateTime ^short = "[DK] vægttid"
 * status ^short = "[DK] vægtStatus"
-* obeys obs-2
+* obeys obs-2 //"If the value is not given, then explain why using dataAbsentReason"
+* obeys obs-1 //"If value is given as a decimal point number with more than one precision, an error is returned"
 
 Instance: RikkeBodyWeight
 InstanceOf: klgateway-children-bodyweight

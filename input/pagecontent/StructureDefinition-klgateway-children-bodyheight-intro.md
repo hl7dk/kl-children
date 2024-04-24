@@ -3,12 +3,12 @@ KLGatewayChildrenBodyHeight is used to document childrens length or height.
 
  Observation.code.coding holds the valid values for the types of observations allowed. It is bound to a mandatory LOINC code: 8302-2 'Body height', and a mandatory set of SNOMED CT codes. The allowed SNOMED CT observation codes are:
  * Body height
- * Body heigh standing
+ * Body height standing
  * Body height recumbent
 
-Either use Body height always, or choose body height recumbent as long as the child is lying down while being meassured, and shift to body heigh standing when the child starts to stand up.
+Choose 'body height recumbent' as long as the child is lying down while being meassured, and shift to 'body heigh standing' when the child starts to stand up. Use 'Body height' if body position is unknown. 
 
-The Observation.value[x] is a valueQuantity. The unit is drawn from UCUM and is always 'cm'. The height should alwas be given as an integer. Decimal points should be rounded to nearest integer before reporting.
+The Observation.value[x] is a valueQuantity. The unit is drawn from UCUM and is always 'cm'. The height should be given as a decimal point with one precision. The Danish Health Authorieties recommend rounding to the nearest half centimeter. Remember to use '.' not ',' for decimal points.
 
 The effective time of the observation is documented in Observation.effective[x].
 
@@ -16,7 +16,7 @@ Observation.category is populated to conform to national and international vital
 
 Observation.subject holds the reference to the child. Observation.encounter holds the reference to the encounter in which the observation is performed.
 
-Notice that the status-attribute is mandatory. For normal use, just set to "final", if data is missing or another problem has occured, follow the FHIR guidance to populate the field correctly. To indicate missing data, Observation.dataAbsentReason can be used as well. 
+Notice that the status-attribute is mandatory. For normal use, just set to "final", if data is missing or another problem has occured, follow the FHIR guidance to populate the field correctly. To indicate missing data, Observation.dataAbsentReason can be used. Observation.dataAbsentReason is mandatory if no value is given.
 
 ### Conversions between Danish information model and FHIR-profile
 
