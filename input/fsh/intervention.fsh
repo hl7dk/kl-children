@@ -1,10 +1,8 @@
-Profile: KLGatewayChildrenPlannedIntervention
+Profile: KLGatewayChildrenIntervention
 Parent: CarePlan
 Id: klgateway-children-intervention
 Title: "KLGatewayChildrenIntervention"
 Description: "Profile representing interventions in the children database"
-
-
 //Requirements
 * status ^definition = "Shall be either unknown, entered-in-error, or the status of the intervention at the time of reporting"
 * intent = #plan
@@ -16,8 +14,6 @@ Description: "Profile representing interventions in the children database"
 * period.start 1..1 //Bevillingsdato
 //period.end er mulig men ikke obligatorisk
 * activity 1..1
-* activity.outcomeReference only Reference(klgateway-children-encounter) //kontakter
-* activity.outcomeReference ^type.aggregation = #bundled
 * activity.reference 0..0
 * activity.detail 1.. 
 * activity.detail.code 1..1 //Indsatskoder niveau 2 og 3
@@ -77,3 +73,16 @@ Description: "Profile representing interventions in the children database"
 * subject ^short = "[DK] indsatssubjekt"
 * activity.detail.reasonCode.coding ^short = "[DK] indsatsbegrundelse"
 * activity.detail.status ^short = "[DK] indsatsAktivitetsstatus"
+
+Instance: RikkeInterventionSocialContact
+InstanceOf: klgateway-children-intervention
+Usage: #example
+Title: "RikkeInterventionSocialContact"
+Description: "Rikkes behovsindsats vedr. social kontakt"
+* subject = Reference(Rikke)
+* period.start = 2021-03-09T10:15:00.000Z
+* intent = #plan
+* status = #active
+* activity.detail.status = #unknown
+* activity.detail.code.coding = Tempcodes#b3de92ea-ac5e-4f87-809e-a9e40b59cc34 "Vejledning i kontakt, samspil og barnets behov"
+* activity.detail.reasonCode.coding = Tempcodes#d3fc57b7-3a5d-4f69-bcb0-bdb8363650eb "Udfordring i forældre-barn samspil"

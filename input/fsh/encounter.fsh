@@ -103,3 +103,4 @@ Description: "Kontakt, hvor der leveres behovskontakt på skærm ved Rikke og he
 * status = $EncounterStatus#finished
 * subject = Reference(Rikke)
 * class = Tempcodes#124be95d-6924-4609-9d2a-e7c73ae3ab3d "Skærmbesøg"
+* extension[basedOnIntervention].valueReference = Reference(RikkeInterventionSocialContact)
