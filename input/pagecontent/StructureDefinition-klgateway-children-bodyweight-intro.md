@@ -28,4 +28,4 @@ Nedenstående tabel oversætter mellem de attributter der er defineret i den fæ
 |vægtKontakt|Den kontakt, hvor observationen er foretaget.|Observation.encounter|
 |vægtStatus|Klasse der udtrykker, hvor i sin proces, observationen er.|Observation.status|
 |vægtMangler|Klasse, der udtrykker hvorfor data mangler|Observation.dataAbsentReason|
-|vægtKategori|Klasse, der udtrykker typen af observation. For vægt angives altid HL7 koden for 'vital-signs'|Observation.category|
+|vægtKategori|Klasse der udtrykker en overordnet katagori for hvad der observeres.|Observation.category|

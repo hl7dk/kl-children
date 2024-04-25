@@ -49,7 +49,7 @@ Description: "Body height profile used in Danish Municipalities, derived from HL
 Invariant: obs-1
 Description: "If value is given as a decimal point number with more than one precision, an error is returned"
 Severity: #error
-Expression: "value.ofType(Quantity).value.toString().matches('^[0-9]*\\.?[0-9]$')"
+Expression: "value.ofType(Quantity).value.toString().matches('^[0-9]*\u002e?[0-9]$')"
 
 
 Instance: RikkeBodyHeight
@@ -63,7 +63,7 @@ Description: "Rikkes kropslængde"
 * category.coding.code = #vital-signs
 * code.coding[SNOMEDCT] = $SCT#1153637007
 * code.coding[LOINC] = $LOINC#8302-2
-* valueQuantity.value = 57
+* valueQuantity.value = 57.4
 * valueQuantity.unit = "cm"
 * valueQuantity.system = $UCUM
 * valueQuantity.code = #cm

@@ -2,7 +2,7 @@ Profile: KLGatewayChildrenHeadCircum
 Parent: http://hl7.dk/fhir/core/StructureDefinition/dk-core-basic-observation
 Id: klgateway-children-headcircum
 Title: "KLGatewayChildrenHeadCircumference"
-Description: "Head circumference profile used in Danish Municipalities, derived from HL7 standard profile"
+Description: "Head circumference profile used in Danish Municipalities, derived from HL7 Denmark standard profile"
 //Constraints
 * code.coding[LOINC] = $LOINC#9843-4 //"Head circumference"
 * code.coding[SNOMEDCT] from HeadCircumSCTobservablesChildren (extensible)
@@ -29,6 +29,8 @@ Description: "Head circumference profile used in Danish Municipalities, derived 
 * device 0..0
 * hasMember 0..0
 * derivedFrom 0..0
+* obeys obs-1
+* obeys obs-2
 
 //Short Danish descriptions
 * category ^short = "[DK] hovedomkredsKategori"
@@ -52,7 +54,7 @@ Description: "Rikkes hovedomkreds"
 * category.coding.system = "http://terminology.hl7.org/CodeSystem/observation-category"
 * category.coding.code = #vital-signs
 * code.coding[SNOMEDCT] = $SCT#363812007 "Head circumference"
-* code.coding[LOINC] = $LOINC#9843-4
+* code.coding[LOINC] = $LOINC#9843-4 "Head Occipital-frontal circumference"
 * valueQuantity.value = 38.3
 * valueQuantity.unit = "cm"
 * valueQuantity.system = $UCUM

@@ -11,7 +11,7 @@ Description: "Observation used to express qualitative examination results to be 
 * code.coding[IEEE] 0..0
 * code.coding[MedCom] 0..0
 * code.coding[SKS] 0..0
-* code.coding[SNOMEDCT] = $SCT#363788007
+* code.coding[SNOMEDCT] = $SCT#363788007 // "Clinical history/examination observable"
 * subject 1..1
 * subject only Reference(klgateway-children-citizen)
 * subject ^type.aggregation = #bundled
@@ -19,14 +19,8 @@ Description: "Observation used to express qualitative examination results to be 
 * encounter ^type.aggregation = #bundled
 * effective[x] 1..1
 * value[x] only CodeableConcept
-* valueCodeableConcept.coding 1..2
-* valueCodeableConcept.coding ^slicing.discriminator.type = #value
-* valueCodeableConcept.coding ^slicing.discriminator.path = "system"
-* valueCodeableConcept.coding ^slicing.rules = #closed
-* valueCodeableConcept.coding contains
-    FBOECode 1..1 and SNOMEDCT 0..1
-* valueCodeableConcept.coding[FBOECode] from ExamResults
-* valueCodeableConcept.coding[SNOMEDCT] from ExamResultsSCT
+* valueCodeableConcept.coding 1..1
+* valueCodeableConcept.coding from ExamResults
 //0..0 cardinalities
 * identifier 0..0
 * basedOn 0..0
@@ -52,3 +46,27 @@ Description: "Observation used to express qualitative examination results to be 
 * encounter ^short = "[DK] Undersøgelseskontakt"
 * effectiveDateTime ^short = "[DK] Undersøgelsestid" //Behøver ikke både kontakt og tid.
 * status ^short = "[DK] UndersøgelsesStatus"
+
+Instance: LarsMentalStateObservation
+InstanceOf: klgateway-children-exam-result
+Usage: #example
+Title: "LarsMentalState"
+Description: "Lars' egenvurderede generelle trivsel ved indskolingsundersøgelsen"
+* subject = Reference(Lars)
+* encounter = Reference(SchoolStartEncounter)
+* code.coding[SNOMEDCT] = $SCT#363788007 // "Clinical history/examination observable"
+* valueCodeableConcept = $FBOE#6bea1014-8e30-40e7-9274-2b02376c0b1b "For det meste glad"
+* status = #final
+* effectiveDateTime = 2021-10-21T10:45:00.000Z
+
+Instance: LarsIncontinenceObservation
+InstanceOf: klgateway-children-exam-result
+Usage: #example
+Title: "LarsIncontinenceObservation"
+Description: "Lars' unrininkontinens ved indskolingsundersøgelsen"
+* subject = Reference(Lars)
+* encounter = Reference(SchoolStartEncounter)
+* code.coding[SNOMEDCT] = $SCT#363788007 // "Clinical history/examination observable"
+* valueCodeableConcept = Tempcodes#54f42eb5-18f9-4e82-98e0-1c83988189b9 "Naturininkontinens"
+* status = #final
+* effectiveDateTime = 2021-10-21T10:45:00.000Z

@@ -124,6 +124,8 @@ Description: "Tempcodes to be implemented in KL-term"
 * #e61e4dab-54bb-4bf4-9b76-8d991cf4de08 "Ernæring"
 * #28972d4b-fea3-42ec-b2a5-e2a26f79b14d "Passiv rygning"
 * #76891f7b-cf49-4cb2-88d6-728a509eb75d "Brug af nikotin"
+* #e62340b2-6721-4462-8129-fa7ae2bae2db "Barnets vurdering af trivsel generelt" 
+* #538cc68c-c8b6-4008-aa8c-54e22f20871f "Barnets vurdering af trivsel i skolen"
 //normale børnefund
 * #008b1890-4be5-463a-b618-0ab3d89515d0 "Alderssvarende social kontakt"
 * #7a107df6-8fb8-4744-8413-be10b4c5c1d9	"Velfungerende forældre-barn-relation"
@@ -280,12 +282,13 @@ Description: "Tempcodes to be implemented in KL-term"
 * #03b4d589-3ff5-437e-ba83-f212579d9707	"Viden- og udviklingsproblem"
 * #dc822827-a548-4e90-8bd6-90f231b89cb5	"Andet udskillelsesproblem"
 * #45144c31-9818-4dc8-9b63-4bf997a49961	"Misdannelse"
+//Fund for madning af spædbørn
 * #77a008dd-21cc-452f-a1ee-ac8d025b7817 "Fuldamning, inklusiv modermælk på flaske"
 * #0a993974-e314-4f76-8c80-c3770fdefe37 "Ammes primært"
 * #3edc905c-2830-442a-98cc-463cc3701dd1 "Ammes som supplement til anden kost"
 * #dfab6d07-b1b6-4210-ac8a-b8a0d095c8ab "Modermælkserstatning og/eller overgangskost"
 * #5101d1ac-b96f-4dd9-a42e-e3f765f747e1 "Udelukkende familiens mad"
-
+//kilde - flyttes fra FFinst til KL-term
 * #a3d30bf2-4a3c-4c49-9001-5363ae11681c "Borger"
 * #71675b26-285e-4551-9488-991d8b34a12a "Borger støttet af pårørende"
 * #5937b533-a4e3-45af-9ddf-61dce1d56b74 "Borger støttet af medarbejder"
@@ -293,8 +296,7 @@ Description: "Tempcodes to be implemented in KL-term"
 * #111b2c8a-389d-4ecc-9187-ce78f019649b "Medarbejder alene"
 * #601dbb34-a0ad-449b-8f03-6dcce9121b97 "Medarbejder og pårørende alene"
 
-* #e62340b2-6721-4462-8129-fa7ae2bae2db "Barnets vurdering af trivsel generelt" 
-* #538cc68c-c8b6-4008-aa8c-54e22f20871f "Barnets vurdering af trivsel i skolen"
+
 
 
 CodeSystem: SNOMED_CT_INT
@@ -321,36 +323,18 @@ Id: SNOMED-CT-INT
 * #363812007 "Head circumference"
 * #229819007 "Tobacco use and exposure (observable entity)"
 * #285854004 "Emotion"
-* #169740003 "Infant feeding method"
-* #228524006 "Exposed to tobacco smoke at home"
-* #110483000 "Tobacco user"
-* #160245001  "No current problems or disability"
-* #1145307003 "Exclusively breastfed"
-* #169743001 "Breastfeeding with supplement"
-* #169746009 "Breastfeeding stopped"
 * #276885007 "Core body temperature"
-* #363788007 "Clinical history/examination observable (observable entity)"
-* #422615001 "Caregiver difficulty providing physical care (finding)"
-* #423080005 "Caregiver difficulty providing emotional nurturance (finding)|"
-* #737368006 "Caregiver-child relationship problem"
-* #1255670000 "Finding of increased risk level (finding)"
-* #363714003 "Interprets (attribute)"
-* #1255619009 "Risk level (observable entity)"
-* #363713009 "Has interpretation (attribute)"
-* #35105006 "Increased"
-* #719722006 "Has realization (attribute)"
-* #703478008 "Developmental delay in social skills (disorder)"
 * #1153637007 "Body height (observable entity)"
 * #248333004 "Standing height"
 * #1149101003 "Recumbent body height (observable entity)" 
 * #225597007 "Ability to interact with others (observable entity)"
 * #450320001 "Edinburgh postnatal depression scale score"
+* #718133008 "Strengths and Difficulties Questionnaire for parents or teachers of 4-17 year olds score"
+* #717639006 "Strengths and Difficulties Questionnaire self-rated for 11-17 year old score"
 
-
-Alias: $v2-0203 = http://terminology.hl7.org/CodeSystem/v2-0203
 
 CodeSystem: LOINC
-Id: v3-loinc
+Id: LOINC
 Title: "Logical Observation Identifiers, Names and Codes (LOINC)"
 Description: "LOINC provides a set of universal names and ID codes for identifying laboratory and clinical test results.1,2 LOINC facilitates the exchange and pooling of results, such as blood hemoglobin, serum potassium, or vital signs, for clinical care, outcomes management, and research. LOINC's universal identifiers (names and codes) can be used in the context of order and observation exchanges between information systems that use syntax standards such as HL73, CEN TC251, ISO TC215, ASTM4, and DICOM. Specifically, the identifier can be used as the coded value for an observation in any other standard that uses the observation/observation value paradigm, whether messages, documents, application programming interface (API), etc. For example, LOINC codes are used widely in the OBX segment Observation Identifier field (OBX-3) of an ORU HL7 (HL7 version 2.x or ASTM 1238-9410) message that may be sent between a Clinical Laboratory Information Management Systems (LIMS) and Electronic Health Record Systems (EHR).5, 6 In this way, LOINC codes provide universal identifiers that allow the exchange of clinical data between heterogeneous computing environments."
 * ^language = #en
@@ -359,11 +343,6 @@ Description: "LOINC provides a set of universal names and ID codes for identifyi
 * ^url = "http://loinc.org"
 * ^identifier[0].system = "urn:ietf:rfc:3986"
 * ^identifier[=].value = "urn:oid:2.16.840.1.113883.6.1"
-* ^identifier[+].use = #official
-* ^identifier[=].type = $v2-0203#iri-stem
-* ^identifier[=].system = "urn:ietf:rfc:3987"
-* ^identifier[=].value = "http://loinc.org/rdf/"
-* ^identifier[=].assigner.display = "LOINC as per User Guide S12.7.2 at https://loinc.org/kb/users-guide/recommendations-for-best-practices-in-using-and-mapping-to-loinc/#using-uris-to-identify-loinc-artifacts, retrieved 2022-11-22"
 * ^version = "3.1.0"
 * ^status = #active
 * ^experimental = false
@@ -375,7 +354,7 @@ Description: "LOINC provides a set of universal names and ID codes for identifyi
 * ^content = #fragment
 * #8302-2 "Body height"
 * #29463-7 "Body weight"
-* #9843-4 "Head circumference"
+* #9843-4 "Head Occipital-frontal circumference"
 
 ValueSet: EncounterClassCodes
 Title: "EncounterClassCodes"
@@ -509,22 +488,6 @@ Description: "SNOMED CT observables for MentalState"
 * ^experimental = false
 * $SCT#285854004 //|Emotion (observable entity)|
 
-ValueSet: FeedingObservablesChildren
-Title: "FeedingObservablesChildren"
-Description: "SNOMED CT observables for infant feeding method"
-* ^experimental = false
-* $SCT#169740003 //|Infant feeding method|
-
-ValueSet: ObservationSCTChildren
-Title: "SCTobservablesChildren"
-Description: "SNOMED CT observables for children observations"
-* ^experimental = false
-* $SCT#425024002 // Body weight without shoes
-* $SCT#1153637007 //"Body height (observable entity)"
-* $SCT#229819007 //Tobacco use and exposure (observable entity)
-* $SCT#169740003 //|Infant feeding method|
-* $SCT#285854004 //|Emotion (observable entity)|
-* $SCT#363812007 //|Hovedomkreds|
 
 ValueSet: TobaccoResultsChildren 
 Title: "TobaccoResultsChildren"
@@ -551,11 +514,11 @@ ValueSet: FeedingResultsChildren
 Title: "FeedingResultsChildren"
 Description: "Resultcodes for feeding"
 * ^experimental = false
-* Tempcodes#77a008dd-21cc-452f-a1ee-ac8d025b7817 "Fuldamning, inklusiv modermælk på flaske"
-* Tempcodes#0a993974-e314-4f76-8c80-c3770fdefe37 "Ammes primært"
-* Tempcodes#3edc905c-2830-442a-98cc-463cc3701dd1 "Ammes som supplement til anden kost"
-* Tempcodes#dfab6d07-b1b6-4210-ac8a-b8a0d095c8ab "Modermælkserstatning og/eller overgangskost"
-* Tempcodes#5101d1ac-b96f-4dd9-a42e-e3f765f747e1 "Udelukkende familiens mad"
+* Tempcodes#77a008dd-21cc-452f-a1ee-ac8d025b7817 //"Fuldamning, inklusiv modermælk på flaske"
+* Tempcodes#0a993974-e314-4f76-8c80-c3770fdefe37 //"Ammes primært"
+* Tempcodes#3edc905c-2830-442a-98cc-463cc3701dd1 //"Ammes som supplement til anden kost"
+* Tempcodes#dfab6d07-b1b6-4210-ac8a-b8a0d095c8ab //"Modermælkserstatning og/eller overgangskost"
+* Tempcodes#5101d1ac-b96f-4dd9-a42e-e3f765f747e1 //"Udelukkende familiens mad"
 
 ValueSet: ObservationResultsChildren
 Title: "Observation resultcodes"
@@ -564,9 +527,6 @@ Description: "SNOMED CT finding codes to express the result of children observat
 * $SCT#228524006 //|Exposed to tobacco smoke at home (finding)|
 * $SCT#110483000 //|Tobacco user (finding)|
 //* $SCT#711563001 //|No known exposure to tobacco smoke| /(normalt fund. Overvej at lade udgå)
-* $SCT#1145307003 //|Exclusively breastfed| (EffectivePeriod)
-* $SCT#169743001 //|Breastfeeding with supplement| (EffectivePeriod)
-* $SCT#169746009 //|Breastfeeding stopped| (EffectiveTime)
 * $FBOE#be128c20-851d-4217-b8df-744d8af39cac //"for det meste meget glad" "Barnet vurderer selv for det meste at være meget glad"
 * $FBOE#6bea1014-8e30-40e7-9274-2b02376c0b1b //"for det meste glad" "Barnet vurderer selv for det meste at være glad"
 * $FBOE#2c945a43-a07b-4b26-b4cc-205ba15a1251 //"for det meste midt imellem" "Barnet vurderer selv for det meste at være midt imellem glad og ikke glad"
@@ -845,11 +805,3 @@ Description: "Valueset for optional history and examination findings in small ch
 * $FBOE#5dc857f6-1220-4762-a718-31a6101b5d61 //"for det meste glad i skolen" "Barnet vurderer selv for det meste at være glad i skolen"
 * $FBOE#2e026475-a2ec-45e3-92d8-f0bed307cceb //"for det meste midt imellem i skolen" "Barnet vurderer selv for det meste at være midt imellem glad og ikke glad i skolen"
 * $FBOE#822dffb2-3b29-4f86-9784-757954d6a047 //"for det meste ikke glad i skolen"
-
-ValueSet: ExamResultsSCT
-Title: "ExamResultsSCT"
-Description: "SNOMED CT based valueset for optional history and examination findings in small children and school children"
-* ^experimental = false
-* $SCT#422615001 // |omsorgsudøvern besvær med at give fysisk pleje|
-* $SCT#423080005 //  |omsorgsudøver har besvær med at give pleje og pasning|
-* $SCT#737368006 // |Caregiver-child relationship problem|

@@ -21,7 +21,7 @@ dependencies:
   kl.dk.fhir.term: 1.1.0
 
 parameters:
-  special-url: [http://snomed.info/sct]
+  special-url: [http://snomed.info/sct, http://loinc.org]
 
 # ╭────────────────────────────────────────────menu.xml────────────────────────────────────────────╮
 # │  To use a provided input/includes/menu.xml file, delete the "menu" property below.             │

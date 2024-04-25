@@ -42,12 +42,13 @@ Description: "Feeding observation profile used in the children database"
 * device 0..0
 * hasMember 0..0
 * derivedFrom 0..0
+* obeys obs-2
 // * obeys feed-1
-// * obeys feed-2
+
 
 //Short Danish descriptions
 * dataAbsentReason ^short = "[DK] madningsobservationMangler"
-* code ^short = "[DK] madningsobservationsKe61e4dab-54bb-4bf4-9b76-8d991cf4de08ode"
+* code ^short = "[DK] madningsobservationsKode"
 * value[x] ^short = "[DK] madningsobservationsResultat"
 * subject ^short = "[DK] madningsobservationSubjekt"
 * encounter ^short = "[DK] madningsobservationKontakt"
@@ -65,41 +66,58 @@ Description: "Feeding observation profile used in the children database"
 // Severity: #error
 // Expression: "((value.coding.code = '169743001') or (value.coding.code = '1145307003')) implies (effective.start.exists())"
 
-//https://hl7.github.io/fhirpath.js/
+// https://hl7.github.io/fhirpath.js/
 
-// Instance: RikkeFeedingObservationError
-// InstanceOf: klgateway-children-feeding-observation
-// Usage: #example
-// Title: "RikkeBodyFeedingObservationError"
-// Description: "Rikkes ammestatus, med forkert angivelse af tid giver feed-2 fejl"
-// * subject = Reference(Rikke)
-// * encounter = Reference(2mthEncounter)
-// * code.coding = $SCT#169740003
-// * valueCodeableConcept = $SCT#1145307003 //|Exclusively breastfed| (EffectivePeriod)
-// * status = #final
-// * effectiveDateTime = 2020-07-07T12:45:00.000Z
 
-// Instance: RikkeFeedingObservation
-// InstanceOf: klgateway-children-feeding-observation
-// Usage: #example
-// Title: "RikkeFeedingObservation"
-// Description: "Rikkes ammestatus, med rigtig angivelse af tid"
-// * subject = Reference(Rikke)
-// * encounter = Reference(2mthEncounter)
-// * code.coding = $SCT#169740003
-// * valueCodeableConcept = $SCT#1145307003 //|Exclusively breastfed| (EffectivePeriod)
-// * status = #final
-// * effectivePeriod.start = 2020-05-05T00:00:00.000Z
-// * effectivePeriod.end = 2020-07-07T00:00:00.000Z
+Instance: RikkeFeedingObservationPeriod
+InstanceOf: klgateway-children-feeding-observation
+Usage: #example
+Title: "RikkeFeedingObservationPeriod"
+Description: "Rikkes periode for fuldamning"
+* subject = Reference(Rikke)
+* encounter = Reference(2mthEncounter)
+* code.coding[FBOECode] = Tempcodes#e61e4dab-54bb-4bf4-9b76-8d991cf4de08 "Ernæring"
+* code.coding[SNOMEDCT] = $SCT#169740003 "Infant feeding method"
+* valueCodeableConcept = Tempcodes#77a008dd-21cc-452f-a1ee-ac8d025b7817 "Fuldamning, inklusiv modermælk på flaske"
+* status = #final
+* effectivePeriod.start = 2020-05-05T00:00:00.000Z
+* effectivePeriod.end = 2020-06-28T00:00:00.000Z
 
-// Instance: RikkeFeedingObservation2
-// InstanceOf: klgateway-children-feeding-observation
-// Usage: #example
-// Title: "RikkeFeedingObservation2"
-// Description: "Rikkes ammestatus, ved stop af amning"
-// * subject = Reference(Rikke)
-// * encounter = Reference(10mthEncounter)
-// * code.coding = $SCT#169740003
-// * valueCodeableConcept = $SCT#169746009  //|Exclusively breastfed| (EffectivePeriod)
-// * status = #final
-// * effectiveDateTime = 2021-02-02T00:00:00.000Z
+Instance: RikkeFeedingObservationStatus
+InstanceOf: klgateway-children-feeding-observation
+Usage: #example
+Title: "RikkeFeedingObservationStatus"
+Description: "Rikkes ammeperiode for fuldamning"
+* subject = Reference(Rikke)
+* encounter = Reference(2mthEncounter)
+* code.coding[FBOECode] = Tempcodes#e61e4dab-54bb-4bf4-9b76-8d991cf4de08 "Ernæring"
+* code.coding[SNOMEDCT] = $SCT#169740003 "Infant feeding method"
+* valueCodeableConcept = Tempcodes#3edc905c-2830-442a-98cc-463cc3701dd1 "Ammes som supplement til anden kost"
+* status = #final
+* effectiveDateTime = 2020-07-07T00:00:00.000Z
+
+Instance: RikkeFeedingObservationNewPeriod
+InstanceOf: klgateway-children-feeding-observation
+Usage: #example
+Title: "RikkeFeedingObservationNewPeriod"
+Description: "Rikkes periode-start for ammes som supplement til anden kost"
+* subject = Reference(Rikke)
+* encounter = Reference(2mthEncounter)
+* code.coding[FBOECode] = Tempcodes#e61e4dab-54bb-4bf4-9b76-8d991cf4de08 "Ernæring"
+* code.coding[SNOMEDCT] = $SCT#169740003 "Infant feeding method"
+* valueCodeableConcept = Tempcodes#77a008dd-21cc-452f-a1ee-ac8d025b7817 "Ammes som supplement til anden kost"
+* status = #final
+* effectivePeriod.start = 2020-06-28T00:00:00.000Z
+
+Instance: RikkeFeedingObservationStatus10mth
+InstanceOf: klgateway-children-feeding-observation
+Usage: #example
+Title: "RikkeFeedingObservationStatus10mth"
+Description: "Rikkes status, ved 10 måneder, udelukkende status fordi perioden er startet tidligere, og ikke er afsluttet"
+* subject = Reference(Rikke)
+* encounter = Reference(10mthEncounter)
+* code.coding[FBOECode] = Tempcodes#e61e4dab-54bb-4bf4-9b76-8d991cf4de08 "Ernæring"
+* code.coding[SNOMEDCT] = $SCT#169740003 "Infant feeding method"
+* valueCodeableConcept = Tempcodes#dfab6d07-b1b6-4210-ac8a-b8a0d095c8ab "Modermælkserstatning og/eller overgangskost"
+* status = #final
+* effectiveDateTime = 2021-02-02T00:00:00.000Z
