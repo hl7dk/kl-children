@@ -142,7 +142,6 @@ Description: "Tempcodes to be implemented in KL-term"
 * #b54723cf-3114-4119-b1cb-28107a283a99	"Ikke udsat for tobaksrøg"
 * #a7a53cfd-c7bb-4573-a4ae-2eb18e3dda1f	"Ikke prøvet nikotin"
 
-
 //Børnetilstande
 //obligatoriske
 * #18938eb0-3f40-48c5-9971-7255aa86336a "Få tegn på udfordringer i social kontakt" 
@@ -230,6 +229,8 @@ Description: "Tempcodes to be implemented in KL-term"
 * #a6808e88-8740-48a2-b67e-0ae6daf7aee2 "Ustabil døgnrytme "
 * #c684526e-a922-4bba-936e-3741b51ae1a4 "Lang indsovning"
 * #39dedc66-fe8a-45bb-ad05-e1dee689428a "Usammenhængende søvn"
+* #03c93c46-86ad-4102-a7d5-2c7b3ad0f616	"Føler sig ikke udhvilet"
+
 * #1ff97bed-f371-4db6-8556-7ec7bfec2274 "Trist"
 * #5eaa4b16-11de-44fa-88ed-639e2bb1dd11 "Genert/stille"
 * #575fec77-05e3-42f1-9701-478c3c4acb27 "Kontaktsøgende/grænseløs"
@@ -265,10 +266,10 @@ Description: "Tempcodes to be implemented in KL-term"
 * #54c87d2b-b4b2-40eb-89e7-46cca2be757e "Udfordring med stammen"
 * #b44d5315-41dc-4d02-a16a-3dbe1c31df0f "Udfordring med sproganvendelse"
 * #fbc23626-556f-4eeb-b494-0a5af1dd2dd6 "Udfordring med at målrette opmærksomhed"
-* #b79078ce-c5b1-44ad-ad55-7e01b6edc3c5 "Vandladningsinkontinens i dagtimer"
-* #54f42eb5-18f9-4e82-98e0-1c83988189b9 "Vandladningsinkontinens i nattetimer"
-* #8f4e33a5-38c1-42db-b9d1-7f19b2e25618 "Afføringsinkontinens i dagtimer"
-* #65375f18-ee74-456a-9f69-575a1126d61b "Afføringsinkontinens i nattetimer"
+* #b79078ce-c5b1-44ad-ad55-7e01b6edc3c5 "Dagurininkontinens"
+* #54f42eb5-18f9-4e82-98e0-1c83988189b9 "Naturininkontinens"
+* #9642daa3-7ec8-41a8-b5a0-111123de4193 "Afføringsinkontinens"
+//Vægt og vækst tilstande
 * #37ef9400-2229-4cea-877c-8d653c9ec5ca	"Vigende hovedomfang"
 * #3c8735c2-f599-44ea-840d-a0d09db4ce2b	"Vigende vægt"
 * #8bb204b0-9d83-4562-bcde-aea7aee78e34	"Overvægt"
@@ -470,32 +471,6 @@ Description: "SNOMED CT observables for length/height"
 * $SCT#248333004 //Standing height
 * $SCT#1149101003 //Recumbent body height (observable entity)
 
-ValueSet: HeadCircumSCTobservablesChildren
-Title: "HeadCircumferenceSCTobservablesChildren"
-Description: "SNOMED CT observables for Head Circumference"
-* ^experimental = false
-* $SCT#363812007 //|Hovedomkreds|
-
-ValueSet: TobaccoObservablesChildren
-Title: "TobaccoobservablesChildren"
-Description: "SNOMED CT observables for tobacco use and exposure"
-* ^experimental = false
-* $SCT#229819007 //Tobacco use and exposure (observable entity)
-
-ValueSet: MentalStateObservables
-Title: "MentalStateobservables"
-Description: "SNOMED CT observables for MentalState"
-* ^experimental = false
-* $SCT#285854004 //|Emotion (observable entity)|
-
-
-ValueSet: TobaccoResultsChildren 
-Title: "TobaccoResultsChildren"
-Description: "SNOMED CT observation resultcodes for tobacco use and exposure"
-* ^experimental = false
-* $SCT#228524006 //|Exposed to tobacco smoke at home (finding)|
-* $SCT#110483000 //|Tobacco user (finding)|
-* $SCT#160245001  //"No current problems or disability"
 
 // ValueSet: MentalStateResultsChildren
 // Title: "MentalStateResultsChildren"
@@ -520,28 +495,6 @@ Description: "Resultcodes for feeding"
 * Tempcodes#dfab6d07-b1b6-4210-ac8a-b8a0d095c8ab //"Modermælkserstatning og/eller overgangskost"
 * Tempcodes#5101d1ac-b96f-4dd9-a42e-e3f765f747e1 //"Udelukkende familiens mad"
 
-ValueSet: ObservationResultsChildren
-Title: "Observation resultcodes"
-Description: "SNOMED CT finding codes to express the result of children observations"
-* ^experimental = false
-* $SCT#228524006 //|Exposed to tobacco smoke at home (finding)|
-* $SCT#110483000 //|Tobacco user (finding)|
-//* $SCT#711563001 //|No known exposure to tobacco smoke| /(normalt fund. Overvej at lade udgå)
-* $FBOE#be128c20-851d-4217-b8df-744d8af39cac //"for det meste meget glad" "Barnet vurderer selv for det meste at være meget glad"
-* $FBOE#6bea1014-8e30-40e7-9274-2b02376c0b1b //"for det meste glad" "Barnet vurderer selv for det meste at være glad"
-* $FBOE#2c945a43-a07b-4b26-b4cc-205ba15a1251 //"for det meste midt imellem" "Barnet vurderer selv for det meste at være midt imellem glad og ikke glad"
-* $FBOE#10edfc52-3632-453b-8db1-af6691049885 //"for det meste ikke glad" "Barnet vurderer selv for det meste ikke at være glad"
-* $FBOE#9b4b5194-cf7f-4274-a691-734c24adb0b7 //"for det meste meget glad i skolen" "Barnet vurderer selv for det meste at være meget glad i skolen"
-* $FBOE#5dc857f6-1220-4762-a718-31a6101b5d61 //"for det meste glad i skolen" "Barnet vurderer selv for det meste at være glad i skolen"
-* $FBOE#2e026475-a2ec-45e3-92d8-f0bed307cceb //"for det meste midt imellem i skolen" "Barnet vurderer selv for det meste at være midt imellem glad og ikke glad i skolen"
-* $FBOE#822dffb2-3b29-4f86-9784-757954d6a047 //"for det meste ikke glad i skolen"
-//* $SCT#162339002 //|normal hørelse| (normalt fund, overvej at lade udgå)
-//* $SCT#134376008 //|abnormt fund ved høreprøve på højre side|
-//* $SCT#134375007 //|abnormt fund ved høreprøve på venstre side|
-//* $SCT#134374006 //|Høreprøve abnorm bilateralt|
-//* $SCT#164728001 //|abnorm synstest|
-//* $SCT#45089002 //|Normalt syn|(normalt fund, overvej at lade udgå)
-* $SCT#160245001  //"No current problems or disability"
 
 ValueSet: ObservationUnitsWeight
 Title: "ObservationUnitsWeight"
@@ -565,6 +518,9 @@ Description: "Indicator-observables for parents and children"
 * Tempcodes#b331fe02-a781-4abd-b6db-9331d6a69b15 //	Fysisk aktivitet
 * Tempcodes#a22c4b53-b622-4394-ba13-910a7b0d7b0d //	Hørelse
 * Tempcodes#01fddd46-ed7c-423d-b191-ffdd977dd61e //	Syn
+* Tempcodes#28972d4b-fea3-42ec-b2a5-e2a26f79b14d //	Passiv rygning
+* Tempcodes#76891f7b-cf49-4cb2-88d6-728a509eb75d //	Brug af nikotin
+
 
 //* $FBOE#bee30064-8436-4762-83ed-e47d65f23fc6 // "Observation af samvær, kontakt, forældre-barn relation ifm. forebyggelsesindsats for småbørn" 
 //* $FBOE#e88ddd81-4aa5-4c84-89fb-52de961a7c17 // "Observation af signaler, reaktioner, kommunikation ifm. forebyggelsesindsats for småbørn"
@@ -623,24 +579,16 @@ ValueSet: SocialInteractionCodes
 Title: "SocialInteractionCodes"
 Description: "Mandatory result values for social interaction in small children and school children"
 * ^experimental = false
-* Tempcodes#008b1890-4be5-463a-b618-0ab3d89515d0 // "Alderssvarende social kontakt"
+* Tempcodes#008b1890-4be5-463a-b618-0ab3d89515d0 //"Alderssvarende social kontakt"
 * Tempcodes#18938eb0-3f40-48c5-9971-7255aa86336a //"Få tegn på udfordringer i social kontakt" 
 * Tempcodes#e1c1674c-9384-4d95-999f-763f3868f444 //"Udfordringer i social kontakt"
-
-ValueSet: SocialInteractionCodesSCT
-Title: "SocialInteractionCodesSCT"
-Description: "SNOMED CT result values for social interaction in small children and school children"
-* ^experimental = false
-* $SCT#160245001 //|ingen aktuelle problemer eller funktionsnedsættelse|
-* $SCT#1255670000:{363714003=1255619009,363713009=35105006}{719722006=703478008} //1255670000 |Finding of increased risk level (finding)| : { 363714003 |fortolker| = 1255619009 |Risk level (observable entity)|, 363713009 |har fortolkning| = 35105006 |Forhøjet| }{ 719722006 |Has realization (attribute)| = 703478008 |Developmental delay in social skills| }
-* $SCT#703478008
 
 ValueSet: ChildrenParentRelationshipCodes
 Title: "ChildrenParentRelationshipCodes"
 Description: "Mandatory result values for parent child relationship in small children and school children"
 * ^experimental = false
 * Tempcodes#7a107df6-8fb8-4744-8413-be10b4c5c1d9 //	Velfungerende forældre-barn-relation
-* Tempcodes#274791a5-094d-4e6a-831e-e712d3d66aeb //Let påvirket forældre-barn-relation
+* Tempcodes#274791a5-094d-4e6a-831e-e712d3d66aeb // Let påvirket forældre-barn-relation
 * Tempcodes#80aa0dab-aa41-45b1-a2cc-16d7e3733fdd //	Udfordringer i forældre-barn-relation
 
 ValueSet: ParentSocialStatusCodes
@@ -662,7 +610,7 @@ ValueSet: CommunicationCodes
 Title: "CommunicationCodes"
 Description: "Mandatory result values for ability to communicate in small children and school children"
 * ^experimental = false
-* Tempcodes#042d522d-0abe-46eb-a958-6e235b5d5408	// Kommunikerer alderssvarende 
+* Tempcodes#042d522d-0abe-46eb-a958-6e235b5d5408 // Kommunikerer alderssvarende 
 * Tempcodes#851ad2f2-a805-4d81-a1d8-15c3b09f5949 //	Få tegn på udfordret kommunikation 
 * Tempcodes#d9f00ad4-4305-4bd0-aedf-2e51bef602e2 //	Udfordring med kommunikation
 
@@ -705,6 +653,8 @@ Description: "Mandatory result values for hearning in school children"
 * ^experimental = false
 * Tempcodes#9628db65-7460-4ecc-bbb1-48c0ac4b3f02 //	Intet problem med hørelse målt
 * Tempcodes#c4c79311-ba80-4890-9008-c2f62ab00eda //	Potentielt problem med hørelse
+* Tempcodes#4d4b20b6-0159-4014-ac1c-46a7a860b204 //	"Kendt problem med hørelse"
+
 
 ValueSet: SightCodes
 Title: "SightCodes"
@@ -712,6 +662,22 @@ Description: "Mandatory result values for sight in school children"
 * ^experimental = false
 * Tempcodes#bdcb835d-6ef6-4c4f-9fdf-94c3ebd17182 //	Intet problem med syn målt
 * Tempcodes#0896610c-1322-44f2-836c-774de52fc3f1 //	Potentielt problem med syn
+* Tempcodes#e489119b-de75-47cc-a53b-6ba90ed2c7e8 // "Kendt problem med syn"
+
+ValueSet: PassiveSmokingCodes
+Title: "PassiveSmokingCodes"
+Description: "Mandatory result values for passive smoking in small- and school children"
+* ^experimental = false
+* Tempcodes#b54723cf-3114-4119-b1cb-28107a283a99	"Ikke udsat for tobaksrøg"
+* Tempcodes#5bc59698-bdf9-48db-ab97-20c43d7ff4f1	"Udsat for tobaksrøg"
+
+ValueSet: NicotineCodes
+Title: "NicotineCodes"
+Description: "Mandatory result values for nicotine use in school children"
+* ^experimental = false
+* Tempcodes#a7a53cfd-c7bb-4573-a4ae-2eb18e3dda1f	"Ikke prøvet nikotin"
+* Tempcodes#fd145ea6-b7de-466c-9053-8b4a0be960ac	"Har prøvet nikotin"
+* Tempcodes#cfe9150e-380e-4ce3-a120-2e2b227c8b9f	"Bruger nikotin"
 
 ValueSet: ExamResults
 Title: "ExamResults"
@@ -759,6 +725,7 @@ Description: "Valueset for optional history and examination findings in small ch
 * Tempcodes#a6808e88-8740-48a2-b67e-0ae6daf7aee2	// "Ustabil døgnrytme "
 * Tempcodes#c684526e-a922-4bba-936e-3741b51ae1a4	// "Lang indsovning"
 * Tempcodes#39dedc66-fe8a-45bb-ad05-e1dee689428a	// "Usammenhængende søvn"
+* Tempcodes#03c93c46-86ad-4102-a7d5-2c7b3ad0f616	// "Føler sig ikke udhvilet"
 * Tempcodes#1ff97bed-f371-4db6-8556-7ec7bfec2274	// "Trist"
 * Tempcodes#5eaa4b16-11de-44fa-88ed-639e2bb1dd11	// "Genert/stille"
 * Tempcodes#575fec77-05e3-42f1-9701-478c3c4acb27	// "Kontaktsøgende/grænseløs"
@@ -793,10 +760,10 @@ Description: "Valueset for optional history and examination findings in small ch
 * Tempcodes#54c87d2b-b4b2-40eb-89e7-46cca2be757e	// "Udfordring med stammen"
 * Tempcodes#b44d5315-41dc-4d02-a16a-3dbe1c31df0f	// "Udfordring med sproganvendelse"
 * Tempcodes#fbc23626-556f-4eeb-b494-0a5af1dd2dd6	// "Udfordring med at målrette opmærksomhed"
-* Tempcodes#b79078ce-c5b1-44ad-ad55-7e01b6edc3c5	// "Vandladningsinkontinens i dagtimer"
-* Tempcodes#54f42eb5-18f9-4e82-98e0-1c83988189b9	// "Vandladningsinkontinens i nattetimer"
-* Tempcodes#8f4e33a5-38c1-42db-b9d1-7f19b2e25618	// "Afføringsinkontinens i dagtimer"
-* Tempcodes#65375f18-ee74-456a-9f69-575a1126d61b	// "Afføringsinkontinens i nattetimer"
+* Tempcodes#b79078ce-c5b1-44ad-ad55-7e01b6edc3c5	// "Dagurininkontinens"
+* Tempcodes#54f42eb5-18f9-4e82-98e0-1c83988189b9	// "Naturininkontinens"
+* Tempcodes#9642daa3-7ec8-41a8-b5a0-111123de4193	// "Afføringsinkontinens"
+
 * $FBOE#be128c20-851d-4217-b8df-744d8af39cac //"for det meste meget glad" "Barnet vurderer selv for det meste at være meget glad"
 * $FBOE#6bea1014-8e30-40e7-9274-2b02376c0b1b //"for det meste glad" "Barnet vurderer selv for det meste at være glad"
 * $FBOE#2c945a43-a07b-4b26-b4cc-205ba15a1251 //"for det meste midt imellem" "Barnet vurderer selv for det meste at være midt imellem glad og ikke glad"

@@ -1,4 +1,4 @@
-### Scope and usage
+<!-- ### Scope and usage
 KLGatewayChildrenTobaccoObservation is used to document small childrens exposue to tobacco, and teenagers tocacco use.
 
 Observation.code.coding, holds the valid value for the types of observations allowed. It is bound to a fixed SNOMED CT code 'Tobacco use and exposure'.
@@ -28,4 +28,4 @@ Nedenstående tabel oversætter mellem de attributter der er defineret i den fæ
 |tobaksobservationSubjekt|Den borger, for hvem der er foretaget en observation.|Observation.subject|
 |tobaksobservationKontakt|Den kontakt, hvor observationen er foretaget.|Observation.encounter|
 |tobaksobservationStatus|Klasse der udtrykker, hvor i sin proces, observationen er.|Observation.status|
-|tobaksobservationMangler|Klasse, der udtrykker hvorfor data mangler|Observation.dataAbsentReason|
+|tobaksobservationMangler|Klasse, der udtrykker hvorfor data mangler|Observation.dataAbsentReason| -->

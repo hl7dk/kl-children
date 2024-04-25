@@ -5,7 +5,7 @@ Title: "KLGatewayChildrenHeadCircumference"
 Description: "Head circumference profile used in Danish Municipalities, derived from HL7 Denmark standard profile"
 //Constraints
 * code.coding[LOINC] = $LOINC#9843-4 //"Head circumference"
-* code.coding[SNOMEDCT] from HeadCircumSCTobservablesChildren (extensible)
+* code.coding[SNOMEDCT] = $SCT#363812007 //"Head circumference"
 * valueQuantity.code = #cm
 * subject 1..1
 * subject only Reference(klgateway-children-citizen)

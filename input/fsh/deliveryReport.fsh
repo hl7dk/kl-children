@@ -105,8 +105,8 @@ Usage: #example
 * entry[+].fullUrl = "Observation/RikkeHeadCircum"
 * entry[=].resource = RikkeHeadCircum
 
-* entry[+].fullUrl = "Observation/RikkeTobaccoObservation"
-* entry[=].resource = RikkeTobaccoObservation
+//* entry[+].fullUrl = "Observation/RikkeTobaccoObservation"
+//* entry[=].resource = RikkeTobaccoObservation
 
 //* entry[+].fullUrl = "Observation/RikkeFeedingObservation"
 //* entry[=].resource = RikkeFeedingObservation
