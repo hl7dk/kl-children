@@ -358,7 +358,7 @@ Description: "LOINC provides a set of universal names and ID codes for identifyi
 * #9843-4 "Head Occipital-frontal circumference"
 
 ValueSet: EncounterClassCodes
-Title: "EncounterClassCodes"
+Title: "KontaktKlasseKoder"
 Description: "Codes to describe the mode of delivery of an encounter"
 * ^experimental = false
 * include codes from valueset http://terminology.hl7.org/ValueSet/v3-ActEncounterCode
@@ -366,7 +366,7 @@ Description: "Codes to describe the mode of delivery of an encounter"
 * Tempcodes#124be95d-6924-4609-9d2a-e7c73ae3ab3d //"Skærmbesøg" KLCommonCareSocialCodes
 
 ValueSet: FindingInformerCodes  //I virkeligheden FFInst-koder. Disse bør tilføjes til KLterm, hvis de ikke allered er?
-Title: "FindingInformerCodes"
+Title: "KildeTilOplysningKoder"
 Description: "Codes for who informed the findings"
 * ^experimental = false
 * Tempcodes#a3d30bf2-4a3c-4c49-9001-5363ae11681c //"Borger"
@@ -437,7 +437,7 @@ Description: "Sundhedsplejetilstande, som relaterer sig til sygeplejefaglige pro
 
 ValueSet: EncounterTypes
 Id: EncounterTypes
-Title: "EncounterTypes"
+Title: "SundhedsplejeKontaktTyper"
 Description: "Extension on encountertype valueset, to be implemented in KL-term and FKI, does not use exciting codes only those specific to childrens nursing"
 * ^experimental = false
 * $FBOE#d3c00541-f1d3-4c43-b5fc-16e8914ca1df //"Graviditetsbesøg"
@@ -457,36 +457,22 @@ Description: "Extension on encountertype valueset, to be implemented in KL-term 
 
 ValueSet: ParentTypes
 Id: ParentTypes
-Title: "ParentTypes"
+Title: "ForælderTyper"
 Description: "Limitation on HL7 role class to only represent parent-relationships, as accepted in the children data-set"
 * ^experimental = false
 * $RoleCode#PRN
 //* $RoleClass#GUARD
 
 ValueSet: BodyheightSCTobservablesChildren
-Title: "BodyheightSCTobservablesChildren"
+Title: "HøjdeObservationskoderSCT"
 Description: "SNOMED CT observables for length/height"
 * ^experimental = false
 * $SCT#1153637007 //Body height (observable entity)
 * $SCT#248333004 //Standing height
 * $SCT#1149101003 //Recumbent body height (observable entity)
 
-
-// ValueSet: MentalStateResultsChildren
-// Title: "MentalStateResultsChildren"
-// Description: "Resultcodes for mental state"
-// * ^experimental = false
-// * $FBOE#be128c20-851d-4217-b8df-744d8af39cac //"for det meste meget glad" "Barnet vurderer selv for det meste at være meget glad"
-// * $FBOE#6bea1014-8e30-40e7-9274-2b02376c0b1b //"for det meste glad" "Barnet vurderer selv for det meste at være glad"
-// * $FBOE#2c945a43-a07b-4b26-b4cc-205ba15a1251 //"for det meste midt imellem" "Barnet vurderer selv for det meste at være midt imellem glad og ikke glad"
-// * $FBOE#10edfc52-3632-453b-8db1-af6691049885 //"for det meste ikke glad" "Barnet vurderer selv for det meste ikke at være glad"
-// * $FBOE#9b4b5194-cf7f-4274-a691-734c24adb0b7 //"for det meste meget glad i skolen" "Barnet vurderer selv for det meste at være meget glad i skolen"
-// * $FBOE#5dc857f6-1220-4762-a718-31a6101b5d61 //"for det meste glad i skolen" "Barnet vurderer selv for det meste at være glad i skolen"
-// * $FBOE#2e026475-a2ec-45e3-92d8-f0bed307cceb //"for det meste midt imellem i skolen" "Barnet vurderer selv for det meste at være midt imellem glad og ikke glad i skolen"
-// * $FBOE#822dffb2-3b29-4f86-9784-757954d6a047 //"for det meste ikke glad i skolen"
-
 ValueSet: FeedingResultsChildren
-Title: "FeedingResultsChildren"
+Title: "ResultatkoderSmåbørnMad"
 Description: "Resultcodes for feeding"
 * ^experimental = false
 * Tempcodes#77a008dd-21cc-452f-a1ee-ac8d025b7817 //"Fuldamning, inklusiv modermælk på flaske"
@@ -497,14 +483,14 @@ Description: "Resultcodes for feeding"
 
 
 ValueSet: ObservationUnitsWeight
-Title: "ObservationUnitsWeight"
+Title: "ObservationsEnhederVægt"
 Description: "UCUM units for childrens weight"
 * ^experimental = false
 * $UCUM#kg
 * $UCUM#g
 
 ValueSet: IndicatorCodesChildren
-Title: "IndicatorCodesChildren"
+Title: "SundhedsplejeIndikatorkoder"
 Description: "Indicator-observables for parents and children"
 * ^experimental = false
 * $FBOE#2c39af9f-8e45-4c88-962f-e7a9e2cd31b6 // Forælders psykiske tilstand
@@ -521,54 +507,8 @@ Description: "Indicator-observables for parents and children"
 * Tempcodes#28972d4b-fea3-42ec-b2a5-e2a26f79b14d //	Passiv rygning
 * Tempcodes#76891f7b-cf49-4cb2-88d6-728a509eb75d //	Brug af nikotin
 
-
-//* $FBOE#bee30064-8436-4762-83ed-e47d65f23fc6 // "Observation af samvær, kontakt, forældre-barn relation ifm. forebyggelsesindsats for småbørn" 
-//* $FBOE#e88ddd81-4aa5-4c84-89fb-52de961a7c17 // "Observation af signaler, reaktioner, kommunikation ifm. forebyggelsesindsats for småbørn"
-// * $FBOE#0701a892-2e6b-4b76-a041-97ceda78f973 // "Observation af motorik ifm. forebyggelsesindsats for småbørn"
-// * $FBOE#bfc7062e-d529-4516-a698-fc87b339033a // "Observation af søvn, døgnrytme ifm. forebyggelsesindsats for småbørn"
-// * $FBOE#5f4a21bb-6314-477a-a0fe-7924ff83954a // "Observation af sprog ifm. indskolingsundersøgelse"
-// * $FBOE#2a8ebbc5-a4f0-485c-850f-1e95db492a6f // "Observation af evne til at gå ifm. indskolingsundersøgelse"
-// * $FBOE#c61e0e57-b1fd-4e4a-9eb9-5086b14b7504 // "Observation af evne til at hoppe ifm. indskolingsundersøgelse"
-// * $FBOE#5697e7df-3009-44d2-a495-ca8e4da167fb // "Observation af evne til at holde balance ifm. indskolingsundersøgelse"
-// * $FBOE#550cad89-6036-453f-9536-d1adb4eae879 // "Observation af evne til at løbe gadedrengeløb ifm. indskolingsundersøgelse"
-// * $FBOE#1c4b0adf-cd19-42af-ba43-80c28fcbc7e3 // "Observation af evne til at stå på venstre ben ifm. indskolingsundersøgelse"
-// * $FBOE#c05a5706-c0df-4a66-a6a1-a01e948d9326 // "Observation af evne til at stå på højre ben ifm. indskolingsundersøgelse"
-// * $FBOE#0e24a41d-6bb6-4c84-89e1-5635cd4ea481 // "Observation af evne til at kaste bold med højre hån ifm. indskolingsundersøgelse"
-// * $FBOE#998d1b1e-b165-43c9-861f-0b620f753df3 // "Observation af evne til at kaste bold med venstre hånd ifm. indskolingsundersøgelse"
-// * $FBOE#a3e32326-283d-47db-af92-3d8554fb7977 // "Observation af evne til at gribe bold ifm. indskolingsundersøgelse"
-// * $FBOE#dfa9a5e4-c542-4491-8a4b-1dee0bab8b17 // "Observation af evne til at holde om en blyant ifm. indskolingsundersøgelse"
-// * $FBOE#f8d7fba7-acc4-4481-bb8d-4b3112f411a9 // "Observation vedr. fysisk aktivitet ifm. indskolingsundersøgelse"
-// * $FBOE#d240cad7-04ca-4f36-9dd7-86fb1987856a // "Observation vedr. mad og måltider ifm. indskolingsundersøgelse"
-// * $FBOE#51a91eca-5a66-4e1a-bbf7-be4ccf12810f // "Observation vedr. forældre-barn relation, kontakt, omsorg ifm. indskolingsundersøgelse"
-// * $FBOE#58464451-5fbb-4607-871d-1e01212c38d7 // "Observation vedr. sundhedsplejerskens observationer og kontakt med barnet ifm. indskolingsundersøgelse"
-// * $FBOE#7dbe4d6a-a486-4d8a-bd85-d8803ecb9688 // "Observation vedr. synstest ifm indskolingsundersøgelse"
-// * $FBOE#877a3705-ddd4-4e54-a6eb-f94a95276f99 // "Observation vedr. høretest ifm. indskolingsundersøgelse"
-// * $FBOE#da541ade-cbc9-4377-bff7-5ec153c93a89 // "Observation vedr. fysisk trivsel ifm. udskolingsundersøgelse"
-// * $FBOE#20a41422-1ea1-483e-8070-7ffd79c493c0 // "Observation vedr. søvn/træthed ifm. udskolingsundersøgelse"
-// * $FBOE#089c064d-3e14-47d2-9e34-b753fcf18c7a // "Observation vedr. spisning, kost og motion  ifm. udskolingsundersøgelse"
-// * $FBOE#933d7ded-0c10-48e0-9645-b84b7c8946c7 // "Observation vedr. trivsel  ifm. udskolingsundersøgelse"
-// * $FBOE#ae0bc3c6-7084-4e62-8e83-427f14a09646 // "Observation vedr. seksuel adfærd ifm. udskolingsundersøgelse"
-// * $FBOE#aeded840-d8da-408e-bb6d-d2d8560a6b79 // "Observation vedr. alkohol  ifm. udskolingsundersøgelse"
-// * $FBOE#d59a5f7f-805c-44a6-9ab7-a4e7a1d9bd1e // "Observation vedr. andre rusmidler  ifm. udskolingsundersøgelse"
-// * $FBOE#5a517611-64d6-4ebd-af33-f2b30d0ad874 // "Observation vedr. mental sundhed  ifm. udskolingsundersøgelse"
-// * $FBOE#9069b5aa-d62c-48f9-a0d9-d17ecd12920a // "Observation vedr. syntest ifm. udskolingsundersøgelse"
-// * $FBOE#6be08133-feca-4d2f-a45d-cb36d141011e // "Observation vedr. høretest  ifm. udskolingsundersøgelse"
-
-// ValueSet: IndicatorResultsChildren
-// Title: "IndicatorResultsChildren"
-// Description: "Result values for children indicators"
-// * ^experimental = false
-// * $FBOE#96e3eda6-3eb7-4fbb-9850-fc6dfafadb4a //"Problem/bemærkning" 
-// * $FBOE#1b64f768-5133-4633-85a4-2b97fcaa1f7a //"Der er intet at bemærke"
-//* $SCT#228150001 //|mental helbredssvækkelse| (bemærkninger til mors psykiske tilstand)
-//* $SCT#737368006 //|Caregiver-child relationship problem| (bemærkning til samspil og kontakt)
-//* $SCT#247806005 //|dårligt tilpas| (Eller 276247002 |misforhold vedrørende sindsstemning|) (Bemærkning til signaler og reaktioner)
-//* $SCT#164728001 //|abnorm synstest|
-//* $SCT#313203003 //|Hearing test abnormal (finding)|
-//* $SCT#160245001  //"No current problems or disability"
-
 ValueSet: ParentsMentalCodes
-Title: "ParentsMentalCodes"
+Title: "ForældresPsykiskeTilstandKoder"
 Description: "Mandatory result values for parents mental state"
 * ^experimental = false
 * Tempcodes#0e5db980-8c6e-4034-abab-054e0eb40935 //"Normal psykisk tilstand"
@@ -576,7 +516,7 @@ Description: "Mandatory result values for parents mental state"
 * Tempcodes#f86c2526-3b04-454c-a99e-d350f699dc94 //"Udfordret psykisk tilstand"
 
 ValueSet: SocialInteractionCodes
-Title: "SocialInteractionCodes"
+Title: "SocialKontaktKoder"
 Description: "Mandatory result values for social interaction in small children and school children"
 * ^experimental = false
 * Tempcodes#008b1890-4be5-463a-b618-0ab3d89515d0 //"Alderssvarende social kontakt"
@@ -584,7 +524,7 @@ Description: "Mandatory result values for social interaction in small children a
 * Tempcodes#e1c1674c-9384-4d95-999f-763f3868f444 //"Udfordringer i social kontakt"
 
 ValueSet: ChildrenParentRelationshipCodes
-Title: "ChildrenParentRelationshipCodes"
+Title: "ForældreBarnRelationsKoder"
 Description: "Mandatory result values for parent child relationship in small children and school children"
 * ^experimental = false
 * Tempcodes#7a107df6-8fb8-4744-8413-be10b4c5c1d9 //	Velfungerende forældre-barn-relation
@@ -592,7 +532,7 @@ Description: "Mandatory result values for parent child relationship in small chi
 * Tempcodes#80aa0dab-aa41-45b1-a2cc-16d7e3733fdd //	Udfordringer i forældre-barn-relation
 
 ValueSet: ParentSocialStatusCodes
-Title: "ParentSocialStatusCodes"
+Title: "ForældresSårbarhedKoder"
 Description: "Mandatory result values for parents social status. Only documented in parents of small children"
 * ^experimental = false
 * Tempcodes#57dd67d7-175a-4541-87ff-db1381c4e1d9 //	Ingen sårbarhed 
@@ -600,14 +540,14 @@ Description: "Mandatory result values for parents social status. Only documented
 * Tempcodes#2461e246-b75c-46bb-b6ad-c68d529ace7e //	Sårbarhed
 
 ValueSet: SocialSupportNetworkCodes
-Title: "SocialSupportNetworkCodes"
+Title: "NetværkKoder"
 Description: "Mandatory result values for social support network of the family"
 * ^experimental = false
 * Tempcodes#fbd9a8a5-0ed6-4e1a-9841-066ade34b071 //	Godt netværk
 * Tempcodes#983ff338-2e77-413d-b157-66d0141a4a96 //	Sparsomt netværk
 
 ValueSet: CommunicationCodes
-Title: "CommunicationCodes"
+Title: "KommunikationKoder"
 Description: "Mandatory result values for ability to communicate in small children and school children"
 * ^experimental = false
 * Tempcodes#042d522d-0abe-46eb-a958-6e235b5d5408 // Kommunikerer alderssvarende 
@@ -615,7 +555,7 @@ Description: "Mandatory result values for ability to communicate in small childr
 * Tempcodes#d9f00ad4-4305-4bd0-aedf-2e51bef602e2 //	Udfordring med kommunikation
 
 ValueSet: SleepCodes
-Title: "SleepCodes"
+Title: "SøvnKoder"
 Description: "Mandatory result values for challenges in sleeping pattern in small children and school children"
 * ^experimental = false
 * Tempcodes#b07eec60-941d-484d-8c2a-aeaa2ba798bf //	Søvn med normale variationer
@@ -623,7 +563,7 @@ Description: "Mandatory result values for challenges in sleeping pattern in smal
 * Tempcodes#c25b5cda-3f6b-4ef7-998d-c22c58c6dd18 //	Udfordring med søvn
 
 ValueSet: MotorFunctionCodes
-Title: "MotorFunctionCodes"
+Title: "MotorikKoder"
 Description: "Mandatory result values for motor function in small children and school children"
 * ^experimental = false
 * Tempcodes#d5b876e1-a86c-4768-b46d-cd795eaa89e4 //	Alderssvarende motorik
@@ -631,7 +571,7 @@ Description: "Mandatory result values for motor function in small children and s
 * Tempcodes#aeade013-b14a-4ad3-80da-66742782411e //	Udfordringer med motorik
 
 ValueSet: NutritionCodes
-Title: "NutritionCodes"
+Title: "ErnæringKoder"
 Description: "Mandatory result values for nutrition in school children"
 * ^experimental = false
 * Tempcodes#78dcf013-8ae9-4541-b175-100cde77a9f0 //	Almindeligt kostindtag
@@ -639,7 +579,7 @@ Description: "Mandatory result values for nutrition in school children"
 * Tempcodes#019e3a2d-775c-4660-8183-75206b47048f //	Problem med kost
 
 ValueSet: PhysicalActivityCodes
-Title: "PhysicalActivityCodes"
+Title: "FysiskAktiviteteKoder"
 Description: "Mandatory result values for physical activity in school children"
 * ^experimental = false
 * Tempcodes#05086dad-8718-4a6c-b096-54c7101d0b2c //	Fysisk aktiv
@@ -648,7 +588,7 @@ Description: "Mandatory result values for physical activity in school children"
 * Tempcodes#2ef19cdf-f6e6-4b2c-aaef-f466e33cf261 //	Overdreven motion
 
 ValueSet: HearingCodes
-Title: "HearingCodes"
+Title: "HørelseKoder"
 Description: "Mandatory result values for hearning in school children"
 * ^experimental = false
 * Tempcodes#9628db65-7460-4ecc-bbb1-48c0ac4b3f02 //	Intet problem med hørelse målt
@@ -657,7 +597,7 @@ Description: "Mandatory result values for hearning in school children"
 
 
 ValueSet: SightCodes
-Title: "SightCodes"
+Title: "SynKoder"
 Description: "Mandatory result values for sight in school children"
 * ^experimental = false
 * Tempcodes#bdcb835d-6ef6-4c4f-9fdf-94c3ebd17182 //	Intet problem med syn målt
@@ -665,14 +605,14 @@ Description: "Mandatory result values for sight in school children"
 * Tempcodes#e489119b-de75-47cc-a53b-6ba90ed2c7e8 // "Kendt problem med syn"
 
 ValueSet: PassiveSmokingCodes
-Title: "PassiveSmokingCodes"
+Title: "PassivRygningKoder"
 Description: "Mandatory result values for passive smoking in small- and school children"
 * ^experimental = false
 * Tempcodes#b54723cf-3114-4119-b1cb-28107a283a99	"Ikke udsat for tobaksrøg"
 * Tempcodes#5bc59698-bdf9-48db-ab97-20c43d7ff4f1	"Udsat for tobaksrøg"
 
 ValueSet: NicotineCodes
-Title: "NicotineCodes"
+Title: "NikotinKoder"
 Description: "Mandatory result values for nicotine use in school children"
 * ^experimental = false
 * Tempcodes#a7a53cfd-c7bb-4573-a4ae-2eb18e3dda1f	"Ikke prøvet nikotin"
@@ -680,7 +620,7 @@ Description: "Mandatory result values for nicotine use in school children"
 * Tempcodes#cfe9150e-380e-4ce3-a120-2e2b227c8b9f	"Bruger nikotin"
 
 ValueSet: ExamResults
-Title: "ExamResults"
+Title: "UndersøgelsesResultatKoder"
 Description: "Valueset for optional history and examination findings in small children and school children"
 * ^experimental = false
 * Tempcodes#a038c064-b57d-4a62-9333-c9456817595d //	 "Fysiske behov mødes ikke"

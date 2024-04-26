@@ -7,7 +7,7 @@ Description: "Profile for describing the relationship between the child, and the
 * patient ^type.aggregation = #bundled
 * relationship from ParentTypes (required)
 * identifier 0..0
-* active 0..0
+* active 0..1
 * name 0..0
 * telecom 0..0
 * gender 0..0
@@ -19,6 +19,7 @@ Description: "Profile for describing the relationship between the child, and the
 
 * patient ^short = "[DK] harBarn"
 * relationship ^short = "[DK] type"
+* active ^short = "[DK] harAktivJournal" 
 
 Instance: RikkesParent
 InstanceOf: klgateway-children-related-parent

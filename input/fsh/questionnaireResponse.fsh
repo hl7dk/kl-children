@@ -10,7 +10,7 @@ Description: "Questionnaire response profile, for all questionaires in kl-childr
 //* questionnaire only $epds
 * item 0..36
 * item.answer 1..1
-* item.answer..value[x] 1..1
+* item.answer.value[x] 1..1
 * item.answer.value[x] only integer or boolean or string
 * item.answer.valueString obeys questionnaire-response-string-length  
 * subject 1..1
@@ -30,7 +30,15 @@ Description: "Questionnaire response profile, for all questionaires in kl-childr
 * item.item 0..0
 * item.answer.item 0..0
 
+* extension[FindingInformer].valueCodeableConcept ^short = "[DK] SpørgeskemaSvarKilde"
+* questionnaire ^short = "[DK] SpørgeskemaSvarSpørgeskemaDefinition"
+* item.linkId ^short = "[DK] SpørgeskemaSvarPunktId"
+* item.answer.value[x] ^short = "[DK] SpørgeskemaSvarPunktSvar"
+* subject ^short = "[DK] SpørgeskemaSvarSubjekt"
+* authored ^short = "[DK] SpørgeskemaSvarTid"
+
 Invariant: questionnaire-response-string-length
 Description: "Answer given as string must be a minimum of 1 character, and maximum of 30 characters long"
 Severity: #error
 Expression: "matches('^.{1,30}$')"
+

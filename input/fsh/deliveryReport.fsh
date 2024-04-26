@@ -3,6 +3,8 @@ Parent: Bundle
 Id: klgateway-children-delivery-report
 Title: "KLGatewayChildrenDeliveryReport"
 Description: "Delivery report to deliver data for each child, including state of the family."
+* meta.profile 1..1
+* meta.profile = Canonical(klgateway-children-delivery-report)
 * identifier ..0
 * type = #collection
 * timestamp 1..1
@@ -69,16 +71,16 @@ Usage: #example
 * type = #collection
 * timestamp = 2020-06-01T23:45:00.000Z
 
-* entry[+].fullUrl = "Patient/Rikke"
+* entry[+].fullUrl = Canonical(Rikke)
 * entry[=].resource = Rikke
 
-* entry[+].fullUrl = "Encounter/2nd1mthEncounter"
+* entry[+].fullUrl = Canonical(2nd1mthEncounter)
 * entry[=].resource = 2nd1mthEncounter
 
-* entry[+].fullUrl = "Observation/RikkeBodyHeight"
+* entry[+].fullUrl = Canonical(RikkeBodyHeight)
 * entry[=].resource = RikkeBodyHeight
 
-* entry[+].fullUrl = "Observation/RikkeBodyWeight"
+* entry[+].fullUrl = Canonical(RikkeBodyWeight)
 * entry[=].resource = RikkeBodyWeight
 
 
@@ -90,19 +92,19 @@ Usage: #example
 * type = #collection
 * timestamp = 2020-07-08T23:45:00.000Z
 
-* entry[+].fullUrl = "Patient/Rikke"
+* entry[+].fullUrl = Canonical(Rikke)
 * entry[=].resource = Rikke
 
-* entry[+].fullUrl = "Patient/Kirsten"
+* entry[+].fullUrl = Canonical(Kirsten)
 * entry[=].resource = Kirsten
 
-* entry[+].fullUrl = "RelatedPerson/RikkesParent"
+* entry[+].fullUrl = Canonical(RikkesParent)
 * entry[=].resource = RikkesParent
 
-* entry[+].fullUrl = "Encounter/2mthEncounter"
+* entry[+].fullUrl = Canonical(2mthEncounter)
 * entry[=].resource = 2mthEncounter
 
-* entry[+].fullUrl = "Observation/RikkeHeadCircum"
+* entry[+].fullUrl = Canonical(RikkeHeadCircum)
 * entry[=].resource = RikkeHeadCircum
 
 //* entry[+].fullUrl = "Observation/RikkeTobaccoObservation"
@@ -111,7 +113,7 @@ Usage: #example
 //* entry[+].fullUrl = "Observation/RikkeFeedingObservation"
 //* entry[=].resource = RikkeFeedingObservation
 
-* entry[+].fullUrl = "Observation/RikkeSocialInteraction"
+* entry[+].fullUrl = Canonical(RikkeSocialInteraction)
 * entry[=].resource = RikkeSocialInteraction
 
 // * entry[+].fullUrl = "Observation/KirstenIndicatorMS"
