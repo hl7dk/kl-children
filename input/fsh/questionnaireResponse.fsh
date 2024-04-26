@@ -1,5 +1,5 @@
 Profile: KLGatewayChildrenQuestionnaireResponse
-Id: klgateway-children-questionaire-response
+Id: klgateway-children-questionnaire-response
 Parent: QuestionnaireResponse
 Title: "KLGatewayChildrenQuestionnaireResponse"
 Description: "Questionnaire response profile, for all questionaires in kl-children"

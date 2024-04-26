@@ -8,6 +8,7 @@ Description: "Feeding observation profile used in the children database"
 * code.coding ^slicing.rules = #closed
 * code.coding contains
     FBOECode 1..1
+* code.coding[FBOECode].system = Canonical(Tempcodes)
 * code.coding[LOINC] 0..0
 * code.coding[NPU] 0..0
 * code.coding[IEEE] 0..0

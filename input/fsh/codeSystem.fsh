@@ -124,8 +124,6 @@ Description: "Tempcodes to be implemented in KL-term"
 * #e61e4dab-54bb-4bf4-9b76-8d991cf4de08 "Ernæring"
 * #28972d4b-fea3-42ec-b2a5-e2a26f79b14d "Passiv rygning"
 * #76891f7b-cf49-4cb2-88d6-728a509eb75d "Brug af nikotin"
-* #e62340b2-6721-4462-8129-fa7ae2bae2db "Barnets vurdering af trivsel generelt" 
-* #538cc68c-c8b6-4008-aa8c-54e22f20871f "Barnets vurdering af trivsel i skolen"
 //normale børnefund
 * #008b1890-4be5-463a-b618-0ab3d89515d0 "Alderssvarende social kontakt"
 * #7a107df6-8fb8-4744-8413-be10b4c5c1d9	"Velfungerende forældre-barn-relation"

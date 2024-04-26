@@ -70,3 +70,15 @@ Description: "Lars' unrininkontinens ved indskolingsundersøgelsen"
 * valueCodeableConcept = Tempcodes#54f42eb5-18f9-4e82-98e0-1c83988189b9 "Naturininkontinens"
 * status = #final
 * effectiveDateTime = 2021-10-21T10:45:00.000Z
+
+Instance: RikkeEyeContact2mth
+InstanceOf: klgateway-children-exam-result
+Usage: #example
+Title: "RikkeEyeContact2mth"
+Description: "Rikke har afvigende øjenkontakt ved 2 måneder"
+* subject = Reference(Rikke)
+* encounter = Reference(2mthEncounter)
+* code.coding[SNOMEDCT] = $SCT#363788007 // "Clinical history/examination observable"
+* valueCodeableConcept = Tempcodes#bfd18100-d007-4465-95ce-5bf2ac8bc091 "Afvigende øjenkontakt"
+* status = #final
+* effectiveDateTime = 2020-07-07

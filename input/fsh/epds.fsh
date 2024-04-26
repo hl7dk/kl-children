@@ -94,7 +94,7 @@ Description: "EPDS besvarelse mor, Kirsten"
 * status = #completed
 * subject = Reference(Kirsten)
 * extension[findingInformer].valueCodeableConcept = Tempcodes#a3d30bf2-4a3c-4c49-9001-5363ae11681c "Borger"
-* authored = 2020-07-04
+* authored = 2020-07-07
 
 * item[0].linkId = "1humor"
 * item[=].answer.valueInteger = 0
@@ -106,10 +106,10 @@ Description: "EPDS besvarelse mor, Kirsten"
 * item[=].answer.valueInteger = 1
 
 * item[+].linkId = "4worry"
-* item[=].answer.valueInteger = 0
+* item[=].answer.valueInteger = 1
 
 * item[+].linkId = "5anxious"
-* item[=].answer.valueInteger = 0
+* item[=].answer.valueInteger = 2
 
 * item[+].linkId = "6grow"
 * item[=].answer.valueInteger = 1
@@ -127,4 +127,4 @@ Description: "EPDS besvarelse mor, Kirsten"
 * item[=].answer.valueInteger = 0
 
 * item[+].linkId = "score"
-* item[=].answer.valueInteger = 7
+* item[=].answer.valueInteger = 10

@@ -63,9 +63,27 @@ Description: "Rikkes kropslængde"
 * category.coding.code = #vital-signs
 * code.coding[SNOMEDCT] = $SCT#1153637007
 * code.coding[LOINC] = $LOINC#8302-2
-* valueQuantity.value = 57.4
+* valueQuantity.value = 54.4
 * valueQuantity.unit = "cm"
 * valueQuantity.system = $UCUM
 * valueQuantity.code = #cm
 * status = #final
 * effectiveDateTime = 2020-06-01
+
+Instance: RikkeBodyHeight2mth
+InstanceOf: klgateway-children-bodyheight
+Usage: #example
+Title: "RikkeBodyHeight2mth"
+Description: "Rikkes kropslængde"
+* subject = Reference(Rikke)
+* encounter = Reference(2mthEncounter)
+* category.coding.system = "http://terminology.hl7.org/CodeSystem/observation-category"
+* category.coding.code = #vital-signs
+* code.coding[SNOMEDCT] = $SCT#1153637007
+* code.coding[LOINC] = $LOINC#8302-2
+* valueQuantity.value = 58
+* valueQuantity.unit = "cm"
+* valueQuantity.system = $UCUM
+* valueQuantity.code = #cm
+* status = #final
+* effectiveDateTime = 2020-07-07

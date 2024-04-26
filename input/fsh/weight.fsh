@@ -59,3 +59,21 @@ Description: "Rikkes vægt"
 * valueQuantity.code = #g
 * status = #final
 * effectiveDateTime = 2020-06-01
+
+Instance: RikkeBodyWeight2mth
+InstanceOf: klgateway-children-bodyweight
+Usage: #example
+Title: "RikkeBodyWeight"
+Description: "Rikkes vægt"
+* subject = Reference(Rikke)
+* encounter = Reference(2mthEncounter)
+* category.coding.system = "http://terminology.hl7.org/CodeSystem/observation-category"
+* category.coding.code = #vital-signs
+* code.coding[SNOMEDCT] = $SCT#27113001 "Body weight"
+* code.coding[LOINC] = $LOINC#29463-7
+* valueQuantity.value = 6200
+* valueQuantity.unit = "g"
+* valueQuantity.system = $UCUM
+* valueQuantity.code = #g
+* status = #final
+* effectiveDateTime = 2020-06-30
