@@ -6,7 +6,6 @@ Description: "Encounter for health prevention and need-based visits from childre
 * identifier ..0
 * statusHistory ..0
 * class.version ..0
-* class.display ..0
 * class.userSelected ..0
 * classHistory ..0
 * class from EncounterClassCodes (required)
@@ -98,7 +97,7 @@ InstanceOf: klgateway-children-encounter
 Title: "Behovskontakt ved Rikke på skærm"
 Usage: #example
 Description: "Kontakt, hvor der leveres behovskontakt på skærm ved Rikke og hendes familie"
-* type = $FBOE#4b039ba1-4005-42e6-b672-09b81ad7578a "Behovskontakt med småbørnssundhedsplejen" 
+* type = $FBOE#4b039ba1-4005-42e6-b672-09b81ad7578a "Behovsbesøg af småbørnssundhedsplejen" 
 * period.start = 2021-03-25T10:15:00.000Z
 * status = $EncounterStatus#finished
 * subject = Reference(Rikke)

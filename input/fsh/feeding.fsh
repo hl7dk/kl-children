@@ -106,7 +106,7 @@ Description: "Rikkes periode-start for ammes som supplement til anden kost"
 * encounter = Reference(2mthEncounter)
 * code.coding[FBOECode] = Tempcodes#e61e4dab-54bb-4bf4-9b76-8d991cf4de08 "Ernæring"
 * code.coding[SNOMEDCT] = $SCT#169740003 "Infant feeding method"
-* valueCodeableConcept = Tempcodes#77a008dd-21cc-452f-a1ee-ac8d025b7817 "Ammes som supplement til anden kost"
+* valueCodeableConcept = Tempcodes#3edc905c-2830-442a-98cc-463cc3701dd1 "Ammes som supplement til anden kost"
 * status = #final
 * effectivePeriod.start = 2020-06-28T00:00:00.000Z
 

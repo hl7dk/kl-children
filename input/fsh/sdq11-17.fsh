@@ -1,11 +1,11 @@
 Instance: klgateway-children-sdq11-17
 InstanceOf: KLGatewayChildrenQuestionnaire
 Usage: #definition
-Title: "KLGatewayChildrenSDQ11-17"
+Title: "KLGatewayChildrenSDQ1117"
 * status = #active
 * publisher = "Kommunernes Landsforening"
 * description = "Strength and Difficulties Questionnaire (SDQ), including impact supplement for self-completion by 11-17 year olds (SDQ S11-17)"
-* name = "KLGatewayChildrenSDQ11-17"
+* name = "KLGatewayChildrenSDQ1117"
 * code = $SCT#717639006 "Strengths and Difficulties Questionnaire self-rated for 11-17 year old score"
 * copyright = "Please note that Strengths and Difficulties Questionnaires, whether in English or in translation, are copyright documents that are not in the public domain. As such, they may not be modified in any way (e.g. changing the wording of questions, adding questions or administering only subsets of questions). This is to ensure that the SDQ is fully comparable across studies and settings. Similarly, to ensure high quality and consistency, unauthorized translations are not permitted. Paper versions may be downloaded and subsequently photocopied without charge by individuals or non-profit organizations provided they are not making any charge to families.
 Users are not permitted to create or distribute electronic versions for any purpose without prior authorization from youthinmind. If you are interested in making translations or creating electronic versions you MUST first contact support@youthinmind.com."
