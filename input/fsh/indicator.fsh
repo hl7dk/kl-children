@@ -137,7 +137,7 @@ Title: "KirstenParentMentalStatus"
 Description: "Kirstens psykiske tilstand ved Rikkes 2mrd"
 * subject = Reference(Kirsten)
 * code.coding[FBOECode] = $FBOE#2c39af9f-8e45-4c88-962f-e7a9e2cd31b6 "Forælders psykiske tilstand"
-* valueCodeableConcept = Tempcodes#b8220216-e185-451b-8d2a-67cdf73c42c3 "Let påvirket psykisk tilstand"
+* valueCodeableConcept = Tempcodes#b8220216-e185-451b-8d2a-67cdf73c42c3 "Let psykisk reaktion"
 * status = #final
 * effectiveDateTime = 2020-07-07T00:00:00.000Z
 

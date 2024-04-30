@@ -127,7 +127,7 @@ Description: "Tempcodes to be implemented in KL-term"
 //normale børnefund
 * #008b1890-4be5-463a-b618-0ab3d89515d0 "Alderssvarende social kontakt"
 * #7a107df6-8fb8-4744-8413-be10b4c5c1d9	"Velfungerende forældre-barn-relation"
-* #0e5db980-8c6e-4034-abab-054e0eb40935 "Normal psykisk tilstand"
+* #0e5db980-8c6e-4034-abab-054e0eb40935 "Forventelig psykisk reaktion"
 * #57dd67d7-175a-4541-87ff-db1381c4e1d9	"Ingen sårbarhed" 
 * #fbd9a8a5-0ed6-4e1a-9841-066ade34b071	"Godt netværk"
 * #042d522d-0abe-46eb-a958-6e235b5d5408	"Kommunikerer alderssvarende" 
@@ -148,8 +148,8 @@ Description: "Tempcodes to be implemented in KL-term"
 * #274791a5-094d-4e6a-831e-e712d3d66aeb	"Let påvirket forældre-barn-relation"
 * #80aa0dab-aa41-45b1-a2cc-16d7e3733fdd	"Udfordringer i forældre-barn-relation"
 
-* #b8220216-e185-451b-8d2a-67cdf73c42c3 "Let påvirket psykisk tilstand"
-* #f86c2526-3b04-454c-a99e-d350f699dc94 "Udfordret psykisk tilstand"
+* #b8220216-e185-451b-8d2a-67cdf73c42c3 "Let psykisk reaktion"
+* #f86c2526-3b04-454c-a99e-d350f699dc94 "Psykisk reaktion"
 
 
 
@@ -509,9 +509,9 @@ ValueSet: ParentsMentalCodes
 Title: "ForældresPsykiskeTilstandKoder"
 Description: "Mandatory result values for parents mental state"
 * ^experimental = false
-* Tempcodes#0e5db980-8c6e-4034-abab-054e0eb40935 //"Normal psykisk tilstand"
-* Tempcodes#b8220216-e185-451b-8d2a-67cdf73c42c3 //"Let påvirket psykisk tilstand"
-* Tempcodes#f86c2526-3b04-454c-a99e-d350f699dc94 //"Udfordret psykisk tilstand"
+* Tempcodes#0e5db980-8c6e-4034-abab-054e0eb40935 //"Forventelig psykisk reaktion"
+* Tempcodes#b8220216-e185-451b-8d2a-67cdf73c42c3 //"Let psykisk reaktion"
+* Tempcodes#f86c2526-3b04-454c-a99e-d350f699dc94 //"Psykisk reaktion"
 
 ValueSet: SocialInteractionCodes
 Title: "SocialKontaktKoder"

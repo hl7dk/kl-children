@@ -88,7 +88,7 @@ Instance: RikkeFeedingObservationStatus
 InstanceOf: klgateway-children-feeding-observation
 Usage: #example
 Title: "RikkeFeedingObservationStatus"
-Description: "Rikkes ammeperiode for fuldamning"
+Description: "Rikkes status på madning ved 2 mrd"
 * subject = Reference(Rikke)
 * encounter = Reference(2mthEncounter)
 * code.coding[FBOECode] = Tempcodes#e61e4dab-54bb-4bf4-9b76-8d991cf4de08 "Ernæring"

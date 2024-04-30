@@ -6,7 +6,7 @@ Kirsten er gravid, og er i uge 27. Hun møder sundhedsplejersken sammen med sin 
 #### Reporting
 The delivery report contains two Citizens (Kirsten and Knud), one Encounter (Type: ‘Graviditetsbesøg’), and an instance of the mandatory Observations for each parent IndicatorParentSocialStatus (Kirsten’s psychological vulnerability is marked as “Potentiel sårbarhed”) , IndicatorParentMentalStatus, IndicatorSocialSupportNetwork. In addition, Kirsten has an instance of ExamResult (her childhood trauma is registered as ‘Traumatiske oplevelser’).
 
-<!-- The report for this is found here: [DeliveryReport-Rikke-1](Bundle-b9479825-6be1-4fa1-a2ae-74fe67014caa.html) -->
+The report for this is found here: [DeliveryReport-Rikke-1](Bundle-b9479825-6be1-4fa1-a2ae-74fe67014caa.html)
 
 ### Second Event May 9th, 2020
 #### Story
@@ -14,6 +14,9 @@ Rikke blev født d. 5. maj. D. 9. maj kommer sundhedsplejersken på barselsbesø
 Sundhedsplejersken får dog ved en fejl ikke registreret forældre-barn-relationen i journalen. Derfor fejler indberetningen. Næste nat forsøges data afsendt igen, og fejler af samme årsag. Herefter afsendes rapporten med en registrering af, at data mangler for forældre-barn-relationen.
 #### Failed reporting
 The delivery report contains one Citizen (Rikke), one Encounter (Type: ‘Barselsbesøg’), and two instances of the mandatory Observation FeedingObservation (One feeding periode and one feeding status), and one instance of BodyWeight. The report fails because IndicatorParentRelationship is missing.
+
+The report for this is found here: [DeliveryReport-Rikke-2a](Bundle-c5b55e0e-3bc4-468a-8600-1b23617dbb58.html)
+
 #### Successful reporting
 IndicatorParentRelationship is added to the report with no value and a dataAbsentReason, and the content is validated and send. 
 
