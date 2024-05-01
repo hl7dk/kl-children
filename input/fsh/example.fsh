@@ -1093,3 +1093,57 @@ Description: "Rikkes behovsindsats vedr. social kontakt"
 * activity.detail.status = #unknown
 * activity.detail.code.coding = Tempcodes#b3de92ea-ac5e-4f87-809e-a9e40b59cc34 "Vejledning i kontakt, samspil og barnets behov"
 * activity.detail.reasonCode.coding = Tempcodes#e1c1674c-9384-4d95-999f-763f3868f444 "Udfordringer i social kontakt"
+
+//6th
+Instance: dbe422ac-dd15-4562-838d-1f5ff9ae45d8
+InstanceOf: klgateway-children-delivery-report
+Description: "DeliveryReport-Rikke-6"
+Usage: #example
+* type = #collection
+* timestamp = 2020-07-09T23:25:12Z
+
+* entry[+].fullUrl = "https://test.fhir.dk/Patient/fa03ee6c-e38a-44cf-8ef4-79f8ea91b3b8" //Kirsten
+* entry[=].resource = fa03ee6c-e38a-44cf-8ef4-79f8ea91b3b8-v2
+
+* entry[+].fullUrl = "https://test.fhir.dk/Patient/e60106e2-413e-46c5-8a3f-62d8e77ce794" //Rikke
+* entry[=].resource = e60106e2-413e-46c5-8a3f-62d8e77ce794
+
+* entry[+].fullUrl = "https://test.fhir.dk/RelatedPerson/a4b064a0-7fdd-467f-81cc-d1575b52b7f8" //Kirsten mor
+* entry[=].resource = a4b064a0-7fdd-467f-81cc-d1575b52b7f8
+
+* entry[+].fullUrl = "https://test.fhir.dk/Encounter/96d43e08-4011-4003-9c37-4a2eabca0c4a" //behovskontakt 1, rikke
+* entry[=].resource = 96d43e08-4011-4003-9c37-4a2eabca0c4a
+
+* entry[+].fullUrl = "https://test.fhir.dk/Encounter/8d097cb2-3b48-46e9-9d96-a097bbff0928" //behovskontakt 1, kirsten
+* entry[=].resource = 8d097cb2-3b48-46e9-9d96-a097bbff0928
+
+* entry[+].fullUrl = "https://test.fhir.dk/CarePlan/d3df60d0-4380-43b4-8d15-2e3fb3b4c50a" //Kirstens ’Støtte ved psykisk reaktion eller sårbarhed’
+* entry[=].resource = d3df60d0-4380-43b4-8d15-2e3fb3b4c50a
+
+* entry[+].fullUrl = "https://test.fhir.dk/CarePlan/6122356d-a611-4660-8b0f-c86185f465f8" // Rikkes ’Vejledning i kontakt, samspil og barnets behov’
+* entry[=].resource = 6122356d-a611-4660-8b0f-c86185f465f8
+
+Instance: 96d43e08-4011-4003-9c37-4a2eabca0c4a
+InstanceOf: klgateway-children-encounter
+Title: "Behovskontakt Kirsten 1"
+Usage: #inline
+Description: "Behovskontakt Kirsten 1"
+* type = $FBOE#4b039ba1-4005-42e6-b672-09b81ad7578a "Behovsbesøg af småbørnssundhedsplejen"
+* period.start = 2020-07-09
+* status = $EncounterStatus#finished
+* subject = Reference(fa03ee6c-e38a-44cf-8ef4-79f8ea91b3b8-v2)
+* class = Tempcodes#83559d49-fe53-42e9-a191-072da13c8c99 "Telefonisk"
+* extension[basedOnIntervention].valueReference = Reference(d3df60d0-4380-43b4-8d15-2e3fb3b4c50a)
+
+Instance: 8d097cb2-3b48-46e9-9d96-a097bbff0928
+InstanceOf: klgateway-children-encounter
+Title: "Behovskontakt Rikke 1"
+Usage: #inline
+Description: "Behovskontakt Rikke 1"
+* type = $FBOE#4b039ba1-4005-42e6-b672-09b81ad7578a "Behovsbesøg af småbørnssundhedsplejen"
+* period.start = 2020-07-09
+* status = $EncounterStatus#finished
+* subject = Reference(e60106e2-413e-46c5-8a3f-62d8e77ce794)
+* class = Tempcodes#83559d49-fe53-42e9-a191-072da13c8c99 "Telefonisk"
+* extension[basedOnIntervention].valueReference = Reference(6122356d-a611-4660-8b0f-c86185f465f8)
+

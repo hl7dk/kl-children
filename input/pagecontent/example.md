@@ -70,6 +70,9 @@ The delivery report contains two citizens (Rikke, Kirsten), and a RelatedParent 
 For Kirsten, it is registered that she had an Encounter (Type: ‘Behovskontakt med småbørnssundhedsplejen’), and that this encounter was a delivery of her intervention ’Støtte ved psykisk  eller sårbarhed’, which means that an Instance of her Intervention is also included.
 For Rikke, it is registered that she had an Encounter (Type: ‘Behovskontakt med småbørnssundhedsplejen’), and that this encounter was a delivery of her intervention ‘Vejledning i kontakt, samspil og barnets behov’, which means that an Instance of her Intervention is also included.
 Note that two instances of Encounter is related to one visit. This is done for two reasons: Not mixing up Rikkes and Kirstens patient journals, and keeping the FHIR standard, which says that encounters are personal i.e. has one subject. For ease of registration, just use the same start-time, and (if registered at all) the same end-time.
+
+The report for this is found here: [DeliveryReport-Rikke-6](Bundle-dbe422ac-dd15-4562-838d-1f5ff9ae45d8.html)
+
 ### Seventh Event July 14th, 2020
 #### Story
 Sundhedsplejersken besøger Kirsten, Knud og Rikke, i en behovskontakt. Familien fortæller, at det går bedre. Kirsten er allerede begyndt i sin nye forældregruppe og til psykolog, og Knud er mere hjemme. Sundhedsplejen vurderer, at der nu gøres det der kan i andet regi mht. Kirstens psykiske tilstand, og afslutter derfor Kirstens indsats vedr. ’Støtte ved psykisk reaktion eller sårbarhed’.
