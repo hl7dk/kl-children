@@ -23,6 +23,7 @@ Description: "Delivery report to deliver data for each child, including state of
     klgateway-children-related-parent or
     klgateway-children-intervention or
     klgateway-children-questionnaire-response or
+    klgateway-children-location or
     klgateway-children-social-interaction or
     klgateway-children-parent-relationship or
     klgateway-children-parent-social-status or
@@ -45,8 +46,23 @@ Description: "Delivery report to deliver data for each child, including state of
 * timestamp ^short = "[DK] indberetningsrapportTid"
 * meta.profile ^short = "[DK] indberetningsrapportProfil"
 //* obeys gateway-children-report-1
+* obeys gateway-children-report-parent-mental-state
+* obeys gateway-children-report-parent-social-status
+* obeys gateway-children-report-support-network
+* obeys gateway-children-report-social-interaction
+* obeys gateway-children-report-parent-relationship
 * obeys gateway-children-report-weight
-
+* obeys gateway-children-report-height
+* obeys gateway-children-report-head-circumference
+* obeys gateway-children-report-passive-smoking
+* obeys gateway-children-report-nicotine
+* obeys gateway-children-report-nutrition
+* obeys gateway-children-report-communication
+* obeys gateway-children-report-sleep
+* obeys gateway-children-report-motor-function
+* obeys gateway-children-report-physical-activity
+* obeys gateway-children-report-hearing
+* obeys gateway-children-report-sight
 
 // Invariant: gateway-children-report-1
 // Description: "All observation resources shall conform to the observation profiles defined in this IG"

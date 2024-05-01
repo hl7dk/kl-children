@@ -26,13 +26,19 @@ Description: "Encounter for health prevention and need-based visits from childre
 * period 1..1
 * period.start 1..1
 * period.end ..1
+* location ..1
+* location.location only Reference(klgateway-children-location)
+* location.location ^type.aggregation = #bundled
+* location.status 0..0
+* location.physicalType 0..0
+* location.period 0..0
 * length ..0
 * reasonCode ..0
 * reasonReference ..0
 * diagnosis ..0
 * account ..0
 * hospitalization ..0
-* location ..0
+
 * serviceProvider ..0
 * partOf ..0
 * extension contains
@@ -47,6 +53,7 @@ Description: "Encounter for health prevention and need-based visits from childre
 * subject ^short = "[DK] kontaktsubjekt"
 * class ^short = "[DK] kontaktklasse"
 * extension[basedOnIntervention] ^short = "[DK] kontaktBaseretPå"
+* location.location ^short = "[DK] kontaktLokation"
 
 Instance: 2nd1mthEncounter
 InstanceOf: klgateway-children-encounter
@@ -91,6 +98,7 @@ Description: "Kontakt, der er Lars' indskolingsundersøgelse"
 * status = $EncounterStatus#finished
 * subject = Reference(Lars)
 * class = $V3ACTCODES#AMB
+* location.location = Reference(SchoolHolbaek)
 
 Instance: NeedBasedEncounterRikke
 InstanceOf: klgateway-children-encounter

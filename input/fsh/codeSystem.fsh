@@ -439,6 +439,7 @@ Title: "SundhedsplejeKontaktTyper"
 Description: "Extension on encountertype valueset, to be implemented in KL-term and FKI, does not use exciting codes only those specific to childrens nursing"
 * ^experimental = false
 * $FBOE#d3c00541-f1d3-4c43-b5fc-16e8914ca1df //"Graviditetsbesøg"
+* $FBOE#7d35a193-e808-4e77-b361-6c0d114d021f //"Barselsbesøg"
 * $FBOE#b4bf6058-502a-4d64-bb8e-369661f43b47 //"Etableringsbesøg"
 * $FBOE#563c4174-f451-4c87-8db8-8d5472ca7ff6 // "Andet besøg i barnets første levemåned"
 * $FBOE#51f30d1c-d60e-4e3e-ac22-ec9712ea962d // "Besøg ved det ca. 2 måneder gamle barn"
@@ -606,16 +607,16 @@ ValueSet: PassiveSmokingCodes
 Title: "PassivRygningKoder"
 Description: "Mandatory result values for passive smoking in small- and school children"
 * ^experimental = false
-* Tempcodes#b54723cf-3114-4119-b1cb-28107a283a99	"Ikke udsat for tobaksrøg"
-* Tempcodes#5bc59698-bdf9-48db-ab97-20c43d7ff4f1	"Udsat for tobaksrøg"
+* Tempcodes#b54723cf-3114-4119-b1cb-28107a283a99 //	"Ikke udsat for tobaksrøg"
+* Tempcodes#5bc59698-bdf9-48db-ab97-20c43d7ff4f1 //	"Udsat for tobaksrøg"
 
 ValueSet: NicotineCodes
 Title: "NikotinKoder"
 Description: "Mandatory result values for nicotine use in school children"
 * ^experimental = false
-* Tempcodes#a7a53cfd-c7bb-4573-a4ae-2eb18e3dda1f	"Ikke prøvet nikotin"
-* Tempcodes#fd145ea6-b7de-466c-9053-8b4a0be960ac	"Har prøvet nikotin"
-* Tempcodes#cfe9150e-380e-4ce3-a120-2e2b227c8b9f	"Bruger nikotin"
+* Tempcodes#a7a53cfd-c7bb-4573-a4ae-2eb18e3dda1f //	"Ikke prøvet nikotin"
+* Tempcodes#fd145ea6-b7de-466c-9053-8b4a0be960ac //	"Har prøvet nikotin"
+* Tempcodes#cfe9150e-380e-4ce3-a120-2e2b227c8b9f //	"Bruger nikotin"
 
 ValueSet: ExamResults
 Title: "UndersøgelsesResultatKoder"
