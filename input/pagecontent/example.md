@@ -39,12 +39,18 @@ Ved 2. besøg i barnets første levemåned, kommer sundhedsplejersken forbi sen 
 Desværre når sundhedsplejersken ikke at skrive resultaterne fra besøget ind i systemet fordi hun har fyraften lige efter besøget. Derfor fejler afleveringen af data første nat. Næste dag skrives de resterende data ind i systemet, hvormed data kan valideres og afsendes følgende nat.
  #### Failed reporting
 The delivery report contains one Citizen (Rikke), one Encounter (Type: ‘2. Besøg i barnets første levemåned’). The report fails because the mandatory observations are missing.
+
+The report for this is found here: [DeliveryReport-Rikke-4a](Bundle-c60604d1-692b-4e6d-86e5-03046b2d2f16.html)
+
 #### Successful reporting
 The observations are added. In addition to the instances mentioned above, the report contains IndicatorParentRelationship, BodyWeight, BodyHeight, HeadCircumference, FeedingObservation, IndicatorCommunication.
+
+The report for this is found here: [DeliveryReport-Rikke-4b](Bundle-84cf4f74-0cc7-47fe-8301-3bc8eb0ddd8f.html)
+
 ### Fifth Event July 7th, 2020
 #### Story
 Ved 2 måneders besøget udfylder begge forældre EPDS.  Kirstens score ligger på 15, og sundhedsplejen må konstatere at Kirsten, når der spørges ind, er påvirket særligt med nedtrykthed, dårlig selvfølelse og selvbebrejdelse (de to sidstnævnte er depressive ledsagesymptomer).  Der registreres derfor en psykisk reaktion i journalen, som også nuanceres med Kirstens symptomer. Knuds EPDS er normal, og hans psykiske reaktion er forventelig.
-Sandsynligvis pga. sin mors mistrivsel, kan sundhedsplejersken konstatere let udfordret forældre-barn-relation, fordi Kirsten nogle gange har svært ved at dække Rikkes følelsesmæssige behov, de timer, hvor de er alene. Desuden græder Rikke meget både ifm. besøget, og ellers, og sundhedsplejersken vurderer, at Kirstens kontakt med barnet ikke er alderssvarende, særligt er der afvigende øjenkontakt. Alt andet er normalt. Vægten er 5100g, længden er 57cm og hovedomfanget er 38cm.
+Sandsynligvis pga. sin mors mistrivsel, kan sundhedsplejersken konstatere let påvirket forældre-barn-relation, fordi Kirsten nogle gange har svært ved at dække Rikkes følelsesmæssige behov, de timer, hvor de er alene. Desuden græder Rikke meget både ifm. besøget, og ellers, og sundhedsplejersken vurderer, at hendes egen kontakt med barnet ikke er alderssvarende, særligt er der afvigende øjenkontakt. Alt andet er normalt. Vægten er 5100g, længden er 57cm og hovedomfanget er 38cm.
 Sundhedsplejersken opstarter vejledning i kontakt, samspil og barnets behov.
 Sundhedsplejersken opfordrer Kirsten til at søge egen læge hurtigst muligt med henblik på diagnosticering af fødselsdepression og psykologhjælp, dvs. indsatsen ’Anbefalet kontakt til praktiserende læge’. Desuden takker Kirsten ja til at deltage i en forældregruppe med andre forældre der har en psykisk reaktion, dvs. indsatsen ’Forældregruppe hvor forælder har psykisk reaktion’.
 Sundhedsplejen igangsætter desuden indsatsen ’Støtte ved psykisk reaktion eller sårbarhed’ i Kirstens journal. Og indsatsen ’Vejledning i kontakt, samspil og barnets behov’ i Rikkes journal. De aftaler at sundhedsplejersken ringer et par dage efter for at følge op, og kommer forbi fysisk efter en uge.
@@ -53,6 +59,9 @@ The delivery report contains three Citizens (Rikke, Kirsten, Knud), two RelatedP
 For Knud, there is an instance of QuestionnaireResponse (EPDS), IndicatorParentMentalStatus
 For Kirsten, there is an instance of QuestionnaireResponse (EPDS), IndicatorParentMentalStatus and two instances of ExamResult to contain Kirsten’s depression symptoms. In addition, three instances of Intervention contains the three need-based interventions that are started for Kirsten.
 For Rikke, there is an instance of IndicatorSocialInteraction, IndicatorParentRelationship, BodyWeight, BodyHeight, HeadCircumference, FeedingObservation, IndicatorCommunication. In addition, three instances of ExamResult, that holds the observations related to social interaction (græder meget, afvigende øjenkontakt) and child-parent relationship (‘Følelsesmæssige behov mødes ikke’). Rikke’s need-based intervention is also reported as an instance of Intervention.
+
+The report for this is found here: [DeliveryReport-Rikke-5](Bundle-567a4d32-b3eb-46d6-8564-c7c2a1a1b903.html)
+
 ### Sixth Event July 9th, 2020
 #### Story
 Sundhedsplejersken ringer til Kirsten, i en behovskontakt leveret som telefonopkald. Kirsten fortæller blandt andet, at hun siden sidst har kontaktet egen læge, og at Knud har talt med sin arbejdsgiver om, at kunne være meget mere hjemme i den kommende tid. Ud over at spørge ind til familien fortsætter sundhedsplejersken sin vejledning i kontakt, samspil og barnets behov.

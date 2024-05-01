@@ -673,3 +673,423 @@ Description: "Rikkes kommunikation ved 2. besøg"
 * valueCodeableConcept = Tempcodes#042d522d-0abe-46eb-a958-6e235b5d5408 "Kommunikerer alderssvarende" 
 * status = #final
 * effectiveDateTime = 2020-06-01
+
+//5th
+Instance: 567a4d32-b3eb-46d6-8564-c7c2a1a1b903
+InstanceOf: klgateway-children-delivery-report
+Description: "DeliveryReport-Rikke-5"
+Usage: #example
+* type = #collection
+* timestamp = 2020-07-07T23:25:12Z
+
+* entry[+].fullUrl = "https://test.fhir.dk/Patient/fa03ee6c-e38a-44cf-8ef4-79f8ea91b3b8" //Kirsten
+* entry[=].resource = fa03ee6c-e38a-44cf-8ef4-79f8ea91b3b8-v2
+
+* entry[+].fullUrl = "https://test.fhir.dk/Patient/e2cbbca1-ac3d-4bb1-b43b-c0d62b48b33a" //Knud
+* entry[=].resource = e2cbbca1-ac3d-4bb1-b43b-c0d62b48b33a-v2
+
+* entry[+].fullUrl = "https://test.fhir.dk/Patient/e60106e2-413e-46c5-8a3f-62d8e77ce794" //Rikke
+* entry[=].resource = e60106e2-413e-46c5-8a3f-62d8e77ce794
+
+* entry[+].fullUrl = "https://test.fhir.dk/RelatedPerson/a4b064a0-7fdd-467f-81cc-d1575b52b7f8" //Kirsten mor
+* entry[=].resource = a4b064a0-7fdd-467f-81cc-d1575b52b7f8
+
+* entry[+].fullUrl = "https://test.fhir.dk/RelatedPerson/e9704ba6-f6ca-46b1-9d19-d9b4bcdc864c" //Knud far
+* entry[=].resource = e9704ba6-f6ca-46b1-9d19-d9b4bcdc864c
+
+* entry[+].fullUrl = "https://test.fhir.dk/Encounter/d84ae0c1-4054-476d-950a-993aa1de3320" //2 måneders besøg
+* entry[=].resource = d84ae0c1-4054-476d-950a-993aa1de3320
+
+* entry[+].fullUrl = "https://test.fhir.dk/QuestionnaireResponse/e95e75ea-bef7-4b37-bc38-6cb7b4d3a7df" //Kirstens EPDS
+* entry[=].resource = e95e75ea-bef7-4b37-bc38-6cb7b4d3a7df
+
+* entry[+].fullUrl = "https://test.fhir.dk/QuestionnaireResponse/6b1b28f3-f2f2-4f81-b840-b9aaf6a3fa9d" //Knuds EPDS
+* entry[=].resource = 6b1b28f3-f2f2-4f81-b840-b9aaf6a3fa9d
+
+* entry[+].fullUrl = "https://test.fhir.dk/Observation/36d31f74-0835-474d-825b-d37562cfaa0a" //Kirsten psykisk tilstand, påvirket
+* entry[=].resource = 36d31f74-0835-474d-825b-d37562cfaa0a
+
+* entry[+].fullUrl = "https://test.fhir.dk/Observation/620b137a-344a-46b4-b806-899744d927e9" //Kirsten exam result, nedtrykt
+* entry[=].resource = 620b137a-344a-46b4-b806-899744d927e9
+
+* entry[+].fullUrl = "https://test.fhir.dk/Observation/78dd76e4-3480-46ce-83d7-e81d4898bd52" //Kirsten exam result, depressive ledsagesymptomer
+* entry[=].resource = 78dd76e4-3480-46ce-83d7-e81d4898bd52
+
+* entry[+].fullUrl = "https://test.fhir.dk/Observation/ea3dd374-c0b8-4a5b-a55b-6f875250410d" //Knuds psykisk tilstand, forventelig
+* entry[=].resource = ea3dd374-c0b8-4a5b-a55b-6f875250410d
+
+* entry[+].fullUrl = "https://test.fhir.dk/Observation/af086f37-4784-42b0-bbfe-9517a8c4f910" //Rikke forældre-barn relation, let udfordret
+* entry[=].resource = af086f37-4784-42b0-bbfe-9517a8c4f910
+
+* entry[+].fullUrl = "https://test.fhir.dk/Observation/5f4dbe28-6fef-4c8d-92fd-5845cccdc10c" //Rikke exam result, følelsesmæssige behov ikke dækket
+* entry[=].resource = 5f4dbe28-6fef-4c8d-92fd-5845cccdc10c
+
+* entry[+].fullUrl = "https://test.fhir.dk/Observation/fbc991ff-39f3-414d-ae56-cc09f1191902" //Rikke social kontakt, ikke alderssvarende
+* entry[=].resource = fbc991ff-39f3-414d-ae56-cc09f1191902
+
+* entry[+].fullUrl = "https://test.fhir.dk/Observation/322439d1-6b40-457f-899f-79f3aa71465f" //Rikke exam result, græder meget
+* entry[=].resource = 322439d1-6b40-457f-899f-79f3aa71465f
+
+* entry[+].fullUrl = "https://test.fhir.dk/Observation/36003d32-79f2-4e49-aaad-b90361eff393" //Rikke exam result, afvigende øjenkontakt
+* entry[=].resource = 36003d32-79f2-4e49-aaad-b90361eff393
+
+* entry[+].fullUrl = "https://test.fhir.dk/Observation/c7a83370-eb45-40b1-af81-7340a640cc20" //ammestatus
+* entry[=].resource = c7a83370-eb45-40b1-af81-7340a640cc20
+
+* entry[+].fullUrl = "https://test.fhir.dk/Observation/23430a7d-2310-45d5-9e62-0d210c309a26" //vægt
+* entry[=].resource = 23430a7d-2310-45d5-9e62-0d210c309a26
+
+* entry[+].fullUrl = "https://test.fhir.dk/Observation/27a28610-3637-4042-a00f-2a183c743848" //højde
+* entry[=].resource = 27a28610-3637-4042-a00f-2a183c743848
+
+* entry[+].fullUrl = "https://test.fhir.dk/Observation/dc5df970-dcd3-4171-8c45-aa9aed1b7ac3" //hovedomfang
+* entry[=].resource = dc5df970-dcd3-4171-8c45-aa9aed1b7ac3
+
+* entry[+].fullUrl = "https://test.fhir.dk/Observation/8786751e-5d85-48c2-aade-3a9d321956ed" //kommunikation
+* entry[=].resource = 8786751e-5d85-48c2-aade-3a9d321956ed
+
+* entry[+].fullUrl = "https://test.fhir.dk/CarePlan/64c5d9f1-1647-4ed0-9f61-172a0c96ecc1" //Kirstens ’Anbefalet kontakt til praktiserende læge’
+* entry[=].resource = 64c5d9f1-1647-4ed0-9f61-172a0c96ecc1
+
+* entry[+].fullUrl = "https://test.fhir.dk/CarePlan/39c7eccc-4cc4-496a-8664-ab73017edb58" //Kirstens ’Forældregruppe hvor forælder har psykisk reaktion’
+* entry[=].resource = 39c7eccc-4cc4-496a-8664-ab73017edb58
+
+* entry[+].fullUrl = "https://test.fhir.dk/CarePlan/d3df60d0-4380-43b4-8d15-2e3fb3b4c50a" //Kirstens ’Støtte ved psykisk reaktion eller sårbarhed’
+* entry[=].resource = d3df60d0-4380-43b4-8d15-2e3fb3b4c50a
+
+* entry[+].fullUrl = "https://test.fhir.dk/CarePlan/6122356d-a611-4660-8b0f-c86185f465f8" // Rikkes ’Vejledning i kontakt, samspil og barnets behov’
+* entry[=].resource = 6122356d-a611-4660-8b0f-c86185f465f8
+
+Instance: d84ae0c1-4054-476d-950a-993aa1de3320
+InstanceOf: klgateway-children-encounter
+Title: "2 måneders besøg ved Rikke"
+Usage: #inline
+Description: "Kontakt, hvor der leveres 2 måneders besøgved Rikke"
+* type = $FBOE#51f30d1c-d60e-4e3e-ac22-ec9712ea962d "Besøg ved det ca. 2 måneder gamle barn"
+* period.start = 2020-07-07
+* status = $EncounterStatus#finished
+* subject = Reference(e60106e2-413e-46c5-8a3f-62d8e77ce794)
+* class = $V3ACTCODES#HH
+
+Instance: e95e75ea-bef7-4b37-bc38-6cb7b4d3a7df
+InstanceOf: KLGatewayChildrenQuestionnaireResponse
+Usage: #example
+Title: "EPDS Kirsten"
+Description: "EPDS besvarelse mor, Kirsten"
+* questionnaire = "http://fhir.kl.dk/children/Questionnaire/klgateway-children-epds"
+* status = #completed
+* subject = Reference(fa03ee6c-e38a-44cf-8ef4-79f8ea91b3b8-v2)
+* extension[findingInformer].valueCodeableConcept = Tempcodes#a3d30bf2-4a3c-4c49-9001-5363ae11681c "Borger"
+* authored = 2020-07-07
+
+* item[0].linkId = "1humor"
+* item[=].answer.valueInteger = 0
+
+* item[+].linkId = "2happiness"
+* item[=].answer.valueInteger = 2
+
+* item[+].linkId = "3blame"
+* item[=].answer.valueInteger = 3
+
+* item[+].linkId = "4worry"
+* item[=].answer.valueInteger = 1
+
+* item[+].linkId = "5anxious"
+* item[=].answer.valueInteger = 2
+
+* item[+].linkId = "6grow"
+* item[=].answer.valueInteger = 1
+
+* item[+].linkId = "7sleep"
+* item[=].answer.valueInteger = 1
+
+* item[+].linkId = "8sad"
+* item[=].answer.valueInteger = 3
+
+* item[+].linkId = "9cry"
+* item[=].answer.valueInteger = 2
+
+* item[+].linkId = "10harm"
+* item[=].answer.valueInteger = 0
+
+* item[+].linkId = "score"
+* item[=].answer.valueInteger = 15
+
+Instance: 6b1b28f3-f2f2-4f81-b840-b9aaf6a3fa9d
+InstanceOf: KLGatewayChildrenQuestionnaireResponse
+Usage: #example
+Title: "EPDS Knud"
+Description: "EPDS besvarelse far, Knud"
+* questionnaire = "http://fhir.kl.dk/children/Questionnaire/klgateway-children-epds"
+* status = #completed
+* subject = Reference(e2cbbca1-ac3d-4bb1-b43b-c0d62b48b33a-v2)
+* extension[findingInformer].valueCodeableConcept = Tempcodes#a3d30bf2-4a3c-4c49-9001-5363ae11681c "Borger"
+* authored = 2020-07-07
+
+* item[0].linkId = "1humor"
+* item[=].answer.valueInteger = 0
+
+* item[+].linkId = "2happiness"
+* item[=].answer.valueInteger = 0
+
+* item[+].linkId = "3blame"
+* item[=].answer.valueInteger = 0
+
+* item[+].linkId = "4worry"
+* item[=].answer.valueInteger = 1
+
+* item[+].linkId = "5anxious"
+* item[=].answer.valueInteger = 0
+
+* item[+].linkId = "6grow"
+* item[=].answer.valueInteger = 1
+
+* item[+].linkId = "7sleep"
+* item[=].answer.valueInteger = 1
+
+* item[+].linkId = "8sad"
+* item[=].answer.valueInteger = 0
+
+* item[+].linkId = "9cry"
+* item[=].answer.valueInteger = 0
+
+* item[+].linkId = "10harm"
+* item[=].answer.valueInteger = 0
+
+* item[+].linkId = "score"
+* item[=].answer.valueInteger = 2
+
+Instance: 36d31f74-0835-474d-825b-d37562cfaa0a
+InstanceOf: klgateway-children-parent-mental-status
+Usage: #inline
+Title: "Forælders psykiske tilstand, Kirsten"
+Description: "Kirstens psykiske tilstand ved 2 mrd"
+* subject = Reference(fa03ee6c-e38a-44cf-8ef4-79f8ea91b3b8-v2)
+* code.coding[FBOECode] = $FBOE#2c39af9f-8e45-4c88-962f-e7a9e2cd31b6 "Forælders psykiske tilstand"
+* valueCodeableConcept = Tempcodes#f86c2526-3b04-454c-a99e-d350f699dc94 "Psykisk reaktion"
+* status = #final
+* effectiveDateTime = 2020-07-07
+
+Instance: ea3dd374-c0b8-4a5b-a55b-6f875250410d
+InstanceOf: klgateway-children-parent-mental-status
+Usage: #inline
+Title: "Forælders psykiske tilstand, Knud"
+Description: "Knuds psykiske tilstand ved 2mrd"
+* subject = Reference(e2cbbca1-ac3d-4bb1-b43b-c0d62b48b33a-v2)
+* code.coding[FBOECode] = $FBOE#2c39af9f-8e45-4c88-962f-e7a9e2cd31b6 "Forælders psykiske tilstand"
+* valueCodeableConcept = Tempcodes#0e5db980-8c6e-4034-abab-054e0eb40935 "Forventelig psykisk reaktion"
+* status = #final
+* effectiveDateTime = 2020-07-07
+
+Instance: 620b137a-344a-46b4-b806-899744d927e9
+InstanceOf: klgateway-children-exam-result
+Usage: #inline
+Title: "Kirstens, forælders psykiske tilstand nuancering, 2mrds besøg"
+Description: "Kirstens, forælders psykiske tilstand nuancering, 2mrds besøg: nedtrykt"
+* subject = Reference(fa03ee6c-e38a-44cf-8ef4-79f8ea91b3b8-v2)
+* code.coding[SNOMEDCT] = $SCT#363788007 // "Clinical history/examination observable"
+* valueCodeableConcept = Tempcodes#fc3d65d1-1509-47ef-8845-60adea5d7a65 "Nedtrykthed"
+* status = #final
+* effectiveDateTime = 2020-07-07
+
+Instance: 78dd76e4-3480-46ce-83d7-e81d4898bd52
+InstanceOf: klgateway-children-exam-result
+Usage: #inline
+Title: "Kirstens, forælders psykiske tilstand nuancering, 2mrds besøg"
+Description: "Kirstens, forælders psykiske tilstand nuancering, 2mrds besøg: Depressive ledsagesymptomer"
+* subject = Reference(fa03ee6c-e38a-44cf-8ef4-79f8ea91b3b8-v2)
+* code.coding[SNOMEDCT] = $SCT#363788007 // "Clinical history/examination observable"
+* valueCodeableConcept = Tempcodes#dc7cdfb3-d33b-41cc-bb18-2be3592fe323 "Depressive ledsagesymptomer"
+* status = #final
+* effectiveDateTime = 2020-07-07
+
+Instance: af086f37-4784-42b0-bbfe-9517a8c4f910
+InstanceOf: klgateway-children-parent-relationship
+Usage: #inline
+Title: "Rikkes relation til forældre 2 mrds besøg"
+Description: "Rikkes relation til forældre ved 2 mrds besøg: let påvirket"
+* subject = Reference(e60106e2-413e-46c5-8a3f-62d8e77ce794)
+* encounter = Reference(d84ae0c1-4054-476d-950a-993aa1de3320)
+* code.coding[TempCode] = Tempcodes#763c6f21-5467-4713-82fb-716c9d0a1fdf "Forælder-barn-relation"
+* valueCodeableConcept = Tempcodes#274791a5-094d-4e6a-831e-e712d3d66aeb "Let påvirket forældre-barn relation"
+* status = #final
+* effectiveDateTime = 2020-07-07
+
+Instance: 5f4dbe28-6fef-4c8d-92fd-5845cccdc10c
+InstanceOf: klgateway-children-exam-result
+Usage: #inline
+Title: "Rikke, forældre barn relation nuancering, 2mrds besøg"
+Description: "Rikke, forældre barn relation nuancering, 2mrds besøg: Følelsesmæssige behov dækkes ikke"
+* subject = Reference(e60106e2-413e-46c5-8a3f-62d8e77ce794)
+* encounter = Reference(d84ae0c1-4054-476d-950a-993aa1de3320)
+* code.coding[SNOMEDCT] = $SCT#363788007 // "Clinical history/examination observable"
+* valueCodeableConcept = Tempcodes#51bc227a-3455-474d-bf42-fc7a7875513c "Følelsesmæssige behov mødes ikke"
+* status = #final
+* effectiveDateTime = 2020-07-07
+
+Instance: fbc991ff-39f3-414d-ae56-cc09f1191902
+InstanceOf: klgateway-children-social-interaction
+Usage: #example
+Title: "Rikke social kontakt"
+Description: "Rikkes sociale kontakt ved 2mrd"
+* subject = Reference(e60106e2-413e-46c5-8a3f-62d8e77ce794)
+* encounter = Reference(d84ae0c1-4054-476d-950a-993aa1de3320)
+* code.coding[TempCode] = Tempcodes#68605f88-49fb-44b9-b327-86947af6aa93 "Social kontakt"
+* valueCodeableConcept = Tempcodes#e1c1674c-9384-4d95-999f-763f3868f444 "Udfordringer i social kontakt"
+* status = #final
+* effectiveDateTime = 2020-07-07
+
+Instance: 322439d1-6b40-457f-899f-79f3aa71465f
+InstanceOf: klgateway-children-exam-result
+Usage: #inline
+Title: "Rikke, social kontakt nuancering, 2mrds besøg"
+Description: "Rikke, social kontakt nuancering, 2mrds besøg: græder meget"
+* subject = Reference(e60106e2-413e-46c5-8a3f-62d8e77ce794)
+* encounter = Reference(d84ae0c1-4054-476d-950a-993aa1de3320)
+* code.coding[SNOMEDCT] = $SCT#363788007 // "Clinical history/examination observable"
+* valueCodeableConcept = Tempcodes#e818645e-47a7-4125-a579-a68f556b7344	"Græder meget"
+* status = #final
+* effectiveDateTime = 2020-07-07
+
+Instance: 36003d32-79f2-4e49-aaad-b90361eff393
+InstanceOf: klgateway-children-exam-result
+Usage: #inline
+Title: "Rikke, social kontakt nuancering, 2mrds besøg"
+Description: "Rikke, social kontakt nuancering, 2mrds besøg: afvigende øjenkontakt"
+* subject = Reference(e60106e2-413e-46c5-8a3f-62d8e77ce794)
+* encounter = Reference(d84ae0c1-4054-476d-950a-993aa1de3320)
+* code.coding[SNOMEDCT] = $SCT#363788007 // "Clinical history/examination observable"
+* valueCodeableConcept = Tempcodes#bfd18100-d007-4465-95ce-5bf2ac8bc091 "Afvigende øjenkontakt"
+* status = #final
+* effectiveDateTime = 2020-07-07
+
+Instance: 23430a7d-2310-45d5-9e62-0d210c309a26
+InstanceOf: klgateway-children-bodyweight
+Usage: #inline
+Title: "Rikkes vægt, 2 måneders besøg"
+Description: "Rikkes vægt ved 2 måneders besøg"
+* subject = Reference(e60106e2-413e-46c5-8a3f-62d8e77ce794)
+* encounter = Reference(d84ae0c1-4054-476d-950a-993aa1de3320)
+* category.coding.system = "http://terminology.hl7.org/CodeSystem/observation-category"
+* category.coding.code = #vital-signs
+* code.coding[SNOMEDCT] = $SCT#27113001
+* code.coding[LOINC] = $LOINC#29463-7
+* valueQuantity.value = 5100
+* valueQuantity.unit = "g"
+* valueQuantity.system = $UCUM
+* valueQuantity.code = #g
+* status = #final
+* effectiveDateTime = 2020-07-07
+
+Instance: 27a28610-3637-4042-a00f-2a183c743848
+InstanceOf: klgateway-children-bodyheight
+Usage: #inline
+Title: "Rikkes længde 2 måneders besøg"
+Description: "Rikkes kropslængde, 2 måneders besøg"
+* subject = Reference(e60106e2-413e-46c5-8a3f-62d8e77ce794)
+* encounter = Reference(d84ae0c1-4054-476d-950a-993aa1de3320)
+* category.coding.system = "http://terminology.hl7.org/CodeSystem/observation-category"
+* category.coding.code = #vital-signs
+* code.coding[SNOMEDCT] = $SCT#1153637007
+* code.coding[LOINC] = $LOINC#8302-2
+* valueQuantity.value = 57
+* valueQuantity.unit = "cm"
+* valueQuantity.system = $UCUM
+* valueQuantity.code = #cm
+* status = #final
+* effectiveDateTime = 2020-07-07
+
+Instance: dc5df970-dcd3-4171-8c45-aa9aed1b7ac3
+InstanceOf: klgateway-children-headcircum
+Usage: #inline
+Title: "Rikkes hovedomkreds, 2 måneders besøg"
+Description: "Rikkes hovedomkreds, 2 måneders besøg"
+* subject = Reference(e60106e2-413e-46c5-8a3f-62d8e77ce794)
+* encounter = Reference(d84ae0c1-4054-476d-950a-993aa1de3320)
+* category.coding.system = "http://terminology.hl7.org/CodeSystem/observation-category"
+* category.coding.code = #vital-signs
+* code.coding[SNOMEDCT] = $SCT#363812007 "Head circumference"
+* code.coding[LOINC] = $LOINC#9843-4 "Head Occipital-frontal circumference"
+* valueQuantity.value = 38
+* valueQuantity.unit = "cm"
+* valueQuantity.system = $UCUM
+* valueQuantity.code = #cm
+* status = #final
+* effectiveDateTime = 2020-07-07
+
+Instance: c7a83370-eb45-40b1-af81-7340a640cc20
+InstanceOf: klgateway-children-feeding-observation
+Usage: #inline
+Title: "Rikkes ammestatus ved 2 måneders besøg, fuldammes"
+Description: "Rikkes status på madning ved 2 måneders besøg: fuldamning"
+* subject = Reference(e60106e2-413e-46c5-8a3f-62d8e77ce794)
+* encounter = Reference(d84ae0c1-4054-476d-950a-993aa1de3320)
+* code.coding[FBOECode] = Tempcodes#e61e4dab-54bb-4bf4-9b76-8d991cf4de08 "Ernæring"
+* code.coding[SNOMEDCT] = $SCT#169740003 "Infant feeding method"
+* valueCodeableConcept = Tempcodes#77a008dd-21cc-452f-a1ee-ac8d025b7817 "Fuldamning, inklusiv modermælk på flaske"
+* status = #final
+* effectiveDateTime = 2020-07-07
+
+Instance: 8786751e-5d85-48c2-aade-3a9d321956ed
+InstanceOf: klgateway-children-communication
+Usage: #inline
+Title: "Rikkes kommunikation 2 måneders besøg"
+Description: "Rikkes kommunikation ved 2 måneders besøg"
+* subject = Reference(e60106e2-413e-46c5-8a3f-62d8e77ce794)
+* encounter = Reference(d84ae0c1-4054-476d-950a-993aa1de3320)
+* code.coding[TempCode] = Tempcodes#653c2b0b-bb64-4906-888b-aea6fef3c3f8 "Kommunikation"
+* valueCodeableConcept = Tempcodes#042d522d-0abe-46eb-a958-6e235b5d5408 "Kommunikerer alderssvarende" 
+* status = #final
+* effectiveDateTime = 2020-07-07
+
+Instance: 64c5d9f1-1647-4ed0-9f61-172a0c96ecc1
+InstanceOf: klgateway-children-intervention
+Usage: #inline
+Title: "Kirsten intervention, praktiserende læge"
+Description: "Kirsten intervention, praktiserende læge"
+* subject = Reference(fa03ee6c-e38a-44cf-8ef4-79f8ea91b3b8-v2)
+* period.start = 2020-07-07
+* intent = #plan
+* status = #active
+* activity.detail.status = #unknown
+* activity.detail.code.coding = Tempcodes#b708c983-0bb8-4303-a442-9af4c8b950bb "Anbefaling af kontakt til praktiserende læge"
+* activity.detail.reasonCode.coding = Tempcodes#f86c2526-3b04-454c-a99e-d350f699dc94 "Psykisk reaktion"
+
+Instance: 39c7eccc-4cc4-496a-8664-ab73017edb58
+InstanceOf: klgateway-children-intervention
+Usage: #inline
+Title: "Kirsten intervention, forældregruppe"
+Description: "Kirsten intervention, forældregruppe"
+* subject = Reference(fa03ee6c-e38a-44cf-8ef4-79f8ea91b3b8-v2)
+* period.start = 2020-07-07
+* intent = #plan
+* status = #active
+* activity.detail.status = #unknown
+* activity.detail.code.coding = Tempcodes#e535fc78-ce61-4f97-b717-5901d5330ca9 "Forældregruppe, hvor forælder har psykisk reaktion"
+* activity.detail.reasonCode.coding = Tempcodes#f86c2526-3b04-454c-a99e-d350f699dc94 "Psykisk reaktion"
+
+Instance: d3df60d0-4380-43b4-8d15-2e3fb3b4c50a
+InstanceOf: klgateway-children-intervention
+Usage: #inline
+Title: "Kirsten intervention, Støtte ved psykisk reaktion eller sårbarhed"
+Description: "Kirsten intervention, Støtte ved psykisk reaktion eller sårbarhed"
+* subject = Reference(fa03ee6c-e38a-44cf-8ef4-79f8ea91b3b8-v2)
+* period.start = 2020-07-07
+* intent = #plan
+* status = #active
+* activity.detail.status = #unknown
+* activity.detail.code.coding = Tempcodes#8af7f611-2bae-4ba5-923a-d748501d1ad3 "Støtte ved psykisk reaktion eller sårbarhed"
+* activity.detail.reasonCode.coding = Tempcodes#f86c2526-3b04-454c-a99e-d350f699dc94 "Psykisk reaktion"
+
+Instance: 6122356d-a611-4660-8b0f-c86185f465f8
+InstanceOf: klgateway-children-intervention
+Usage: #inline
+Title: "Rikke behovsindsats social kontakt"
+Description: "Rikkes behovsindsats vedr. social kontakt"
+* subject = Reference(e60106e2-413e-46c5-8a3f-62d8e77ce794)
+* period.start = 2020-07-07
+* intent = #plan
+* status = #active
+* activity.detail.status = #unknown
+* activity.detail.code.coding = Tempcodes#b3de92ea-ac5e-4f87-809e-a9e40b59cc34 "Vejledning i kontakt, samspil og barnets behov"
+* activity.detail.reasonCode.coding = Tempcodes#e1c1674c-9384-4d95-999f-763f3868f444 "Udfordringer i social kontakt"
