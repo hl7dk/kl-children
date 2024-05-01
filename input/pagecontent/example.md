@@ -82,6 +82,10 @@ The delivery report contains two citizens (Rikke, Kirsten), and a RelatedParent 
 For Kirsten, it is registered that she had an Encounter (Type: “Behovskontakt med småbørnssundhedsplejen”), and that this encounter was a delivery of her intervention ’Støtte ved psykisk reaktion eller sårbarhed’, which means that an Instance of her Intervention is also included. This Intervention is now ended (i.e. given an end-date).
 For Rikke, it is registered that she had an Encounter (Type: “Behovskontakt med småbørnssundhedsplejen”), and that this encounter was a delivery of her intervention ‘Vejledning i kontakt samspil og barnets behov’, which means that an Instance of her Intervention is also included.
 
+The report for this is found here:
+[DeliveryReport-Rikke-7](Bundle-a50c7477-c817-4f98-92a8-b8c15f015d9e.html)
+
+
 ### Eighth Event July 23rd, 2020
 #### Story
 Sundhedsplejersken besøger Kirsten, Knud og Rikke, i en behovskontakt. Familien fortæller at de har det rigtig godt og synes Rikke er i trivsel.
