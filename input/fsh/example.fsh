@@ -305,7 +305,7 @@ Usage: #example
 * entry[=].resource = e9704ba6-f6ca-46b1-9d19-d9b4bcdc864c
 
 * entry[+].fullUrl = "https://test.fhir.dk/Encounter/62c429e2-fdc5-4e33-83e1-0db858175e08" //Etableringsbesøg
-* entry[=].resource = dcaf11eb-1fa5-4bf6-aa8d-1d5a07dceba6
+* entry[=].resource = 62c429e2-fdc5-4e33-83e1-0db858175e08
 
 * entry[+].fullUrl = "https://test.fhir.dk/Observation/711081e9-46d7-4841-98cd-3f64130318b7" //ammestatus
 * entry[=].resource = 711081e9-46d7-4841-98cd-3f64130318b7
@@ -368,14 +368,14 @@ Usage: #inline
 Instance: a4b064a0-7fdd-467f-81cc-d1575b52b7f8
 InstanceOf: klgateway-children-related-parent
 Description: "Rikke's mor"
-Usage: #example
+Usage: #inline
 * patient = Reference(e60106e2-413e-46c5-8a3f-62d8e77ce794)
 * relationship = $RoleCode#PRN
 
 Instance: e9704ba6-f6ca-46b1-9d19-d9b4bcdc864c
 InstanceOf: klgateway-children-related-parent
 Description: "Rikke's far"
-Usage: #example
+Usage: #inline
 * patient = Reference(e60106e2-413e-46c5-8a3f-62d8e77ce794)
 * relationship = $RoleCode#PRN
 
@@ -459,7 +459,7 @@ Description: "Rikkes hovedomkreds, etablering"
 
 Instance: 62855009-6fbb-481e-9dd0-8a4c369bde0d
 InstanceOf: klgateway-children-parent-relationship
-Usage: #example
+Usage: #inline
 Title: "Rikkes relation til forældre ved etablering"
 Description: "Rikkes relation til forældre ved etablering"
 * subject = Reference(e60106e2-413e-46c5-8a3f-62d8e77ce794)
@@ -471,7 +471,7 @@ Description: "Rikkes relation til forældre ved etablering"
 
 Instance: 0f6ddfae-2882-4ad5-aec4-1144d600eee8
 InstanceOf: klgateway-children-passive-smoking
-Usage: #example
+Usage: #inline
 Title: "Rikkes passiv rygning ved etablering"
 Description: "Rikkes passiv rygning ved etablering"
 * subject = Reference(e60106e2-413e-46c5-8a3f-62d8e77ce794)
@@ -525,7 +525,151 @@ Description: "Knuds netværk ved etablering"
 * status = #final
 * effectiveDateTime = 2020-02-05T00:00:00.000Z
 
-//  Derfor registreres det, at Rikke ikke udsættes for passiv rygning.
+// 4th - a
+Instance: c60604d1-692b-4e6d-86e5-03046b2d2f16
+InstanceOf: klgateway-children-delivery-report
+Description: "DeliveryReport-Rikke-4a"
+Usage: #example
+* type = #collection
+* timestamp = 2020-06-01T23:25:12Z
 
-//The delivery report contains three Citizens (Rikke, Kirsten, Knud), ), two RelatedParent instances to maintain the relationship between the three,  one Encounter (Type: ‘Etableringsbesøg’). For Rikke, there is an instance of the mandatory Observations IndicatorParentRelationship, BodyWeight, BodyHeight, HeadCircumference, IndicatorPassiveSmoking, and FeedingObservation.
-//The parent’s Observations result in two instances of IndicatorParentSocialStatus and IndicatorSocialSupportNetwork respectively.
+* entry[+].fullUrl = "https://test.fhir.dk/Patient/e60106e2-413e-46c5-8a3f-62d8e77ce794" //Rikke
+* entry[=].resource = e60106e2-413e-46c5-8a3f-62d8e77ce794
+
+* entry[+].fullUrl = "https://test.fhir.dk/Encounter/78742a92-91b1-489f-9fea-6901f6d0b34b" //2. besøg i første levemåned
+* entry[=].resource = 78742a92-91b1-489f-9fea-6901f6d0b34b
+
+
+Instance: 78742a92-91b1-489f-9fea-6901f6d0b34b
+InstanceOf: klgateway-children-encounter
+Title: "Andet besøg i barnets første levemåned ved Rikke"
+Usage: #inline
+Description: "Kontakt, hvor der leveres andet besøg i barnets første levemåned ved Rikke"
+* type = $FBOE#563c4174-f451-4c87-8db8-8d5472ca7ff6 "Andet besøg i barnets første levemåned"
+* period.start = 2020-06-01
+* status = $EncounterStatus#finished
+* subject = Reference(e60106e2-413e-46c5-8a3f-62d8e77ce794)
+* class = $V3ACTCODES#HH
+
+
+Instance: 84cf4f74-0cc7-47fe-8301-3bc8eb0ddd8f
+InstanceOf: klgateway-children-delivery-report
+Description: "DeliveryReport-Rikke-4b"
+Usage: #example
+* type = #collection
+* timestamp = 2020-06-02T23:25:12Z
+
+* entry[+].fullUrl = "https://test.fhir.dk/Patient/e60106e2-413e-46c5-8a3f-62d8e77ce794" //Rikke
+* entry[=].resource = e60106e2-413e-46c5-8a3f-62d8e77ce794
+
+* entry[+].fullUrl = "https://test.fhir.dk/Encounter/78742a92-91b1-489f-9fea-6901f6d0b34b" //2. besøg i første levemåned
+* entry[=].resource = 78742a92-91b1-489f-9fea-6901f6d0b34b
+
+* entry[+].fullUrl = "https://test.fhir.dk/Observation/a85a7271-1838-4b93-ad2e-8a115a91fff7" // Rikkes vægt
+* entry[=].resource = a85a7271-1838-4b93-ad2e-8a115a91fff7
+
+* entry[+].fullUrl = "https://test.fhir.dk/Observation/f1bc69fc-c059-4b3a-8277-e45e985f74d6" // Rikkes højde
+* entry[=].resource = f1bc69fc-c059-4b3a-8277-e45e985f74d6
+
+* entry[+].fullUrl = "https://test.fhir.dk/Observation/f71f887e-cf4b-44fc-b211-76230e56f5cd" // Rikkes hovedomfang
+* entry[=].resource = f71f887e-cf4b-44fc-b211-76230e56f5cd
+
+* entry[+].fullUrl = "https://test.fhir.dk/Observation/44655dde-e380-4df2-8bea-b3e64a18d49f" // Rikkes fuldamning
+* entry[=].resource = 44655dde-e380-4df2-8bea-b3e64a18d49f
+
+* entry[+].fullUrl = "https://test.fhir.dk/Observation/e10d5d17-9f63-41ca-96b9-f43caee79efb" // Rikkes relation til forældre
+* entry[=].resource = e10d5d17-9f63-41ca-96b9-f43caee79efb
+
+* entry[+].fullUrl = "https://test.fhir.dk/Observation/0db05d8b-00b9-4125-8cb1-2edc064394a4" // Rikkes kommunikation
+* entry[=].resource = 0db05d8b-00b9-4125-8cb1-2edc064394a4
+
+Instance: a85a7271-1838-4b93-ad2e-8a115a91fff7
+InstanceOf: klgateway-children-bodyweight
+Usage: #inline
+Title: "Rikkes vægt, andet besøg i barnets første levemåned"
+Description: "Rikkes vægt ved andet besøg i barnets første levemåned"
+* subject = Reference(e60106e2-413e-46c5-8a3f-62d8e77ce794)
+* encounter = Reference(78742a92-91b1-489f-9fea-6901f6d0b34b)
+* category.coding.system = "http://terminology.hl7.org/CodeSystem/observation-category"
+* category.coding.code = #vital-signs
+* code.coding[SNOMEDCT] = $SCT#27113001
+* code.coding[LOINC] = $LOINC#29463-7
+* valueQuantity.value = 4150
+* valueQuantity.unit = "g"
+* valueQuantity.system = $UCUM
+* valueQuantity.code = #g
+* status = #final
+* effectiveDateTime = 2020-06-01
+
+Instance: f1bc69fc-c059-4b3a-8277-e45e985f74d6
+InstanceOf: klgateway-children-bodyheight
+Usage: #inline
+Title: "Rikkes længde andet besøg i barnets første levemåned"
+Description: "Rikkes kropslængde, andet besøg i barnets første levemåned"
+* subject = Reference(e60106e2-413e-46c5-8a3f-62d8e77ce794)
+* encounter = Reference(78742a92-91b1-489f-9fea-6901f6d0b34b)
+* category.coding.system = "http://terminology.hl7.org/CodeSystem/observation-category"
+* category.coding.code = #vital-signs
+* code.coding[SNOMEDCT] = $SCT#1153637007
+* code.coding[LOINC] = $LOINC#8302-2
+* valueQuantity.value = 53.5
+* valueQuantity.unit = "cm"
+* valueQuantity.system = $UCUM
+* valueQuantity.code = #cm
+* status = #final
+* effectiveDateTime = 2020-06-01
+
+Instance: f71f887e-cf4b-44fc-b211-76230e56f5cd
+InstanceOf: klgateway-children-headcircum
+Usage: #inline
+Title: "Rikkes hovedomkreds, 2. besøg"
+Description: "Rikkes hovedomkreds, 2. besøg"
+* subject = Reference(e60106e2-413e-46c5-8a3f-62d8e77ce794)
+* encounter = Reference(78742a92-91b1-489f-9fea-6901f6d0b34b)
+* category.coding.system = "http://terminology.hl7.org/CodeSystem/observation-category"
+* category.coding.code = #vital-signs
+* code.coding[SNOMEDCT] = $SCT#363812007 "Head circumference"
+* code.coding[LOINC] = $LOINC#9843-4 "Head Occipital-frontal circumference"
+* valueQuantity.value = 36.5
+* valueQuantity.unit = "cm"
+* valueQuantity.system = $UCUM
+* valueQuantity.code = #cm
+* status = #final
+* effectiveDateTime = 2020-06-01
+
+Instance: 44655dde-e380-4df2-8bea-b3e64a18d49f
+InstanceOf: klgateway-children-feeding-observation
+Usage: #inline
+Title: "Rikkes ammestatus ved 2. besøg, fuldammes"
+Description: "Rikkes status på madning ved 2. besøg: fuldamning"
+* subject = Reference(e60106e2-413e-46c5-8a3f-62d8e77ce794)
+* encounter = Reference(78742a92-91b1-489f-9fea-6901f6d0b34b)
+* code.coding[FBOECode] = Tempcodes#e61e4dab-54bb-4bf4-9b76-8d991cf4de08 "Ernæring"
+* code.coding[SNOMEDCT] = $SCT#169740003 "Infant feeding method"
+* valueCodeableConcept = Tempcodes#77a008dd-21cc-452f-a1ee-ac8d025b7817 "Fuldamning, inklusiv modermælk på flaske"
+* status = #final
+* effectiveDateTime = 2020-06-01
+
+Instance: e10d5d17-9f63-41ca-96b9-f43caee79efb
+InstanceOf: klgateway-children-parent-relationship
+Usage: #inline
+Title: "Rikkes relation til forældre ved 2. besøg"
+Description: "Rikkes relation til forældre ved 2. besøg"
+* subject = Reference(e60106e2-413e-46c5-8a3f-62d8e77ce794)
+* encounter = Reference(78742a92-91b1-489f-9fea-6901f6d0b34b)
+* code.coding[TempCode] = Tempcodes#763c6f21-5467-4713-82fb-716c9d0a1fdf "Forælder-barn-relation"
+* valueCodeableConcept = Tempcodes#7a107df6-8fb8-4744-8413-be10b4c5c1d9 "Velfungerende forældre-barn-relation"
+* status = #final
+* effectiveDateTime = 2020-06-01
+
+Instance: 0db05d8b-00b9-4125-8cb1-2edc064394a4
+InstanceOf: klgateway-children-communication
+Usage: #inline
+Title: "Rikkes kommunikation 2. besøg"
+Description: "Rikkes kommunikation ved 2. besøg"
+* subject = Reference(e60106e2-413e-46c5-8a3f-62d8e77ce794)
+* encounter = Reference(78742a92-91b1-489f-9fea-6901f6d0b34b)
+* code.coding[TempCode] = Tempcodes#653c2b0b-bb64-4906-888b-aea6fef3c3f8 "Kommunikation"
+* valueCodeableConcept = Tempcodes#042d522d-0abe-46eb-a958-6e235b5d5408 "Kommunikerer alderssvarende" 
+* status = #final
+* effectiveDateTime = 2020-06-01

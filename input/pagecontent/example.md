@@ -23,14 +23,16 @@ IndicatorParentRelationship is added to the report with no value and a dataAbsen
 
 The report for this is found here: [DeliveryReport-Rikke-2b](Bundle-74dcb49e-dd6a-4450-9fb8-85ad0e7bed38.html)
 
-
 ### Third Event May 17th, 2020
 #### Story
 Ved etableringsbesøget er alt som det skal være. Kirsten ammer fortsat, vægten er 3400g, længden 51cm og hovedomfang 35cm. Der skal på besøget rapporteres på forældres sårbarhed, ligesom på graviditetsbesøget. Da der ikke er noget der har ændret sig, bliver forældre og sundhedsplejerske hurtigt enige om, at det er samme situation som før fødslen. Der ryges ikke i hjemmet, ej heller hvor Rikke hyppigt opholder sig. Derfor registreres det, at Rikke ikke udsættes for passiv rygning.
 
 #### Reporting
-The delivery report contains three Citizens (Rikke, Kirsten, Knud), ), two RelatedParent instances to maintain the relationship between the three,  one Encounter (Type: ‘Etableringsbesøg’). For Rikke, there is an instance of the mandatory Observations IndicatorParentRelationship, BodyWeight, BodyHeight, HeadCircumference, IndicatorPassiveSmoking, and FeedingObservation.
+The delivery report contains three Citizens (Rikke, Kirsten, Knud), two RelatedParent instances to maintain the relationship between the three,  one Encounter (Type: ‘Etableringsbesøg’). For Rikke, there is an instance of the mandatory Observations IndicatorParentRelationship, BodyWeight, BodyHeight, HeadCircumference, IndicatorPassiveSmoking, and FeedingObservation.
 The parent’s Observations result in two instances of IndicatorParentSocialStatus and IndicatorSocialSupportNetwork respectively.
+
+The report for this is found here: [DeliveryReport-Rikke-3](Bundle-a27ab0ea-4018-4516-900c-f1249a28dc37.html)
+
 ### Fourth Event June 1st, 2020
 #### Story
 Ved 2. besøg i barnets første levemåned, kommer sundhedsplejersken forbi sen eftermiddag. Alt er normalt. Rikke vejer 4150g, er 53,5 cm og har et hovedomfang på 36,5cm. Kirsten fuldammer stadig.
