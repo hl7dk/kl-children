@@ -748,6 +748,9 @@ Usage: #example
 * entry[+].fullUrl = "https://test.fhir.dk/Observation/8786751e-5d85-48c2-aade-3a9d321956ed" //kommunikation
 * entry[=].resource = 8786751e-5d85-48c2-aade-3a9d321956ed
 
+* entry[+].fullUrl = "https://test.fhir.dk/Observation/4e533431-661c-4be3-ac6b-fc2736527340" //søvn
+* entry[=].resource = 4e533431-661c-4be3-ac6b-fc2736527340
+
 * entry[+].fullUrl = "https://test.fhir.dk/CarePlan/64c5d9f1-1647-4ed0-9f61-172a0c96ecc1" //Kirstens ’Anbefalet kontakt til praktiserende læge’
 * entry[=].resource = 64c5d9f1-1647-4ed0-9f61-172a0c96ecc1
 
@@ -911,7 +914,7 @@ Description: "Rikkes relation til forældre ved 2 mrds besøg: let påvirket"
 * subject = Reference(e60106e2-413e-46c5-8a3f-62d8e77ce794)
 * encounter = Reference(d84ae0c1-4054-476d-950a-993aa1de3320)
 * code.coding[TempCode] = Tempcodes#763c6f21-5467-4713-82fb-716c9d0a1fdf "Forælder-barn-relation"
-* valueCodeableConcept = Tempcodes#274791a5-094d-4e6a-831e-e712d3d66aeb "Let påvirket forældre-barn relation"
+* valueCodeableConcept = Tempcodes#274791a5-094d-4e6a-831e-e712d3d66aeb "Let påvirket forældre-barn-relation"
 * status = #final
 * effectiveDateTime = 2020-07-07
 
@@ -1039,6 +1042,18 @@ Description: "Rikkes kommunikation ved 2 måneders besøg"
 * encounter = Reference(d84ae0c1-4054-476d-950a-993aa1de3320)
 * code.coding[TempCode] = Tempcodes#653c2b0b-bb64-4906-888b-aea6fef3c3f8 "Kommunikation"
 * valueCodeableConcept = Tempcodes#042d522d-0abe-46eb-a958-6e235b5d5408 "Kommunikerer alderssvarende" 
+* status = #final
+* effectiveDateTime = 2020-07-07
+
+Instance: 4e533431-661c-4be3-ac6b-fc2736527340
+InstanceOf: klgateway-children-sleep
+Usage: #inline
+Title: "Rikkes søvn ved 2mrd"
+Description: "Rikkes søvn ved 2mrd"
+* subject = Reference(e60106e2-413e-46c5-8a3f-62d8e77ce794)
+* encounter = Reference(d84ae0c1-4054-476d-950a-993aa1de3320)
+* code.coding[TempCode] = Tempcodes#73f981f8-455a-4158-b435-7c6d83ab84da "Søvn"
+* valueCodeableConcept = Tempcodes#b07eec60-941d-484d-8c2a-aeaa2ba798bf "Søvn med normale variationer" 
 * status = #final
 * effectiveDateTime = 2020-07-07
 

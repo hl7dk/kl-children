@@ -58,7 +58,7 @@ Sundhedsplejen igangsætter desuden indsatsen ’Støtte ved psykisk reaktion el
 The delivery report contains three Citizens (Rikke, Kirsten, Knud), two RelatedParent instances to maintain the relationship between the three, and one Encounter (Type: ‘Besøg ved det ca. 2 måneder gamle barn’). 
 For Knud, there is an instance of QuestionnaireResponse (EPDS), IndicatorParentMentalStatus
 For Kirsten, there is an instance of QuestionnaireResponse (EPDS), IndicatorParentMentalStatus and two instances of ExamResult to contain Kirsten’s depression symptoms. In addition, three instances of Intervention contains the three need-based interventions that are started for Kirsten.
-For Rikke, there is an instance of IndicatorSocialInteraction, IndicatorParentRelationship, BodyWeight, BodyHeight, HeadCircumference, FeedingObservation, IndicatorCommunication. In addition, three instances of ExamResult, that holds the observations related to social interaction (græder meget, afvigende øjenkontakt) and child-parent relationship (‘Følelsesmæssige behov mødes ikke’). Rikke’s need-based intervention is also reported as an instance of Intervention.
+For Rikke, there is an instance of IndicatorSocialInteraction, IndicatorParentRelationship, BodyWeight, BodyHeight, HeadCircumference, FeedingObservation, IndicatorCommunication and IndicatorSleep. In addition, three instances of ExamResult, that holds the observations related to social interaction (græder meget, afvigende øjenkontakt) and child-parent relationship (‘Følelsesmæssige behov mødes ikke’). Rikke’s need-based intervention is also reported as an instance of Intervention.
 
 The report for this is found here: [DeliveryReport-Rikke-5](Bundle-567a4d32-b3eb-46d6-8564-c7c2a1a1b903.html)
 
@@ -93,3 +93,6 @@ Sundhedsplejersken vurderer, at Rikke nu er alderssvarende i sin sociale kontakt
 Sundhedsplejersken aftaler med familien, at de ser hinanden næste gang til 4-6 måneders besøget.
 #### Reporting
 The delivery report contains one citizens (Rikke). It is registered that she had an Encounter (Type: ‘Behovskontakt med småbørnssundhedsplejen’), and that this encounter was a delivery of her intervention ‘Vejledning i kontakt samspil og barnets behov’, which means that an Instance of her Intervention is also included. This Intervention is now ended (i.e. given an end-date).
+
+The report for this is found here:
+[DeliveryReport-Rikke-8](Bundle-d2e57785-7d0e-4b30-9e51-62c14185b9ed.html)
