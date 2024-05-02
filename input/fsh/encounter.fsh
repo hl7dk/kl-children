@@ -25,10 +25,10 @@ Description: "Encounter for health prevention and need-based visits from childre
 * basedOn ..0
 * participant ..0
 * appointment ..0
-* period 1..1 SU
+* period 1..1
 * period.start 1..1
 * period.end ..1
-* location ..1 SU
+* location ..1
 * location.location only Reference(klgateway-children-location)
 * location.location ^type.aggregation = #bundled
 * location.status 0..0
@@ -46,7 +46,6 @@ Description: "Encounter for health prevention and need-based visits from childre
 * extension contains
    BasedOnInterventionExtension named basedOnIntervention 0..*
 * extension[basedOnIntervention].valueReference ^type.aggregation = #bundled
-* extension[basedOnIntervention].valueReference SU
 
 
 //Danish descriptions

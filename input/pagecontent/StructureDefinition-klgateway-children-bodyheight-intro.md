@@ -16,7 +16,7 @@ Observation.category is populated to conform to national and international vital
 
 Observation.subject holds the reference to the child. Observation.encounter holds the reference to the encounter in which the observation is performed.
 
-Notice that the status-attribute is mandatory. For normal use, just set to "final", if data is missing or another problem has occurred, follow the FHIR guidance to populate the field correctly. To indicate missing data, Observation.dataAbsentReason can be used. Observation.dataAbsentReason is mandatory if no value is given.
+Notice that the status-attribute is mandatory. For normal use, just set to "final", if data is missing or another problem has occurred, follow the FHIR guidance to populate the field correctly. To indicate missing data, Observation.dataAbsentReason can be used. Observation.dataAbsentReason is mandatory if no value is given. Use the appropriate value according to the FHIR standard, or choose value 'unknown' if in doubt.
 
 ### Conversions between Danish information model and FHIR-profile
 
