@@ -214,7 +214,7 @@ Invariant: gateway-children-report-nicotine
 Description: "If there is an encounter of type 'Udskolingsundersøgelse' delivered face-to-face, then nicotine should be included in the bundle"
 Severity: #error
 Expression: "entry.select((resource as Encounter).where(
-    (type.coding.code = 'b4bf6058-502a-4d64-bb8e-369661f43b47')
+    (type.coding.code = 'dd766967-4d02-4c17-8ed3-021852785fdf')
     and
     (class.code = 'HH'
     or class.code = 'AMB'))).exists() implies 

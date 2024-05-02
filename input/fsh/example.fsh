@@ -776,7 +776,7 @@ Description: "Kontakt, hvor der leveres 2 måneders besøgved Rikke"
 
 Instance: e95e75ea-bef7-4b37-bc38-6cb7b4d3a7df
 InstanceOf: KLGatewayChildrenQuestionnaireResponse
-Usage: #example
+Usage: #inline
 Title: "EPDS Kirsten"
 Description: "EPDS besvarelse mor, Kirsten"
 * questionnaire = "http://fhir.kl.dk/children/Questionnaire/klgateway-children-epds"
@@ -820,7 +820,7 @@ Description: "EPDS besvarelse mor, Kirsten"
 
 Instance: 6b1b28f3-f2f2-4f81-b840-b9aaf6a3fa9d
 InstanceOf: KLGatewayChildrenQuestionnaireResponse
-Usage: #example
+Usage: #inline
 Title: "EPDS Knud"
 Description: "EPDS besvarelse far, Knud"
 * questionnaire = "http://fhir.kl.dk/children/Questionnaire/klgateway-children-epds"
@@ -932,7 +932,7 @@ Description: "Rikke, forældre barn relation nuancering, 2mrds besøg: Følelses
 
 Instance: fbc991ff-39f3-414d-ae56-cc09f1191902
 InstanceOf: klgateway-children-social-interaction
-Usage: #example
+Usage: #inline
 Title: "Rikke social kontakt"
 Description: "Rikkes sociale kontakt ved 2mrd"
 * subject = Reference(e60106e2-413e-46c5-8a3f-62d8e77ce794)

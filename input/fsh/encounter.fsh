@@ -8,7 +8,9 @@ Description: "Encounter for health prevention and need-based visits from childre
 * class.version ..0
 * class.userSelected ..0
 * classHistory ..0
+* class SU
 * class from EncounterClassCodes (required)
+* type SU 
 * type from EncounterTypes (required)
 * type.coding 1..
 * type.coding.version ..0
@@ -16,17 +18,17 @@ Description: "Encounter for health prevention and need-based visits from childre
 * type.text ..0
 * serviceType ..0
 * priority ..0
-* subject 1..1
+* subject 1..1 SU
 * subject only Reference(klgateway-children-citizen)
 * subject ^type.aggregation = #bundled
 * episodeOfCare ..0
 * basedOn ..0
 * participant ..0
 * appointment ..0
-* period 1..1
+* period 1..1 SU
 * period.start 1..1
 * period.end ..1
-* location ..1
+* location ..1 SU
 * location.location only Reference(klgateway-children-location)
 * location.location ^type.aggregation = #bundled
 * location.status 0..0
@@ -44,6 +46,8 @@ Description: "Encounter for health prevention and need-based visits from childre
 * extension contains
    BasedOnInterventionExtension named basedOnIntervention 0..*
 * extension[basedOnIntervention].valueReference ^type.aggregation = #bundled
+* extension[basedOnIntervention].valueReference SU
+
 
 //Danish descriptions
 * status ^short = "[DK] kontaktstatus"

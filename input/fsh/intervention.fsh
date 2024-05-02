@@ -17,11 +17,11 @@ Description: "Profile representing interventions in the children database"
 * activity.reference 0..0
 * activity.detail 1.. 
 * activity.detail.code 1..1 //Indsatskoder niveau 2 og 3
-* activity.detail.code.coding 1..1
+* activity.detail.code.coding 1..1 SU
 * activity.detail.code.text 0..0
 * activity.detail.code.coding.system = Canonical(Tempcodes) //$FBOE
 * activity.detail.code.coding from KLHealthNurseInterventions
-* activity.detail.reasonCode ..*
+* activity.detail.reasonCode ..* SU
 * activity.detail.reasonCode.coding from KLHealthNurseConditions
 * activity.detail.scheduled[x] 0..0
 * activity.detail.reasonReference 0..0
