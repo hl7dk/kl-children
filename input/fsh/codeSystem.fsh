@@ -65,7 +65,7 @@ Description: "Tempcodes to be implemented in KL-term"
 // * #6be08133-feca-4d2f-a45d-cb36d141011e "Observation vedr. høretest  ifm. udskolingsundersøgelse"
 // * #96e3eda6-3eb7-4fbb-9850-fc6dfafadb4a "Problem/bemærkning" 
 // * #1b64f768-5133-4633-85a4-2b97fcaa1f7a "Der er intet at bemærke"
-* #83559d49-fe53-42e9-a191-072da13c8c99 "Telefonisk" "Kontakten er foregået per telefon"//KLCommonCareSocialCodes
+* #83559d49-fe53-42e9-a191-072da13c8c99 "Telefonisk" "Kontakten er foregået per telefon" //KLCommonCareSocialCodes
 * #124be95d-6924-4609-9d2a-e7c73ae3ab3d "Skærmbesøg" "Kontakten er foregået via skærm med mulighed for tændt kamera, så parterne har haft mulighed for at interagere ansigt til ansigt, og fremvise ting." //KLCommonCareSocialCodes
 //Behovsindsatser
 * #7620766c-6d3d-487b-9896-bfcf7f883f0f	"Behovsindsatser småbørn"

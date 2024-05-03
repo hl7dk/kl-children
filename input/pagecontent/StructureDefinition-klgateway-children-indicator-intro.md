@@ -26,7 +26,7 @@ Observation.subject holds the reference to the child or parent, who is observed.
 
 Notice that the status-attribute is mandatory. For normal use, just set to "final", if data is missing or another problem has occurred, follow the FHIR guidance to populate the field correctly. 
 
-To indicate missing data, Observation.dataAbsentReason is used. Observation.dataAbsentReason is mandatory if no value is given.
+To indicate missing data, Observation.dataAbsentReason is used. Observation.dataAbsentReason is mandatory if no value is given. Use the appropriate value according to the FHIR standard, or choose value 'unknown' if in doubt.
 
 ### Conversions between Danish information model and FHIR-profile
 

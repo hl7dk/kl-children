@@ -233,7 +233,7 @@ Description: "Rikkes vægt, barselsbesøg"
 * encounter = Reference(ebaaad51-e77f-4fc1-944a-24b0ace0a9f9)
 * category.coding.system = "http://terminology.hl7.org/CodeSystem/observation-category"
 * category.coding.code = #vital-signs
-* code.coding[SNOMEDCT] = $SCT#27113001
+* code.coding[SNOMEDCT] = $SCT#27113001 "Body weight"
 * code.coding[LOINC] = $LOINC#29463-7
 * valueQuantity.value = 3100
 * valueQuantity.unit = "g"
@@ -412,7 +412,7 @@ Description: "Rikkes vægt ved etableringsbesøg"
 * encounter = Reference(62c429e2-fdc5-4e33-83e1-0db858175e08)
 * category.coding.system = "http://terminology.hl7.org/CodeSystem/observation-category"
 * category.coding.code = #vital-signs
-* code.coding[SNOMEDCT] = $SCT#27113001
+* code.coding[SNOMEDCT] = $SCT#27113001 "Body weight"
 * code.coding[LOINC] = $LOINC#29463-7
 * valueQuantity.value = 3400
 * valueQuantity.unit = "g"
@@ -430,7 +430,7 @@ Description: "Rikkes kropslængde, etablering"
 * encounter = Reference(62c429e2-fdc5-4e33-83e1-0db858175e08)
 * category.coding.system = "http://terminology.hl7.org/CodeSystem/observation-category"
 * category.coding.code = #vital-signs
-* code.coding[SNOMEDCT] = $SCT#1153637007
+* code.coding[SNOMEDCT] = $SCT#1149101003 "Recumbent body height"
 * code.coding[LOINC] = $LOINC#8302-2
 * valueQuantity.value = 51
 * valueQuantity.unit = "cm"
@@ -592,7 +592,7 @@ Description: "Rikkes vægt ved andet besøg i barnets første levemåned"
 * encounter = Reference(78742a92-91b1-489f-9fea-6901f6d0b34b)
 * category.coding.system = "http://terminology.hl7.org/CodeSystem/observation-category"
 * category.coding.code = #vital-signs
-* code.coding[SNOMEDCT] = $SCT#27113001
+* code.coding[SNOMEDCT] = $SCT#27113001 "Body weight"
 * code.coding[LOINC] = $LOINC#29463-7
 * valueQuantity.value = 4150
 * valueQuantity.unit = "g"
@@ -610,7 +610,7 @@ Description: "Rikkes kropslængde, andet besøg i barnets første levemåned"
 * encounter = Reference(78742a92-91b1-489f-9fea-6901f6d0b34b)
 * category.coding.system = "http://terminology.hl7.org/CodeSystem/observation-category"
 * category.coding.code = #vital-signs
-* code.coding[SNOMEDCT] = $SCT#1153637007
+* code.coding[SNOMEDCT] = $SCT#1149101003 "Recumbent body height"
 * code.coding[LOINC] = $LOINC#8302-2
 * valueQuantity.value = 53.5
 * valueQuantity.unit = "cm"
@@ -975,7 +975,7 @@ Description: "Rikkes vægt ved 2 måneders besøg"
 * encounter = Reference(d84ae0c1-4054-476d-950a-993aa1de3320)
 * category.coding.system = "http://terminology.hl7.org/CodeSystem/observation-category"
 * category.coding.code = #vital-signs
-* code.coding[SNOMEDCT] = $SCT#27113001
+* code.coding[SNOMEDCT] = $SCT#27113001 "Body weight"
 * code.coding[LOINC] = $LOINC#29463-7
 * valueQuantity.value = 5100
 * valueQuantity.unit = "g"
@@ -993,7 +993,7 @@ Description: "Rikkes kropslængde, 2 måneders besøg"
 * encounter = Reference(d84ae0c1-4054-476d-950a-993aa1de3320)
 * category.coding.system = "http://terminology.hl7.org/CodeSystem/observation-category"
 * category.coding.code = #vital-signs
-* code.coding[SNOMEDCT] = $SCT#1153637007
+* code.coding[SNOMEDCT] = $SCT#1149101003 "Recumbent body height"
 * code.coding[LOINC] = $LOINC#8302-2
 * valueQuantity.value = 57
 * valueQuantity.unit = "cm"

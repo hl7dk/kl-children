@@ -27,13 +27,15 @@ In the context of the children database, only encounters actually carried out sh
 
 Encounter.class is mandatory in FHIR. In Danish municipalities the values are used as follows.
 * Visits in citizens homes have the code 'HH' Home health, the code is also used for services that are not strictly health related e.g. help with cleaning. This code is also used, even if the activities stretch outside the citizens residence e.g. a physiotherapist that want to see a citizen walk outside, or a social worker helping with shopping activities.
-* Sessions where the citizens visit municipality facilities e.g. for training or health prevention have the code "AMB" Ambulatory.
+* Sessions where the citizens visit municipality facilities e.g. for training or health prevention have the code 'AMB' Ambulatory.
 * Encounters delivered as a screen visit should be registered as 'Skærmbesøg'.
 * Encounters delivered using a phone should be registered as 'Telefonisk'
 
-The time of the encounter is documented in Encounter.period.start, and is mandatory. The end time is not mandatory. If Encounter.period.end is reported it may be either planned end time or actual end time.
+For school nurse encounters, the Danish school-code should be registered as well, using Encounter.location that relates to a Location resource. Note that the school code should be registered even though the encounter does not take place at the school. FHIR Locations can be used to describe a more abstract location, and as such the school nurse works in the context of a school when seeing the child. If the child does not have a school affiliation, a school-code should not be registered.
 
-Encounter.subject relates to the subject that the encounter is about. In the context of the children database, primarily the children's encounters are documented. This should be respected even though many visits are directed at the family as a whole. However, before the child is born, this is not possible.  For pregnancy visits/'Graviditetsbesøg', the encounter is linked to one of the parents (typically the mother).
+The time of the encounter is documented in Encounter.period.start, and it is mandatory. The end time is not mandatory. If Encounter.period.end is reported it may be either planned end time or actual end time.
+
+Encounter.subject relates to the subject that the encounter is about. In the context of the children database, primarily the children's encounters are documented. This should be respected even though many visits are directed at the family as a whole. However, before the child is born, this is not possible.  For pregnancy visits/'Graviditetsbesøg', the encounter is linked to one of the parents (typically the mother). For need-based encounters, they should be linked to citizen who has the intervention, whether this is the child, one of the parents or both. Consequently, one visit might result in more than one encounter if both parant nad child has a need-based intervention going on.
 
 ### Conversions between Danish information model and FHIR-profile
 

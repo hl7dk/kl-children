@@ -1,37 +1,37 @@
 # KLChildren
-This implementation guide describes the delivery of children health data to KL Gateway. The data originates from the documentation made by health nurses (sundhedsplejersker) in the Danish municipalities.The reporting aims for compliance with the Danish core profiles and the current work on a shared information model (FKI) for data in the Danish municipalities.  
+This implementation guide describes the delivery of children health data to KL Gateway. The data originates from the documentation made by health nurses (sundhedsplejersker) in the Danish municipalities. The reporting aims for compliance with the Danish core profiles and the current work on a shared information model (FKI) for data in the Danish municipalities.  
 
 The profiles for the reporting are restricted to allow only the information that is required to report to KL Gateway.
 
-**Notice that the included content is not finished. Right now the guide should be read as a guide to, how data will eventually be organized. Especially codes and code systems are very much preliminary. The DeliveryReport and invariants are not finished.**
+**Notice that the included content is not finished. Especially codes and code systems are preliminary. The temporary codes (TempCodes) will be implemented in FK-klassifikation and in the IG kl-term. This will change their 'system' whenever a CodeSystem is referred. However, uuid codes will be preserved as stated in this guide**
 
 ## Overview
 The data is reported as a collection of instances. A report may contain instances that conforms to the profiles defined in this implementation guide. See figure below.
 
 <img alt="OverviewModel" src="./ReportStructure.png" style="float:none; display:block; margin-left:auto; margin-right:auto;" />
 
-In addition to being structured as a report, relationships exist between the models. These are illustrated in the figure below. Note that the resource Indicator is abstract. Relevant models inherit from dk-core i.e. Citizen, Observation, BasicObservation and Condition. QuestionnaireResponses are repported, not Questionnaires. The latter represents shared knowledge between sender and reciever.
+In addition to being structured as a report, relationships exist between the models. These are illustrated in the figure below. Note that the resource Indicator is abstract. Relevant models inherit from dk-core i.e. Citizen, Observation, BasicObservation and Condition. QuestionnaireResponses are reported, not Questionnaires. The latter represents shared knowledge between sender and receiver.
 
 <img alt="ClassDiagram" src="./ClassDiagram.png" style="float:none; display:block; margin-left:auto; margin-right:auto;" />
 
 ## Special constraints, and resulting reporting practises
-Whereas the report may seem unconstrained, each profile define constraints on attributes, datatypes and cardinalities. In addition, extra constraints are implemented to accomodate the rules of reporting data to The National Child Health Register, see [guidance](https://sundhedsdatastyrelsen.dk/da/rammer-og-retningslinjer/indberetning_sei/vejledninger_indberetning/bornedatabasen) and ​​Fælleskommunal standard for forebyggende sundhedsydelser til børn og unge​ (FBU). The extra constraints is defines to ensure that the relevant mandatory observations are reported as part of reporting on certain standard encounters. Note that the constraints only apply, when the appropriate encounter-type is applied, and when Enconter.Class is ambulatory "AMB" or Home visit "HH". A table is presented below (Danish names for standard-visits):
+Whereas the report may seem unconstrained, each profile define constraints on attributes, datatypes and cardinalities. In addition, extra constraints are implemented to accommodate the rules of reporting data to The National Child Health Register, see [guidance](https://sundhedsdatastyrelsen.dk/da/rammer-og-retningslinjer/indberetning_sei/vejledninger_indberetning/bornedatabasen) and Fælleskommunal standard for forebyggende sundhedsydelser til børn og unge (FBU). The extra constraints are defined to ensure that the relevant mandatory observations are reported as part of reporting on certain standard encounters. Note that the constraints only apply, when the appropriate encounter-type is applied, and when Enconter.Class is ambulatory "AMB" or Home visit "HH". A table is presented below (Danish names for standard-visits):
 
 {:class="grid"}
 |Standard visit| Mandatory Observations in Report|
 | ------------- |-------------|
-|Graviditetsbesøg |IndicatorParentMentalState, IndicatorSocialSupportNetwork, IndicatorParentSocialStatus|
-|Barselsbesøg |ParentRelationship, Weight, Feeding|
-|Etableringsbesøg |IndicatorSocialSupportNetwork, IndicatorParentSocialStatus, IndicatorParentRelationship, Weight, Height, HeadCircumference, IndicatorTobacco, Feeding|
+|Graviditetsbesøg |IndicatorParentMentalState, IndicatorSocialSupportNetwork, IndicatorParentSocialStatus|
+|Barselsbesøg |ParentRelationship, Weight, Feeding|
+|Etableringsbesøg |IndicatorSocialSupportNetwork, IndicatorParentSocialStatus, IndicatorParentRelationship, Weight, Height, HeadCircumference, IndicatorTobacco, Feeding|
 |Andet besøg i barnets første levemåned|IndicatorParentRelationship, Weight, Height, HeadCircumference, Feeding|
-|Besøg ved det ca. 2 måneder gamle barn |IndicatorParentMentalState, IndicatorSocialInteraction, IndicatorParentRelationship, Weight, Height, HeadCircumference, Feeding, IndicatorCommunication, IndicatorSleep, IndicatorMotorFunction|
+|Besøg ved det ca. 2 måneder gamle barn |IndicatorParentMentalState, IndicatorSocialInteraction, IndicatorParentRelationship, Weight, Height, HeadCircumference, Feeding, IndicatorCommunication, IndicatorSleep, IndicatorMotorFunction|
 |Besøg ved det 4-6 måneder gamle barn|IndicatorSocialInteraction, IndicatorParentRelationship, Weight, Height, HeadCircumference, Feeding, IndicatorCommunication, IndicatorSleep, IndicatorMotorFunction|
 |Besøg ved det 8-11 måneder gamle barn|IndicatorSocialInteraction, IndicatorParentRelationship, Weight, Height, HeadCircumference, Feeding, IndicatorCommunication, IndicatorSleep, IndicatorMotorFunction|
-|Indskolingsundersøgelse |IndicatorSocialInteraction, Weight, Height, IndicatorNutrition, IndicatorCommunication, IndicatorSleep, IndicatorMotorFunction, IndicatorPhysicalActivity, IndicatorHearing, IndicatorSight|
-|Undersøgelse i mellemtrin, med måling |Weight, Height|
-|Udskolingsundersøgelse| IndicatorSocialInteraction, Weight, Height, IndicatorNutrition, IndicatorNicotine, IndicatorCommunication, IndicatorSleep, IndicatorPhysicalActivity, IndicatorHearing, IndicatorSight.|
+|Indskolingsundersøgelse |IndicatorSocialInteraction, Weight, Height, IndicatorNutrition, IndicatorCommunication, IndicatorSleep, IndicatorMotorFunction, IndicatorPhysicalActivity, IndicatorHearing, IndicatorSight|
+|Undersøgelse i mellemtrin, med måling |Weight, Height|
+|Udskolingsundersøgelse| IndicatorSocialInteraction, Weight, Height, IndicatorNutrition, IndicatorNicotine, IndicatorCommunication, IndicatorSleep, IndicatorPhysicalActivity, IndicatorHearing, IndicatorSight.|
 
-The applied rules mean that an observation without a value must be reported if one of the menitioned encounters are completed without the data being obtained, and an appropriate dataAbsentReason must be given. See more in the descriptions below and in the [Enconter-profile](StructureDefinition-klgateway-children-encounter.html)
+The applied rules mean that an observation without a value must be reported if one of the mentioned encounters are completed without the data being obtained, and an appropriate dataAbsentReason must be given. See more in the descriptions below and in the [Enconter-profile](StructureDefinition-klgateway-children-encounter.html)
 
 Note that constraint might also pose a challenge for reporting, in case the documentation is finished in the days following a visit. For reports missing mandatory observations, it is recommended to try to send the record on the following two days (to see if documentation is finished). If the data is not documented by the second day, send the observations immediately without a value and add a dataAbsentReason.
 
@@ -46,9 +46,9 @@ Information about the citizens that are the subjects of the report. This resourc
 
 ##### Validation
 * One and only one civil registration number exists, and is a syntactically valid CPR-nr
-* One and only one managing organization exitis, and is a syntactically valid SOR code (only code length is currently validated in the profile, but the authorization validates the actual SOR code)
+* One and only one managing organization exists, and is a syntactically valid SOR code (only code length is currently validated in the profile, but the authorization validates the actual SOR code)
 * One reference to ParentRelation may exist
-* One FHIR status may exist, and should be drawn form the standard ValueSet.
+* One FHIR status may exist, and should be drawn from the standard ValueSet.
 
 ## ParentRelation
 Information about the relationship between a child and its parents.
@@ -57,7 +57,7 @@ Information about the relationship between a child and its parents.
 * a reference to the Citizen instance that holds the child's information
 * a relationship type that states that this is a 'parent'-relationship.
 * a FHIR status attribute used to report errors.
-* One FHIR status may exist, and should be drawn form the standard ValueSet.
+* One FHIR status may exist, and should be drawn from the standard ValueSet.
 
 ##### Validation
 * one and only one reference to the Citizen exists
@@ -67,20 +67,34 @@ Information about the relationship between a child and its parents.
 Information about when a child and/or parents meet the health nurse (sundhedsplejerske) in a Danish municipality context. 
 
 ##### Attributes
-* Type of encounter. The attribute describe which health nurse visit/enconter is deliverd using a code.
-* Encounter class. The attriute holds a code which describe the place of delivery e.g. home visit, ambulatory or virtual.
+* Type of encounter. The attribute describe which health nurse visit/encounter is delivered using a code.
+* Encounter class. The attribute holds a code which describe the place of delivery e.g. home visit, ambulatory or virtual.
 * The encounter start-time
 * The encounter end-time
 * A reference to the Citizen instance that holds the child's information
-* A FHIR status atrribute
-
+* A FHIR status attribute
+* A reference to a Location, that holds the school code
 ##### Validation
 * One and only one encounter-type exists, and should be drawn from a specific ValueSet, no other codes may be reported.
-* One ond only one encounter class exists, and should be drawn from the standard FHIR-ValueSet
+* One and only one encounter class exists, and should be drawn from the standard FHIR-ValueSet
 * One and only one encounter start-time exists
 * One encounter start-time may exist
 * One and only one reference to the Citizen exists
 * One and only one FHIR status exists, and should be drawn from the standard FHIR-ValueSet
+* A reference to a location may exist
+
+## Location
+A place physical or abstract
+
+##### Attributes
+* An identifier, which holds the Danish school code
+* A type, which states that the location is a school
+* A FHIR status attribute ^short = "[DK] Lokationsstatus"
+
+##### Validation
+* One and only one identifier exists
+* type is always ‘SCHOOL’
+* status may exist, and is assumed active if not present
 
 ## Indicator
 A simple form of observation where a whole area of concern is evaluated. The value is always a code. Indicator is abstract. The following describes how the specializations of Indicator is validated.
@@ -91,12 +105,12 @@ A simple form of observation where a whole area of concern is evaluated. The val
 * A reference to the Citizen instance that holds either the parents or the child's information
 * A reference to the Encounter in which the indicator have been evaluated
 * The time of the evaluation
-* A dataAbsentReason, which is a possiblity to describe why data is absent
+* A dataAbsentReason, which is a possibility to describe why data is absent
 * A FHIR status attribute
 
 ##### Validation
 * One and only one code exists to describe the kind of indicator. It is a fixed code for each of the specializations.
-* One value which is alwasys a code may exist. For each specialization, it should be drawn from a specific ValueSet, no other codes may be reported.
+* One value which is always a code may exist. For each specialization, it should be drawn from a specific ValueSet, no other codes may be reported.
 * One and only one reference to the Citizen exists
 * A reference to an Encounter may exist
 * The time of the evaluation is mandatory
@@ -111,7 +125,7 @@ Optional detailed history and examination findings from the health nurse record.
 * A value which is a code
 * An observation-time
 * A reference to the Citizen instance that holds the child's information
-* A reference to the Encounter in which the observation occured
+* A reference to the Encounter in which the observation occurred
 * A FHIR status attributeFHIR-ValueSet
 
 ##### Validation
@@ -127,12 +141,12 @@ A child's weight
 
 ##### Attributes
 * A category that is used for commonly used vital-signs observations internationally
-* Two codes that describes that this is a weigth observable
+* Two codes that describes that this is a weight observable
 * A value that describes how much the child weighs
 * A dataAbsentReason, which makes it possible to describe why data is absent
 * An observation-time
 * A reference to the Citizen instance that holds the child's information
-* A reference to the Encounter in which the observation occured
+* A reference to the Encounter in which the observation occurred
 * A FHIR status attribute
 
 ##### Validation
@@ -155,7 +169,7 @@ A child's length/height
 * A dataAbsentReason, which makes it possible to describe why data is absent
 * An observation-time
 * A reference to the Citizen instance that holds the child's information
-* A reference to the Encounter in which the observation occured
+* A reference to the Encounter in which the observation occurred
 * A FHIR status attribute
 
 ##### Validation
@@ -223,7 +237,6 @@ Interventions that are carried out by health nurses in childrens health promotio
 * A reasonCode that describe the condition which is the reason for the intervention
 * Three FHIR status attributes
 
-
 ##### Validation
 * One and only one code is mandatory and should be drawn from the specified ValueSet
 * One and only one start-time is mandatory
@@ -251,14 +264,15 @@ Response to a Questionnaire. Questionnaires may concern child or parents. The qu
 * At least one answer should be reported
 * One and only one FHIR status exists, and should be drawn from the standard FHIR-ValueSet
 
-### Dependencies
+## Dependencies
 {% include dependency-table.xhtml %}
 
-### Cross Version Analysis
+## Cross Version Analysis
 {% include cross-version-analysis.xhtml %}
 
-### Global Profiles
+## Global Profiles
 {% include globals-table.xhtml %}
 
-### IP Statements
+## IP Statements
 {% include ip-statements.xhtml %}
+
