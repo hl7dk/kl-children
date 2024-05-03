@@ -12,14 +12,14 @@ The report for this is found here: [DeliveryReport-Lars-1](Bundle-5f1d5816-a906-
 
 ### Second Event October 9th, 2021
 #### Story
-Sundhedsplejersken skal have en behovskontakt med Lars fra 3. klasse vedr. en overvægt. Ved en fejl, kommer hun til at skrive det i Lars fra 0.klasses journal (Lars Test Berggren). Eksemplet viser, hvordan data først indberettes til den forkerte Lars' journal, og hvordan fejlen herefter rettes. Læg mærke til at hverken Lars, eller Lokationen (skolen i Holbæk) tages med i fejlretningen. Det er fordi, det er entiteter, der rent faktisk eksisterer og ikke skal rettes. 
+Sundhedsplejersken skal have en behovskontakt med Lars fra 3. klasse vedr. overvægt. Ved en fejl, kommer hun til at skrive det i Lars fra 0.klasses journal (Lars Test Berggren). Eksemplet viser, hvordan data først indberettes til den forkerte Lars' journal, og hvordan fejlen herefter rettes. Læg mærke til at hverken Lars, eller Lokationen (skolen i Holbæk) tages med i fejlretningen. Det er fordi, det er entiteter, der rent faktisk eksisterer og ikke skal rettes. 
 
 #### Error-filled reporting
 The delivery report contains one Citizen (Lars), one Encounter (Type: ‘Behovskontakt’), the encounters location (the school). In addition, an Intervention ('Opsporing og vejledning ved overvægt').
 
-The report for this is found here: [DeliveryReport-Lars-2a](Bundle-c5b55e0e-3bc4-468a-8600-1b23617dbb58.html)
+The report for this is found here: [DeliveryReport-Lars-2a](Bundle-4cda6c3c-856c-4fe3-ac90-9b6f968207c3.html)
 
 #### Error-correction report
 The delivery report contains a new version of the Encounter and Intervention mentioned above, where status is entered-in-error.
 
-The report for this is found here: [DeliveryReport-Lars-2b](Bundle-74dcb49e-dd6a-4450-9fb8-85ad0e7bed38.html)
+The report for this is found here: [DeliveryReport-Lars-2b](Bundle-9a966368-052f-42e5-87fa-e57d9b8cbf2c.html)
