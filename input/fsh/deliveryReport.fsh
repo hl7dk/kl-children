@@ -37,8 +37,7 @@ Description: "Delivery report to deliver data for each child, including state of
     klgateway-children-hearing or
     klgateway-children-sight or
     klgateway-children-passive-smoking or
-    klgateway-children-nicotine or
-    klgateway-children-location
+    klgateway-children-nicotine
 * entry.search ..0
 * entry.request ..0
 * entry.response ..0

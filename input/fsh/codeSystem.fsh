@@ -505,6 +505,7 @@ Description: "Indicator-observables for parents and children"
 * Tempcodes#01fddd46-ed7c-423d-b191-ffdd977dd61e //	Syn
 * Tempcodes#28972d4b-fea3-42ec-b2a5-e2a26f79b14d //	Passiv rygning
 * Tempcodes#76891f7b-cf49-4cb2-88d6-728a509eb75d //	Brug af nikotin
+* Tempcodes#e61e4dab-54bb-4bf4-9b76-8d991cf4de08 //Ernæring
 
 ValueSet: ParentsMentalCodes
 Title: "ForældresPsykiskeTilstandKoder"
