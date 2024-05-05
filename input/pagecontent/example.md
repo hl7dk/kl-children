@@ -37,7 +37,8 @@ The report for this is found here: [DeliveryReport-Rikke-3](Bundle-a27ab0ea-4018
 #### Story
 Ved 2. besøg i barnets første levemåned, kommer sundhedsplejersken forbi sen eftermiddag. Alt er normalt. Rikke vejer 4150g, er 53,5 cm og har et hovedomfang på 36,5cm. Kirsten fuldammer stadig.
 Desværre når sundhedsplejersken ikke at skrive resultaterne fra besøget ind i systemet fordi hun har fyraften lige efter besøget. Derfor fejler afleveringen af data første nat. Næste dag skrives de resterende data ind i systemet, hvormed data kan valideres og afsendes følgende nat.
- #### Failed reporting
+
+#### Failed reporting
 The delivery report contains one Citizen (Rikke), one Encounter (Type: ‘2. Besøg i barnets første levemåned’). The report fails because the mandatory observations are missing.
 
 The report for this is found here: [DeliveryReport-Rikke-4a](Bundle-c60604d1-692b-4e6d-86e5-03046b2d2f16.html)
