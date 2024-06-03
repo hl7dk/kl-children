@@ -60,10 +60,10 @@ Description: "Encounter for health prevention and need-based visits from childre
 
 Instance: 2nd1mthEncounter
 InstanceOf: klgateway-children-encounter
-Title: "Andet besøg i barnets første levemåned ved Rikke"
+Title: "Andet besøg inden første måned ved Rikke"
 Usage: #example
-Description: "Kontakt, hvor der leveres andet besøg i barnets første levemåned til Rikke og hendes familie"
-* type = $FBOE#563c4174-f451-4c87-8db8-8d5472ca7ff6 "Andet besøg i barnets første levemåned"
+Description: "Kontakt, hvor der leveres Andet besøg inden første måned til Rikke og hendes familie"
+* type = $FBOE#563c4174-f451-4c87-8db8-8d5472ca7ff6 "Andet besøg inden første måned"
 * period.start = 2020-06-01
 * status = $EncounterStatus#finished
 * subject = Reference(Rikke)
@@ -73,8 +73,8 @@ Instance: 2mthEncounter
 InstanceOf: klgateway-children-encounter
 Title: "2 måneders besøg ved Rikke"
 Usage: #example
-Description: "Kontakt, hvor der leveres besøg ved det ca. 2 måneder gamle barn til Rikke og hendes familie"
-* type = $FBOE#51f30d1c-d60e-4e3e-ac22-ec9712ea962d "Besøg ved det ca. 2 måneder gamle barn"
+Description: "Kontakt, hvor der leveres Besøg hos det ca. 2 måneder gamle barn til Rikke og hendes familie"
+* type = $FBOE#51f30d1c-d60e-4e3e-ac22-ec9712ea962d "Besøg hos det ca. 2 måneder gamle barn"
 * period.start = 2020-07-07T12:45:00.000Z
 * status = $EncounterStatus#finished
 * subject = Reference(Rikke)
@@ -84,8 +84,8 @@ Instance: 10mthEncounter
 InstanceOf: klgateway-children-encounter
 Title: "10 måneders besøg ved Rikke"
 Usage: #example
-Description: "Kontakt, hvor der leveres besøg ved det 8-11 måneder gamle barn til Rikke og hendes familie"
-* type = $FBOE#3f3e6489-31bd-44cf-9920-3c632868feb7 "Besøg ved det 8-11 måneder gamle barn"
+Description: "Kontakt, hvor der leveres Besøg hos det 8-11 måneder gamle barn til Rikke og hendes familie"
+* type = $FBOE#3f3e6489-31bd-44cf-9920-3c632868feb7 "Besøg hos det 8-11 måneder gamle barn"
 * period.start = 2021-03-09T10:15:00.000Z
 * status = $EncounterStatus#finished
 * subject = Reference(Rikke)
@@ -108,7 +108,7 @@ InstanceOf: klgateway-children-encounter
 Title: "Behovskontakt ved Rikke på skærm"
 Usage: #example
 Description: "Kontakt, hvor der leveres behovskontakt på skærm ved Rikke og hendes familie"
-* type = $FBOE#4b039ba1-4005-42e6-b672-09b81ad7578a "Behovsbesøg af småbørnssundhedsplejen" 
+* type = $FBOE#4b039ba1-4005-42e6-b672-09b81ad7578a "Behovskontakt med småbørnssundhedsplejen" 
 * period.start = 2021-03-25T10:15:00.000Z
 * status = $EncounterStatus#finished
 * subject = Reference(Rikke)

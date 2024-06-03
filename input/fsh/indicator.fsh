@@ -7,8 +7,7 @@ Description: "Abstract indicator profile, used in the children database"
 * code.coding 1..1
 * code.coding ^slicing.rules = #closed
 * code.coding contains
-    FBOECode 0..1 and // 1..1
-    TempCode 0..1 //slet
+    FBOECode 1..1 // 1..1
 * code.coding[LOINC] 0..0
 * code.coding[NPU] 0..0
 * code.coding[IEEE] 0..0
@@ -77,7 +76,7 @@ Parent: KLGatewayChildrenIndicator
 Id: klgateway-children-social-interaction
 Title: "KLGatewayChildrenIndicatorInteraction"
 Description: "Childrens social interaction, that inherits from Indicator"
-* code.coding[TempCode] = $FBOE#68605f88-49fb-44b9-b327-86947af6aa93 //Social kontakt
+* code.coding[FBOECode] = $FBOE#68605f88-49fb-44b9-b327-86947af6aa93 //Social kontakt
 * valueCodeableConcept.coding from SocialInteractionCodes (required)
 
 Instance: RikkeSocialInteraction
@@ -87,8 +86,8 @@ Title: "RikkeSocialInteraction"
 Description: "Rikkes sociale kontakt ved 2mrd"
 * subject = Reference(Rikke)
 * encounter = Reference(2mthEncounter)
-* code.coding[TempCode] = $FBOE#68605f88-49fb-44b9-b327-86947af6aa93 "Social kontakt"
-* valueCodeableConcept = $FBOE#e1c1674c-9384-4d95-999f-763f3868f444 "Udfordringer i social kontakt"
+* code.coding[FBOECode] = $FBOE#68605f88-49fb-44b9-b327-86947af6aa93 "Social kontakt"
+* valueCodeableConcept = $FBOE#e1c1674c-9384-4d95-999f-763f3868f444 "Udfordring i social kontakt"
 * status = #final
 * effectiveDateTime = 2020-07-07T00:00:00.000Z
 
@@ -97,7 +96,7 @@ Parent: KLGatewayChildrenIndicator
 Id: klgateway-children-parent-relationship
 Title: "KLGatewayChildrenIndicatorParentRelationship"
 Description: "Parent-child relationship, that inherits from Indicator"
-* code.coding[TempCode] = $FBOE#763c6f21-5467-4713-82fb-716c9d0a1fdf //Forælder-barn-relation
+* code.coding[FBOECode] = $FBOE#763c6f21-5467-4713-82fb-716c9d0a1fdf //Forældre-barn-relation
 * valueCodeableConcept.coding from ChildrenParentRelationshipCodes (required)
 
 Instance: RikkeChildrenParentRelationship
@@ -107,7 +106,7 @@ Title: "RikkeChildrenParentRelationship"
 Description: "Rikkes relation til forældre ved 2mrd"
 * subject = Reference(Rikke)
 * encounter = Reference(2mthEncounter)
-* code.coding[TempCode] = $FBOE#763c6f21-5467-4713-82fb-716c9d0a1fdf "Forælder-barn-relation"
+* code.coding[FBOECode] = $FBOE#763c6f21-5467-4713-82fb-716c9d0a1fdf "Forældre-barn-relation"
 * valueCodeableConcept = $FBOE#7a107df6-8fb8-4744-8413-be10b4c5c1d9 "Velfungerende forældre-barn-relation"
 * status = #final
 * effectiveDateTime = 2020-07-07T00:00:00.000Z
@@ -117,7 +116,7 @@ Parent: KLGatewayChildrenIndicator
 Id: klgateway-children-parent-social-status
 Title: "KLGatewayChildrenIndicatorParentSocialStatus"
 Description: "parent's social status, that inherits from Indicator"
-* code.coding[TempCode] = $FBOE#58997614-ba43-4534-90bd-10c7e76802f4 //	Forælders sårbarhed
+* code.coding[FBOECode] = $FBOE#58997614-ba43-4534-90bd-10c7e76802f4 //	Forælders sårbarhed
 * valueCodeableConcept.coding from ParentSocialStatusCodes (required)
 
 Profile: KLGatewayChildrenIndicatorParentMentalStatus
@@ -144,7 +143,7 @@ Parent: KLGatewayChildrenIndicator
 Id: klgateway-children-social-support-network
 Title: "KLGatewayChildrenIndicatorSocialSupportNetwork"
 Description: "Families social support network, that inherits from Indicator"
-* code.coding[TempCode] = $FBOE#7e7fab2f-278a-4b14-9bc9-efc36fffcba5 //Netværk
+* code.coding[FBOECode] = $FBOE#7e7fab2f-278a-4b14-9bc9-efc36fffcba5 //Netværk
 * valueCodeableConcept.coding from SocialSupportNetworkCodes (required)
 
 Profile: KLGatewayChildrenIndicatorCommunication
@@ -152,7 +151,7 @@ Parent: KLGatewayChildrenIndicator
 Id: klgateway-children-communication
 Title: "KLGatewayChildrenIndicatorCommunication"
 Description: "Childrens communication, that inherits from Indicator"
-* code.coding[TempCode] = $FBOE#653c2b0b-bb64-4906-888b-aea6fef3c3f8 //Kommunikation
+* code.coding[FBOECode] = $FBOE#653c2b0b-bb64-4906-888b-aea6fef3c3f8 //Kommunikation
 * valueCodeableConcept.coding from CommunicationCodes (required)
 
 Instance: RikkeCommunication2mth
@@ -162,7 +161,7 @@ Title: "RikkeCommunication2mth"
 Description: "Rikkes kommunikation ved 2mrd"
 * subject = Reference(Rikke)
 * encounter = Reference(2mthEncounter)
-* code.coding[TempCode] = $FBOE#653c2b0b-bb64-4906-888b-aea6fef3c3f8 "Kommunikation"
+* code.coding[FBOECode] = $FBOE#653c2b0b-bb64-4906-888b-aea6fef3c3f8 "Kommunikation"
 * valueCodeableConcept = $FBOE#042d522d-0abe-46eb-a958-6e235b5d5408 "Kommunikerer alderssvarende" 
 * status = #final
 * effectiveDateTime = 2020-07-07T00:00:00.000Z
@@ -172,7 +171,7 @@ Parent: KLGatewayChildrenIndicator
 Id: klgateway-children-sleep
 Title: "KLGatewayChildrenIndicatorSleep"
 Description: "Childrens sleep observation, that inherits from Indicator"
-* code.coding[TempCode] = $FBOE#73f981f8-455a-4158-b435-7c6d83ab84da //	Søvn
+* code.coding[FBOECode] = $FBOE#73f981f8-455a-4158-b435-7c6d83ab84da //	Søvn
 * valueCodeableConcept.coding from SleepCodes (required)
 
 Instance: RikkeSleep2mth
@@ -182,7 +181,7 @@ Title: "RikkeSleep2mth"
 Description: "Rikkes søvn ved 2mrd"
 * subject = Reference(Rikke)
 * encounter = Reference(2mthEncounter)
-* code.coding[TempCode] = $FBOE#73f981f8-455a-4158-b435-7c6d83ab84da "Søvn"
+* code.coding[FBOECode] = $FBOE#73f981f8-455a-4158-b435-7c6d83ab84da "Søvn"
 * valueCodeableConcept = $FBOE#b07eec60-941d-484d-8c2a-aeaa2ba798bf "Søvn med normale variationer" 
 * status = #final
 * effectiveDateTime = 2020-07-07T00:00:00.000Z
@@ -192,7 +191,7 @@ Parent: KLGatewayChildrenIndicator
 Id: klgateway-children-motor-function
 Title: "KLGatewayChildrenIndicatorMotorFunction"
 Description: "Childrens motor function, that inherits from Indicator"
-* code.coding[TempCode] = $FBOE#e04f2ca1-888a-4671-a97a-371b525cd2a3 //	Motorik
+* code.coding[FBOECode] = $FBOE#e04f2ca1-888a-4671-a97a-371b525cd2a3 //	Motorik
 * valueCodeableConcept.coding from MotorFunctionCodes (required)
 
 Instance: RikkeMotorFunction2mth
@@ -202,7 +201,7 @@ Title: "RikkeMotorFunction2mth"
 Description: "Rikkes motorik ved 2mrd"
 * subject = Reference(Rikke)
 * encounter = Reference(2mthEncounter)
-* code.coding[TempCode] = $FBOE#e04f2ca1-888a-4671-a97a-371b525cd2a3 "Motorik"
+* code.coding[FBOECode] = $FBOE#e04f2ca1-888a-4671-a97a-371b525cd2a3 "Motorik"
 * valueCodeableConcept = $FBOE#936a0163-08eb-4fdb-bf0c-bcf5bc7cb3f6 "Få tegn på udfordret motorik"
 * status = #final
 * effectiveDateTime = 2020-07-07T00:00:00.000Z
@@ -212,7 +211,7 @@ Parent: KLGatewayChildrenIndicator
 Id: klgateway-children-nutrition
 Title: "KLGatewayChildrenIndicatorNutrition"
 Description: "Childrens nutrition, that inherits from Indicator"
-* code.coding[TempCode] = $FBOE#e61e4dab-54bb-4bf4-9b76-8d991cf4de08 //	Ernæring
+* code.coding[FBOECode] = $FBOE#e61e4dab-54bb-4bf4-9b76-8d991cf4de08 //	Ernæring
 * valueCodeableConcept.coding from NutritionCodes (required)
 
 Profile: KLGatewayChildrenIndicatorPhysicalActivity
@@ -220,7 +219,7 @@ Parent: KLGatewayChildrenIndicator
 Id: klgateway-children-physical-activity
 Title: "KLGatewayChildrenIndicatorPhysicalActivity"
 Description: "Childrens physical activity, that inherits from Indicator"
-* code.coding[TempCode] = $FBOE#b331fe02-a781-4abd-b6db-9331d6a69b15 //	Fysisk aktivitet
+* code.coding[FBOECode] = $FBOE#b331fe02-a781-4abd-b6db-9331d6a69b15 //	Fysisk aktivitet
 * valueCodeableConcept.coding from PhysicalActivityCodes (required)
 
 Profile: KLGatewayChildrenIndicatorHearing
@@ -228,7 +227,7 @@ Parent: KLGatewayChildrenIndicator
 Id: klgateway-children-hearing
 Title: "KLGatewayChildrenIndicatorHearing"
 Description: "Childrens hearing, that inherits from Indicator"
-* code.coding[TempCode] = $FBOE#a22c4b53-b622-4394-ba13-910a7b0d7b0d //	Hørelse
+* code.coding[FBOECode] = $FBOE#a22c4b53-b622-4394-ba13-910a7b0d7b0d //	Hørelse
 * valueCodeableConcept.coding from HearingCodes (required)
 
 Profile: KLGatewayChildrenIndicatorSight
@@ -236,7 +235,7 @@ Parent: KLGatewayChildrenIndicator
 Id: klgateway-children-sight
 Title: "KLGatewayChildrenIndicatorSight"
 Description: "Childrens sight, that inherits from Indicator"
-* code.coding[TempCode] = $FBOE#01fddd46-ed7c-423d-b191-ffdd977dd61e //"Syn"
+* code.coding[FBOECode] = $FBOE#01fddd46-ed7c-423d-b191-ffdd977dd61e //"Syn"
 * valueCodeableConcept.coding from SightCodes (required)
 
 Profile: KLGatewayChildrenIndicatorPassiveSmoking
@@ -244,7 +243,7 @@ Parent: KLGatewayChildrenIndicator
 Id: klgateway-children-passive-smoking
 Title: "KLGatewayChildrenIndicatorPassiveSmoking"
 Description: "Children's passive smoking, that inherits from Indicator"
-* code.coding[TempCode] = $FBOE#28972d4b-fea3-42ec-b2a5-e2a26f79b14d "Passiv rygning"
+* code.coding[FBOECode] = $FBOE#28972d4b-fea3-42ec-b2a5-e2a26f79b14d "Passiv rygning"
 * valueCodeableConcept.coding from PassiveSmokingCodes (required)
 
 Profile: KLGatewayChildrenIndicatorNicotine
@@ -252,5 +251,5 @@ Parent: KLGatewayChildrenIndicator
 Id: klgateway-children-nicotine
 Title: "KLGatewayChildrenIndicatorNicotine"
 Description: "Children's use of nicotine, that inherits from Indicator"
-* code.coding[TempCode] = $FBOE#76891f7b-cf49-4cb2-88d6-728a509eb75d "Brug af nikotin"
+* code.coding[FBOECode] = $FBOE#76891f7b-cf49-4cb2-88d6-728a509eb75d "Brug af nikotin"
 * valueCodeableConcept.coding from NicotineCodes (required)

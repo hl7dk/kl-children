@@ -90,7 +90,7 @@ Title: "Lars social kontakt ved indskoling"
 Description: "Lars social kontakt ved indskoling"
 * subject = Reference(4ced31e7-f852-4bad-a320-fe2a02640434)
 * encounter = Reference(9a97ee62-ada2-45f6-8559-99477c028eb4)
-* code.coding[TempCode] = $FBOE#68605f88-49fb-44b9-b327-86947af6aa93 "Social kontakt"
+* code.coding[FBOECode] = $FBOE#68605f88-49fb-44b9-b327-86947af6aa93 "Social kontakt"
 * valueCodeableConcept = $FBOE#008b1890-4be5-463a-b618-0ab3d89515d0 "Alderssvarende social kontakt"
 * status = #final
 * effectiveDateTime = 2021-10-06
@@ -138,7 +138,7 @@ Title: "Lars kost, indskoling"
 Description: "Lars kost indskoling"
 * subject = Reference(4ced31e7-f852-4bad-a320-fe2a02640434)
 * encounter = Reference(9a97ee62-ada2-45f6-8559-99477c028eb4)
-* code.coding[TempCode] = $FBOE#e61e4dab-54bb-4bf4-9b76-8d991cf4de08 "Ernæring"
+* code.coding[FBOECode] = $FBOE#e61e4dab-54bb-4bf4-9b76-8d991cf4de08 "Ernæring"
 * valueCodeableConcept.coding = $FBOE#78dcf013-8ae9-4541-b175-100cde77a9f0 "Almindeligt kostindtag"
 * status = #final
 * effectiveDateTime = 2021-10-06
@@ -151,7 +151,7 @@ Title: "Lars kommunikation indskoling"
 Description: "Lars kommunikation indskoling"
 * subject = Reference(4ced31e7-f852-4bad-a320-fe2a02640434)
 * encounter = Reference(9a97ee62-ada2-45f6-8559-99477c028eb4)
-* code.coding[TempCode] = $FBOE#653c2b0b-bb64-4906-888b-aea6fef3c3f8 "Kommunikation"
+* code.coding[FBOECode] = $FBOE#653c2b0b-bb64-4906-888b-aea6fef3c3f8 "Kommunikation"
 * valueCodeableConcept = $FBOE#042d522d-0abe-46eb-a958-6e235b5d5408 "Kommunikerer alderssvarende" 
 * status = #final
 * effectiveDateTime = 2021-10-06
@@ -163,7 +163,7 @@ Title: "Lars motorik indskoling"
 Description: "Lars motorik indskoling"
 * subject = Reference(4ced31e7-f852-4bad-a320-fe2a02640434)
 * encounter = Reference(9a97ee62-ada2-45f6-8559-99477c028eb4)
-* code.coding[TempCode] = $FBOE#e04f2ca1-888a-4671-a97a-371b525cd2a3 //	Motorik
+* code.coding[FBOECode] = $FBOE#e04f2ca1-888a-4671-a97a-371b525cd2a3 //	Motorik
 * valueCodeableConcept = $FBOE#d5b876e1-a86c-4768-b46d-cd795eaa89e4 "Alderssvarende motorik"
 * status = #final
 * effectiveDateTime = 2021-10-06
@@ -175,7 +175,7 @@ Title: "Lars fysisk aktivitet indskoling"
 Description: "Lars fysisk aktivitet indskoling"
 * subject = Reference(4ced31e7-f852-4bad-a320-fe2a02640434)
 * encounter = Reference(9a97ee62-ada2-45f6-8559-99477c028eb4)
-* code.coding[TempCode] = $FBOE#b331fe02-a781-4abd-b6db-9331d6a69b15 "Fysisk aktivitet"
+* code.coding[FBOECode] = $FBOE#b331fe02-a781-4abd-b6db-9331d6a69b15 "Fysisk aktivitet"
 * valueCodeableConcept = $FBOE#05086dad-8718-4a6c-b096-54c7101d0b2c "Fysisk aktiv"
 * status = #final
 * effectiveDateTime = 2021-10-06
@@ -187,7 +187,7 @@ Title: "Lars hørelse indskoling"
 Description: "Lars hørelse indskoling"
 * subject = Reference(4ced31e7-f852-4bad-a320-fe2a02640434)
 * encounter = Reference(9a97ee62-ada2-45f6-8559-99477c028eb4)
-* code.coding[TempCode] = $FBOE#a22c4b53-b622-4394-ba13-910a7b0d7b0d "Hørelse"
+* code.coding[FBOECode] = $FBOE#a22c4b53-b622-4394-ba13-910a7b0d7b0d "Hørelse"
 * valueCodeableConcept = $FBOE#9628db65-7460-4ecc-bbb1-48c0ac4b3f02 "Intet problem med hørelse målt"
 * status = #final
 * effectiveDateTime = 2021-10-06
@@ -199,7 +199,7 @@ Title: "Lars syn indskoling"
 Description: "Lars syn indskoling"
 * subject = Reference(4ced31e7-f852-4bad-a320-fe2a02640434)
 * encounter = Reference(9a97ee62-ada2-45f6-8559-99477c028eb4)
-* code.coding[TempCode] = $FBOE#01fddd46-ed7c-423d-b191-ffdd977dd61e "Syn"
+* code.coding[FBOECode] = $FBOE#01fddd46-ed7c-423d-b191-ffdd977dd61e "Syn"
 * valueCodeableConcept = $FBOE#bdcb835d-6ef6-4c4f-9fdf-94c3ebd17182 "Intet problem med syn målt"
 * status = #final
 * effectiveDateTime = 2021-10-06
@@ -211,7 +211,7 @@ Title: "Lars søvn indskoling"
 Description: "Lars søvn indskoling"
 * subject = Reference(4ced31e7-f852-4bad-a320-fe2a02640434)
 * encounter = Reference(9a97ee62-ada2-45f6-8559-99477c028eb4)
-* code.coding[TempCode] = $FBOE#73f981f8-455a-4158-b435-7c6d83ab84da "Søvn"
+* code.coding[FBOECode] = $FBOE#73f981f8-455a-4158-b435-7c6d83ab84da "Søvn"
 * valueCodeableConcept = $FBOE#d13ad530-d8f6-4933-be18-bb77e2334f9f	"Let forstyrret søvn"
 * status = #final
 * effectiveDateTime = 2021-10-06

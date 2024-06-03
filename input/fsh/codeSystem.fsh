@@ -8,11 +8,11 @@
 // * #6c2a4f15-d775-47f3-9868-b26fbff9ff8b #d3c00541-f1d3-4c43-b5fc-16e8914ca1df "Graviditetsbesøg"
 // * #6c2a4f15-d775-47f3-9868-b26fbff9ff8b #7d35a193-e808-4e77-b361-6c0d114d021f "Barselsbesøg"
 // * #6c2a4f15-d775-47f3-9868-b26fbff9ff8b #b4bf6058-502a-4d64-bb8e-369661f43b47 "Etableringsbesøg"
-// * #6c2a4f15-d775-47f3-9868-b26fbff9ff8b #563c4174-f451-4c87-8db8-8d5472ca7ff6 "Andet besøg i barnets første levemåned"
-// * #6c2a4f15-d775-47f3-9868-b26fbff9ff8b #51f30d1c-d60e-4e3e-ac22-ec9712ea962d "Besøg ved det ca. 2 måneder gamle barn"
-// * #6c2a4f15-d775-47f3-9868-b26fbff9ff8b #58ff370b-a775-4bec-b24a-91604e0a5fe7 "Besøg ved det 4-6 måneder gamle barn"
-// * #6c2a4f15-d775-47f3-9868-b26fbff9ff8b #3f3e6489-31bd-44cf-9920-3c632868feb7 "Besøg ved det 8-11 måneder gamle barn"
-// * #4b039ba1-4005-42e6-b672-09b81ad7578a "Behovsbesøg af småbørnssundhedsplejen" "Sundhedsplejens hjemmebesøg i barnets første 5 leveår efter behov"
+// * #6c2a4f15-d775-47f3-9868-b26fbff9ff8b #563c4174-f451-4c87-8db8-8d5472ca7ff6 "Andet besøg inden første måned"
+// * #6c2a4f15-d775-47f3-9868-b26fbff9ff8b #51f30d1c-d60e-4e3e-ac22-ec9712ea962d "Besøg hos det ca. 2 måneder gamle barn"
+// * #6c2a4f15-d775-47f3-9868-b26fbff9ff8b #58ff370b-a775-4bec-b24a-91604e0a5fe7 "Besøg hos det 4-6 måneder gamle barn"
+// * #6c2a4f15-d775-47f3-9868-b26fbff9ff8b #3f3e6489-31bd-44cf-9920-3c632868feb7 "Besøg hos det 8-11 måneder gamle barn"
+// * #4b039ba1-4005-42e6-b672-09b81ad7578a "Behovskontakt med småbørnssundhedsplejen" "Sundhedsplejens hjemmebesøg i barnets første 5 leveår efter behov"
 // * #b30f139c-fac5-416e-b84a-a3429f0222c2 "Anden kontakt med småbørnssundhedsplejen ifm den almindelige forebyggende småbørnsindsats"
 // * #b30f139c-fac5-416e-b84a-a3429f0222c2 #644dd6c1-5c80-4412-ae59-f6e0767cead5 "Kontakt med sundhedsplejen i åben konsultation"
 // * #b30f139c-fac5-416e-b84a-a3429f0222c2 #a08d3cf6-58ef-4631-8893-3fa44bd67363 "Kontakt med sundhedsplejen ifm. gruppeaktivitet"
@@ -65,7 +65,7 @@
 // * #6be08133-feca-4d2f-a45d-cb36d141011e "Observation vedr. høretest  ifm. udskolingsundersøgelse"
 // * #96e3eda6-3eb7-4fbb-9850-fc6dfafadb4a "Problem/bemærkning" 
 // * #1b64f768-5133-4633-85a4-2b97fcaa1f7a "Der er intet at bemærke"
-// * #83559d49-fe53-42e9-a191-072da13c8c99 "Telefonisk" "Kontakten er foregået per telefon" //KLCommonCareSocialCodes
+// * #1b55a4b0-1156-4f58-b2df-b5c6014d9048 "Telefonisk" "Kontakten er foregået per telefon" //KLCommonCareSocialCodes
 // * #124be95d-6924-4609-9d2a-e7c73ae3ab3d "Skærmbesøg" "Kontakten er foregået via skærm med mulighed for tændt kamera, så parterne har haft mulighed for at interagere ansigt til ansigt, og fremvise ting." //KLCommonCareSocialCodes
 // //Behovsindsatser
 // * #7620766c-6d3d-487b-9896-bfcf7f883f0f	"Behovsindsatser småbørn"
@@ -112,7 +112,7 @@
 // * #b062a901-1364-4ed6-8d40-f4f14cfc737a #04cc94e7-1d89-4070-8bda-55f65637ab68 "Sparring med anden faggruppe"
 // //Børneobservationer
 // * #68605f88-49fb-44b9-b327-86947af6aa93 "Social kontakt"
-// * #763c6f21-5467-4713-82fb-716c9d0a1fdf "Forælder-barn-relation"
+// * #763c6f21-5467-4713-82fb-716c9d0a1fdf "Forældre-barn-relation"
 // * #58997614-ba43-4534-90bd-10c7e76802f4 "Forælders sårbarhed"
 // * #7e7fab2f-278a-4b14-9bc9-efc36fffcba5 "Netværk"
 // * #653c2b0b-bb64-4906-888b-aea6fef3c3f8 "Kommunikation"
@@ -143,7 +143,7 @@
 // //Børnetilstande
 // //obligatoriske
 // * #18938eb0-3f40-48c5-9971-7255aa86336a "Få tegn på udfordringer i social kontakt" 
-// * #e1c1674c-9384-4d95-999f-763f3868f444 "Udfordringer i social kontakt"
+// * #e1c1674c-9384-4d95-999f-763f3868f444 "Udfordring i social kontakt"
 
 // * #274791a5-094d-4e6a-831e-e712d3d66aeb	"Let påvirket forældre-barn-relation"
 // * #80aa0dab-aa41-45b1-a2cc-16d7e3733fdd	"Udfordringer i forældre-barn-relation"
@@ -399,7 +399,7 @@ Description: "Sundhedsplejetilstande, som relaterer sig til sygeplejefaglige pro
 * exclude $FBOE#5dc857f6-1220-4762-a718-31a6101b5d61 //For det meste glad i skolen
 
 //aktuelle problemer fra obligatoriske datapunkter
-* $FBOE#e1c1674c-9384-4d95-999f-763f3868f444 //"Udfordringer i social kontakt"
+* $FBOE#e1c1674c-9384-4d95-999f-763f3868f444 //"Udfordring i social kontakt"
 * $FBOE#80aa0dab-aa41-45b1-a2cc-16d7e3733fdd //	"Udfordringer i forældre-barn-relation"
 * $FBOE#f86c2526-3b04-454c-a99e-d350f699dc94 //"Udfordret psykisk tilstand"
 * $FBOE#2461e246-b75c-46bb-b6ad-c68d529ace7e //"Sårbarhed"
@@ -441,11 +441,11 @@ Description: "Extension on encountertype valueset, to be implemented in KL-term 
 * $FBOE#d3c00541-f1d3-4c43-b5fc-16e8914ca1df //"Graviditetsbesøg"
 * $FBOE#7d35a193-e808-4e77-b361-6c0d114d021f //"Barselsbesøg"
 * $FBOE#b4bf6058-502a-4d64-bb8e-369661f43b47 //"Etableringsbesøg"
-* $FBOE#563c4174-f451-4c87-8db8-8d5472ca7ff6 // "Andet besøg i barnets første levemåned"
-* $FBOE#51f30d1c-d60e-4e3e-ac22-ec9712ea962d // "Besøg ved det ca. 2 måneder gamle barn"
-* $FBOE#58ff370b-a775-4bec-b24a-91604e0a5fe7 // "Besøg ved det 4-6 måneder gamle barn"
-* $FBOE#3f3e6489-31bd-44cf-9920-3c632868feb7 // "Besøg ved det 8-11 måneder gamle barn"
-* $FBOE#4b039ba1-4005-42e6-b672-09b81ad7578a //'Behovsbesøg af småbørnssundhedsplejen'/"Behovskontakt med småbørnssundhedsplejen" 
+* $FBOE#563c4174-f451-4c87-8db8-8d5472ca7ff6 // "Andet besøg inden første måned"
+* $FBOE#51f30d1c-d60e-4e3e-ac22-ec9712ea962d // "Besøg hos det ca. 2 måneder gamle barn"
+* $FBOE#58ff370b-a775-4bec-b24a-91604e0a5fe7 // "Besøg hos det 4-6 måneder gamle barn"
+* $FBOE#3f3e6489-31bd-44cf-9920-3c632868feb7 // "Besøg hos det 8-11 måneder gamle barn"
+* $FBOE#4b039ba1-4005-42e6-b672-09b81ad7578a //'Behovskontakt med småbørnssundhedsplejen'/"Behovskontakt med småbørnssundhedsplejen" 
 * $FBOE#b30f139c-fac5-416e-b84a-a3429f0222c2 //"Almindelig forebyggende småbørnskontakt"
 * $FBOE#c06ed6f1-be9d-460e-a45e-34821bcbd533 // "Indskolingsundersøgelse"
 * $FBOE#d01bcb90-2b29-44f4-834c-191d6dd4a08a // "Undersøgelse i mellemtrin, med måling"
@@ -496,7 +496,7 @@ Description: "Indicator-observables for parents and children"
 * $FBOE#58997614-ba43-4534-90bd-10c7e76802f4 //	Forælders sårbarhed
 * $FBOE#7e7fab2f-278a-4b14-9bc9-efc36fffcba5 //	Netværk
 * $FBOE#68605f88-49fb-44b9-b327-86947af6aa93 //	Social kontakt
-* $FBOE#763c6f21-5467-4713-82fb-716c9d0a1fdf //	Forælder-barn-relation
+* $FBOE#763c6f21-5467-4713-82fb-716c9d0a1fdf //	Forældre-barn-relation
 * $FBOE#653c2b0b-bb64-4906-888b-aea6fef3c3f8 //	Kommunikation
 * $FBOE#73f981f8-455a-4158-b435-7c6d83ab84da //	Søvn
 * $FBOE#e04f2ca1-888a-4671-a97a-371b525cd2a3 //	Motorik
@@ -521,7 +521,7 @@ Description: "Mandatory result values for social interaction in small children a
 * ^experimental = false
 * $FBOE#008b1890-4be5-463a-b618-0ab3d89515d0 //"Alderssvarende social kontakt"
 * $FBOE#18938eb0-3f40-48c5-9971-7255aa86336a //"Få tegn på udfordringer i social kontakt" 
-* $FBOE#e1c1674c-9384-4d95-999f-763f3868f444 //"Udfordringer i social kontakt"
+* $FBOE#e1c1674c-9384-4d95-999f-763f3868f444 //"Udfordring i social kontakt"
 
 ValueSet: ChildrenParentRelationshipCodes
 Title: "ForældreBarnRelationsKoder"

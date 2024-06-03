@@ -23,10 +23,10 @@ Whereas the report may seem unconstrained, each profile define constraints on at
 |Graviditetsbesøg |IndicatorParentMentalState, IndicatorSocialSupportNetwork, IndicatorParentSocialStatus|
 |Barselsbesøg |ParentRelationship, Weight, Feeding|
 |Etableringsbesøg |IndicatorSocialSupportNetwork, IndicatorParentSocialStatus, IndicatorParentRelationship, Weight, Height, HeadCircumference, IndicatorTobacco, Feeding|
-|Andet besøg i barnets første levemåned|IndicatorParentRelationship, Weight, Height, HeadCircumference, Feeding|
-|Besøg ved det ca. 2 måneder gamle barn |IndicatorParentMentalState, IndicatorSocialInteraction, IndicatorParentRelationship, Weight, Height, HeadCircumference, Feeding, IndicatorCommunication, IndicatorSleep, IndicatorMotorFunction|
-|Besøg ved det 4-6 måneder gamle barn|IndicatorSocialInteraction, IndicatorParentRelationship, Weight, Height, HeadCircumference, Feeding, IndicatorCommunication, IndicatorSleep, IndicatorMotorFunction|
-|Besøg ved det 8-11 måneder gamle barn|IndicatorSocialInteraction, IndicatorParentRelationship, Weight, Height, HeadCircumference, Feeding, IndicatorCommunication, IndicatorSleep, IndicatorMotorFunction|
+|Andet besøg inden første måned|IndicatorParentRelationship, Weight, Height, HeadCircumference, Feeding|
+|Besøg hos det ca. 2 måneder gamle barn |IndicatorParentMentalState, IndicatorSocialInteraction, IndicatorParentRelationship, Weight, Height, HeadCircumference, Feeding, IndicatorCommunication, IndicatorSleep, IndicatorMotorFunction|
+|Besøg hos det 4-6 måneder gamle barn|IndicatorSocialInteraction, IndicatorParentRelationship, Weight, Height, HeadCircumference, Feeding, IndicatorCommunication, IndicatorSleep, IndicatorMotorFunction|
+|Besøg hos det 8-11 måneder gamle barn|IndicatorSocialInteraction, IndicatorParentRelationship, Weight, Height, HeadCircumference, Feeding, IndicatorCommunication, IndicatorSleep, IndicatorMotorFunction|
 |Indskolingsundersøgelse |IndicatorSocialInteraction, Weight, Height, IndicatorNutrition, IndicatorCommunication, IndicatorSleep, IndicatorMotorFunction, IndicatorPhysicalActivity, IndicatorHearing, IndicatorSight|
 |Undersøgelse i mellemtrin, med måling |Weight, Height|
 |Udskolingsundersøgelse| IndicatorSocialInteraction, Weight, Height, IndicatorNutrition, IndicatorNicotine, IndicatorCommunication, IndicatorSleep, IndicatorPhysicalActivity, IndicatorHearing, IndicatorSight.|

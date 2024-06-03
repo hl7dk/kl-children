@@ -6,10 +6,10 @@ The Encounter.type.coding attribute is used to classify the type of activities t
 * Graviditetsbesøg
 * Barselsbesøg
 * Etableringsbesøg
-* Andet besøg i barnets første levemåned
-* Besøg ved det ca. 2 måneder gamle barn
-* Besøg ved det 4-6 måneder gamle barn
-* Besøg ved det 8-11 måneder gamle barn
+* Andet besøg inden første måned
+* Besøg hos det ca. 2 måneder gamle barn
+* Besøg hos det 4-6 måneder gamle barn
+* Besøg hos det 8-11 måneder gamle barn
 * Almindelig forebyggende småbørnskontakt 
 * Behovskontakt med småbørnssundhedsplejen
 * Indskolingsundersøgelse
@@ -19,9 +19,9 @@ The Encounter.type.coding attribute is used to classify the type of activities t
 * Behovskontakt med skolesundhedsplejen
 
 Sometimes, it might be difficult to apply the correct type to an encounter. The following guiding principles exists:
-* The encounter in which most of the activities of a certain visit or examination (as described in the guidance document) is carried out, is classified as that type of visit or examination. This holds true even if the guidance document describes this encounter or examination for a child of a certain age, and the child examined is in fact younger or older. (fx hvis man besøger et 12 måneder gammelt barn, og udfører de ting sundhedsstyrelsen vejledning beskriver for 'besøg ved det 8-11 måneder gamle barn', så klassificeres det som 'besøg ved det 8-11 måneder gamle barn'.)
+* The encounter in which most of the activities of a certain visit or examination (as described in the guidance document) is carried out, is classified as that type of visit or examination. This holds true even if the guidance document describes this encounter or examination for a child of a certain age, and the child examined is in fact younger or older. (fx hvis man besøger et 12 måneder gammelt barn, og udfører de ting sundhedsstyrelsen vejledning beskriver for 'Besøg hos det 8-11 måneder gamle barn', så klassificeres det som 'Besøg hos det 8-11 måneder gamle barn'.)
 * If certain mandatory activities are not carried out, and another encounter is planned and completed to account for this, classify this secondary encounter as 'Almindelig forebyggende småbørnskontakt' or 'Almindelig forebyggende skolebørnskontakt'.
-* If local encounter types exists, report them as the most specific type which is still true. Be especially aware if the reason for the encounter is prevention, or a specific need in the family. E.g. a municipality may have a specific encounter type to help mothers that have problems with breastfeeding. These should be reported as 'Behovsbesøg af småbørnssundhedsplejen'. If the municipality has regular extra visits with all children in the 3rd month, they should be reported as 'Almindelig forebyggende småbørnskontakt'.
+* If local encounter types exists, report them as the most specific type which is still true. Be especially aware if the reason for the encounter is prevention, or a specific need in the family. E.g. a municipality may have a specific encounter type to help mothers that have problems with breastfeeding. These should be reported as 'Behovskontakt med småbørnssundhedsplejen'. If the municipality has regular extra visits with all children in the 3rd month, they should be reported as 'Almindelig forebyggende småbørnskontakt'.
 
 In the context of the children database, only encounters actually carried out should be documented. Consequently, for most intends and purposes the encounter.status should be 'finished'. However, if errors have been reported use the 'entered-in-error' status as described by the FHIR-documentation.
 

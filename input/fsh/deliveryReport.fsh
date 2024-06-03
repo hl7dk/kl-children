@@ -76,7 +76,7 @@ Description: "Delivery report to deliver data for each child, including state of
 //  or $this.conformsTo('http://fhir.kl.dk/children/StructureDefinition/klgateway-children-bodyweight'))"
 
 //Invariant: gateway-children-report-2
-//Description: "If there is an encounter of type 'Andet besøg i barnets første levemåned' eller 'Besøg ved det 4-6 måneder gamle barn' eller 'indskolingsundersøgelse' eller 'udskolingsundersøgelse' then weight and height meassurements should be included in the bundle"
+//Description: "If there is an encounter of type 'Andet besøg inden første måned' eller 'Besøg hos det 4-6 måneder gamle barn' eller 'indskolingsundersøgelse' eller 'udskolingsundersøgelse' then weight and height meassurements should be included in the bundle"
 //Severity: #error
 //Expression: "entry.select((resource as Encounter).type.coding.where(
     // code = '563c4174-f451-4c87-8db8-8d5472ca7ff6'
@@ -89,7 +89,7 @@ Description: "Delivery report to deliver data for each child, including state of
 
 
 Invariant: gateway-children-report-parent-mental-state
-Description: "If there is an encounter of type 'Graviditetsbesøg', 'Besøg ved det ca. 2 måneder gamle barn' delivered face-to-face, then parents mental state should be included in the bundle"
+Description: "If there is an encounter of type 'Graviditetsbesøg', 'Besøg hos det ca. 2 måneder gamle barn' delivered face-to-face, then parents mental state should be included in the bundle"
 Severity: #error
 Expression: "entry.select((resource as Encounter).where(
     (type.coding.code = 'd3c00541-f1d3-4c43-b5fc-16e8914ca1df'
@@ -122,7 +122,7 @@ Expression: "entry.select((resource as Encounter).where(
     entry.select((resource as Observation).code.coding.where(code = '7e7fab2f-278a-4b14-9bc9-efc36fffcba5')).exists()"
 
 Invariant: gateway-children-report-social-interaction
-Description: "If there is an encounter of type 'Besøg ved det ca. 2 måneder gamle barn', 'Besøg ved det 4-6 måneder gamle barn', 'Besøg ved det 8-11 måneder gamle barn', 'Indskolingsundersøgelse', 'Udskolingsundersøgelse',  delivered face-to-face, then social interaction should be included in the bundle"
+Description: "If there is an encounter of type 'Besøg hos det ca. 2 måneder gamle barn', 'Besøg hos det 4-6 måneder gamle barn', 'Besøg hos det 8-11 måneder gamle barn', 'Indskolingsundersøgelse', 'Udskolingsundersøgelse',  delivered face-to-face, then social interaction should be included in the bundle"
 Severity: #error
 Expression: "entry.select((resource as Encounter).where(
     (type.coding.code = '51f30d1c-d60e-4e3e-ac22-ec9712ea962d'
@@ -136,7 +136,7 @@ Expression: "entry.select((resource as Encounter).where(
     entry.select((resource as Observation).code.coding.where(code = '68605f88-49fb-44b9-b327-86947af6aa93')).exists()"
 
 Invariant: gateway-children-report-parent-relationship
-Description: "If there is an encounter of type 'Barselsbesøg', 'Etableringsbesøg', 'Andet besøg i barnets første levemåned', 'Besøg ved det ca. 2 måneder gamle barn', 'Besøg ved det 4-6 måneder gamle barn', 'Besøg ved det 8-11 måneder gamle barn',  delivered face-to-face, then parent relationship should be included in the bundle"
+Description: "If there is an encounter of type 'Barselsbesøg', 'Etableringsbesøg', 'Andet besøg inden første måned', 'Besøg hos det ca. 2 måneder gamle barn', 'Besøg hos det 4-6 måneder gamle barn', 'Besøg hos det 8-11 måneder gamle barn',  delivered face-to-face, then parent relationship should be included in the bundle"
 Severity: #error
 Expression: "entry.select((resource as Encounter).where(
     (type.coding.code = '7d35a193-e808-4e77-b361-6c0d114d021f'
@@ -150,7 +150,7 @@ Expression: "entry.select((resource as Encounter).where(
     entry.select((resource as Observation).code.coding.where(code = '763c6f21-5467-4713-82fb-716c9d0a1fdf')).exists()"
 
 Invariant: gateway-children-report-weight
-Description: "If there is an encounter of type 'Barselsbesøg', 'Etableringsbesøg', 'Andet besøg i barnets første levemåned', 'Besøg ved det ca. 2 måneder gamle barn', 'Besøg ved det 4-6 måneder gamle barn', 'Besøg ved det 8-11 måneder gamle barn', 'Indskolingsundersøgelse', 'Undersøgelse i mellemtrin, med måling', 'Udskolingsundersøgelse',  delivered face-to-face, then weight should be included in the bundle"
+Description: "If there is an encounter of type 'Barselsbesøg', 'Etableringsbesøg', 'Andet besøg inden første måned', 'Besøg hos det ca. 2 måneder gamle barn', 'Besøg hos det 4-6 måneder gamle barn', 'Besøg hos det 8-11 måneder gamle barn', 'Indskolingsundersøgelse', 'Undersøgelse i mellemtrin, med måling', 'Udskolingsundersøgelse',  delivered face-to-face, then weight should be included in the bundle"
 Severity: #error
 Expression: "entry.select((resource as Encounter).where(
     (type.coding.code = '7d35a193-e808-4e77-b361-6c0d114d021f'
@@ -168,7 +168,7 @@ Expression: "entry.select((resource as Encounter).where(
     entry.select((resource as Observation).code.coding.where(code = '27113001')).exists()"
 
 Invariant: gateway-children-report-height
-Description: "If there is an encounter of type 'Etableringsbesøg', 'Andet besøg i barnets første levemåned', 'Besøg ved det ca. 2 måneder gamle barn', 'Besøg ved det 4-6 måneder gamle barn', 'Besøg ved det 8-11 måneder gamle barn', 'Indskolingsundersøgelse', 'Undersøgelse i mellemtrin, med måling', 'Udskolingsundersøgelse',  delivered face-to-face, then height should be included in the bundle"
+Description: "If there is an encounter of type 'Etableringsbesøg', 'Andet besøg inden første måned', 'Besøg hos det ca. 2 måneder gamle barn', 'Besøg hos det 4-6 måneder gamle barn', 'Besøg hos det 8-11 måneder gamle barn', 'Indskolingsundersøgelse', 'Undersøgelse i mellemtrin, med måling', 'Udskolingsundersøgelse',  delivered face-to-face, then height should be included in the bundle"
 Severity: #error
 Expression: "entry.select((resource as Encounter).where(
     (type.coding.code = 'b4bf6058-502a-4d64-bb8e-369661f43b47'
@@ -187,7 +187,7 @@ Expression: "entry.select((resource as Encounter).where(
     or entry.select((resource as Observation).code.coding.where(code = '1149101003')).exists())"
 
 Invariant: gateway-children-report-head-circumference
-Description: "If there is an encounter of type 'Etableringsbesøg', 'Andet besøg i barnets første levemåned', 'Besøg ved det ca. 2 måneder gamle barn', 'Besøg ved det 4-6 måneder gamle barn', 'Besøg ved det 8-11 måneder gamle barn' delivered face-to-face, then head circumference should be included in the bundle"
+Description: "If there is an encounter of type 'Etableringsbesøg', 'Andet besøg inden første måned', 'Besøg hos det ca. 2 måneder gamle barn', 'Besøg hos det 4-6 måneder gamle barn', 'Besøg hos det 8-11 måneder gamle barn' delivered face-to-face, then head circumference should be included in the bundle"
 Severity: #error
 Expression: "entry.select((resource as Encounter).where(
     (type.coding.code = 'b4bf6058-502a-4d64-bb8e-369661f43b47'
@@ -221,7 +221,7 @@ Expression: "entry.select((resource as Encounter).where(
     entry.select((resource as Observation).code.coding.where(code = '76891f7b-cf49-4cb2-88d6-728a509eb75d')).exists()"
 
 Invariant: gateway-children-report-nutrition
-Description: "If there is an encounter of type 'Barselsbesøg', 'Etableringsbesøg', 'Andet besøg i barnets første levemåned', 'Besøg ved det ca. 2 måneder gamle barn', 'Besøg ved det 4-6 måneder gamle barn', 'Besøg ved det 8-11 måneder gamle barn', 'Indskolingsundersøgelse', 'Udskolingsundersøgelse',  delivered face-to-face, then nutrition should be included in the bundle"
+Description: "If there is an encounter of type 'Barselsbesøg', 'Etableringsbesøg', 'Andet besøg inden første måned', 'Besøg hos det ca. 2 måneder gamle barn', 'Besøg hos det 4-6 måneder gamle barn', 'Besøg hos det 8-11 måneder gamle barn', 'Indskolingsundersøgelse', 'Udskolingsundersøgelse',  delivered face-to-face, then nutrition should be included in the bundle"
 Severity: #error
 Expression: "entry.select((resource as Encounter).where(
     (type.coding.code = '7d35a193-e808-4e77-b361-6c0d114d021f'
@@ -238,7 +238,7 @@ Expression: "entry.select((resource as Encounter).where(
     entry.select((resource as Observation).code.coding.where(code = 'e61e4dab-54bb-4bf4-9b76-8d991cf4de08')).exists()"
 
 Invariant: gateway-children-report-communication
-Description: "If there is an encounter of type 'Besøg ved det ca. 2 måneder gamle barn', 'Besøg ved det 4-6 måneder gamle barn', 'Besøg ved det 8-11 måneder gamle barn', 'Indskolingsundersøgelse', 'Udskolingsundersøgelse',  delivered face-to-face, then communication should be included in the bundle"
+Description: "If there is an encounter of type 'Besøg hos det ca. 2 måneder gamle barn', 'Besøg hos det 4-6 måneder gamle barn', 'Besøg hos det 8-11 måneder gamle barn', 'Indskolingsundersøgelse', 'Udskolingsundersøgelse',  delivered face-to-face, then communication should be included in the bundle"
 Severity: #error
 Expression: "entry.select((resource as Encounter).where(
     (type.coding.code = '563c4174-f451-4c87-8db8-8d5472ca7ff6'
@@ -253,7 +253,7 @@ Expression: "entry.select((resource as Encounter).where(
     entry.select((resource as Observation).code.coding.where(code = '653c2b0b-bb64-4906-888b-aea6fef3c3f8')).exists()"
 
 Invariant: gateway-children-report-sleep
-Description: "If there is an encounter of type 'Besøg ved det ca. 2 måneder gamle barn', 'Besøg ved det 4-6 måneder gamle barn', 'Besøg ved det 8-11 måneder gamle barn', 'Indskolingsundersøgelse', 'Udskolingsundersøgelse',  delivered face-to-face, then sleep should be included in the bundle"
+Description: "If there is an encounter of type 'Besøg hos det ca. 2 måneder gamle barn', 'Besøg hos det 4-6 måneder gamle barn', 'Besøg hos det 8-11 måneder gamle barn', 'Indskolingsundersøgelse', 'Udskolingsundersøgelse',  delivered face-to-face, then sleep should be included in the bundle"
 Severity: #error
 Expression: "entry.select((resource as Encounter).where(
     (type.coding.code = '51f30d1c-d60e-4e3e-ac22-ec9712ea962d'
@@ -267,7 +267,7 @@ Expression: "entry.select((resource as Encounter).where(
     entry.select((resource as Observation).code.coding.where(code = '73f981f8-455a-4158-b435-7c6d83ab84da')).exists()"
 
 Invariant: gateway-children-report-motor-function
-Description: "If there is an encounter of type 'Besøg ved det ca. 2 måneder gamle barn', 'Besøg ved det 4-6 måneder gamle barn', 'Besøg ved det 8-11 måneder gamle barn', 'Indskolingsundersøgelse', 'Udskolingsundersøgelse',  delivered face-to-face, then sleep should be included in the bundle"
+Description: "If there is an encounter of type 'Besøg hos det ca. 2 måneder gamle barn', 'Besøg hos det 4-6 måneder gamle barn', 'Besøg hos det 8-11 måneder gamle barn', 'Indskolingsundersøgelse', 'Udskolingsundersøgelse',  delivered face-to-face, then sleep should be included in the bundle"
 Severity: #error
 Expression: "entry.select((resource as Encounter).where(
     (type.coding.code = '51f30d1c-d60e-4e3e-ac22-ec9712ea962d'
