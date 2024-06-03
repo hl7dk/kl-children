@@ -292,7 +292,7 @@ Description: "SDQ svar om Lars lavet af Lars' mor eller far"
 * status = #completed
 * subject = Reference(Lars)
 * authored = 2024-04-23
-* extension[findingInformer].valueCodeableConcept = Tempcodes#d5762abe-706b-4d52-ac2b-2621c60486b2 "Pårørende alene"
+* extension[findingInformer].valueCodeableConcept = $KLCommonCodes#166d2437-4e47-4a52-bd94-cdbe91086ca6 "Pårørende alene"
 
 * item[0].linkId = "1friendly"
 * item[=].answer.valueString = "Passer godt"

@@ -46,10 +46,13 @@ Description: "Body height profile used in Danish Municipalities, derived from HL
 * obeys obs-2
 
 
+
 Invariant: obs-1
 Description: "If value is given as a decimal point number with more than one precision, an error is returned"
 Severity: #error
-Expression: "value.ofType(Quantity).value.toString().matches('^[0-9]*\u002e?[0-9]$')"
+Expression: "value.ofType(Quantity).value.toString().matches('^[0-9]*\\u002e?[0-9])$')"
+//Expression: "value.ofType(Quantity).value.toString().matches('^[0-9]*\u002e?[0-9]$')"
+
 
 
 Instance: RikkeBodyHeight

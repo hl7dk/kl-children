@@ -5,6 +5,8 @@
 id: kl.dk.fhir.children
 canonical: http://fhir.kl.dk/children
 name: KLChildren
+title: "KLChildren implementation guide, an implementation of FBU"
+description: "KLChildren contains the specification for reporting data from the Danish health promotion and disease prevention program for children in Denmark (Sundhedsplejen). Data is reported to FK Gateway"
 status: active
 version: 2.0.0
 fhirVersion: 4.0.1
@@ -18,7 +20,7 @@ dependencies:
   hl7.fhir.dk.core:
     uri: http://hl7.dk/fhir/core/ImplementationGuide/hl7.fhir.dk.core
     version: 3.1.0
-  kl.dk.fhir.term: 1.1.0
+  kl.dk.fhir.term: 2.0.0
 
 parameters:
   special-url: [http://snomed.info/sct, http://loinc.org]

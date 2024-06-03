@@ -1,7 +1,7 @@
 Profile: KLGatewayChildrenExamResult
 Parent: http://hl7.dk/fhir/core/StructureDefinition/dk-core-observation
 Id: klgateway-children-exam-result
-Title: "KLGatewayExamResult"
+Title: "KLGatewayChildrenExamResult"
 Description: "Observation used to express qualitative examination results to be reported to the children database"
 //Constraints
 * code.coding 1..1
@@ -67,7 +67,7 @@ Description: "Lars' unrininkontinens ved indskolingsundersøgelsen"
 * subject = Reference(Lars)
 * encounter = Reference(SchoolStartEncounter)
 * code.coding[SNOMEDCT] = $SCT#363788007 // "Clinical history/examination observable"
-* valueCodeableConcept = Tempcodes#54f42eb5-18f9-4e82-98e0-1c83988189b9 "Naturininkontinens"
+* valueCodeableConcept = $FBOE#54f42eb5-18f9-4e82-98e0-1c83988189b9 "Naturininkontinens"
 * status = #final
 * effectiveDateTime = 2021-10-21T10:45:00.000Z
 
@@ -79,6 +79,6 @@ Description: "Rikke har afvigende øjenkontakt ved 2 måneder"
 * subject = Reference(Rikke)
 * encounter = Reference(2mthEncounter)
 * code.coding[SNOMEDCT] = $SCT#363788007 // "Clinical history/examination observable"
-* valueCodeableConcept = Tempcodes#bfd18100-d007-4465-95ce-5bf2ac8bc091 "Afvigende øjenkontakt"
+* valueCodeableConcept = $FBOE#bfd18100-d007-4465-95ce-5bf2ac8bc091 "Afvigende øjenkontakt"
 * status = #final
 * effectiveDateTime = 2020-07-07

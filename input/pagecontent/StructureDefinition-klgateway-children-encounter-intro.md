@@ -35,7 +35,7 @@ For school nurse encounters, the Danish school-code should be registered as well
 
 The time of the encounter is documented in Encounter.period.start, and it is mandatory. The end time is not mandatory. If Encounter.period.end is reported it may be either planned end time or actual end time.
 
-Encounter.subject relates to the subject that the encounter is about. In the context of the children database, primarily the children's encounters are documented. This should be respected even though many visits are directed at the family as a whole. However, before the child is born, this is not possible.  For pregnancy visits/'Graviditetsbesøg', the encounter is linked to one of the parents (typically the mother). For need-based encounters, they should be linked to citizen who has the intervention, whether this is the child, one of the parents or both. Consequently, one visit might result in more than one encounter if both parant nad child has a need-based intervention going on.
+Encounter.subject relates to the subject that the encounter is about. In the context of the children database, primarily the children's encounters are documented. This should be respected even though many visits are directed at the family as a whole. However, before the child is born, this is not possible.  For pregnancy visits/'Graviditetsbesøg', the encounter is linked to one of the parents (typically the mother). For need-based encounters, they should be linked to citizen who has the intervention, whether this is the child, one of the parents or both. Consequently, one visit might result in more than one encounter if both parent and child has a need-based intervention going on.
 
 ### Conversions between Danish information model and FHIR-profile
 

@@ -4,7 +4,7 @@ KLGatewayChildrenSDQ11-17 is used to define the Strength and Difficulties Questi
 Note that this Questionnaire defines question type as 'choice' and datatype (string) This is done for each item in the Questionnaire. However, the FHIR-validator is not able to validate a QuestionnaireResponse using these rules (Because there is a loose coupling between Questionnaire and QuestionnaireResponse in FHIR). We encourage vendors to ensure that responses are validated according to the rules described here. In other words, only the exact strings provided in Questionnaire.item.answerOption.valueString should be accepted in the QuestionnaireResponse.
 
 ### Copyright
-Copyright and licences obtained by Local Government Denmark(Kommunernes Landsforening) to include this questionnaire in this standard, does not mean that clinical systems and users that report to KLGateway using this standard automatically have permission. It is the sole responsibility of users to handle their own permissions.
+Permissions obtained by Local Government Denmark(Kommunernes Landsforening) to include this questionnaire in this standard, does not mean that clinical systems and users that report to KLGateway using this standard automatically have permission. It is the sole responsibility of users to handle their own permissions.
 
 In Denmark, copyright for SDQ is handled by Komiteen for Sundhedsoplysning https://www.sundhedsoplysning.dk/. Below, the international copyright notice is pasted.
 

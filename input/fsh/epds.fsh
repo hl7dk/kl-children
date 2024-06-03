@@ -93,7 +93,7 @@ Description: "EPDS besvarelse mor, Kirsten"
 * questionnaire = "http://fhir.kl.dk/children/Questionnaire/klgateway-children-epds"
 * status = #completed
 * subject = Reference(Kirsten)
-* extension[findingInformer].valueCodeableConcept = Tempcodes#a3d30bf2-4a3c-4c49-9001-5363ae11681c "Borger"
+* extension[findingInformer].valueCodeableConcept = $KLCommonCodes#25b4e705-2e9a-47a2-b11a-c829316b9d3a "Borger"
 * authored = 2020-07-07
 
 * item[0].linkId = "1humor"

@@ -159,7 +159,7 @@ Description: "PUF besvarelse Rikke"
 * questionnaire = "http://fhir.kl.dk/children/Questionnaire/klgateway-children-puf"
 * status = #completed
 * subject = Reference(Rikke)
-* extension[findingInformer].valueCodeableConcept = Tempcodes#601dbb34-a0ad-449b-8f03-6dcce9121b97 "Medarbejder og pårørende alene"
+* extension[findingInformer].valueCodeableConcept = $KLCommonCodes#329774f9-7700-47cf-9c00-63765d9e8078 "Medarbejder og pårørende alene"
 * authored = 2021-10-01
 
 * item[0].linkId = "1sleepPattern"

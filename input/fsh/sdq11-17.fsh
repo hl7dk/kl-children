@@ -294,7 +294,7 @@ Description: "SDQ svar lavet af Rikke (Rikkes alder passer ikke til spørgeskema
 * status = #completed
 * subject = Reference(Rikke)
 * authored = 2024-04-23
-* extension[findingInformer].valueCodeableConcept = Tempcodes#a3d30bf2-4a3c-4c49-9001-5363ae11681c "Borger"
+* extension[findingInformer].valueCodeableConcept = $KLCommonCodes#25b4e705-2e9a-47a2-b11a-c829316b9d3a "Borger"
 
 * item[0].linkId = "1friendly"
 * item[=].answer.valueString = "Passer delvist"

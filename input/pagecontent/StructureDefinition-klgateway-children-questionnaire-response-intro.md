@@ -23,8 +23,6 @@ Nedenstående tabel oversætter mellem de attributter der er defineret i den fæ
 |SpørgeskemaSvarSpørgeskemaDefinition|Reference til definitionen på det spørgeskema der besvares.|QuestionnaireResponse.questionnaire|
 |SpørgeskemaSvarSubjekt|Den borger, som spørgeskemasvaret omhandler|QuestionnaireResponse.subject|
 |SpørgeskemaSvarKilde|Klasse der udtrykker kilden til spørgeskemasvaret dvs. den der reelt har besvaret spørgsmålene.|QuestionnaireResponse.extension:FindingInformer|
-
 |SpørgeskemaSvarTid|Tidspunkt for spørgeskemabesvarelsen|QuestionnaireResponse.authored|
-
 |SpørgeskemaSvarPunktId|Id for det enkelte punkt/spørgsmål i spørgeskemaet|QuestionnaireResponse.item.linkId|
 |SpørgeskemaSvarPunktSvar|Svaret på det enkelte punkt/svar i spørgeskemaet|QuestionnaireResponse.item.answer.value[x]|

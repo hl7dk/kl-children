@@ -73,8 +73,8 @@ InstanceOf: klgateway-children-parent-social-status
 Title: "Forælders sårbarhed, Kirsten"
 Usage: #inline
 Description: "Indikator vedr. forælders sårbarhed ifm graviditetsbesøg, Kirsten"
-* code.coding[TempCode] = Tempcodes#58997614-ba43-4534-90bd-10c7e76802f4 "Forælders sårbarhed"
-* valueCodeableConcept.coding = Tempcodes#546e7bef-7a22-451e-971a-326fcd78a843 "Potentiel sårbarhed"
+* code.coding[TempCode] = $FBOE#58997614-ba43-4534-90bd-10c7e76802f4 "Forælders sårbarhed"
+* valueCodeableConcept.coding = $FBOE#546e7bef-7a22-451e-971a-326fcd78a843 "Potentiel sårbarhed"
 * status = #final
 * effectiveDateTime = 2020-02-05T00:00:00.000Z
 * subject = Reference(fa03ee6c-e38a-44cf-8ef4-79f8ea91b3b8)
@@ -85,8 +85,8 @@ InstanceOf: klgateway-children-parent-social-status
 Title: "Forælders sårbarhed, Knud"
 Usage: #inline
 Description: "Indikator vedr. forælders sårbarhed ifm graviditetsbesøg, Knud"
-* code.coding[TempCode] = Tempcodes#58997614-ba43-4534-90bd-10c7e76802f4 "Forælders sårbarhed"
-* valueCodeableConcept.coding = Tempcodes#57dd67d7-175a-4541-87ff-db1381c4e1d9 "Ingen sårbarhed"
+* code.coding[TempCode] = $FBOE#58997614-ba43-4534-90bd-10c7e76802f4 "Forælders sårbarhed"
+* valueCodeableConcept.coding = $FBOE#57dd67d7-175a-4541-87ff-db1381c4e1d9 "Ingen sårbarhed"
 * status = #final
 * effectiveDateTime = 2020-02-05T00:00:00.000Z
 * subject = Reference(e2cbbca1-ac3d-4bb1-b43b-c0d62b48b33a)
@@ -98,7 +98,7 @@ Title: "Forælders psykiske tilstand, Kirsten"
 Description: "Kirstens psykiske tilstand ved graviditetsbesøg"
 * subject = Reference(fa03ee6c-e38a-44cf-8ef4-79f8ea91b3b8)
 * code.coding[FBOECode] = $FBOE#2c39af9f-8e45-4c88-962f-e7a9e2cd31b6 "Forælders psykiske tilstand"
-* valueCodeableConcept = Tempcodes#0e5db980-8c6e-4034-abab-054e0eb40935 "Forventelig psykisk reaktion"
+* valueCodeableConcept = $FBOE#0e5db980-8c6e-4034-abab-054e0eb40935 "Forventelig psykisk reaktion"
 * status = #final
 * effectiveDateTime = 2020-02-05T00:00:00.000Z
 * encounter = Reference(dcaf11eb-1fa5-4bf6-aa8d-1d5a07dceba6)
@@ -110,7 +110,7 @@ Title: "Forælders psykiske tilstand, Knud"
 Description: "Knuds psykiske tilstand ved graviditetsbesøg"
 * subject = Reference(e2cbbca1-ac3d-4bb1-b43b-c0d62b48b33a)
 * code.coding[FBOECode] = $FBOE#2c39af9f-8e45-4c88-962f-e7a9e2cd31b6 "Forælders psykiske tilstand"
-* valueCodeableConcept = Tempcodes#0e5db980-8c6e-4034-abab-054e0eb40935 "Forventelig psykisk reaktion"
+* valueCodeableConcept = $FBOE#0e5db980-8c6e-4034-abab-054e0eb40935 "Forventelig psykisk reaktion"
 * status = #final
 * effectiveDateTime = 2020-02-05T00:00:00.000Z
 
@@ -120,8 +120,8 @@ Usage: #inline
 Title: "Forælders netværk, Kirsten"
 Description: "Kirstens netværk ved graviditetsbesøg"
 * subject = Reference(fa03ee6c-e38a-44cf-8ef4-79f8ea91b3b8)
-* code.coding[TempCode] = Tempcodes#7e7fab2f-278a-4b14-9bc9-efc36fffcba5 "Netværk"
-* valueCodeableConcept = Tempcodes#fbd9a8a5-0ed6-4e1a-9841-066ade34b071 "Godt netværk"
+* code.coding[TempCode] = $FBOE#7e7fab2f-278a-4b14-9bc9-efc36fffcba5 "Netværk"
+* valueCodeableConcept = $FBOE#fbd9a8a5-0ed6-4e1a-9841-066ade34b071 "Godt netværk"
 * status = #final
 * effectiveDateTime = 2020-02-05T00:00:00.000Z
 * encounter = Reference(dcaf11eb-1fa5-4bf6-aa8d-1d5a07dceba6)
@@ -132,8 +132,8 @@ Usage: #inline
 Title: "Forælders netværk, Knud"
 Description: "Knuds netværk ved graviditetsbesøg"
 * subject = Reference(e2cbbca1-ac3d-4bb1-b43b-c0d62b48b33a)
-* code.coding[TempCode] = Tempcodes#7e7fab2f-278a-4b14-9bc9-efc36fffcba5 "Netværk"
-* valueCodeableConcept = Tempcodes#fbd9a8a5-0ed6-4e1a-9841-066ade34b071 "Godt netværk"
+* code.coding[TempCode] = $FBOE#7e7fab2f-278a-4b14-9bc9-efc36fffcba5 "Netværk"
+* valueCodeableConcept = $FBOE#fbd9a8a5-0ed6-4e1a-9841-066ade34b071 "Godt netværk"
 * status = #final
 * effectiveDateTime = 2020-02-05T00:00:00.000Z
 
@@ -145,7 +145,7 @@ Description: "Kirstens nuancering på forælders sårbarhed: Traumatiske oplevel
 * subject = Reference(fa03ee6c-e38a-44cf-8ef4-79f8ea91b3b8)
 * encounter = Reference(dcaf11eb-1fa5-4bf6-aa8d-1d5a07dceba6)
 * code.coding[SNOMEDCT] = $SCT#363788007 // "Clinical history/examination observable"
-* valueCodeableConcept = Tempcodes#7acf5936-6640-44a7-af6d-b20c7607dcfe	"Traumatiske oplevelser"
+* valueCodeableConcept = $FBOE#7acf5936-6640-44a7-af6d-b20c7607dcfe	"Traumatiske oplevelser"
 * status = #final
 * effectiveDateTime = 2020-02-05T00:00:00.000Z
 
@@ -205,9 +205,9 @@ Title: "Rikke fuldamning periodestart"
 Description: "Rikke fuldamning periodestart"
 * subject = Reference(e60106e2-413e-46c5-8a3f-62d8e77ce794)
 * encounter = Reference(ebaaad51-e77f-4fc1-944a-24b0ace0a9f9)
-* code.coding[FBOECode] = Tempcodes#e61e4dab-54bb-4bf4-9b76-8d991cf4de08 "Ernæring"
+* code.coding[FBOECode] = $FBOE#e61e4dab-54bb-4bf4-9b76-8d991cf4de08 "Ernæring"
 * code.coding[SNOMEDCT] = $SCT#169740003 "Infant feeding method"
-* valueCodeableConcept = Tempcodes#77a008dd-21cc-452f-a1ee-ac8d025b7817 "Fuldamning, inklusiv modermælk på flaske"
+* valueCodeableConcept = $FBOE#77a008dd-21cc-452f-a1ee-ac8d025b7817 "Fuldamning, inklusiv modermælk på flaske"
 * status = #final
 * effectivePeriod.start = 2020-05-05T00:00:00.000Z
 
@@ -218,9 +218,9 @@ Title: "Rikkes ammestatus ved barselsbesøg, fuldammes"
 Description: "Rikkes status på madning ved barselsbesøg: fuldamning"
 * subject = Reference(e60106e2-413e-46c5-8a3f-62d8e77ce794)
 * encounter = Reference(ebaaad51-e77f-4fc1-944a-24b0ace0a9f9)
-* code.coding[FBOECode] = Tempcodes#e61e4dab-54bb-4bf4-9b76-8d991cf4de08 "Ernæring"
+* code.coding[FBOECode] = $FBOE#e61e4dab-54bb-4bf4-9b76-8d991cf4de08 "Ernæring"
 * code.coding[SNOMEDCT] = $SCT#169740003 "Infant feeding method"
-* valueCodeableConcept = Tempcodes#77a008dd-21cc-452f-a1ee-ac8d025b7817 "Fuldamning, inklusiv modermælk på flaske"
+* valueCodeableConcept = $FBOE#77a008dd-21cc-452f-a1ee-ac8d025b7817 "Fuldamning, inklusiv modermælk på flaske"
 * status = #final
 * effectiveDateTime = 2020-05-07T00:00:00.000Z
 
@@ -276,7 +276,7 @@ Title: "RikkeChildrenParentRelationship"
 Description: "Rikkes relation til forældre barselsbesøg, data mangler"
 * subject = Reference(e60106e2-413e-46c5-8a3f-62d8e77ce794)
 * encounter = Reference(ebaaad51-e77f-4fc1-944a-24b0ace0a9f9)
-* code.coding[TempCode] = Tempcodes#763c6f21-5467-4713-82fb-716c9d0a1fdf "Forælder-barn-relation"
+* code.coding[TempCode] = $FBOE#763c6f21-5467-4713-82fb-716c9d0a1fdf "Forælder-barn-relation"
 * status = #final
 * effectiveDateTime = 2020-07-07T00:00:00.000Z
 * dataAbsentReason = http://terminology.hl7.org/CodeSystem/data-absent-reason#unknown
@@ -397,9 +397,9 @@ Title: "Rikkes ammestatus ved etableringsbesøg, fuldammes"
 Description: "Rikkes status på madning ved etableringsbesøg: fuldamning"
 * subject = Reference(e60106e2-413e-46c5-8a3f-62d8e77ce794)
 * encounter = Reference(62c429e2-fdc5-4e33-83e1-0db858175e08)
-* code.coding[FBOECode] = Tempcodes#e61e4dab-54bb-4bf4-9b76-8d991cf4de08 "Ernæring"
+* code.coding[FBOECode] = $FBOE#e61e4dab-54bb-4bf4-9b76-8d991cf4de08 "Ernæring"
 * code.coding[SNOMEDCT] = $SCT#169740003 "Infant feeding method"
-* valueCodeableConcept = Tempcodes#77a008dd-21cc-452f-a1ee-ac8d025b7817 "Fuldamning, inklusiv modermælk på flaske"
+* valueCodeableConcept = $FBOE#77a008dd-21cc-452f-a1ee-ac8d025b7817 "Fuldamning, inklusiv modermælk på flaske"
 * status = #final
 * effectiveDateTime = 2020-05-17T00:00:00.000Z
 
@@ -464,8 +464,8 @@ Title: "Rikkes relation til forældre ved etablering"
 Description: "Rikkes relation til forældre ved etablering"
 * subject = Reference(e60106e2-413e-46c5-8a3f-62d8e77ce794)
 * encounter = Reference(62c429e2-fdc5-4e33-83e1-0db858175e08)
-* code.coding[TempCode] = Tempcodes#763c6f21-5467-4713-82fb-716c9d0a1fdf "Forælder-barn-relation"
-* valueCodeableConcept = Tempcodes#7a107df6-8fb8-4744-8413-be10b4c5c1d9 "Velfungerende forældre-barn-relation"
+* code.coding[TempCode] = $FBOE#763c6f21-5467-4713-82fb-716c9d0a1fdf "Forælder-barn-relation"
+* valueCodeableConcept = $FBOE#7a107df6-8fb8-4744-8413-be10b4c5c1d9 "Velfungerende forældre-barn-relation"
 * status = #final
 * effectiveDateTime = 2020-05-07
 
@@ -476,8 +476,8 @@ Title: "Rikkes passiv rygning ved etablering"
 Description: "Rikkes passiv rygning ved etablering"
 * subject = Reference(e60106e2-413e-46c5-8a3f-62d8e77ce794)
 * encounter = Reference(62c429e2-fdc5-4e33-83e1-0db858175e08)
-* code.coding[TempCode] = Tempcodes#28972d4b-fea3-42ec-b2a5-e2a26f79b14d "Passiv rygning"
-* valueCodeableConcept.coding = Tempcodes#b54723cf-3114-4119-b1cb-28107a283a99	"Ikke udsat for tobaksrøg"
+* code.coding[TempCode] = $FBOE#28972d4b-fea3-42ec-b2a5-e2a26f79b14d "Passiv rygning"
+* valueCodeableConcept.coding = $FBOE#b54723cf-3114-4119-b1cb-28107a283a99	"Ikke udsat for tobaksrøg"
 * status = #final
 * effectiveDateTime = 2020-05-07
 
@@ -486,8 +486,8 @@ InstanceOf: klgateway-children-parent-social-status
 Title: "Forælders sårbarhed, Kirsten"
 Usage: #inline
 Description: "Indikator vedr. forælders sårbarhed ifm etablering, Kirsten"
-* code.coding[TempCode] = Tempcodes#58997614-ba43-4534-90bd-10c7e76802f4 "Forælders sårbarhed"
-* valueCodeableConcept.coding = Tempcodes#546e7bef-7a22-451e-971a-326fcd78a843 "Potentiel sårbarhed"
+* code.coding[TempCode] = $FBOE#58997614-ba43-4534-90bd-10c7e76802f4 "Forælders sårbarhed"
+* valueCodeableConcept.coding = $FBOE#546e7bef-7a22-451e-971a-326fcd78a843 "Potentiel sårbarhed"
 * status = #final
 * effectiveDateTime = 2020-02-05T00:00:00.000Z
 * subject = Reference(fa03ee6c-e38a-44cf-8ef4-79f8ea91b3b8-v2)
@@ -497,8 +497,8 @@ InstanceOf: klgateway-children-parent-social-status
 Title: "Forælders sårbarhed, Knud"
 Usage: #inline
 Description: "Indikator vedr. forælders sårbarhed ifm etablering, Knud"
-* code.coding[TempCode] = Tempcodes#58997614-ba43-4534-90bd-10c7e76802f4 "Forælders sårbarhed"
-* valueCodeableConcept.coding = Tempcodes#57dd67d7-175a-4541-87ff-db1381c4e1d9 "Ingen sårbarhed"
+* code.coding[TempCode] = $FBOE#58997614-ba43-4534-90bd-10c7e76802f4 "Forælders sårbarhed"
+* valueCodeableConcept.coding = $FBOE#57dd67d7-175a-4541-87ff-db1381c4e1d9 "Ingen sårbarhed"
 * status = #final
 * effectiveDateTime = 2020-02-05T00:00:00.000Z
 * subject = Reference(e2cbbca1-ac3d-4bb1-b43b-c0d62b48b33a-v2)
@@ -509,8 +509,8 @@ Usage: #inline
 Title: "Forælders netværk, Kirsten"
 Description: "Kirstens netværk ved etablering"
 * subject = Reference(fa03ee6c-e38a-44cf-8ef4-79f8ea91b3b8-v2)
-* code.coding[TempCode] = Tempcodes#7e7fab2f-278a-4b14-9bc9-efc36fffcba5 "Netværk"
-* valueCodeableConcept = Tempcodes#fbd9a8a5-0ed6-4e1a-9841-066ade34b071 "Godt netværk"
+* code.coding[TempCode] = $FBOE#7e7fab2f-278a-4b14-9bc9-efc36fffcba5 "Netværk"
+* valueCodeableConcept = $FBOE#fbd9a8a5-0ed6-4e1a-9841-066ade34b071 "Godt netværk"
 * status = #final
 * effectiveDateTime = 2020-02-05T00:00:00.000Z
 
@@ -520,8 +520,8 @@ Usage: #inline
 Title: "Forælders netværk, Knud"
 Description: "Knuds netværk ved etablering"
 * subject = Reference(e2cbbca1-ac3d-4bb1-b43b-c0d62b48b33a-v2)
-* code.coding[TempCode] = Tempcodes#7e7fab2f-278a-4b14-9bc9-efc36fffcba5 "Netværk"
-* valueCodeableConcept = Tempcodes#fbd9a8a5-0ed6-4e1a-9841-066ade34b071 "Godt netværk"
+* code.coding[TempCode] = $FBOE#7e7fab2f-278a-4b14-9bc9-efc36fffcba5 "Netværk"
+* valueCodeableConcept = $FBOE#fbd9a8a5-0ed6-4e1a-9841-066ade34b071 "Godt netværk"
 * status = #final
 * effectiveDateTime = 2020-02-05T00:00:00.000Z
 
@@ -644,9 +644,9 @@ Title: "Rikkes ammestatus ved 2. besøg, fuldammes"
 Description: "Rikkes status på madning ved 2. besøg: fuldamning"
 * subject = Reference(e60106e2-413e-46c5-8a3f-62d8e77ce794)
 * encounter = Reference(78742a92-91b1-489f-9fea-6901f6d0b34b)
-* code.coding[FBOECode] = Tempcodes#e61e4dab-54bb-4bf4-9b76-8d991cf4de08 "Ernæring"
+* code.coding[FBOECode] = $FBOE#e61e4dab-54bb-4bf4-9b76-8d991cf4de08 "Ernæring"
 * code.coding[SNOMEDCT] = $SCT#169740003 "Infant feeding method"
-* valueCodeableConcept = Tempcodes#77a008dd-21cc-452f-a1ee-ac8d025b7817 "Fuldamning, inklusiv modermælk på flaske"
+* valueCodeableConcept = $FBOE#77a008dd-21cc-452f-a1ee-ac8d025b7817 "Fuldamning, inklusiv modermælk på flaske"
 * status = #final
 * effectiveDateTime = 2020-06-01
 
@@ -657,8 +657,8 @@ Title: "Rikkes relation til forældre ved 2. besøg"
 Description: "Rikkes relation til forældre ved 2. besøg"
 * subject = Reference(e60106e2-413e-46c5-8a3f-62d8e77ce794)
 * encounter = Reference(78742a92-91b1-489f-9fea-6901f6d0b34b)
-* code.coding[TempCode] = Tempcodes#763c6f21-5467-4713-82fb-716c9d0a1fdf "Forælder-barn-relation"
-* valueCodeableConcept = Tempcodes#7a107df6-8fb8-4744-8413-be10b4c5c1d9 "Velfungerende forældre-barn-relation"
+* code.coding[TempCode] = $FBOE#763c6f21-5467-4713-82fb-716c9d0a1fdf "Forælder-barn-relation"
+* valueCodeableConcept = $FBOE#7a107df6-8fb8-4744-8413-be10b4c5c1d9 "Velfungerende forældre-barn-relation"
 * status = #final
 * effectiveDateTime = 2020-06-01
 
@@ -669,8 +669,8 @@ Title: "Rikkes kommunikation 2. besøg"
 Description: "Rikkes kommunikation ved 2. besøg"
 * subject = Reference(e60106e2-413e-46c5-8a3f-62d8e77ce794)
 * encounter = Reference(78742a92-91b1-489f-9fea-6901f6d0b34b)
-* code.coding[TempCode] = Tempcodes#653c2b0b-bb64-4906-888b-aea6fef3c3f8 "Kommunikation"
-* valueCodeableConcept = Tempcodes#042d522d-0abe-46eb-a958-6e235b5d5408 "Kommunikerer alderssvarende" 
+* code.coding[TempCode] = $FBOE#653c2b0b-bb64-4906-888b-aea6fef3c3f8 "Kommunikation"
+* valueCodeableConcept = $FBOE#042d522d-0abe-46eb-a958-6e235b5d5408 "Kommunikerer alderssvarende" 
 * status = #final
 * effectiveDateTime = 2020-06-01
 
@@ -782,7 +782,7 @@ Description: "EPDS besvarelse mor, Kirsten"
 * questionnaire = "http://fhir.kl.dk/children/Questionnaire/klgateway-children-epds"
 * status = #completed
 * subject = Reference(fa03ee6c-e38a-44cf-8ef4-79f8ea91b3b8-v2)
-* extension[findingInformer].valueCodeableConcept = Tempcodes#a3d30bf2-4a3c-4c49-9001-5363ae11681c "Borger"
+* extension[findingInformer].valueCodeableConcept = $KLCommonCodes#25b4e705-2e9a-47a2-b11a-c829316b9d3a "Borger"
 * authored = 2020-07-07
 
 * item[0].linkId = "1humor"
@@ -826,7 +826,7 @@ Description: "EPDS besvarelse far, Knud"
 * questionnaire = "http://fhir.kl.dk/children/Questionnaire/klgateway-children-epds"
 * status = #completed
 * subject = Reference(e2cbbca1-ac3d-4bb1-b43b-c0d62b48b33a-v2)
-* extension[findingInformer].valueCodeableConcept = Tempcodes#a3d30bf2-4a3c-4c49-9001-5363ae11681c "Borger"
+* extension[findingInformer].valueCodeableConcept = $KLCommonCodes#25b4e705-2e9a-47a2-b11a-c829316b9d3a "Borger"
 * authored = 2020-07-07
 
 * item[0].linkId = "1humor"
@@ -869,7 +869,7 @@ Title: "Forælders psykiske tilstand, Kirsten"
 Description: "Kirstens psykiske tilstand ved 2 mrd"
 * subject = Reference(fa03ee6c-e38a-44cf-8ef4-79f8ea91b3b8-v2)
 * code.coding[FBOECode] = $FBOE#2c39af9f-8e45-4c88-962f-e7a9e2cd31b6 "Forælders psykiske tilstand"
-* valueCodeableConcept = Tempcodes#f86c2526-3b04-454c-a99e-d350f699dc94 "Psykisk reaktion"
+* valueCodeableConcept = $FBOE#f86c2526-3b04-454c-a99e-d350f699dc94 "Psykisk reaktion"
 * status = #final
 * effectiveDateTime = 2020-07-07
 
@@ -880,7 +880,7 @@ Title: "Forælders psykiske tilstand, Knud"
 Description: "Knuds psykiske tilstand ved 2mrd"
 * subject = Reference(e2cbbca1-ac3d-4bb1-b43b-c0d62b48b33a-v2)
 * code.coding[FBOECode] = $FBOE#2c39af9f-8e45-4c88-962f-e7a9e2cd31b6 "Forælders psykiske tilstand"
-* valueCodeableConcept = Tempcodes#0e5db980-8c6e-4034-abab-054e0eb40935 "Forventelig psykisk reaktion"
+* valueCodeableConcept = $FBOE#0e5db980-8c6e-4034-abab-054e0eb40935 "Forventelig psykisk reaktion"
 * status = #final
 * effectiveDateTime = 2020-07-07
 
@@ -891,7 +891,7 @@ Title: "Kirstens, forælders psykiske tilstand nuancering, 2mrds besøg"
 Description: "Kirstens, forælders psykiske tilstand nuancering, 2mrds besøg: nedtrykt"
 * subject = Reference(fa03ee6c-e38a-44cf-8ef4-79f8ea91b3b8-v2)
 * code.coding[SNOMEDCT] = $SCT#363788007 // "Clinical history/examination observable"
-* valueCodeableConcept = Tempcodes#fc3d65d1-1509-47ef-8845-60adea5d7a65 "Nedtrykthed"
+* valueCodeableConcept = $FBOE#fc3d65d1-1509-47ef-8845-60adea5d7a65 "Nedtrykthed"
 * status = #final
 * effectiveDateTime = 2020-07-07
 
@@ -902,7 +902,7 @@ Title: "Kirstens, forælders psykiske tilstand nuancering, 2mrds besøg"
 Description: "Kirstens, forælders psykiske tilstand nuancering, 2mrds besøg: Depressive ledsagesymptomer"
 * subject = Reference(fa03ee6c-e38a-44cf-8ef4-79f8ea91b3b8-v2)
 * code.coding[SNOMEDCT] = $SCT#363788007 // "Clinical history/examination observable"
-* valueCodeableConcept = Tempcodes#dc7cdfb3-d33b-41cc-bb18-2be3592fe323 "Depressive ledsagesymptomer"
+* valueCodeableConcept = $FBOE#dc7cdfb3-d33b-41cc-bb18-2be3592fe323 "Depressive ledsagesymptomer"
 * status = #final
 * effectiveDateTime = 2020-07-07
 
@@ -913,8 +913,8 @@ Title: "Rikkes relation til forældre 2 mrds besøg"
 Description: "Rikkes relation til forældre ved 2 mrds besøg: let påvirket"
 * subject = Reference(e60106e2-413e-46c5-8a3f-62d8e77ce794)
 * encounter = Reference(d84ae0c1-4054-476d-950a-993aa1de3320)
-* code.coding[TempCode] = Tempcodes#763c6f21-5467-4713-82fb-716c9d0a1fdf "Forælder-barn-relation"
-* valueCodeableConcept = Tempcodes#274791a5-094d-4e6a-831e-e712d3d66aeb "Let påvirket forældre-barn-relation"
+* code.coding[TempCode] = $FBOE#763c6f21-5467-4713-82fb-716c9d0a1fdf "Forælder-barn-relation"
+* valueCodeableConcept = $FBOE#274791a5-094d-4e6a-831e-e712d3d66aeb "Let påvirket forældre-barn-relation"
 * status = #final
 * effectiveDateTime = 2020-07-07
 
@@ -926,7 +926,7 @@ Description: "Rikke, forældre barn relation nuancering, 2mrds besøg: Følelses
 * subject = Reference(e60106e2-413e-46c5-8a3f-62d8e77ce794)
 * encounter = Reference(d84ae0c1-4054-476d-950a-993aa1de3320)
 * code.coding[SNOMEDCT] = $SCT#363788007 // "Clinical history/examination observable"
-* valueCodeableConcept = Tempcodes#51bc227a-3455-474d-bf42-fc7a7875513c "Følelsesmæssige behov mødes ikke"
+* valueCodeableConcept = $FBOE#51bc227a-3455-474d-bf42-fc7a7875513c "Følelsesmæssige behov mødes ikke"
 * status = #final
 * effectiveDateTime = 2020-07-07
 
@@ -937,8 +937,8 @@ Title: "Rikke social kontakt"
 Description: "Rikkes sociale kontakt ved 2mrd"
 * subject = Reference(e60106e2-413e-46c5-8a3f-62d8e77ce794)
 * encounter = Reference(d84ae0c1-4054-476d-950a-993aa1de3320)
-* code.coding[TempCode] = Tempcodes#68605f88-49fb-44b9-b327-86947af6aa93 "Social kontakt"
-* valueCodeableConcept = Tempcodes#e1c1674c-9384-4d95-999f-763f3868f444 "Udfordringer i social kontakt"
+* code.coding[TempCode] = $FBOE#68605f88-49fb-44b9-b327-86947af6aa93 "Social kontakt"
+* valueCodeableConcept = $FBOE#e1c1674c-9384-4d95-999f-763f3868f444 "Udfordringer i social kontakt"
 * status = #final
 * effectiveDateTime = 2020-07-07
 
@@ -950,7 +950,7 @@ Description: "Rikke, social kontakt nuancering, 2mrds besøg: græder meget"
 * subject = Reference(e60106e2-413e-46c5-8a3f-62d8e77ce794)
 * encounter = Reference(d84ae0c1-4054-476d-950a-993aa1de3320)
 * code.coding[SNOMEDCT] = $SCT#363788007 // "Clinical history/examination observable"
-* valueCodeableConcept = Tempcodes#e818645e-47a7-4125-a579-a68f556b7344	"Græder meget"
+* valueCodeableConcept = $FBOE#e818645e-47a7-4125-a579-a68f556b7344	"Græder meget"
 * status = #final
 * effectiveDateTime = 2020-07-07
 
@@ -962,7 +962,7 @@ Description: "Rikke, social kontakt nuancering, 2mrds besøg: afvigende øjenkon
 * subject = Reference(e60106e2-413e-46c5-8a3f-62d8e77ce794)
 * encounter = Reference(d84ae0c1-4054-476d-950a-993aa1de3320)
 * code.coding[SNOMEDCT] = $SCT#363788007 // "Clinical history/examination observable"
-* valueCodeableConcept = Tempcodes#bfd18100-d007-4465-95ce-5bf2ac8bc091 "Afvigende øjenkontakt"
+* valueCodeableConcept = $FBOE#bfd18100-d007-4465-95ce-5bf2ac8bc091 "Afvigende øjenkontakt"
 * status = #final
 * effectiveDateTime = 2020-07-07
 
@@ -1027,9 +1027,9 @@ Title: "Rikkes ammestatus ved 2 måneders besøg, fuldammes"
 Description: "Rikkes status på madning ved 2 måneders besøg: fuldamning"
 * subject = Reference(e60106e2-413e-46c5-8a3f-62d8e77ce794)
 * encounter = Reference(d84ae0c1-4054-476d-950a-993aa1de3320)
-* code.coding[FBOECode] = Tempcodes#e61e4dab-54bb-4bf4-9b76-8d991cf4de08 "Ernæring"
+* code.coding[FBOECode] = $FBOE#e61e4dab-54bb-4bf4-9b76-8d991cf4de08 "Ernæring"
 * code.coding[SNOMEDCT] = $SCT#169740003 "Infant feeding method"
-* valueCodeableConcept = Tempcodes#77a008dd-21cc-452f-a1ee-ac8d025b7817 "Fuldamning, inklusiv modermælk på flaske"
+* valueCodeableConcept = $FBOE#77a008dd-21cc-452f-a1ee-ac8d025b7817 "Fuldamning, inklusiv modermælk på flaske"
 * status = #final
 * effectiveDateTime = 2020-07-07
 
@@ -1040,8 +1040,8 @@ Title: "Rikkes kommunikation 2 måneders besøg"
 Description: "Rikkes kommunikation ved 2 måneders besøg"
 * subject = Reference(e60106e2-413e-46c5-8a3f-62d8e77ce794)
 * encounter = Reference(d84ae0c1-4054-476d-950a-993aa1de3320)
-* code.coding[TempCode] = Tempcodes#653c2b0b-bb64-4906-888b-aea6fef3c3f8 "Kommunikation"
-* valueCodeableConcept = Tempcodes#042d522d-0abe-46eb-a958-6e235b5d5408 "Kommunikerer alderssvarende" 
+* code.coding[TempCode] = $FBOE#653c2b0b-bb64-4906-888b-aea6fef3c3f8 "Kommunikation"
+* valueCodeableConcept = $FBOE#042d522d-0abe-46eb-a958-6e235b5d5408 "Kommunikerer alderssvarende" 
 * status = #final
 * effectiveDateTime = 2020-07-07
 
@@ -1052,8 +1052,8 @@ Title: "Rikkes søvn ved 2mrd"
 Description: "Rikkes søvn ved 2mrd"
 * subject = Reference(e60106e2-413e-46c5-8a3f-62d8e77ce794)
 * encounter = Reference(d84ae0c1-4054-476d-950a-993aa1de3320)
-* code.coding[TempCode] = Tempcodes#73f981f8-455a-4158-b435-7c6d83ab84da "Søvn"
-* valueCodeableConcept = Tempcodes#b07eec60-941d-484d-8c2a-aeaa2ba798bf "Søvn med normale variationer" 
+* code.coding[TempCode] = $FBOE#73f981f8-455a-4158-b435-7c6d83ab84da "Søvn"
+* valueCodeableConcept = $FBOE#b07eec60-941d-484d-8c2a-aeaa2ba798bf "Søvn med normale variationer" 
 * status = #final
 * effectiveDateTime = 2020-07-07
 
@@ -1067,8 +1067,8 @@ Description: "Kirsten intervention, praktiserende læge"
 * intent = #plan
 * status = #active
 * activity.detail.status = #unknown
-* activity.detail.code.coding = Tempcodes#b708c983-0bb8-4303-a442-9af4c8b950bb "Anbefaling af kontakt til praktiserende læge"
-* activity.detail.reasonCode.coding = Tempcodes#f86c2526-3b04-454c-a99e-d350f699dc94 "Psykisk reaktion"
+* activity.detail.code.coding = $FBOE#b708c983-0bb8-4303-a442-9af4c8b950bb "Anbefaling af kontakt til praktiserende læge"
+* activity.detail.reasonCode.coding = $FBOE#f86c2526-3b04-454c-a99e-d350f699dc94 "Psykisk reaktion"
 
 Instance: 39c7eccc-4cc4-496a-8664-ab73017edb58
 InstanceOf: klgateway-children-intervention
@@ -1080,8 +1080,8 @@ Description: "Kirsten intervention, forældregruppe"
 * intent = #plan
 * status = #active
 * activity.detail.status = #unknown
-* activity.detail.code.coding = Tempcodes#e535fc78-ce61-4f97-b717-5901d5330ca9 "Forældregruppe, hvor forælder har psykisk reaktion"
-* activity.detail.reasonCode.coding = Tempcodes#f86c2526-3b04-454c-a99e-d350f699dc94 "Psykisk reaktion"
+* activity.detail.code.coding = $FBOE#e535fc78-ce61-4f97-b717-5901d5330ca9 "Forældregruppe, hvor forælder har psykisk reaktion"
+* activity.detail.reasonCode.coding = $FBOE#f86c2526-3b04-454c-a99e-d350f699dc94 "Psykisk reaktion"
 
 Instance: d3df60d0-4380-43b4-8d15-2e3fb3b4c50a
 InstanceOf: klgateway-children-intervention
@@ -1093,8 +1093,8 @@ Description: "Kirsten intervention, Støtte ved psykisk reaktion eller sårbarhe
 * intent = #plan
 * status = #active
 * activity.detail.status = #unknown
-* activity.detail.code.coding = Tempcodes#8af7f611-2bae-4ba5-923a-d748501d1ad3 "Støtte ved psykisk reaktion eller sårbarhed"
-* activity.detail.reasonCode.coding = Tempcodes#f86c2526-3b04-454c-a99e-d350f699dc94 "Psykisk reaktion"
+* activity.detail.code.coding = $FBOE#8af7f611-2bae-4ba5-923a-d748501d1ad3 "Støtte ved psykisk reaktion eller sårbarhed"
+* activity.detail.reasonCode.coding = $FBOE#f86c2526-3b04-454c-a99e-d350f699dc94 "Psykisk reaktion"
 
 Instance: 6122356d-a611-4660-8b0f-c86185f465f8
 InstanceOf: klgateway-children-intervention
@@ -1106,8 +1106,8 @@ Description: "Rikkes behovsindsats vedr. social kontakt"
 * intent = #plan
 * status = #active
 * activity.detail.status = #unknown
-* activity.detail.code.coding = Tempcodes#b3de92ea-ac5e-4f87-809e-a9e40b59cc34 "Vejledning i kontakt, samspil og barnets behov"
-* activity.detail.reasonCode.coding = Tempcodes#e1c1674c-9384-4d95-999f-763f3868f444 "Udfordringer i social kontakt"
+* activity.detail.code.coding = $FBOE#b3de92ea-ac5e-4f87-809e-a9e40b59cc34 "Vejledning i kontakt, samspil og barnets behov"
+* activity.detail.reasonCode.coding = $FBOE#e1c1674c-9384-4d95-999f-763f3868f444 "Udfordringer i social kontakt"
 
 //6th
 Instance: dbe422ac-dd15-4562-838d-1f5ff9ae45d8
@@ -1147,7 +1147,7 @@ Description: "Behovskontakt Kirsten 1"
 * period.start = 2020-07-09
 * status = $EncounterStatus#finished
 * subject = Reference(fa03ee6c-e38a-44cf-8ef4-79f8ea91b3b8-v2)
-* class = Tempcodes#83559d49-fe53-42e9-a191-072da13c8c99 "Telefonisk"
+* class = $KLCommonCodes#83559d49-fe53-42e9-a191-072da13c8c99 "Telefonisk"
 * extension[basedOnIntervention].valueReference = Reference(d3df60d0-4380-43b4-8d15-2e3fb3b4c50a)
 
 Instance: 8d097cb2-3b48-46e9-9d96-a097bbff0928
@@ -1159,7 +1159,7 @@ Description: "Behovskontakt Rikke 1"
 * period.start = 2020-07-09
 * status = $EncounterStatus#finished
 * subject = Reference(e60106e2-413e-46c5-8a3f-62d8e77ce794)
-* class = Tempcodes#83559d49-fe53-42e9-a191-072da13c8c99 "Telefonisk"
+* class = $KLCommonCodes#83559d49-fe53-42e9-a191-072da13c8c99 "Telefonisk"
 * extension[basedOnIntervention].valueReference = Reference(6122356d-a611-4660-8b0f-c86185f465f8)
 
 //7th
@@ -1227,8 +1227,8 @@ Description: "Kirsten intervention, Støtte ved psykisk reaktion eller sårbarhe
 * intent = #plan
 * status = #completed
 * activity.detail.status = #unknown
-* activity.detail.code.coding = Tempcodes#8af7f611-2bae-4ba5-923a-d748501d1ad3 "Støtte ved psykisk reaktion eller sårbarhed"
-* activity.detail.reasonCode.coding = Tempcodes#f86c2526-3b04-454c-a99e-d350f699dc94 "Psykisk reaktion"
+* activity.detail.code.coding = $FBOE#8af7f611-2bae-4ba5-923a-d748501d1ad3 "Støtte ved psykisk reaktion eller sårbarhed"
+* activity.detail.reasonCode.coding = $FBOE#f86c2526-3b04-454c-a99e-d350f699dc94 "Psykisk reaktion"
 
 //8th
 Instance: d2e57785-7d0e-4b30-9e51-62c14185b9ed
@@ -1272,5 +1272,5 @@ Description: "Rikkes behovsindsats vedr. social kontakt, afsluttes"
 * intent = #plan
 * status = #completed
 * activity.detail.status = #unknown
-* activity.detail.code.coding = Tempcodes#b3de92ea-ac5e-4f87-809e-a9e40b59cc34 "Vejledning i kontakt, samspil og barnets behov"
-* activity.detail.reasonCode.coding = Tempcodes#e1c1674c-9384-4d95-999f-763f3868f444 "Udfordringer i social kontakt"
+* activity.detail.code.coding = $FBOE#b3de92ea-ac5e-4f87-809e-a9e40b59cc34 "Vejledning i kontakt, samspil og barnets behov"
+* activity.detail.reasonCode.coding = $FBOE#e1c1674c-9384-4d95-999f-763f3868f444 "Udfordringer i social kontakt"

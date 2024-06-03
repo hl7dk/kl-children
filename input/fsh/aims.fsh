@@ -50,7 +50,7 @@ Description: "Udfyldt AIMS skema for Rikke"
 * questionnaire = "http://fhir.kl.dk/children/Questionnaire/klgateway-children-aims"
 * status = #completed
 * subject = Reference(Rikke)
-* extension[findingInformer].valueCodeableConcept = Tempcodes#111b2c8a-389d-4ecc-9187-ce78f019649b "Medarbejder alene"
+* extension[findingInformer].valueCodeableConcept = $KLCommonCodes#8fe80acb-2c2a-4f10-b2b8-ddb77d2f69dc "Medarbejder alene"
 * authored = 2021-07-04
 
 * item[0].linkId = "prone"
