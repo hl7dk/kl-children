@@ -926,7 +926,7 @@ Description: "Rikke, forældre barn relation nuancering, 2mrds besøg: Følelses
 * subject = Reference(e60106e2-413e-46c5-8a3f-62d8e77ce794)
 * encounter = Reference(d84ae0c1-4054-476d-950a-993aa1de3320)
 * code.coding[SNOMEDCT] = $SCT#363788007 // "Clinical history/examination observable"
-* valueCodeableConcept = $FBOE#51bc227a-3455-474d-bf42-fc7a7875513c "Følelsesmæssige behov mødes ikke"
+* valueCodeableConcept = $FBOE#51bc227a-3455-474d-bf42-fc7a7875513c "Følelsesmæssige behov opfyldes ikke"
 * status = #final
 * effectiveDateTime = 2020-07-07
 

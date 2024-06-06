@@ -12,7 +12,9 @@ Description: "Questionnaire response profile, for all questionaires in kl-childr
 * item.answer 1..1
 * item.answer.value[x] 1..1
 * item.answer.value[x] only integer or boolean or string
-* item.answer.valueString obeys questionnaire-response-string-length  
+* item.answer.valueString obeys questionnaire-response-string-length
+* item.answer.valueInteger 0..1
+* item.answer.valueBoolean 0..1
 * subject 1..1
 * subject only Reference(klgateway-children-citizen) //borger
 * subject ^type.aggregation = #bundled

@@ -329,24 +329,24 @@ Expression: "entry.select((resource as Encounter).where(
 //     entry.select((resource as Observation).code.coding.where(code = '229819007')).exists())"
 
 
-Instance: RikkeDeliveryReport2nd1mth
-InstanceOf: klgateway-children-delivery-report
-Description: "Indberetning for Rikke, andet besøg første levemåned"
-Usage: #example
-* type = #collection
-* timestamp = 2020-06-01T23:45:00.000Z
+// Instance: RikkeDeliveryReport2nd1mth
+// InstanceOf: klgateway-children-delivery-report
+// Description: "Indberetning for Rikke, andet besøg første levemåned"
+// Usage: #example
+// * type = #collection
+// * timestamp = 2020-06-01T23:45:00.000Z
 
-* entry[+].fullUrl = Canonical(Rikke)
-* entry[=].resource = Rikke
+// * entry[+].fullUrl = Canonical(Rikke)
+// * entry[=].resource = Rikke
 
-* entry[+].fullUrl = Canonical(2nd1mthEncounter)
-* entry[=].resource = 2nd1mthEncounter
+// * entry[+].fullUrl = Canonical(2nd1mthEncounter)
+// * entry[=].resource = 2nd1mthEncounter
 
-* entry[+].fullUrl = Canonical(RikkeBodyHeight)
-* entry[=].resource = RikkeBodyHeight
+// * entry[+].fullUrl = Canonical(RikkeBodyHeight)
+// * entry[=].resource = RikkeBodyHeight
 
-* entry[+].fullUrl = Canonical(RikkeBodyWeight)
-* entry[=].resource = RikkeBodyWeight
+// * entry[+].fullUrl = Canonical(RikkeBodyWeight)
+// * entry[=].resource = RikkeBodyWeight
 
 
 

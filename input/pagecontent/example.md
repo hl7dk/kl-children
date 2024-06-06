@@ -59,7 +59,7 @@ Sundhedsplejen igangsætter desuden indsatsen ’Støtte ved psykisk reaktion el
 The delivery report contains three Citizens (Rikke, Kirsten, Knud), two RelatedParent instances to maintain the relationship between the three, and one Encounter (Type: ‘Besøg hos det ca. 2 måneder gamle barn’). 
 For Knud, there is an instance of QuestionnaireResponse (EPDS), IndicatorParentMentalStatus
 For Kirsten, there is an instance of QuestionnaireResponse (EPDS), IndicatorParentMentalStatus and two instances of ExamResult to contain Kirsten’s depression symptoms. In addition, three instances of Intervention contains the three need-based interventions that are started for Kirsten.
-For Rikke, there is an instance of IndicatorSocialInteraction, IndicatorParentRelationship, BodyWeight, BodyHeight, HeadCircumference, FeedingObservation, IndicatorCommunication and IndicatorSleep. In addition, three instances of ExamResult, that holds the observations related to social interaction (græder meget, afvigende øjenkontakt) and child-parent relationship (‘Følelsesmæssige behov mødes ikke’). Rikke’s need-based intervention is also reported as an instance of Intervention.
+For Rikke, there is an instance of IndicatorSocialInteraction, IndicatorParentRelationship, BodyWeight, BodyHeight, HeadCircumference, FeedingObservation, IndicatorCommunication and IndicatorSleep. In addition, three instances of ExamResult, that holds the observations related to social interaction (græder meget, afvigende øjenkontakt) and child-parent relationship (‘Følelsesmæssige behov opfyldes ikke’). Rikke’s need-based intervention is also reported as an instance of Intervention.
 
 The report for this is found here: [DeliveryReport-Rikke-5](Bundle-567a4d32-b3eb-46d6-8564-c7c2a1a1b903.html)
 

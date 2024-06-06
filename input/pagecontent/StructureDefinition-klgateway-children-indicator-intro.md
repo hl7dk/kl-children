@@ -1,5 +1,5 @@
 ### Scope and usage
-KLGatewayChildrenIndicator is an abstract profile (i.e. cannot be instantiated). All mandatory observations/evaluations from the children’s standard, where a whole area of concern is evaluated using a two-, three- or four-point scale of no problems, potential concern and concerns respectively, inherits from this abstract profile. The profiles are:
+KLGatewayChildrenIndicator is an abstract profile (i.e. cannot be instantiated). Indicators are characterized from the children’s standard, where a whole area of concern is evaluated using a two-, three- or four-point scale of no problems, potential concern and concerns respectively. A number of mandatory observations/evaluations inherits from this abstract profile. The profiles are:
 
 * Social interaction (Same profile for small children and school children)
 * Parent-child relationship (Only small children)

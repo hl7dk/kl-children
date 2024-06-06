@@ -188,7 +188,7 @@ Description: "Lars hørelse indskoling"
 * subject = Reference(4ced31e7-f852-4bad-a320-fe2a02640434)
 * encounter = Reference(9a97ee62-ada2-45f6-8559-99477c028eb4)
 * code.coding[FBOECode] = $FBOE#a22c4b53-b622-4394-ba13-910a7b0d7b0d "Hørelse"
-* valueCodeableConcept = $FBOE#9628db65-7460-4ecc-bbb1-48c0ac4b3f02 "Intet problem med hørelse målt"
+* valueCodeableConcept = $FBOE#9628db65-7460-4ecc-bbb1-48c0ac4b3f02 "Normal hørelse"
 * status = #final
 * effectiveDateTime = 2021-10-06
 
@@ -200,7 +200,7 @@ Description: "Lars syn indskoling"
 * subject = Reference(4ced31e7-f852-4bad-a320-fe2a02640434)
 * encounter = Reference(9a97ee62-ada2-45f6-8559-99477c028eb4)
 * code.coding[FBOECode] = $FBOE#01fddd46-ed7c-423d-b191-ffdd977dd61e "Syn"
-* valueCodeableConcept = $FBOE#bdcb835d-6ef6-4c4f-9fdf-94c3ebd17182 "Intet problem med syn målt"
+* valueCodeableConcept = $FBOE#bdcb835d-6ef6-4c4f-9fdf-94c3ebd17182 "Normalt syn"
 * status = #final
 * effectiveDateTime = 2021-10-06
 

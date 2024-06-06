@@ -135,8 +135,8 @@
 // * #d5b876e1-a86c-4768-b46d-cd795eaa89e4	"Alderssvarende motorik"
 // * #78dcf013-8ae9-4541-b175-100cde77a9f0	"Almindeligt kostindtag"
 // * #05086dad-8718-4a6c-b096-54c7101d0b2c	"Fysisk aktiv"
-// * #9628db65-7460-4ecc-bbb1-48c0ac4b3f02	"Intet problem med hørelse målt"
-// * #bdcb835d-6ef6-4c4f-9fdf-94c3ebd17182	"Intet problem med syn målt"
+// * #9628db65-7460-4ecc-bbb1-48c0ac4b3f02	"Normal hørelse"
+// * #bdcb835d-6ef6-4c4f-9fdf-94c3ebd17182	"Normalt syn"
 // * #b54723cf-3114-4119-b1cb-28107a283a99	"Ikke udsat for tobaksrøg"
 // * #a7a53cfd-c7bb-4573-a4ae-2eb18e3dda1f	"Ikke prøvet nikotin"
 
@@ -186,7 +186,7 @@
 
 // //optionelle
 // * #a038c064-b57d-4a62-9333-c9456817595d "Fysiske behov mødes ikke"
-// * #51bc227a-3455-474d-bf42-fc7a7875513c "Følelsesmæssige behov mødes ikke"
+// * #51bc227a-3455-474d-bf42-fc7a7875513c "Følelsesmæssige behov opfyldes ikke"
 // * #d3fc57b7-3a5d-4f69-bcb0-bdb8363650eb "Udfordring i forældre-barn samspil"
 // * #fc4b6e6d-a055-49bf-adab-474e0a810675 "Aktiviteter ikke afpasset"
 // * #00a9f897-f784-4164-966c-eba94171ec82 "Uforudsigelighed"
@@ -214,7 +214,7 @@
 // * #f7dfe2e4-d370-45bc-aca9-9649274d84d3 "Alvorlige sociale problemer"
 // * #d126c096-30f0-49c0-8d15-7a50c888d50b "Sygdom eller handicap"
 // * #8036b9f6-e00d-4956-8704-61ba08287735 "Dårlig appetitregulering og/eller overspisning."
-// * #9b0e6538-a24f-47be-9c06-2988cfaef63a "Småtspisende"
+// * #9b0e6538-a24f-47be-9c06-2988cfaef63a "Småt og/eller selektivt spisende eller vægrer sig ved at spise"
 // * #82f2014b-339a-4497-a822-d284d73c63aa "Værger sig ved at spise"
 // * #b887a387-c630-43a0-96a3-2b5c7c84e043 "Gylper meget/kaster meget op"
 // * #4813e65d-4d24-4c82-8f17-ce9f084bb970 "Udfordring med amning"
@@ -330,7 +330,8 @@ Id: SNOMED-CT-INT
 * #450320001 "Edinburgh postnatal depression scale score"
 * #718133008 "Strengths and Difficulties Questionnaire for parents or teachers of 4-17 year olds score"
 * #717639006 "Strengths and Difficulties Questionnaire self-rated for 11-17 year old score"
-
+* #169740003 "Infant feeding method (observable entity)"
+* #363788007 "Clinical history/examination observable (observable entity)"
 
 CodeSystem: LOINC
 Id: LOINC
@@ -377,7 +378,7 @@ Description: "Codes for who informed the findings"
 ValueSet: KLHealthNurseInterventions
 Id: KLHealthNurseInterventions
 Title: "Sundhedsplejeindsatser"
-Description: "Behovsindsatser anvendt i den kommunale sundhedspleje"
+Description: "Need based interventions used in municipality health nursing (sundhedsplejen)"
 * ^experimental = false
 * include codes from system $FBOE where concept descendent-of #6cbf8b19-5aff-4f6f-a7dc-9a411197bcff //Familieindsatser
 * include codes from system $FBOE where concept descendent-of #5a45df21-d80c-4b41-9e5a-4896a519c6c6	//Indsats til forælder
@@ -389,7 +390,7 @@ Description: "Behovsindsatser anvendt i den kommunale sundhedspleje"
 ValueSet: KLHealthNurseConditions
 Id: KLHealthNurseConditions
 Title: "Sundhedsplejetilstande"
-Description: "Sundhedsplejetilstande, som relaterer sig til sygeplejefaglige problemområder, og/eller udfordringer fundet i undersøgelser/vurderinger"
+Description: "Health nurse conditions, that relates to nursing problem areas and/or challenges found in examinations and evaluations made by the health nurse (sundhedsplejerske)"
 * ^experimental = false
 * include codes from valueset ExamResults
 // Ekskludering af normale fund i ExamResults
@@ -591,7 +592,7 @@ ValueSet: HearingCodes
 Title: "HørelseKoder"
 Description: "Mandatory result values for hearning in school children"
 * ^experimental = false
-* $FBOE#9628db65-7460-4ecc-bbb1-48c0ac4b3f02 //	Intet problem med hørelse målt
+* $FBOE#9628db65-7460-4ecc-bbb1-48c0ac4b3f02 //	Normal hørelse
 * $FBOE#c4c79311-ba80-4890-9008-c2f62ab00eda //	Potentielt problem med hørelse
 * $FBOE#4d4b20b6-0159-4014-ac1c-46a7a860b204 //	"Kendt problem med hørelse"
 
@@ -600,7 +601,7 @@ ValueSet: SightCodes
 Title: "SynKoder"
 Description: "Mandatory result values for sight in school children"
 * ^experimental = false
-* $FBOE#bdcb835d-6ef6-4c4f-9fdf-94c3ebd17182 //	Intet problem med syn målt
+* $FBOE#bdcb835d-6ef6-4c4f-9fdf-94c3ebd17182 //	Normalt syn
 * $FBOE#0896610c-1322-44f2-836c-774de52fc3f1 //	Potentielt problem med syn
 * $FBOE#e489119b-de75-47cc-a53b-6ba90ed2c7e8 // "Kendt problem med syn"
 
@@ -624,7 +625,7 @@ Title: "UndersøgelsesResultatKoder"
 Description: "Valueset for optional history and examination findings in small children and school children"
 * ^experimental = false
 * $FBOE#a038c064-b57d-4a62-9333-c9456817595d //	 "Fysiske behov mødes ikke"
-* $FBOE#51bc227a-3455-474d-bf42-fc7a7875513c //	 "Følelsesmæssige behov mødes ikke"
+* $FBOE#51bc227a-3455-474d-bf42-fc7a7875513c //	 "Følelsesmæssige behov opfyldes ikke"
 * $FBOE#d3fc57b7-3a5d-4f69-bcb0-bdb8363650eb //	 "Udfordring i forældre-barn samspil "
 * $FBOE#fc4b6e6d-a055-49bf-adab-474e0a810675	// "Aktiviteter ikke afpasset"
 * $FBOE#00a9f897-f784-4164-966c-eba94171ec82	// "Uforudsigelighed"
@@ -649,11 +650,9 @@ Description: "Valueset for optional history and examination findings in small ch
 * $FBOE#577d33d5-2eff-47ba-b5d0-c4438b8f49c0	// "Dårlig fødselsoplevelse med dette barn"
 * $FBOE#d1cd9a33-3800-4901-ab7b-b630ee1be46e	// "Tidligere dårlig fødselsoplevelse"
 * $FBOE#87fbc4e5-717a-4395-aa8f-c2c0c0bca763	// "Tab i familien"
-* $FBOE#f7dfe2e4-d370-45bc-aca9-9649274d84d3	// "Alvorlige sociale problemer"
 * $FBOE#d126c096-30f0-49c0-8d15-7a50c888d50b	// "Sygdom eller handicap"
 * $FBOE#8036b9f6-e00d-4956-8704-61ba08287735	// "Dårlig appetitregulering og/eller overspisning."
-* $FBOE#9b0e6538-a24f-47be-9c06-2988cfaef63a	// "Småtspisende "
-* $FBOE#82f2014b-339a-4497-a822-d284d73c63aa	// "Værger sig ved at spise"
+* $FBOE#9b0e6538-a24f-47be-9c06-2988cfaef63a	// "Småt og/eller selektivt spisende eller vægrer sig ved at spise"
 * $FBOE#b887a387-c630-43a0-96a3-2b5c7c84e043	// "Gylper meget/kaster meget op"
 * $FBOE#4813e65d-4d24-4c82-8f17-ce9f084bb970	// "Udfordring med amning"
 * $FBOE#37bfe2f5-bdd2-42b0-a1c9-4787860ce624	// "Udfordringer med gensidig kommunikation "
@@ -668,7 +667,6 @@ Description: "Valueset for optional history and examination findings in small ch
 * $FBOE#03c93c46-86ad-4102-a7d5-2c7b3ad0f616	// "Føler sig ikke udhvilet"
 * $FBOE#1ff97bed-f371-4db6-8556-7ec7bfec2274	// "Trist"
 * $FBOE#5eaa4b16-11de-44fa-88ed-639e2bb1dd11	// "Genert/stille"
-* $FBOE#575fec77-05e3-42f1-9701-478c3c4acb27	// "Kontaktsøgende/grænseløs"
 * $FBOE#15a16fbc-32f1-4eac-b18c-55ebe1887a57	// "Konstant argumenterende"
 * $FBOE#1e2fc60e-a56f-4523-8d45-df51b0c611bf	// "Urolig/ukoncentreret"
 * $FBOE#a59cd6a9-b147-47ba-bd87-a9e3eaf7449f	// "Afvisende"

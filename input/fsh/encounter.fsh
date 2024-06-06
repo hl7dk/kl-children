@@ -12,7 +12,8 @@ Description: "Encounter for health prevention and need-based visits from childre
 * class from EncounterClassCodes (required)
 * type SU 
 * type from EncounterTypes (required)
-* type.coding 1..
+* type 1..1
+* type.coding 1..1
 * type.coding.version ..0
 * type.coding.userSelected ..0
 * type.text ..0

@@ -26,6 +26,7 @@ Description: "Feeding observation profile used in the children database"
 * effective[x] only Period or dateTime
 * effectivePeriod.start 1..1
 * effectivePeriod.end 0..1
+* effectiveDateTime 0..1
 * value[x] only CodeableConcept
 * valueCodeableConcept from FeedingResultsChildren (required)
 //0..0 cardinalities

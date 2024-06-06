@@ -3,16 +3,22 @@ This implementation guide describes the delivery of children health data to KL G
 
 The profiles for the reporting are restricted to allow only the information that is required to report to KL Gateway.
 
-**Notice that the included content is not finished.**
-
 ## Overview
 The data is reported as a collection of instances. A report may contain instances that conforms to the profiles defined in this implementation guide. See figure below.
 
 <img alt="OverviewModel" src="./ReportStructure.png" style="float:none; display:block; margin-left:auto; margin-right:auto;" />
 
-In addition to being structured as a report, relationships exist between the profiles. These are illustrated in the figure below. Note that the resource Indicator is abstract. Relevant profiles inherit from dk-core i.e. Citizen, Observation, BasicObservation, Condition and RelatedPerson. QuestionnaireResponses are reported, not Questionnaires. The latter represents shared knowledge between sender and receiver.
+In addition to being structured as a report, relationships exist between the profiles. These are illustrated in the UML Class Diagram in the figure below.
 
 <img alt="ClassDiagram" src="./ClassDiagram.png" style="float:none; display:block; margin-left:auto; margin-right:auto;" />
+
+The Class diagram shows that Citizen and RelatedParent known each other. The association where the Citizen refers to the RelatedParent is used to represent a parent-citizen associated with a parent role. The association where RelatedPerson refers to the Citizen is used to represent that the parent-role is in relation to the child-citizen.
+
+Intervention, Encounter, Observation and QuestionnaireResponse are all associated with Citizen i.e. these profiles know which Citizen they hold information about. Encounter may be associated with a Location, which is used for school codes. QuestionnaireResponse refers to the Questionnaire defining it. Questionnaire instances relevant for children's health are defined in this implementation guide, thus implementers can refer to these using their canonical url, in QuestionnaireResponse instances. Consequently, Questionnaire instances are not send in reports.
+
+The Observation class represents a basic FHIR Observation, which is not instantiated in the report. Notice that the resource Indicator is abstract, so this is not instantiated either. However, all the other Observations, inherits from these two. The classes that inherits from Indicator are evaluations of child or parent health as made by the Health nurse. They are characterized by being mandatory at some point (see special constraints below), and by including codes that represent both normal findings and problems as possible results. Weight, Height HeadCircumference and Feeding are also mandatory at different points in time. However, the results of these Observations have another structure than Indicator e.g. quantity. The Exam Results are characterized by being history taking information or observations that are never mandatory, and only documented when relevant i.e. they typically express abnormal findings.      
+ 
+Relevant profiles inherit from dk-core, even though it is not illustrated specifically in the Class Diagram. The following profiles from dk-core are used: Citizen, Observation, BasicObservation, Condition and RelatedPerson.
 
 ## Special constraints, and resulting reporting practises
 Whereas the report may seem unconstrained, each profile define constraints on attributes, datatypes and cardinalities. In addition, extra constraints are implemented to accommodate the rules of reporting data to The National Child Health Register, see [guidance](https://sundhedsdatastyrelsen.dk/da/rammer-og-retningslinjer/indberetning_sei/vejledninger_indberetning/bornedatabasen) and Fælleskommunal standard for forebyggende sundhedsydelser til børn og unge (FBU). These additional constraints are established to guarantee that all required observations are included when reporting specific standard encounters. Note that the constraints only apply, when the appropriate encounter-type is applied, and when Enconter.Class is ambulatory "AMB" or Home visit "HH". A table is presented below (Danish names for standard-visits):

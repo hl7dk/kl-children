@@ -20,7 +20,7 @@ InstanceOf: KLGatewayChildrenQuestionnaireResponse
 Usage: #example
 Title: "TOPIAnswerRikke"
 Description: "TOPI vurdering af Rikke lavet af sundhedsplejersker og eventuelle samarbejdspartnere."
-* questionnaire = "http://fhir.kl.dk/children/Questionnaire/klgateway-children-sdq11-17"
+* questionnaire = "http://fhir.kl.dk/children/Questionnaire/klgateway-children-topi"
 * status = #completed
 * subject = Reference(Lars)
 * authored = 2020-12-23
