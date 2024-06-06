@@ -1,5 +1,5 @@
 Alias: $v3-ActCode = http://terminology.hl7.org/CodeSystem/v3-ActCode
-Alias: $KLCommonCodes = http://fhir.kl.dk/term/CodeSystem/CommonCareSocialCodes
+Alias: $KLCommonCodes = http://fhir.kl.dk/term/CodeSystem/CareSocialCodes
 Alias: $RoleCode = http://terminology.hl7.org/CodeSystem/v3-RoleCode
 Alias: $SCT = http://snomed.info/sct
 Alias: $UCUM = http://unitsofmeasure.org
@@ -7,3 +7,6 @@ Alias: $LOINC =  http://loinc.org
 Alias: $EncounterStatus = http://hl7.org/fhir/encounter-status
 Alias: $V3ACTCODES = http://terminology.hl7.org/CodeSystem/v3-ActCode
 Alias: $FBOE = http://fhir.kl.dk/term/CodeSystem/FBOE
+Alias: $ExtMinValue = http://hl7.org/fhir/StructureDefinition/minValue
+Alias: $ExtMaxValue = http://hl7.org/fhir/StructureDefinition/maxValue
+Alias: $actCodes = http://terminology.hl7.org/CodeSystem/v3-ActCode

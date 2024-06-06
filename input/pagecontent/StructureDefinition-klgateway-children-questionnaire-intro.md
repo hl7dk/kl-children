@@ -1,0 +1,2 @@
+### Scope and usage
+This questionnaire profile is used for all questionnaires in this implementation guide. It is a small extension of the FHIR Questionnaire resource. It includes two standard-extensions that allow minimum and maximum values to be specified for questionnaire-items.

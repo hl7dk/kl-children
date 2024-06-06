@@ -1,13 +1,11 @@
 Profile: KLGatewayChildrenBodyWeight
-Parent: http://hl7.org/fhir/StructureDefinition/bodyweight
+Parent: http://hl7.dk/fhir/core/StructureDefinition/dk-core-basic-observation
 Id: klgateway-children-bodyweight
 Title: "KLGatewayChildrenBodyWeight"
 Description: "Profile of HL7 body weight profile used in Danish Municipalities"
-//SNOMED on FHIR recommendation
-* code.coding contains snomedSlice 1..1
-* code.coding[snomedSlice] from BodyweightSCTobservablesChildren (extensible)
-* code.coding[snomedSlice].system = $SCT
-* valueQuantity.code = #g
+* code.coding[LOINC] = $LOINC#29463-7 //Body weight
+* code.coding[SNOMEDCT] = $SCT#27113001
+* valueQuantity.code from ObservationUnitsWeight
 * subject 1..1
 * subject only Reference(klgateway-children-citizen)
 * subject ^type.aggregation = #bundled
@@ -41,7 +39,8 @@ Description: "Profile of HL7 body weight profile used in Danish Municipalities"
 * encounter ^short = "[DK] vægtkontakt"
 * effectiveDateTime ^short = "[DK] vægttid"
 * status ^short = "[DK] vægtStatus"
-* obeys obs-2
+* obeys obs-2 //"If the value is not given, then explain why using dataAbsentReason"
+* obeys obs-1 //"If value is given as a decimal point number with more than one precision, an error is returned"
 
 Instance: RikkeBodyWeight
 InstanceOf: klgateway-children-bodyweight
@@ -50,13 +49,31 @@ Title: "RikkeBodyWeight"
 Description: "Rikkes vægt"
 * subject = Reference(Rikke)
 * encounter = Reference(2nd1mthEncounter)
-* category[VSCat].coding.system = "http://terminology.hl7.org/CodeSystem/observation-category"
-* category[VSCat].coding.code = #vital-signs
-* code.coding[snomedSlice] = $SCT#425024002
-* code.coding[BodyWeightCode] = $LOINC#29463-7
+* category.coding.system = "http://terminology.hl7.org/CodeSystem/observation-category"
+* category.coding.code = #vital-signs
+* code.coding[SNOMEDCT] = $SCT#27113001
+* code.coding[LOINC] = $LOINC#29463-7
 * valueQuantity.value = 5100
 * valueQuantity.unit = "g"
 * valueQuantity.system = $UCUM
 * valueQuantity.code = #g
 * status = #final
 * effectiveDateTime = 2020-06-01
+
+Instance: RikkeBodyWeight2mth
+InstanceOf: klgateway-children-bodyweight
+Usage: #example
+Title: "RikkeBodyWeight"
+Description: "Rikkes vægt"
+* subject = Reference(Rikke)
+* encounter = Reference(2mthEncounter)
+* category.coding.system = "http://terminology.hl7.org/CodeSystem/observation-category"
+* category.coding.code = #vital-signs
+* code.coding[SNOMEDCT] = $SCT#27113001 "Body weight"
+* code.coding[LOINC] = $LOINC#29463-7
+* valueQuantity.value = 6200
+* valueQuantity.unit = "g"
+* valueQuantity.system = $UCUM
+* valueQuantity.code = #g
+* status = #final
+* effectiveDateTime = 2020-06-30

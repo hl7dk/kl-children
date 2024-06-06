@@ -1,0 +1,12 @@
+### Scope and usage
+KLGatewayChildrenSDQ04-10 is used to define the Strength and Difficulties Questionnaire (SDQ), including impact supplement for completion by parents of 4-10 year olds (SDQ P4-10). The questionnaire uses the official Danish translation. The link-ids from this questionnaire have to be referred in the QuestionnaireResponse, that holds the answers to a SDQ P4-10 questionnaire.
+
+Note that this Questionnaire defines question type as 'choice' and datatype (string) This is done for each item in the Questionnaire. However, the FHIR-validator is not able to validate a QuestionnaireResponse using these rules (Because there is a loose coupling between Questionnaire and QuestionnaireResponse in FHIR). We encourage vendors to ensure that responses are validated according to the rules described here. In other words, only the exact strings provided in Questionnaire.item.answerOption.valueString should be accepted in the QuestionnaireResponse.
+
+### Copyright
+Permissions obtained by Local Government Denmark(Kommunernes landsforening) to include this questionnaire in this standard, does not mean that clincal systems and users that report to KLGateway using this standard automatically have permission. It is the sole responsibility of users to handle their own permissions.
+
+In Denmark, copyright for SDQ is handled by Komiteen for Sundhedsoplysning https://www.sundhedsoplysning.dk/. Below, the international copyright notice is pasted.
+
+Please note that Strengths and Difficulties Questionnaires, whether in English or in translation, are copyright documents that are not in the public domain. As such, they may not be modified in any way (e.g. changing the wording of questions, adding questions or administering only subsets of questions). This is to ensure that the SDQ is fully comparable across studies and settings. Similarly, to ensure high quality and consistency, unauthorized translations are not permitted. Paper versions may be downloaded and subsequently photocopied without charge by individuals or non-profit organizations provided they are not making any charge to families.
+Users are not permitted to create or distribute electronic versions for any purpose without prior authorization from youthinmind. If you are interested in making translations or creating electronic versions you MUST first contact support@youthinmind.com.
