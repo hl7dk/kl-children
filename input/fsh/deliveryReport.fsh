@@ -45,7 +45,7 @@ Description: "Delivery report to deliver data for each child, including state of
 * entry ^short = "[DK] indberetningsrapportIndhold"
 * timestamp ^short = "[DK] indberetningsrapportTid"
 * meta.profile ^short = "[DK] indberetningsrapportProfil"
-//* obeys gateway-children-report-1
+* obeys gateway-children-report-1
 * obeys gateway-children-report-parent-mental-state
 * obeys gateway-children-report-parent-social-status
 * obeys gateway-children-report-support-network
@@ -64,16 +64,31 @@ Description: "Delivery report to deliver data for each child, including state of
 * obeys gateway-children-report-hearing
 * obeys gateway-children-report-sight
 
-// Invariant: gateway-children-report-1
-// Description: "All observation resources shall conform to the observation profiles defined in this IG"
-// Severity: #error
-// Expression: "entry.select(resource as Observation).all(
-//     $this.conformsTo('http://fhir.kl.dk/children/StructureDefinition/klgateway-children-feeding-observation')
-//  or $this.conformsTo('http://fhir.kl.dk/children/StructureDefinition/klgateway-children-headcircum')
-//  or $this.conformsTo('http://fhir.kl.dk/children/StructureDefinition/klgateway-children-bodyheight')
-//  or $this.conformsTo('http://fhir.kl.dk/children/StructureDefinition/klgateway-children-indicator')
-//  or $this.conformsTo('http://fhir.kl.dk/children/StructureDefinition/klgateway-children-exam-result')
-//  or $this.conformsTo('http://fhir.kl.dk/children/StructureDefinition/klgateway-children-bodyweight'))"
+Invariant: gateway-children-report-1
+Description: "All observation resources shall conform to the observation profiles defined in this IG"
+Severity: #error
+Expression: "entry.select(resource as Observation).all(
+    $this.conformsTo('http://fhir.kl.dk/children/StructureDefinition/klgateway-children-feeding-observation')
+ or $this.conformsTo('http://fhir.kl.dk/children/StructureDefinition/klgateway-children-headcircum')
+ or $this.conformsTo('http://fhir.kl.dk/children/StructureDefinition/klgateway-children-bodyheight')
+ or $this.conformsTo('http://fhir.kl.dk/children/StructureDefinition/klgateway-children-exam-result')
+ or $this.conformsTo('http://fhir.kl.dk/children/StructureDefinition/klgateway-children-bodyweight')
+ or $this.conformsTo('http://fhir.kl.dk/children/StructureDefinition/klgateway-children-social-interaction')
+ or $this.conformsTo('http://fhir.kl.dk/children/StructureDefinition/klgateway-children-parent-relationship')
+ or $this.conformsTo('http://fhir.kl.dk/children/StructureDefinition/klgateway-children-parent-social-status')
+ or $this.conformsTo('http://fhir.kl.dk/children/StructureDefinition/klgateway-children-parent-mental-status')
+ or $this.conformsTo('http://fhir.kl.dk/children/StructureDefinition/klgateway-children-social-support-network')
+ or $this.conformsTo('http://fhir.kl.dk/children/StructureDefinition/klgateway-children-communication')
+ or $this.conformsTo('http://fhir.kl.dk/children/StructureDefinition/klgateway-children-sleep')
+ or $this.conformsTo('http://fhir.kl.dk/children/StructureDefinition/klgateway-children-motor-function')
+ or $this.conformsTo('http://fhir.kl.dk/children/StructureDefinition/klgateway-children-nutrition')
+ or $this.conformsTo('http://fhir.kl.dk/children/StructureDefinition/klgateway-children-physical-activity')
+ or $this.conformsTo('http://fhir.kl.dk/children/StructureDefinition/klgateway-children-hearing')
+ or $this.conformsTo('http://fhir.kl.dk/children/StructureDefinition/klgateway-children-sight')
+ or $this.conformsTo('http://fhir.kl.dk/children/StructureDefinition/klgateway-children-passive-smoking')
+ or $this.conformsTo('http://fhir.kl.dk/children/StructureDefinition/klgateway-children-nicotine'))"
+
+
 
 //Invariant: gateway-children-report-2
 //Description: "If there is an encounter of type 'Andet besøg inden første måned' eller 'Besøg hos det 4-6 måneder gamle barn' eller 'indskolingsundersøgelse' eller 'udskolingsundersøgelse' then weight and height meassurements should be included in the bundle"
