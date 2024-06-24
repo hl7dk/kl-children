@@ -13,31 +13,13 @@ Description: "Delivery report to deliver data for each child, including state of
 * entry.link 0..0
 * entry.resource 1..1
 * entry.resource only
-    klgateway-children-feeding-observation or
-    klgateway-children-headcircum or
-    klgateway-children-bodyheight or
-    klgateway-children-exam-result or
-    klgateway-children-bodyweight or
     klgateway-children-encounter or
     klgateway-children-citizen or
     klgateway-children-related-parent or
     klgateway-children-intervention or
     klgateway-children-questionnaire-response or
     klgateway-children-location or
-    klgateway-children-social-interaction or
-    klgateway-children-parent-relationship or
-    klgateway-children-parent-social-status or
-    klgateway-children-parent-mental-status or
-    klgateway-children-social-support-network or
-    klgateway-children-communication or
-    klgateway-children-sleep or
-    klgateway-children-motor-function or
-    klgateway-children-nutrition or
-    klgateway-children-physical-activity or
-    klgateway-children-hearing or
-    klgateway-children-sight or
-    klgateway-children-passive-smoking or
-    klgateway-children-nicotine
+    Observation
 * entry.search ..0
 * entry.request ..0
 * entry.response ..0
