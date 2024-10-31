@@ -408,6 +408,20 @@ Usage: #example
 * entry[+].fullUrl = Canonical(RikkeEyeContact2mth)
 * entry[=].resource = RikkeEyeContact2mth
 
+Instance: RikkeDeliveryReport3months
+InstanceOf: klgateway-children-delivery-report
+Description: "Indberetning for Rikke 3 måneder - eksempel på at der er foretaget en enkelt vægtmåling udenfor standardkontakter"
+Usage: #example
+* type = #collection
+* timestamp = 2020-08-08T23:45:00.000Z
+
+* entry[+].fullUrl = Canonical(Rikke)
+* entry[=].resource = Rikke
+
+* entry[+].fullUrl = Canonical(RikkeBodyWeight3mth)
+* entry[=].resource = RikkeBodyWeight3mth
+
+
 //instances used for testing
 
 // Instance: RikkePainVAS

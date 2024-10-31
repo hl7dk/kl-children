@@ -1,1 +1,1 @@
-Patch version. Enconter.entry style changed. 
+Release 2.1.0. Updated to kl-term 2.2.0 - no changes in this IG though. Added Incremental delivery to support FLIS. Example of delivery report with only one observation added.
